@@ -5,7 +5,7 @@ function Expertise() {
     <div>
       <div
         className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold"
-        style={{ backgroundImage: "url(/public/MicrosoftTeams-image12.png)" }}
+        style={{ backgroundImage: "url(/public/MicrosoftTeams-image14.png)" }}
       >
         <h1>NOTRE EXPERTISE</h1>
       </div>

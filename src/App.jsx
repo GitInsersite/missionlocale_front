@@ -14,6 +14,9 @@ import EtreAccompagne from "./pages/EtreAccompagne";
 import Expertise from "./pages/Expertise";
 import DemarcheRse from "./pages/DemarcheRse";
 import TaxeApprentissage from "./pages/TaxeApprentissage";
+import Actualites from "./pages/Actualites";
+import Ateliers from "./pages/Ateliers";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -32,6 +35,9 @@ function App() {
         <Route path="/expertise" element={<Expertise />} />
         <Route path="/demarche-rse" element={<DemarcheRse />} />
         <Route path="/taxe-apprentissage" element={<TaxeApprentissage />} />
+        <Route path="/actualites" element={<Actualites />} />
+        <Route path="/ateliers" element={<Ateliers />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </BrowserRouter>

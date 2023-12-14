@@ -19,12 +19,12 @@ function Footer() {
         <div>
           <h2 className="text-white mt-6 font-bold">ACCES RAPIDE</h2>
           <p className="text-white text-xs">
-            LA MISSION LOCALE <br />
-            SERVICES <br />
-            ACTUALITES <br />
-            ATELIERS <br />
-            ENTREPRISES <br />
-            JEUNES
+            <Link to="/">LA MISSION LOCALE</Link><br />
+            <Link to="/se-former">SERVICES</Link> <br />
+            <Link to="/actualites">ACTUALITES</Link> <br />
+            <Link to="/ateliers">ATELIERS</Link> <br />
+            <Link to="/">ENTREPRISES</Link> <br />
+            <Link to="/">JEUNES</Link>
           </p>
         </div>
         <div>

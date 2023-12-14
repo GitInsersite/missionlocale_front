@@ -82,10 +82,10 @@ function Menu() {
               </ul>
             )}
             <li>
-              <Link>ACTUALITES</Link>
+              <Link to="/actualites">ACTUALITES</Link>
             </li>
             <li>
-              <Link>ATELIERS</Link>
+              <Link to="/ateliers">ATELIERS</Link>
             </li>
             <li className="flex items-center" onClick={toggleSubmenu3}>
               ENTREPRISES <IoIosArrowDown />
@@ -104,7 +104,7 @@ function Menu() {
               </ul>
             )}
             <li>
-              <Link>CONTACTEZ-NOUS</Link>
+              <Link to="/contact">CONTACTEZ-NOUS</Link>
             </li>
           </ul>
         </div>

@@ -11,7 +11,7 @@ function SeFormer() {
       </div>
       <div className="flex flex-col items-center">
         <div>
-          <div className="flex flex-col pl-4 p-4 border-red-500 border-2 font-semibold">
+          <div className="flex flex-col px-4 pt-4 border-red-500 border-2 font-semibold">
             <h2 className="font-bold text-black text-lg mb-4">
               <span className="border-b-2 border-[#D60B52] pb-[0.5px]">
                 Aide à
@@ -39,7 +39,7 @@ function SeFormer() {
               conseiller de la Mission Locale.
             </p>
           </div>
-          <div className="flex flex-col pl-4 border-red-500 border-2 font-semibold bg-[#F6F6F6]">
+          <div className="flex flex-col px-4 border-red-500 border-2 font-semibold bg-[#F6F6F6]">
             <h2 className="font-bold text-black text-lg mb-4">
               <span className="border-b-2 border-[#D60B52] pb-[0.5px]">
                 Les for
@@ -57,7 +57,7 @@ function SeFormer() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col pl-4 border-red-500 border-2 font-semibold ">
+      <div className="flex flex-col px-4 border-red-500 border-2 font-semibold ">
         <h2 className="font-bold text-black text-lg mb-4">
           <span className="border-b-2 border-[#D60B52] pb-[0.5px]">Les for</span>
           mations qualifiantes
@@ -70,7 +70,7 @@ function SeFormer() {
           stages.
         </p>
       </div>
-      <div className="flex flex-col pl-4 border-red-500 border-2 font-semibold bg-[#F6F6F6]">
+      <div className="flex flex-col px-4 border-red-500 border-2 font-semibold bg-[#F6F6F6]">
         <h2 className="font-bold text-black text-lg mb-4">
           <span className="border-b-2 border-[#D60B52] pb-[0.5px]">Appr</span>
           entissage
