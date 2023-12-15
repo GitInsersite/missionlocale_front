@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 
 function Ateliers() {
+
+  const id = 5
+
   return (
     <div>
       <div
@@ -14,7 +17,7 @@ function Ateliers() {
           <span className="border-b-2 border-[#95c11f] pb-[0.5px]">
             CONSEIL
           </span>{" "}
-          D'ADMINISTRATION
+          D&apos;ADMINISTRATION
         </h2>
         <div className="bg-white mx-10 h-40 rounded-xl flex w-3/4 border-blue-500 border-2">
           <div className="w-[50%]">
@@ -27,7 +30,7 @@ function Ateliers() {
           <div className="w-[50%] flex flex-col items-center justify-center border-blue-500 border-2">
             <h3 className="font-bold">TEST</h3>
             <p>test</p>
-            <Link className="bg-[#95c11f] text-white py-1 px-2 text-center rounded-xl text-sm mb-6">
+            <Link to={`/ateliers/${id}`} className="bg-[#95c11f] text-white py-1 px-2 text-center rounded-xl text-sm mb-6">
               Lire la suite
             </Link>
           </div>

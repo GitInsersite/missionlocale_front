@@ -16,7 +16,11 @@ import DemarcheRse from "./pages/DemarcheRse";
 import TaxeApprentissage from "./pages/TaxeApprentissage";
 import Actualites from "./pages/Actualites";
 import Ateliers from "./pages/Ateliers";
+import UnAtelier from "./pages/UnAtelier";
 import Contact from "./pages/Contact";
+import UneActualite from "./pages/UneActualite";
+import ConnexionJeune from "./pages/ConnexionJeune";
+import ConnexionEntreprise from "./pages/ConnexionEntreprise";
 
 function App() {
   return (
@@ -36,8 +40,12 @@ function App() {
         <Route path="/demarche-rse" element={<DemarcheRse />} />
         <Route path="/taxe-apprentissage" element={<TaxeApprentissage />} />
         <Route path="/actualites" element={<Actualites />} />
+        <Route path="/actualites/:id" element={<UneActualite />} />
         <Route path="/ateliers" element={<Ateliers />} />
+        <Route path="/ateliers/:id" element={<UnAtelier />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/connexion-jeune" element={<ConnexionJeune />} />
+        <Route path="/connexion-entreprise" element={<ConnexionEntreprise />} />
       </Routes>
       <Footer />
     </BrowserRouter>

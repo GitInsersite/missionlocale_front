@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
 
 function Actualites() {
+  const id = 6;
+
   return (
     <div>
       <div
         className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold"
         style={{ backgroundImage: "url(/public/MicrosoftTeams-image15.png)" }}
       >
-        <h1>ETRE ACCOMPAGNE</h1>
+        <h1>ACTUALITE</h1>
       </div>
       <div className=" flex flex-col items-center pt-6 border-red-500 border-2">
         <div className="bg-white mx-10 h-40 rounded-xl flex w-3/4 border-blue-500 border-2">
@@ -22,7 +24,10 @@ function Actualites() {
             <h3 className="font-bold">TEST</h3>
             <p className="text-[#2897d5]">17/11/2023</p>
             <p>test</p>
-            <Link className="bg-[#2897d5] text-white py-1 px-2 text-center rounded-xl text-sm mb-6">
+            <Link
+              to={`/actualites/${id}`}
+              className="bg-[#2897d5] text-white py-1 px-2 text-center rounded-xl text-sm mb-6"
+            >
               Lire la suite
             </Link>
           </div>

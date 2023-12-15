@@ -7,7 +7,7 @@ function Footer() {
       <div className="bg-slate-700 px-8 pb-8 pt-8">
         <div>
           <img
-            src="./public/logo1.png"
+            src="/public/logo1.png"
             alt=""
             className="bg-white rounded-lg mb-6"
           />
