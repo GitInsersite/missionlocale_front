@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <>
-      <div className="bg-slate-700 px-8 pb-8 pt-8">
+      <div className="bg-[#252323] px-8 pb-8 pt-8">
         <div>
           <img
             src="/public/logo1.png"
