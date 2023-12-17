@@ -23,10 +23,12 @@ import ConnexionJeune from "./pages/ConnexionJeune";
 import ConnexionEntreprise from "./pages/ConnexionEntreprise";
 import PreInscription from "./pages/PreInscription";
 import EspacePersonnelJeune from "./pages/EspacePersonnelJeune";
+import EspacePersonnelJeune2 from "./pages/EspacePersonnelJeune2";
 import Formations from "./pages/Formations";
 import PreInscriptionEntreprise from "./pages/PreInscriptionEntreprise";
 import EspaceEntreprise from "./pages/EspaceEntreprise";
 import EspacePersonnelEntreprise from "./pages/EspacePersonnelEntreprise";
+import OffreEmploi from "./pages/OffreEmploi";
 
 function App() {
   return (
@@ -54,10 +56,12 @@ function App() {
         <Route path="/connexion-entreprise" element={<ConnexionEntreprise />} />
         <Route path="/pre-inscription" element={<PreInscription />} />
         <Route path="/espace-personnel-juene" element={<EspacePersonnelJeune />} />
+        <Route path="/espace-personnel-juene2" element={<EspacePersonnelJeune2 />} />
         <Route path="/formations" element={<Formations />} />
         <Route path="/pre-inscription-entreprise" element={<PreInscriptionEntreprise />} />
         <Route path="/espace-entreprise" element={<EspaceEntreprise />} />
         <Route path="/espace-personnel-entreprise" element={<EspacePersonnelEntreprise />} />
+        <Route path="/offre-emploi" element={<OffreEmploi />} />
       </Routes>
       <Footer />
     </BrowserRouter>
