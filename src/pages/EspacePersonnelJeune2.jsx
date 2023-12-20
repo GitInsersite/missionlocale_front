@@ -17,11 +17,11 @@ function EspacePersonnelJeune2() {
         className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52 2xl:h-96"
         style={{ backgroundImage: "url(/public/MicrosoftTeams-image12.png)" }}
       >
-        <h1 className="md:text-3xl">S'ORIENTER</h1>
+        <h1 className="md:text-3xl">ESPACE PERSONNEL</h1>
       </div>
       <div className="px-4 flex flex-col items-center bg-[#F6F6F6]">
         <div className="flex flex-col items-center w-[98%]">
-          <h2 className="font-bold text-black text-lg mb-8 mt-6 lg:text-2xl">
+          <h2 className="font-bold text-black text-lg mb-8 mt-6 md:text-3xl">
             JE CONTACTE MON CONSEILLER POUR :
           </h2>
           <form
@@ -77,7 +77,7 @@ function EspacePersonnelJeune2() {
           </form>
         </div>
       </div>
-      <h2 className="font-bold text-black text-center text-lg">
+      <h2 className="font-bold text-black text-center text-lg md:text-2xl">
         INFORMATIONS PERSONNELLES
       </h2>
       <div className="px-4 flex flex-col items-center bg-[#F6F6F6]">
@@ -120,7 +120,7 @@ function EspacePersonnelJeune2() {
           </div>
         </div>
       </div>
-      <h2 className="font-bold text-black text-center text-lg">
+      <h2 className="font-bold text-black text-center text-lg md:text-2xl">
         MES RENDEZ-VOUS
       </h2>
       <div className="px-4 flex flex-col items-center bg-[#F6F6F6]">
@@ -128,7 +128,7 @@ function EspacePersonnelJeune2() {
           <div className="flex flex-col mt-4 mb-6 p-4 w-full md:w-[70%] lg:w-[80%]"></div>
         </div>
       </div>
-      <h2 className="font-bold text-black text-center text-lg">
+      <h2 className="font-bold text-black text-center text-lg md:text-2xl">
         MES DOCUMENTS
       </h2>
       <div className="px-4 flex flex-col items-center bg-[#F6F6F6]">
@@ -161,7 +161,7 @@ function EspacePersonnelJeune2() {
           </div>
         </div>
       </div>
-      <h2 className="font-bold text-black text-center text-lg">MES ATELIERS</h2>
+      <h2 className="font-bold text-black text-center text-lg md:text-2xl">MES ATELIERS</h2>
       <div className="px-4 flex flex-col items-center bg-[#F6F6F6]">
         <div className="flex flex-col items-center w-[98%]">
           <div className="flex flex-col mt-4 mb-6 p-4 w-full md:w-[70%] lg:w-[80%]">
@@ -176,7 +176,7 @@ function EspacePersonnelJeune2() {
           </div>
         </div>
       </div>
-      <h2 className="font-bold text-black text-center text-lg">
+      <h2 className="font-bold text-black text-center text-lg md:text-2xl">
         MES FORMATIONS
       </h2>
       <div className="px-4 flex flex-col items-center bg-[#F6F6F6]">
@@ -221,7 +221,7 @@ function EspacePersonnelJeune2() {
           </div>
         </div>
       </div>
-      <h2 className="font-bold text-black text-center text-lg">
+      <h2 className="font-bold text-black text-center text-lg md:text-2xl">
         MES OFFRES D'EMPLOI
       </h2>
       <div className="px-4 flex flex-col items-center bg-[#F6F6F6]">
@@ -234,7 +234,7 @@ function EspacePersonnelJeune2() {
           </div>
         </div>
       </div>
-      <h2 className="font-bold text-black text-center text-lg">
+      <h2 className="font-bold text-black text-center text-lg md:text-2xl">
         RESSOURCES / INFORMATIONS
       </h2>
       <div className="px-4 flex flex-col items-center bg-[#F6F6F6]">

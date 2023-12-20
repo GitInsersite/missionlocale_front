@@ -4,16 +4,16 @@ function DemarcheRse() {
   return (
     <div>
       <div
-        className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold"
+        className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52 2xl:h-96"
         style={{ backgroundImage: "url(/public/MicrosoftTeams-image14.png)" }}
       >
-        <h1>S’engager dans une démarche RSE </h1>
+        <h1 className="md:text-3xl">S’engager dans une démarche RSE </h1>
       </div>
-      <div className="flex flex-col pl-4 p-4 border-red-500 border-2 font-semibold">
-        <p className="mb-6">
-          La Mission Locale conseille les entreprises dans la mise en place
+      <div className="flex flex-col pl-4 p-4 font-semibold md:px-14 lg:px-20">
+        <h2 className="mb-6 font-bold text-black text-lg md:text-2xl">
+        <span className="border-b-2 border-[#F29200] pb-[0.5px]">La Mission</span>{" "}Locale conseille les entreprises dans la mise en place
           d’une politique RSE, notamment au niveau de l’emploi des jeunes
-        </p>
+        </h2>
         <p className="mb-6">
           La Responsabilité Sociale et Environnementale est l’application d’une
           démarche développement durable par les entreprises. Ce concept suppose

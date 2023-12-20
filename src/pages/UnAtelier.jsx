@@ -4,12 +4,12 @@ function UnAtelier() {
   return (
     <div>
       <div
-        className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold"
+        className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52 2xl:h-96"
         style={{ backgroundImage: "url(/public/MicrosoftTeams-image13.png)" }}
       >
-        <h1>ATELIERS</h1>
+        <h1 className="md:text-3xl">ATELIER</h1>
       </div>
-      <div className=" flex flex-col items-center pt-6 border-red-500 border-2 bg-[#F6F6F6]">
+      <div className=" flex flex-col items-center pt-6 bg-[#F6F6F6] md:px-14 lg:px-20">
         <div className="border-2 border-[#95c11f] flex flex-col px-4 bg-white rounded-lg mb-4 pt-2 w-[90%]">
           <h2 className="font-semibold text-lg mb-2">ATELIER PODCAST</h2>
           <p className="mb-4">
@@ -20,19 +20,19 @@ function UnAtelier() {
           </p>
           <Link
             to="/"
-            className="bg-[#95c11f] text-white py-1 px-2 text-center rounded-xl text-sm mb-6 w-[55%]"
+            className="bg-[#95c11f] text-white py-1 px-2 text-center rounded-xl text-sm mb-6 w-[55%] md:w-56"
           >
             S&apos;inscrire à l&apos;atelier
           </Link>
         </div>
-        <div className="flex mb-6">
-            <div className=" w-[40%]">
+        <div className="flex mb-6 md:justify-start md:items-center md:w-[90%] md:ml-4">
+            <div className=" w-[40%] md:w-fit md:mr-4">
                 <p className="font-semibold">LE PROCHAIN ATELIER</p>
             </div>
-            <div className="flex justify-between w-[60%] font-bold">
-                <p className="bg-white px-2 py-3 rounded-lg">12</p>
-                <p className="bg-white px-2 py-3 rounded-lg">12</p>
-                <p className="bg-white px-2 py-3 rounded-lg">2023</p>
+            <div className="flex justify-between w-[60%] md:w-fit font-bold">
+                <p className="bg-white px-2 py-3 rounded-lg md:mr-4 md:px-3">12</p>
+                <p className="bg-white px-2 py-3 rounded-lg md:mr-4 md:px-3">12</p>
+                <p className="bg-white px-2 py-3 rounded-lg md:mr-4 md:px-3">2023</p>
             </div>
         </div>
         <div className="border-2 border-[#95c11f] flex flex-col px-4 bg-white rounded-lg mb-4 pt-2 w-[90%]">

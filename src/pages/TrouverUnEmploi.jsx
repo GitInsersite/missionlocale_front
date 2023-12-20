@@ -4,13 +4,13 @@ function TrouverUnEmploi() {
   return (
     <div className="bg-[#F6F6F6]">
       <div
-        className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold"
+        className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52 2xl:h-96"
         style={{ backgroundImage: "url(/public/MicrosoftTeams-image12.png)" }}
       >
-        <h1>TROUVER UN EMPLOI</h1>
+        <h1 className="md:text-3xl">TROUVER UN EMPLOI</h1>
       </div>
-      <div className="flex flex-col pl-4 p-4 border-red-500 border-2 font-semibold">
-        <h2 className="font-bold text-black text-lg mb-4">
+      <div className="flex flex-col pl-4 p-4 font-semibold md:px-14 lg:px-20">
+        <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
           <span className="border-b-2 border-[#D60B52] pb-[0.5px]">
             La Mission
           </span>{" "}
@@ -33,8 +33,8 @@ function TrouverUnEmploi() {
           </li>
         </ul>
       </div>
-      <div className="flex flex-col px-4 pt-4 border-red-500 border-2 font-semibold ">
-        <h2 className="font-bold text-black text-lg mb-4">
+      <div className="flex flex-col px-4 pt-4 font-semibold md:px-14 lg:px-20">
+        <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
           <span className="border-b-2 border-[#D60B52] pb-[0.5px]">
             Nos cons
           </span>
@@ -49,8 +49,8 @@ function TrouverUnEmploi() {
           différents dispositifs d’insertion professionnelle.
         </p>
       </div>
-      <div className="flex flex-col px-4 pt-4 border-red-500 border-2 font-semibold ">
-        <h2 className="font-bold text-black text-lg mb-4">
+      <div className="flex flex-col px-4 pt-4 font-semibold md:px-14 lg:px-20">
+        <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
           <span className="border-b-2 border-[#D60B52] pb-[0.5px]">
             Nos ateli
           </span>
@@ -64,7 +64,7 @@ function TrouverUnEmploi() {
           ateliers gratuits qui sont disponibles pour vous aider à développer
           vos compétences professionnelles.
         </p>
-        <Link className="bg-[#D60B52] text-white font-semibold py-1 text-center rounded-lg text-sm mb-6">
+        <Link className="bg-[#D60B52] text-white font-semibold py-1 text-center rounded-lg text-sm mb-6 md:w-64">
           PRENDRE RDV AVEC UN CONSEILLER
         </Link>
       </div>

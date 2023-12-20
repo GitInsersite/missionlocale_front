@@ -1,9 +1,14 @@
 import ImageGallery from "react-image-gallery";
+import { useMediaQuery } from 'react-responsive';
 import "react-image-gallery/styles/css/image-gallery.css";
 
 function Soutien() {
 
-  const slides = [
+  const isTabletOrLarger = useMediaQuery({ minWidth: 768 });
+  const isLaptopOrLarger = useMediaQuery({ minWidth: 1024 });
+
+
+  const slidesTwoImages = [
     {
       pair: [
         { original: "./public/MicrosoftTeams-image5.png" },
@@ -25,10 +30,54 @@ function Soutien() {
     // Add more pairs as needed
   ];
 
+  const slidesThreeImages = [
+    {
+      pair: [
+        { original: "./public/MicrosoftTeams-image5.png" },
+        { original: "./public/MicrosoftTeams-image6.png" },
+        { original: "./public/MicrosoftTeams-image7.png" }, // Add the third image
+      ],
+    },
+    {
+      pair: [
+        { original: "./public/MicrosoftTeams-image8.png" },
+        { original: "./public/MicrosoftTeams-image9.png" },
+        { original: "./public/MicrosoftTeams-image10.png" }, // Add the third image
+      ],
+    },
+    // Add more pairs as needed
+  ];
+
+  const slidesSixImages = [
+    {
+      pair: [
+        { original: "./public/MicrosoftTeams-image5.png" },
+        { original: "./public/MicrosoftTeams-image6.png" },
+        { original: "./public/MicrosoftTeams-image7.png" },
+        { original: "./public/MicrosoftTeams-image8.png" },
+        { original: "./public/MicrosoftTeams-image9.png" },
+        { original: "./public/MicrosoftTeams-image10.png" },
+      ],
+    },
+    {
+      pair: [
+        { original: "./public/MicrosoftTeams-image5.png" },
+        { original: "./public/MicrosoftTeams-image6.png" },
+        { original: "./public/MicrosoftTeams-image7.png" },
+        { original: "./public/MicrosoftTeams-image8.png" },
+        { original: "./public/MicrosoftTeams-image9.png" },
+        { original: "./public/MicrosoftTeams-image10.png" },
+      ],
+    },
+    // Add more pairs as needed
+  ];
+
+  const slides = isLaptopOrLarger ? slidesSixImages : (isTabletOrLarger ? slidesThreeImages : slidesTwoImages);
+
   return (
-    <div className="bg-gray-200">
-      <h1 className='font-bold ml-4 mt-2'>
-        <span className='border-b-2 border-yellow-500 pb-[0.5px]'>AVEC </span>LE SOUTIEN DE:
+    <div className="bg-[#f6f6f6]">
+      <h1 className='font-bold ml-4 mt-2 md:text-2xl md:ml-11 md:mt-10 2xl:text-4xl'>
+        <span className='border-b-2 border-[#FFA500] pb-[0.5px]'>AVEC </span>LE SOUTIEN DE:
       </h1>
       <div className="flex items-center justify-center h-52">
         <ImageGallery
@@ -44,7 +93,7 @@ function Soutien() {
           renderItem={(item) => (
             <div className="flex ">
               {item.pair.map((image, index) => (
-                <img key={index} src={image.original} alt={`Slide ${index + 1}`} className="w-32 h-32 mx-2" />
+                <img key={index} src={image.original} alt={`Slide ${index + 1}`} className="w-32 h-32 mx-2 md:mx-8 lg:mx-4 xl:mx-10 2xl:mx-20" />
               ))}
             </div>
           )}

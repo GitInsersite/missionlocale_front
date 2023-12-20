@@ -4,13 +4,13 @@ function EtreAccompagne() {
   return (
     <div className="bg-[#F6F6F6]">
       <div
-        className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold"
+        className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52 2xl:h-96"
         style={{ backgroundImage: "url(/public/MicrosoftTeams-image12.png)" }}
       >
-        <h1>ETRE ACCOMPAGNE</h1>
+        <h1 className="md:text-3xl">ETRE ACCOMPAGNE</h1>
       </div>
-      <div className="flex flex-col pl-4 p-4 border-red-500 border-2 font-semibold">
-        <h2 className="font-bold text-black text-lg mb-4">
+      <div className="flex flex-col pl-4 p-4 font-semibold md:px-14 lg:px-20">
+        <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
           <span className="border-b-2 border-[#D60B52] pb-[0.5px]">
             Un accom
           </span>
@@ -26,8 +26,8 @@ function EtreAccompagne() {
           formation ou de recherche d’emploi.
         </p>
       </div>
-      <div className="flex flex-col pl-4 p-4 border-red-500 border-2 font-semibold">
-        <h2 className="font-bold text-black text-lg mb-4">
+      <div className="flex flex-col pl-4 p-4 font-semibold md:px-14 lg:px-20">
+        <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
           <span className="border-b-2 border-[#D60B52] pb-[0.5px]">
             Le PACEA
           </span>{" "}
@@ -42,8 +42,8 @@ function EtreAccompagne() {
           compétences.
         </p>
       </div>
-      <div className="flex flex-col pl-4 p-4 border-red-500 border-2 font-semibold">
-        <h2 className="font-bold text-black text-lg mb-4">
+      <div className="flex flex-col pl-4 p-4 font-semibold md:px-14 lg:px-20">
+        <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
           <span className="border-b-2 border-[#D60B52] pb-[0.5px]">Le CEJ</span>{" "}
           (Contrat d’Engagement Jeunes)
         </h2>
@@ -60,8 +60,8 @@ function EtreAccompagne() {
           durable.
         </p>
       </div>
-      <div className="flex flex-col pl-4 p-4 border-red-500 border-2 font-semibold">
-        <h2 className="font-bold text-black text-lg mb-4">
+      <div className="flex flex-col pl-4 p-4 font-semibold md:px-14 lg:px-20">
+        <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
           <span className="border-b-2 border-[#D60B52] pb-[0.5px]">Le Par</span>
           rainage
         </h2>
@@ -76,8 +76,8 @@ function EtreAccompagne() {
           travaillant votre confiance en soi.
         </p>
       </div>
-      <div className="flex flex-col pl-4 p-4 border-red-500 border-2 font-semibold">
-        <h2 className="font-bold text-black text-lg mb-4">
+      <div className="flex flex-col pl-4 p-4 font-semibold md:px-14 lg:px-20">
+        <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
           <span className="border-b-2 border-[#D60B52] pb-[0.5px]">San</span>té
         </h2>
         <p className="mb-6">
@@ -89,8 +89,8 @@ function EtreAccompagne() {
           gratuit.
         </p>
       </div>
-      <div className="flex flex-col pl-4 p-4 border-red-500 border-2 font-semibold">
-        <h2 className="font-bold text-black text-lg mb-4">
+      <div className="flex flex-col pl-4 p-4 font-semibold md:px-14 lg:px-20">
+        <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
           <span className="border-b-2 border-[#D60B52] pb-[0.5px]">Loge</span>
           ment
         </h2>
@@ -101,8 +101,8 @@ function EtreAccompagne() {
           repartent avec toutes les informations et aides nécessaires.
         </p>
       </div>
-      <div className="flex flex-col pl-4 p-4 border-red-500 border-2 font-semibold">
-        <h2 className="font-bold text-black text-lg mb-4">
+      <div className="flex flex-col pl-4 p-4 font-semibold md:px-14 lg:px-20">
+        <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
           <span className="border-b-2 border-[#D60B52] pb-[0.5px]">Chèque</span>{" "}
           Mobilité
         </h2>
@@ -115,7 +115,7 @@ function EtreAccompagne() {
           du 1er mois de stage, de formation professionnelle ou d’emploi, pour
           vous aider à débuter dans la vie active.
         </p>
-        <Link className="bg-[#D60B52] text-white font-semibold py-1 text-center rounded-lg text-sm mb-6">
+        <Link className="bg-[#D60B52] text-white font-semibold py-1 text-center rounded-lg text-sm mb-6 md:w-64">
           PRENDRE RDV AVEC UN CONSEILLER
         </Link>
       </div>

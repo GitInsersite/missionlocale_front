@@ -1,19 +1,19 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 function SeFormer() {
   return (
     <div>
       <div
-        className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold"
+        className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52 2xl:h-96"
         style={{ backgroundImage: "url(/public/MicrosoftTeams-image12.png)" }}
       >
-        <h1>SE FORMER</h1>
+        <h1 className="md:text-3xl">SE FORMER</h1>
       </div>
       <div className="flex flex-col items-center">
         <div>
-          <div className="flex flex-col px-4 pt-4 border-red-500 border-2 font-semibold">
-            <h2 className="font-bold text-black text-lg mb-4">
-              <span className="border-b-2 border-[#D60B52] pb-[0.5px]">
+          <div className="flex flex-col px-4 pt-4 font-semibold md:px-14 lg:px-20">
+            <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
+              <span className="border-b-2 border-[#D70B52] pb-[0.5px]">
                 Aide à
               </span>{" "}
               l’accès à la formation
@@ -39,9 +39,9 @@ function SeFormer() {
               conseiller de la Mission Locale.
             </p>
           </div>
-          <div className="flex flex-col px-4 border-red-500 border-2 font-semibold bg-[#F6F6F6]">
-            <h2 className="font-bold text-black text-lg mb-4">
-              <span className="border-b-2 border-[#D60B52] pb-[0.5px]">
+          <div className="flex flex-col px-4 pt-4  font-semibold bg-[#F6F6F6] md:px-14 lg:px-20">
+            <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
+              <span className="border-b-2 border-[#D70B52] pb-[0.5px]">
                 Les for
               </span>
               mations pré-qualifiantes
@@ -57,9 +57,11 @@ function SeFormer() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col px-4 border-red-500 border-2 font-semibold ">
-        <h2 className="font-bold text-black text-lg mb-4">
-          <span className="border-b-2 border-[#D60B52] pb-[0.5px]">Les for</span>
+      <div className="flex flex-col px-4 pt-4  font-semibold md:px-14 lg:px-20">
+        <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
+          <span className="border-b-2 border-[#D70B52] pb-[0.5px]">
+            Les for
+          </span>
           mations qualifiantes
         </h2>
         <p className="mb-6">
@@ -70,9 +72,9 @@ function SeFormer() {
           stages.
         </p>
       </div>
-      <div className="flex flex-col px-4 border-red-500 border-2 font-semibold bg-[#F6F6F6]">
-        <h2 className="font-bold text-black text-lg mb-4">
-          <span className="border-b-2 border-[#D60B52] pb-[0.5px]">Appr</span>
+      <div className="flex flex-col px-4 pt-4 font-semibold bg-[#F6F6F6] md:px-14 lg:px-20">
+        <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
+          <span className="border-b-2 border-[#D70B52] pb-[0.5px]">Appr</span>
           entissage
         </h2>
         <p className="mb-6">
@@ -82,6 +84,9 @@ function SeFormer() {
           titre professionnel. Elles se composent de cours théoriques et de
           stages.
         </p>
+        <Link className="bg-[#D70B52] text-white font-semibold py-1 text-center rounded-lg mb-8 text-sm md:w-56">
+          OFFRES DE FORMATIONS
+        </Link>
       </div>
     </div>
   );

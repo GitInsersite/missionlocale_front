@@ -6,11 +6,13 @@ function Footer() {
     <>
       <div className="bg-[#252323] px-8 pb-8 pt-8 md:flex">
         <div className="md:w-[30%]">
-          <img
-            src="/public/logo1.png"
-            alt=""
-            className="bg-white rounded-lg mb-6"
-          />
+          <Link to="/">
+            <img
+              src="/public/logo1.png"
+              alt=""
+              className="bg-white rounded-lg mb-6"
+            />
+          </Link>
           <p className="text-white text-xs">
             LA MISSION LOCALE DES MUREAUX ACCOMPAGNE LES JEUNES DE 16 A 25 ANS
             DANS LA RECHERCHE D'EMPLOI, DE FORMATION OU D'AlTERNANCE{" "}

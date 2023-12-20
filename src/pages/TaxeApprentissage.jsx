@@ -4,19 +4,19 @@ function TaxeApprentissage() {
   return (
     <div>
       <div
-        className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold"
+        className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52 2xl:h-96"
         style={{ backgroundImage: "url(/public/MicrosoftTeams-image14.png)" }}
       >
-        <h1>Taxe d’Apprentissage </h1>
+        <h1 className="md:text-3xl">Taxe d’Apprentissage </h1>
       </div>
       <div className="flex flex-col items-center">
-        <div className="flex flex-col px-4 border-red-500 border-2 font-semibold">
+        <div className="flex flex-col px-4 font-semibold md:px-14 lg:px-20">
           <p className="mb-4 mt-4">
             Soutenez l’insertion des jeunes en versant le solde de votre taxe
             d’apprentissage 2023 à la Mission Locale des Mureaux !{" "}
           </p>
-          <h2 className="font-bold text-black text-lg mb-4">
-            <span className="border-b-2 border-[#D60B52] pb-[0.5px]">
+          <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
+            <span className="border-b-2 border-[#F29200] pb-[0.5px]">
               La taxe
             </span>{" "}
             d’apprentissage, comment cela fonctionne ?
@@ -29,9 +29,9 @@ function TaxeApprentissage() {
             aux entreprises.
           </p>
         </div>
-        <div className="flex flex-col px-4 border-red-500 border-2 font-semibold">
-          <h2 className="font-bold text-black text-lg mb-4">
-            <span className="border-b-2 border-[#D60B52] pb-[0.5px]">
+        <div className="flex flex-col px-4 font-semibold md:px-14 lg:px-20">
+          <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
+            <span className="border-b-2 border-[#F29200] pb-[0.5px]">
               Pourquoi
             </span>{" "}
             verser à la Mission Locale des Mureaux ?
@@ -45,9 +45,9 @@ function TaxeApprentissage() {
             jeunes.
           </p>
         </div>
-        <div className="flex flex-col px-4 border-red-500 border-2 font-semibold">
-          <h2 className="font-bold text-black text-lg mb-4">
-            <span className="border-b-2 border-[#D60B52] pb-[0.5px]">
+        <div className="flex flex-col px-4 font-semibold md:px-14 lg:px-20">
+          <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
+            <span className="border-b-2 border-[#F29200] pb-[0.5px]">
               Comment
             </span>{" "}
             verser votre Taxe d’Apprentissage à la Mission Locale des Mureaux ?
@@ -60,7 +60,7 @@ function TaxeApprentissage() {
             expert-comptable.
           </p>
         </div>
-        <div className="flex flex-col px-4 border-red-500 border-2 font-semibold">
+        <div className="flex flex-col px-4 font-semibold md:w-full md:items-center md:px-14 lg:px-20">
           <iframe
             width="260"
             height="170"
@@ -68,7 +68,7 @@ function TaxeApprentissage() {
             title="YouTube Video"
             frameBorder="0"
             allowFullScreen
-            className="mb-6"
+            className="mb-6 md:w-full md:h-72 lg:h-96"
           ></iframe>
         </div>
       </div>

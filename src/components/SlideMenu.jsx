@@ -15,19 +15,29 @@ function SlideMenu() {
     },
     {
       original: "./public/MicrosoftTeams-image2.png",
-      description: "Text Slide 2",
+      description: (
+        <>
+          VOUS AVEZ ENTRE 16 ET 25 ANS ?<br />
+          LA MISSION LOCALE DES MUREAUX VOUS ACCOMPAGNE
+        </>
+      ),
       button: "Learn more",
     },
     {
       original: "./public/MicrosoftTeams-image3.png",
-      description: "Text Slide 3",
+      description: (
+        <>
+          VOUS AVEZ ENTRE 16 ET 25 ANS ?<br />
+          LA MISSION LOCALE DES MUREAUX VOUS ACCOMPAGNE
+        </>
+      ),
       button: "Get started",
     },
   ];
 
   return (
     <>
-      <img src="MicrosoftTeams-image.png" alt="" className="h-1" />
+      <img src="MicrosoftTeams-image.png" alt="" className="h-1 md:h-[5px] xl:h-2 2xl:h-3" />
       <div className="relative">
         <ImageGallery
           items={slides}
@@ -47,8 +57,10 @@ function SlideMenu() {
                 className="w-full h-full object-cover"
               />
               <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center text-white">
-                <p className="text-xs mb-2 text-center">{item.description}</p>
-                <button className="bg-red-600 text-white text-xs px-4 py-1 rounded">
+                <p className="text-xs mb-2 text-center md:mb-6 md:text-xl 2xl:text-5xl">
+                  {item.description}
+                </p>
+                <button className="bg-[#A51F60] text-white text-xs px-4 py-1 rounded md:text-base 2xl:text-2xl">
                   {item.button}
                 </button>
               </div>

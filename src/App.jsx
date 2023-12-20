@@ -29,6 +29,7 @@ import PreInscriptionEntreprise from "./pages/PreInscriptionEntreprise";
 import EspaceEntreprise from "./pages/EspaceEntreprise";
 import EspacePersonnelEntreprise from "./pages/EspacePersonnelEntreprise";
 import OffreEmploi from "./pages/OffreEmploi";
+import Formation from "./pages/Formation";
 
 function App() {
   return (
@@ -58,6 +59,7 @@ function App() {
         <Route path="/espace-personnel-juene" element={<EspacePersonnelJeune />} />
         <Route path="/espace-personnel-juene2" element={<EspacePersonnelJeune2 />} />
         <Route path="/formations" element={<Formations />} />
+        <Route path="/formations/:id" element={<Formation />} />
         <Route path="/pre-inscription-entreprise" element={<PreInscriptionEntreprise />} />
         <Route path="/espace-entreprise" element={<EspaceEntreprise />} />
         <Route path="/espace-personnel-entreprise" element={<EspacePersonnelEntreprise />} />

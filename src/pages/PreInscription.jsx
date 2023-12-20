@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import { useMediaQuery } from "react-responsive";
 
 function PreInscription() {
   const {
@@ -17,17 +18,19 @@ function PreInscription() {
   console.log(watch("commune"));
   console.log(watch("acceptTerms"));
 
+  const isLaptopOrLarger = useMediaQuery({ minWidth: 1024 });
+
   return (
     <div>
       <div
-        className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold"
+        className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52 2xl:h-96"
         style={{ backgroundImage: "url(/public/MicrosoftTeams-image12.png)" }}
       >
-        <h1>PRE-INSCRIPTION</h1>
+        <h1 className="md:text-3xl">PRE-INSCRIPTION</h1>
       </div>
       <div>
-        <div className="flex flex-col px-4 pt-4 mb-6 border-red-500 border-2 font-semibold bg-[#F6F6F6]">
-          <h2 className="font-bold text-black text-lg mb-4">
+        <div className="flex flex-col px-4 pt-4 pb-6 font-semibold bg-[#F6F6F6] md:px-20 lg:px-56 xl:px-96 2xl:mx-[500px]">
+          <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
             <span className="border-b-2 border-[#D60B52] pb-[0.5px]">
               FORMU
             </span>
@@ -43,100 +46,208 @@ function PreInscription() {
             de domicile).
           </p>
           <form
-            className="border-2 border-red-600 flex flex-col mt-4"
+            className="flex flex-col"
             onSubmit={handleSubmit(onSubmit)}
           >
-            <input
-              {...register("lastName", { required: true })}
-              className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
-              placeholder="Nom*"
-            />
-            {errors.lastName && (
-              <span className="text-red-600 text-center mb-4">
-                Ce champ est obligatoire
-              </span>
-            )}
+            {isLaptopOrLarger ? (
+              <div className="flex flex-col">
+                <div className="flex justify-between">
+                  <div className="flex flex-col w-[45%]">
+                    <input
+                      {...register("lastName", { required: true })}
+                      className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
+                      placeholder="Nom*"
+                    />
+                    {errors.lastName && (
+                      <span className="text-red-600 text-center mb-4">
+                        Ce champ est obligatoire
+                      </span>
+                    )}
 
-            <input
-              {...register("name", { required: true })}
-              className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
-              placeholder="Prénom*"
-            />
-            {errors.name && (
-              <span className="text-red-600 text-center mb-4">
-                Ce champ est obligatoire
-              </span>
-            )}
+                    <input
+                      {...register("name", { required: true })}
+                      className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
+                      placeholder="Prénom*"
+                    />
+                    {errors.name && (
+                      <span className="text-red-600 text-center mb-4">
+                        Ce champ est obligatoire
+                      </span>
+                    )}
 
-            <input
-              {...register("phone", { required: true })}
-              className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
-              placeholder="Téléphone*"
-              type="number"
-            />
-            {errors.phone && (
-              <span className="text-red-600 text-center mb-4">
-                Ce champ est obligatoire
-              </span>
-            )}
+                    <input
+                      {...register("phone", { required: true })}
+                      className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
+                      placeholder="Téléphone*"
+                      type="number"
+                    />
+                    {errors.phone && (
+                      <span className="text-red-600 text-center mb-4">
+                        Ce champ est obligatoire
+                      </span>
+                    )}
+                  </div>
 
-            <input
-              {...register("email", { required: true })}
-              className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
-              placeholder="Adresse email*"
-              type="email"
-            />
-            {errors.email && (
-              <span className="text-red-600 text-center mb-4">
-                Ce champ est obligatoire
-              </span>
-            )}
+                  <div className="flex flex-col w-[45%]">
+                    <input
+                      {...register("email", { required: true })}
+                      className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
+                      placeholder="Adresse email*"
+                      type="email"
+                    />
+                    {errors.email && (
+                      <span className="text-red-600 text-center mb-4">
+                        Ce champ est obligatoire
+                      </span>
+                    )}
 
-            <input
-              {...register("age", { required: true })}
-              className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
-              placeholder="Age*"
-              type="number"
-            />
-            {errors.age && (
-              <span className="text-red-600 text-center mb-4">
-                Ce champ est obligatoire
-              </span>
-            )}
+                    <input
+                      {...register("age", { required: true })}
+                      className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
+                      placeholder="Age*"
+                      type="number"
+                    />
+                    {errors.age && (
+                      <span className="text-red-600 text-center mb-4">
+                        Ce champ est obligatoire
+                      </span>
+                    )}
 
-            <input
-              {...register("commune", { required: true })}
-              className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-6"
-              placeholder="Commune*"
-            />
-            {errors.commune && (
-              <span className="text-red-600 text-center mb-4">
-                Ce champ est obligatoire
-              </span>
-            )}
-            <button
-              type="submit"
-              className="bg-[#D60B52] text-white py-1 p-2 rounded-md mb-8 font-semibold w-[50%]"
-            >
-              ENVOYER
-            </button>
-
-            <div className="flex mb-6">
-              <div className="mr-2">
+                    <input
+                      {...register("commune", { required: true })}
+                      className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-6"
+                      placeholder="Commune*"
+                    />
+                    {errors.commune && (
+                      <span className="text-red-600 text-center mb-4">
+                        Ce champ est obligatoire
+                      </span>
+                    )}
+                  </div>
+                </div>
+                <div className="flex mb-6 mt-4">
+                  <div className="mr-2">
+                    <input
+                      {...register("acceptTerms", { required: true })}
+                      type="checkbox"
+                    />
+                  </div>
+                  <div>
+                    <p className="font-bold">
+                      J'accepte d'être contactée par la Mission Locale des
+                      Mureaux et j'accepte que les informations fournies
+                      alimentent mon dossier d'inscription{" "}
+                    </p>
+                  </div>
+                </div>
+                <div className="flex justify-center">
+                <button
+                  type="submit"
+                  className="bg-[#D60B52] text-white py-1 p-2 rounded-md mb-8 font-semibold w-[80%]"
+                >
+                  ENVOYER MA DEMANDE DE PRE-INSCRIPTION
+                </button>
+                </div>
+              </div>
+            ) : (
+              <div className="flex flex-col md:mr-80">
                 <input
-                  {...register("acceptTerms", { required: true })}
-                  type="checkbox"
+                  {...register("lastName", { required: true })}
+                  className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
+                  placeholder="Nom*"
                 />
+                {errors.lastName && (
+                  <span className="text-red-600 text-center mb-4">
+                    Ce champ est obligatoire
+                  </span>
+                )}
+
+                <input
+                  {...register("name", { required: true })}
+                  className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
+                  placeholder="Prénom*"
+                />
+                {errors.name && (
+                  <span className="text-red-600 text-center mb-4">
+                    Ce champ est obligatoire
+                  </span>
+                )}
+
+                <input
+                  {...register("phone", { required: true })}
+                  className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
+                  placeholder="Téléphone*"
+                  type="number"
+                />
+                {errors.phone && (
+                  <span className="text-red-600 text-center mb-4">
+                    Ce champ est obligatoire
+                  </span>
+                )}
+
+                <input
+                  {...register("email", { required: true })}
+                  className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
+                  placeholder="Adresse email*"
+                  type="email"
+                />
+                {errors.email && (
+                  <span className="text-red-600 text-center mb-4">
+                    Ce champ est obligatoire
+                  </span>
+                )}
+
+                <input
+                  {...register("age", { required: true })}
+                  className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
+                  placeholder="Age*"
+                  type="number"
+                />
+                {errors.age && (
+                  <span className="text-red-600 text-center mb-4">
+                    Ce champ est obligatoire
+                  </span>
+                )}
+
+                <input
+                  {...register("commune", { required: true })}
+                  className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-6"
+                  placeholder="Commune*"
+                />
+                {errors.commune && (
+                  <span className="text-red-600 text-center mb-4">
+                    Ce champ est obligatoire
+                  </span>
+                )}
+                <button
+                  type="submit"
+                  className="bg-[#D60B52] text-white py-1 p-2 rounded-md mb-8 font-semibold w-[50%]"
+                >
+                  ENVOYER
+                </button>
               </div>
-              <div>
-                <p className="font-bold">
-                  J'accepte d'être contactée par la Mission Locale des Mureaux
-                  et j'accepte que les informations fournies alimentent mon
-                  dossier d'inscription{" "}
-                </p>
+            )}
+
+            {isLaptopOrLarger ? (
+              ""
+            ) : (
+              <div className="flex mb-6">
+                <div className="mr-2">
+                  <input
+                    {...register("acceptTerms", { required: true })}
+                    type="checkbox"
+                  />
+                </div>
+                <div>
+                  <p className="font-bold">
+                    J'accepte d'être contactée par la Mission Locale des Mureaux
+                    et j'accepte que les informations fournies alimentent mon
+                    dossier d'inscription{" "}
+                  </p>
+                </div>
               </div>
-            </div>
-            <p>
+            )}
+            <p className="text-sm">
               Une fois le formulaire de pré-inscription validé, vous serez
               contacté afin de fixer un rendez-vous obligatoire avec un
               conseiller pour finaliser votre inscription.

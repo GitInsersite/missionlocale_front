@@ -4,13 +4,13 @@ function Sorienter() {
   return (
     <div className="bg-[#F6F6F6]">
       <div
-        className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold"
+        className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52 2xl:h-96"
         style={{ backgroundImage: "url(/public/MicrosoftTeams-image12.png)" }}
       >
-        <h1>S'ORIENTER</h1>
+        <h1 className="md:text-3xl">S'ORIENTER</h1>
       </div>
-      <div className="flex flex-col px-4 pt-4 border-red-500 border-2 font-semibold ">
-        <h2 className="font-bold text-black text-lg mb-4">
+      <div className="flex flex-col px-4 pt-4 font-semibold md:px-14 lg:px-20">
+        <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
           <span className="border-b-2 border-[#D60B52] pb-[0.5px]">
             Quel mét
           </span>
@@ -30,8 +30,8 @@ function Sorienter() {
           de vos compétences et aspirations.
         </p>
       </div>
-      <div className="flex flex-col px-4 pt-4 border-red-500 border-2 font-semibold ">
-        <h2 className="font-bold text-black text-lg mb-4">
+      <div className="flex flex-col px-4 pt-4 font-semibold md:px-14 lg:px-20">
+        <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
           <span className="border-b-2 border-[#D60B52] pb-[0.5px]">
             Les pla
           </span>
@@ -47,8 +47,8 @@ function Sorienter() {
           objectifs d’orientation.
         </p>
       </div>
-      <div className="flex flex-col px-4 pt-4 border-red-500 border-2 font-semibold ">
-        <h2 className="font-bold text-black text-lg mb-4">
+      <div className="flex flex-col px-4 pt-4 font-semibold md:px-14 lg:px-20">
+        <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
           <span className="border-b-2 border-[#D60B52] pb-[0.5px]">E2</span>C
         </h2>
         <p className="mb-6">
@@ -64,8 +64,8 @@ function Sorienter() {
           Mission Locale.
         </p>
       </div>
-      <div className="flex flex-col px-4 pt-4 border-red-500 border-2 font-semibold ">
-        <h2 className="font-bold text-black text-lg mb-4">
+      <div className="flex flex-col px-4 pt-4 font-semibold md:px-14 lg:px-20">
+        <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
           <span className="border-b-2 border-[#D60B52] pb-[0.5px]">Le P</span>
           EE
         </h2>
@@ -85,8 +85,8 @@ function Sorienter() {
           protection sociale.{" "}
         </p>
       </div>
-      <div className="flex flex-col px-4 pt-4 border-red-500 border-2 font-semibold ">
-        <h2 className="font-bold text-black text-lg mb-4">
+      <div className="flex flex-col px-4 pt-4 font-semibold md:px-14 lg:px-20">
+        <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
           <span className="border-b-2 border-[#D60B52] pb-[0.5px]">L’EDI </span>
           (Espace Dynamique d’Insertion)
         </h2>
@@ -102,7 +102,7 @@ function Sorienter() {
           entreprendre ce parcours, référez-vous en à votre conseiller de la
           Mission Locale.
         </p>
-        <Link className="bg-[#D60B52] text-white font-semibold py-1 text-center rounded-lg text-sm mb-6">PRENDRE RDV AVEC UN CONSEILLER</Link>
+        <Link className="bg-[#D60B52] text-white font-semibold py-1 text-center rounded-lg text-sm mb-6 md:w-64">PRENDRE RDV AVEC UN CONSEILLER</Link>
       </div>
     </div>
   );
