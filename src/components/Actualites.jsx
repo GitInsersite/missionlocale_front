@@ -4,7 +4,7 @@ function Actualites() {
   return (
     <div className="mx-4 mt-4 md:px-6 md:my-10">
       <div className="mb-4 lg:mb-10">
-        <h1 className="font-bold mb-2 md:text-2xl 2xl:text-4xl">
+        <h1 className="font-bold mb-2 md:text-2xl">
           <span className="border-b-2 border-[#87D2F0] pb-[0.5px]">NOS</span>{" "}
           ACTUALITES
         </h1>

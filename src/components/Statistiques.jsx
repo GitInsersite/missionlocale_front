@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 function Statistiques() {
+  const [isIntersecting, setIsIntersecting] = useState(false);
   const [currentNumber, setCurrentNumber] = useState(0);
   const [currentNumber1, setCurrentNumber1] = useState(0);
   const [currentNumber2, setCurrentNumber2] = useState(0);
@@ -15,75 +16,107 @@ function Statistiques() {
   const finalNumber4 = 16;
   const finalNumber5 = 70274;
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentNumber((prevNumber) => {
-        const increment = Math.ceil((finalNumber - prevNumber) / 50);
-        return prevNumber + increment;
-      });
-    }, 20);
+  const statisticsRef = useRef(null);
 
-    return () => clearInterval(interval);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (statisticsRef.current) {
+        const boundingBox = statisticsRef.current.getBoundingClientRect();
+        setIsIntersecting(boundingBox.top < window.innerHeight);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Initial check on mount
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentNumber1((prevNumber) => {
-        const increment = Math.ceil((finalNumber1 - prevNumber) / 50);
-        return prevNumber + increment;
-      });
-    }, 20);
+    if (isIntersecting) {
+      const interval = setInterval(() => {
+        setCurrentNumber((prevNumber) => {
+          const increment = Math.ceil((finalNumber - prevNumber) / 50);
+          return prevNumber + increment;
+        });
+      }, 20);
 
-    return () => clearInterval(interval);
-  }, []);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentNumber2((prevNumber) => {
-        const increment = Math.ceil((finalNumber2 - prevNumber) / 50);
-        return prevNumber + increment;
-      });
-    }, 20);
-
-    return () => clearInterval(interval);
-  }, []);
+      return () => clearInterval(interval);
+    }
+  }, [isIntersecting]);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentNumber3((prevNumber) => {
-        const increment = Math.ceil((finalNumber3 - prevNumber) / 50);
-        return prevNumber + increment;
-      });
-    }, 20);
+    if (isIntersecting) {
+      const interval = setInterval(() => {
+        setCurrentNumber1((prevNumber) => {
+          const increment = Math.ceil((finalNumber1 - prevNumber) / 50);
+          return prevNumber + increment;
+        });
+      }, 20);
 
-    return () => clearInterval(interval);
-  }, []);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentNumber4((prevNumber) => {
-        const increment = Math.ceil((finalNumber4 - prevNumber) / 50);
-        return prevNumber + increment;
-      });
-    }, 20);
-
-    return () => clearInterval(interval);
-  }, []);
+      return () => clearInterval(interval);
+    }
+  }, [isIntersecting]);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentNumber5((prevNumber) => {
-        const increment = Math.ceil((finalNumber5 - prevNumber) / 50);
-        return prevNumber + increment;
-      });
-    }, 20);
+    if (isIntersecting) {
+      const interval = setInterval(() => {
+        setCurrentNumber2((prevNumber) => {
+          const increment = Math.ceil((finalNumber2 - prevNumber) / 50);
+          return prevNumber + increment;
+        });
+      }, 20);
 
-    return () => clearInterval(interval);
-  }, []);
+      return () => clearInterval(interval);
+    }
+  }, [isIntersecting]);
+
+  useEffect(() => {
+    if (isIntersecting) {
+      const interval = setInterval(() => {
+        setCurrentNumber3((prevNumber) => {
+          const increment = Math.ceil((finalNumber3 - prevNumber) / 50);
+          return prevNumber + increment;
+        });
+      }, 20);
+
+      return () => clearInterval(interval);
+    }
+  }, [isIntersecting]);
+
+  useEffect(() => {
+    if (isIntersecting) {
+      const interval = setInterval(() => {
+        setCurrentNumber4((prevNumber) => {
+          const increment = Math.ceil((finalNumber4 - prevNumber) / 50);
+          return prevNumber + increment;
+        });
+      }, 20);
+
+      return () => clearInterval(interval);
+    }
+  }, [isIntersecting]);
+
+  useEffect(() => {
+    if (isIntersecting) {
+      const interval = setInterval(() => {
+        setCurrentNumber5((prevNumber) => {
+          const increment = Math.ceil((finalNumber5 - prevNumber) / 50);
+          return prevNumber + increment;
+        });
+      }, 20);
+
+      return () => clearInterval(interval);
+    }
+  }, [isIntersecting]);
 
   return (
-    <div className="flex flex-col items-center md:items-start md:px-10 md:mt-10">
-      <h1 className="mt-2 font-bold md:text-2xl 2xl:text-4xl">
+    <div ref={statisticsRef} className="flex flex-col items-center md:items-start md:px-10 md:mt-10">
+      <h1 className="mt-2 font-bold md:text-2xl">
         <span className="border-b-2 border-[#DB34C7] pb-[0.5px]">CETT</span>E
         ANNEE A LA MISSION LOCALE
       </h1>
@@ -154,3 +187,4 @@ function Statistiques() {
 }
 
 export default Statistiques;
+

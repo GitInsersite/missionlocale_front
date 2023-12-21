@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Menu from "./components/Menu";
+import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 import Accueil from "./pages/accueil";
@@ -34,7 +34,7 @@ import Formation from "./pages/Formation";
 function App() {
   return (
     <BrowserRouter>
-      <Menu />
+      <Header/>
       <Routes>
         <Route path="/" element={<Accueil />} />
         <Route path="/nos-missions" element={<NosMissions />} />

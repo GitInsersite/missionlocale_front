@@ -14,9 +14,9 @@ function ConnexionEntreprise() {
 
   return (
     <>
-      <img src="MicrosoftTeams-image.png" alt="" className="h-1 md:h-[5px] xl:h-2 2xl:h-3" />
+      <img src="MicrosoftTeams-image.png" alt="" className="h-1 md:h-[5px] xl:h-2" />
       <div>
-        <div className=" flex flex-col items-center bg-[#F6F6F6] md:px-20 lg:px-48 xl:px-96 2xl:mx-[500px]">
+        <div className=" flex flex-col items-center bg-[#F6F6F6] md:px-20 lg:px-48 xl:px-96">
           <div className="flex flex-col px-4 rounded-lg w-[90%] md:items-center">
             <img src="/public/logo-inscription.svg" alt="" className="md:w-96 md:h-96"/>
           </div>

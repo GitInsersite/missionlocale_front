@@ -9,12 +9,12 @@ function Contact() {
   return (
     <div>
       <div
-        className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52 2xl:h-96"
+        className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52"
         style={{ backgroundImage: "url(/public/MicrosoftTeams-image16.png)" }}
       >
         <h1 className="md:text-3xl">CONTACT</h1>
       </div>
-      <div className=" flex flex-col items-center pt-6 bg-[#F6F6F6] md:px-32 lg:px-56 xl:px-[410px] 2xl:px-[900px]">
+      <div className=" flex flex-col items-center pt-6 bg-[#F6F6F6] md:px-32 lg:px-56 xl:px-[410px]">
         <div className="flex flex-col items-center mx-4 bg-white rounded-lg mb-4 w-[90%]">
           <h2 className="font-semibold text-lg mb-2">ADRESSE</h2>
           <p className="text-center mb-2">

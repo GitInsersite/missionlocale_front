@@ -49,7 +49,7 @@ function SlideMenu() {
           slideInterval={3000}
           slideDuration={1000}
           renderItem={(item) => (
-            <div className="relative">
+            <div className="relative h-56 md:h-96 lg:h-[500px] xl:h-[700px]">
               <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
               <img
                 src={item.original}
@@ -60,7 +60,7 @@ function SlideMenu() {
                 <p className="text-xs mb-2 text-center md:mb-6 md:text-xl 2xl:text-5xl">
                   {item.description}
                 </p>
-                <button className="bg-[#A51F60] text-white text-xs px-4 py-1 rounded md:text-base 2xl:text-2xl">
+                <button className="bg-[#A51F60] text-white text-xs px-4 py-1 rounded md:text-base">
                   {item.button}
                 </button>
               </div>

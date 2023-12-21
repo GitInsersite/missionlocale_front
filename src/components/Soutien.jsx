@@ -76,7 +76,7 @@ function Soutien() {
 
   return (
     <div className="bg-[#f6f6f6]">
-      <h1 className='font-bold ml-4 mt-2 md:text-2xl md:ml-11 md:mt-10 2xl:text-4xl'>
+      <h1 className='font-bold ml-4 mt-2 md:text-2xl md:ml-11 md:mt-10'>
         <span className='border-b-2 border-[#FFA500] pb-[0.5px]'>AVEC </span>LE SOUTIEN DE:
       </h1>
       <div className="flex items-center justify-center h-52">
@@ -93,7 +93,7 @@ function Soutien() {
           renderItem={(item) => (
             <div className="flex ">
               {item.pair.map((image, index) => (
-                <img key={index} src={image.original} alt={`Slide ${index + 1}`} className="w-32 h-32 mx-2 md:mx-8 lg:mx-4 xl:mx-10 2xl:mx-20" />
+                <img key={index} src={image.original} alt={`Slide ${index + 1}`} className="w-32 h-32 mx-2 md:mx-8 lg:mx-4 xl:mx-10" />
               ))}
             </div>
           )}

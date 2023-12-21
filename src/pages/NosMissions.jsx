@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 function NosMissions() {
   return (
     <div >
-        <div className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52 2xl:h-96" style={{ backgroundImage: 'url(/public/MicrosoftTeams-image11.png)' }}>
+        <div className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52" style={{ backgroundImage: 'url(/public/MicrosoftTeams-image11.png)' }}>
             <h1 className="md:text-3xl">NOS MISSIONS</h1>
         </div>
         <div className='flex flex-col mx-4 mt-4 md:mx-14 lg:mx-20'>

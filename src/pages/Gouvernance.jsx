@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 function Gouvernance() {
   return (
-    <div className="bg-gray-200">
+    <div className="bg-[#f6f6f6]">
       <div
-        className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52 2xl:h-96"
+        className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52"
         style={{ backgroundImage: "url(/public/MicrosoftTeams-image11.png)" }}
       >
         <h1 className="md:text-3xl">GOUVERNANCE</h1>
