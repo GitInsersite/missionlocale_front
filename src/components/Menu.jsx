@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowUp } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import DropdownButtonMission from "./DropdownButtonMission";
@@ -116,7 +117,7 @@ function Menu() {
             <div className="mt-4 ml-10">
               <ul>
                 <li className="flex items-center" onClick={toggleSubmenu1}>
-                  LA MISSION LOCAL <IoIosArrowDown />
+                  LA MISSION LOCAL {isSubmenuOpen1 ? <IoIosArrowUp /> : <IoIosArrowDown />}  
                 </li>
                 {isSubmenuOpen1 && (
                   <ul className="pl-6">
@@ -143,7 +144,7 @@ function Menu() {
                   </ul>
                 )}
                 <li className="flex items-center" onClick={toggleSubmenu2}>
-                  SERVICES <IoIosArrowDown />
+                  SERVICES {isSubmenuOpen2 ? <IoIosArrowUp /> : <IoIosArrowDown />}
                 </li>
                 {isSubmenuOpen2 && (
                   <ul className="pl-6">
@@ -180,7 +181,7 @@ function Menu() {
                   </Link>
                 </li>
                 <li className="flex items-center" onClick={toggleSubmenu3}>
-                  ENTREPRISES <IoIosArrowDown />
+                  ENTREPRISES {isSubmenuOpen3 ? <IoIosArrowUp /> : <IoIosArrowDown />}
                 </li>
                 {isSubmenuOpen3 && (
                   <ul className="pl-6">
