@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoIosArrowDown } from "react-icons/io";
 import { Link } from "react-router-dom";
@@ -17,6 +17,9 @@ function Menu() {
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
+    setSubmenuOpen1(false);
+    setSubmenuOpen2(false);
+    setSubmenuOpen3(false);
   };
 
   const toggleSubmenu1 = () => {
@@ -37,6 +40,27 @@ function Menu() {
     setSubmenuOpen2(false);
   };
 
+  const closeMenu = () => {
+    setMenuOpen(false);
+    setSubmenuOpen1(false);
+    setSubmenuOpen2(false);
+    setSubmenuOpen3(false);
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setMenuOpen(false);
+    };
+
+    // Attach the event listener when the component mounts
+    window.addEventListener("scroll", handleScroll);
+
+    // Detach the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []); // Empty dependency array means the effect runs once when the component mounts
+
   return (
     <div>
       {isLaptopOrLarger ? (
@@ -53,10 +77,10 @@ function Menu() {
           <div className="flex">
             <ul className="flex items-center text-sm font-semibold">
               <li className="flex items-center mr-4">
-                <DropdownButtonMission/>
+                <DropdownButtonMission />
               </li>
               <li className="flex items-center mr-4">
-                <DropdownButtonService/>
+                <DropdownButtonService />
               </li>
               <li className="mr-4">
                 <Link to="/actualites">ACTUALITES</Link>
@@ -65,7 +89,7 @@ function Menu() {
                 <Link to="/ateliers">ATELIERS</Link>
               </li>
               <li className="flex items-center mr-4">
-                <DropdownButtonEntreprise/>
+                <DropdownButtonEntreprise />
               </li>
               <li>
                 <Link to="/contact">CONTACTEZ-NOUS</Link>
@@ -84,13 +108,8 @@ function Menu() {
               />
             </Link>
             <GiHamburgerMenu
-              className="w-5 h-5 cursor-pointer"
-              onClick={() => {
-                toggleMenu();
-                setSubmenuOpen1(false);
-                setSubmenuOpen2(false);
-                setSubmenuOpen3(false);
-              }}
+              className="w-5 h-5 cursor-pointer mr-3"
+              onClick={() => toggleMenu()}
             />
           </div>
           {isMenuOpen && (
@@ -99,92 +118,91 @@ function Menu() {
                 <li className="flex items-center" onClick={toggleSubmenu1}>
                   LA MISSION LOCAL <IoIosArrowDown />
                 </li>
-                {isMenuOpen && isSubmenuOpen1 && (
-                  <ul className="absolute right-0 mt-2 mr-0 p-2 bg-white shadow">
-                    <li>
-                      <Link to="/nos-missions">Nos missions</Link>
-                    </li>
-                    <li>
-                      <Link to="/nos-communes">Nos communes</Link>
-                    </li>
-                    <li>
-                      <Link to="/gouvernance">La gouvernance</Link>
-                    </li>
-                    <li>
-                      <Link to="/equipe">Notre équipe</Link>
-                    </li>
+                {isSubmenuOpen1 && (
+                  <ul className="pl-6">
+                    <Link to="/nos-missions" onClick={() => closeMenu()}>
+                      <li className="border-b-2 py-2 text-[#646765]">
+                        Nos missions
+                      </li>
+                    </Link>
+                    <Link to="/nos-communes" onClick={() => closeMenu()}>
+                      <li className="border-b-2 py-2 text-[#646765]">
+                        Nos communes
+                      </li>
+                    </Link>
+                    <Link to="/gouvernance" onClick={() => closeMenu()}>
+                      <li className="border-b-2 py-2 text-[#646765]">
+                        La gouvernance
+                      </li>
+                    </Link>
+                    <Link to="/equipe" onClick={() => closeMenu()}>
+                      <li className="border-b-2 py-2 text-[#646765]">
+                        Notre équipe
+                      </li>
+                    </Link>
                   </ul>
                 )}
                 <li className="flex items-center" onClick={toggleSubmenu2}>
                   SERVICES <IoIosArrowDown />
                 </li>
-                {isMenuOpen && isSubmenuOpen2 && (
-                  <ul className="absolute right-0 mt-2 ml-0 p-2 bg-white shadow z-50">
-                    <li>
-                      <Link to="/se-former">Se former</Link>
-                    </li>
-                    <li>
-                      <Link to="/sorienter">S'orienter</Link>
-                    </li>
-                    <li>
-                      <Link to="/trouver-un-emploi">Trouver un emploi</Link>
-                    </li>
-                    <li>
-                      <Link to="/etre-accompagne">Etre accompagne</Link>
-                    </li>
+                {isSubmenuOpen2 && (
+                  <ul className="pl-6">
+                    <Link to="/se-former" onClick={() => closeMenu()}>
+                      <li className="border-b-2 py-2 text-[#646765]">
+                        Se former
+                      </li>
+                    </Link>
+                    <Link to="/sorienter" onClick={() => closeMenu()}>
+                      <li className="border-b-2 py-2 text-[#646765]">
+                        S'orienter
+                      </li>
+                    </Link>
+                    <Link to="/trouver-un-emploi" onClick={() => closeMenu()}>
+                      <li className="border-b-2 py-2 text-[#646765]">
+                        Trouver un emploi
+                      </li>
+                    </Link>
+                    <Link to="/etre-accompagne" onClick={() => closeMenu()}>
+                      <li className="border-b-2 py-2 text-[#646765]">
+                        Etre accompagne
+                      </li>
+                    </Link>
                   </ul>
                 )}
                 <li>
-                  <Link
-                    to="/actualites"
-                    onClick={() => [
-                      setSubmenuOpen3(false),
-                      setSubmenuOpen1(false),
-                      setSubmenuOpen2(false),
-                    ]}
-                  >
+                  <Link to="/actualites" onClick={() => closeMenu()}>
                     ACTUALITES
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to="/ateliers"
-                    onClick={() => [
-                      setSubmenuOpen3(false),
-                      setSubmenuOpen1(false),
-                      setSubmenuOpen2(false),
-                    ]}
-                  >
+                  <Link to="/ateliers" onClick={() => closeMenu()}>
                     ATELIERS
                   </Link>
                 </li>
                 <li className="flex items-center" onClick={toggleSubmenu3}>
                   ENTREPRISES <IoIosArrowDown />
                 </li>
-                {isMenuOpen && isSubmenuOpen3 && (
-                  <ul className="absolute right-0 mt-2 ml-0 p-2 bg-white shadow z-50">
-                    <li>
-                      <Link to="/expertise">Notre expertise</Link>
-                    </li>
-                    <li>
-                      <Link to="/demarche-rse">
+                {isSubmenuOpen3 && (
+                  <ul className="pl-6">
+                    <Link to="/expertise" onClick={() => closeMenu()}>
+                      <li className="border-b-2 py-2 text-[#646765]">
+                        Notre expertise
+                      </li>
+                    </Link>
+                    <Link to="/demarche-rse" onClick={() => closeMenu()}>
+                      <li className="border-b-2 py-2 text-[#646765]">
                         S'engager dans une démarche RSE
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/taxe-apprentissage">Taxe d'apprentissage</Link>
-                    </li>
+                      </li>
+                    </Link>
+                    <Link to="/taxe-apprentissage" onClick={() => closeMenu()}>
+                      <li className="border-b-2 py-2 text-[#646765]">
+                        Taxe d'apprentissage
+                      </li>
+                    </Link>
                   </ul>
                 )}
                 <li>
-                  <Link
-                    to="/contact"
-                    onClick={() => [
-                      setSubmenuOpen3(false),
-                      setSubmenuOpen1(false),
-                      setSubmenuOpen2(false),
-                    ]}
-                  >
+                  <Link to="/contact" onClick={() => closeMenu()}>
                     CONTACTEZ-NOUS
                   </Link>
                 </li>

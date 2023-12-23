@@ -11,7 +11,7 @@ function SlideMenu() {
           LA MISSION LOCALE DES MUREAUX VOUS ACCOMPAGNE
         </>
       ),
-      button: "JE M'INSCRIR",
+      button: "JE M'INSCRIS",
     },
     {
       original: "./public/MicrosoftTeams-image2.png",
@@ -21,7 +21,7 @@ function SlideMenu() {
           LA MISSION LOCALE DES MUREAUX VOUS ACCOMPAGNE
         </>
       ),
-      button: "Learn more",
+      button: "JE M'INSCRIS",
     },
     {
       original: "./public/MicrosoftTeams-image3.png",
@@ -31,7 +31,7 @@ function SlideMenu() {
           LA MISSION LOCALE DES MUREAUX VOUS ACCOMPAGNE
         </>
       ),
-      button: "Get started",
+      button: "JE M'INSCRIS",
     },
   ];
 
@@ -57,7 +57,7 @@ function SlideMenu() {
                 className="w-full h-full object-cover"
               />
               <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center text-white">
-                <p className="text-xs mb-2 text-center md:mb-6 md:text-xl 2xl:text-5xl">
+                <p className="text-xs mb-2 text-center md:mb-6 md:text-xl">
                   {item.description}
                 </p>
                 <button className="bg-[#A51F60] text-white text-xs px-4 py-1 rounded md:text-base">

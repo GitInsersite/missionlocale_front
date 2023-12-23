@@ -28,7 +28,7 @@ const DropdownButtonMission = () => {
         onClick={handleDropdownToggle}
         type="button"
       >
-        LA MISSION LOCAL
+        LA MISSION LOCALE
         <svg
           className="w-2.5 h-2.5 ms-3"
           aria-hidden="true"
@@ -60,7 +60,7 @@ const DropdownButtonMission = () => {
                 to="/nos-missions"
                 className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
               >
-                Nos mission
+                Nos missions
               </Link>
             </li>
             <li>

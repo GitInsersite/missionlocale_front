@@ -2,19 +2,14 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaUser } from "react-icons/fa";
 
-function DropdownButtonConnexion() {
+function DropdownButtonConnexionMo() {
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
 
-    const [isDropdownOpen, setDropdownOpen] = useState(false);
-
-  const handleDropdownToggle = () => {
+  const handleButtonClick = () => {
     setDropdownOpen(!isDropdownOpen);
   };
 
-  const handleMouseEnter = () => {
-    setDropdownOpen(true);
-  };
-
-  const handleMouseLeave = () => {
+  const handleLinkClick = () => {
     setDropdownOpen(false);
   };
 
@@ -33,18 +28,14 @@ function DropdownButtonConnexion() {
   }, []); // Empty dependency array means the effect runs once when the component mounts
 
   return (
-    <div
-      className="relative inline-block text-center"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
+    <div className="relative inline-block text-center">
       <button
         id="dropdownHoverButton"
         className="font-semibold text-center inline-flex items-center"
-        onClick={handleDropdownToggle}
+        onClick={handleButtonClick}
         type="button"
       >
-        <FaUser className="mr-2"/>
+        <FaUser className="mr-2" />
         CONNEXION
       </button>
 
@@ -53,14 +44,13 @@ function DropdownButtonConnexion() {
         <div
           id="dropdownHover"
           className="z-10 absolute mt-[1px] origin-top-right bg-white divide-y divide-gray-100 rounded-lg shadow w-fit dark:bg-gray-700"
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
         >
           <ul className="text-sm text-white bg-[#252323] flex flex-col items-start">
             <li>
               <Link
                 to="/connexion-jeune"
                 className="block text-left px-4 py-2 hover:bg-[#A4195C] dark:hover:bg-gray-600 dark:hover:text-white"
+                onClick={handleLinkClick}
               >
                 Espace Jeune
               </Link>
@@ -69,6 +59,7 @@ function DropdownButtonConnexion() {
               <Link
                 to="/connexion-entreprise"
                 className="block text-left px-4 py-2 hover:bg-[#F39101] dark:hover:bg-gray-600 dark:hover:text-white"
+                onClick={handleLinkClick}
               >
                 Espace Entreprise
               </Link>
@@ -80,4 +71,7 @@ function DropdownButtonConnexion() {
   );
 }
 
-export default DropdownButtonConnexion
+export default DropdownButtonConnexionMo;
+
+
+

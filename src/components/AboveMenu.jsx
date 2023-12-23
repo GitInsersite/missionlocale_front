@@ -1,8 +1,8 @@
-import { FaUser } from "react-icons/fa";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { FaLocationDot } from "react-icons/fa6";
 import { useMediaQuery } from "react-responsive";
 import DropdownButtonConnexion from "./DropdownButtonConnexion";
+import DropdownButtonConnexionMo from "./DropdownButtonConnexionMo";
 
 function AboveMenu() {
   const isTabletOrLarger = useMediaQuery({ minWidth: 768 });
@@ -27,7 +27,7 @@ function AboveMenu() {
             <BsFillTelephoneFill className="mr-2" /> 01 30 91 21 50
           </div>
           <div className="mr-4 flex items-center">
-            <FaUser className="mr-2" /> CONNEXION
+            <DropdownButtonConnexionMo/>
           </div>
         </div>
       )}
