@@ -17,14 +17,14 @@ function Actualites() {
       <div className="flex flex-col items-center md:mb-2">
         <div className="md:flex md:justify-around md:w-full">
           <div className="border-[1px] w-40 h-56 rounded-xl mb-4 md:w-52 md:h-64 lg:h-72">
-            <img src="" alt="" className="border-[1px] h-[70%] rounded-t-lg lg:h-[75%]" />
+            <img src="./public/alternance.jpg" alt="" className="border-[1px] h-[70%] rounded-t-lg lg:h-[75%] w-full" />
             <p className="text-[#87D2F0] text-xs mt-3 font-semibold ml-2">
               11/10/13
             </p>
             <p className="font-bold text-xs ml-2">ALTERNANCE</p>
           </div>
           <div className="border-[1px] w-40 h-56 rounded-xl md:w-52 md:h-64 lg:h-72">
-            <img src="" alt="" className="border-[1px] h-[70%] rounded-t-lg lg:h-[75%]" />
+            <img src="./public/stage.jpg" alt="" className="border-[1px] h-[70%] rounded-t-lg lg:h-[75%] w-full" />
             <p className="text-[#87D2F0] text-xs mt-3 font-semibold ml-2">
               18/10/13
             </p>
@@ -32,7 +32,8 @@ function Actualites() {
           </div>
         </div>
         <Link
-          to="/"
+          to="/actualites"
+          onClick={() => window.scrollTo(0, 0)}
           className="border-[#87D2F0] border-2 rounded-lg px-3 py-[0.2rem] text-[0.6rem] mt-4 font-semibold text-[#87D2F0] mb-2 md:px-10 md:text-sm"
         >
           VOIR TOUTE L'ACTUALITE

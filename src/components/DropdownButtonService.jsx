@@ -24,7 +24,7 @@ function DropdownButtonService() {
     >
       <button
         id="dropdownHoverButton"
-        className="font-semibold text-center inline-flex items-center"
+        className="font-semibold text-center inline-flex items-center hover:text-[#D60B51]"
         onClick={handleDropdownToggle}
         type="button"
       >
@@ -50,15 +50,15 @@ function DropdownButtonService() {
       {isDropdownOpen && (
         <div
           id="dropdownHover"
-          className="z-10 absolute mt-[1px] origin-top-right bg-white divide-y divide-gray-100 rounded-lg shadow w-fit dark:bg-gray-700"
+          className="z-10 absolute mt-[0.5px] origin-top-right bg-white divide-y divide-gray-100 rounded-lg shadow w-fit dark:bg-gray-700"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <ul className="py-2 text-sm text-gray-700 dark:text-gray-200 flex flex-col items-start">
+          <ul className="text-sm text-gray-700 dark:text-gray-200 flex flex-col">
             <li>
               <Link
                 to="/se-former"
-                className="block text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                className="block text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 hover:rounded-t-lg dark:hover:text-white hover:text-[#D60B51]"
               >
                 Se former
               </Link>
@@ -66,7 +66,7 @@ function DropdownButtonService() {
             <li>
               <Link
                 to="/sorienter"
-                className="block text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                className="block text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white hover:text-[#D60B51]"
               >
                 S'orienter
               </Link>
@@ -74,7 +74,7 @@ function DropdownButtonService() {
             <li>
               <Link
                 to="/trouver-un-emploi"
-                className="block text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                className="block text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white hover:text-[#D60B51]"
               >
                 Trouver un emploi
               </Link>
@@ -82,7 +82,7 @@ function DropdownButtonService() {
             <li>
               <Link
                 to="/etre-accompagne"
-                className="block text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                className="block text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 hover:rounded-b-lg dark:hover:text-white hover:text-[#D60B51]"
               >
                 Etre accompagné
               </Link>

@@ -67,7 +67,7 @@ function Menu() {
       {isLaptopOrLarger ? (
         <div className="flex justify-around xl:mx-28">
           <div>
-            <Link to="/">
+            <Link to="/" onClick={() => window.scrollTo(0, 0)}>
               <img
                 src="/public/logo1.png"
                 alt="logo-mission-local"
@@ -84,16 +84,16 @@ function Menu() {
                 <DropdownButtonService />
               </li>
               <li className="mr-4">
-                <Link to="/actualites">ACTUALITES</Link>
+                <Link to="/actualites" className="hover:text-[#2696D4]">ACTUALITES</Link>
               </li>
               <li className="mr-4">
-                <Link to="/ateliers">ATELIERS</Link>
+                <Link to="/ateliers" className="hover:text-[#93C01F]">ATELIERS</Link>
               </li>
               <li className="flex items-center mr-4">
                 <DropdownButtonEntreprise />
               </li>
               <li>
-                <Link to="/contact">CONTACTEZ-NOUS</Link>
+                <Link to="/contact" className="hover:text-[#434446]">CONTACTEZ-NOUS</Link>
               </li>
             </ul>
           </div>

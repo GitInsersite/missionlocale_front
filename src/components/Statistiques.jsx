@@ -156,7 +156,7 @@ function Statistiques() {
             {currentNumber3.toLocaleString()}
           </p>
           <p className="text-center leading-tight text-sm mt-5">
-            JEUNES
+            ENTRETIEN
             <br />
             ET ATELIERS
           </p>
@@ -166,9 +166,7 @@ function Statistiques() {
             {currentNumber5.toLocaleString()}
           </p>
           <p className="text-center leading-tight text-sm mt-5">
-            JEUNES
-            <br />
-            ET ATELIERS
+             ATELIERS
           </p>
         </div>
         <div className="border-[#FFFF00] border-2 w-36 h-20 mt-10 relative">
@@ -176,9 +174,7 @@ function Statistiques() {
             {currentNumber4.toLocaleString()}
           </p>
           <p className="text-center leading-tight text-sm mt-5">
-            JEUNES
-            <br />
-            ET ATELIERS
+            PARTENAIRES
           </p>
         </div>
       </div>

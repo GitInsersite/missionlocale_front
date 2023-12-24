@@ -64,11 +64,11 @@ function TaxeApprentissage() {
           <iframe
             width="260"
             height="170"
-            src="https://www.youtube.com/watch?v=n8g2RKTn5_Y&t=19s"
+            src="https://www.youtube.com/embed/n8g2RKTn5_Y"
             title="YouTube Video"
             frameBorder="0"
             allowFullScreen
-            className="mb-6 md:w-full md:h-72 lg:h-96"
+            className="mb-6 md:w-[99%] md:h-96 md:mt-6 lg:w-[70%] lg:h-[450px] xl:h-[550px]"
           ></iframe>
         </div>
       </div>

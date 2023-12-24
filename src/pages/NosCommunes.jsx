@@ -15,12 +15,18 @@ function NosCommunes() {
       {isTabletOrLarger ? (
         <div className="bg-[#f6f6f6] pt-2 pb-6 md:px-14 lg:px-20 md:pt-6">
           <h1 className="font-bold text-black text-lg mb-8 md:text-2xl">
-            <span className="border-b-2 border-[#DB34C7] pb-[0.5px]">
+            <span className="border-b-2 border-[#A4195C] pb-[0.5px]">
               COMMUNES
             </span>{" "}
             ADHERENTES
           </h1>
-          <img src="/public/carte_mission_locale_mureaux.svg" alt="" />
+          <div className="flex justify-center">
+            <img
+              src="/public/carte_mission_locale_mureaux.svg"
+              alt=""
+              className="h-[500px]"
+            />
+          </div>
         </div>
       ) : (
         ""
@@ -28,41 +34,68 @@ function NosCommunes() {
       <div className="flex flex-col items-center mt-6">
         <div className="md:w-full md:px-14">
           <h1 className="font-bold text-black text-lg mb-8 md:text-2xl">
-            <span className="border-b-2 border-[#DB34C7] pb-[0.5px]">
+            <span className="border-b-2 border-[#A4195C] pb-[0.5px]">
               COMMUNES
             </span>{" "}
             ADHERENTES
           </h1>
         </div>
         <div className="md:w-full md:px-14 md:pr-28 md:flex md:flex-col lg:pr-36 lg:px-20">
-          <div className="font-medium md:flex md:justify-between">
-            <ul>
-              <li>-ECQUEVILLY,</li>
-              <li>-EVECQUEMONT,</li>
-              <li>-FLINS SUR SEINE,</li>
-              <li>-GAILLON-SUR-MONTCIENT,</li>
-              <li>-HADRICOURT,</li>
-              <li>-JAMBVILLE,</li>
-              <li>-JUZIERS,</li>
-              <li>-LAINVILLE,</li>
-            </ul>
-            <ul>
-              <li>-LES MUREAUX,</li>
-              <li>-MEULAN EN YVELINES,</li>
-              <li>-MEZY-SUR-SEINE,</li>
-              <li>-MONTALET LE BOIS,</li>
-              <li>-NEZEL,</li>
-              <li>-OINVILLE-SUR-MONTCIENT,</li>
-              <li>-TESSANCOURT SUR AUBETTE,</li>
-              <li>-VAUX SUR SEINE,</li>
-            </ul>
-          </div>
+          {isLaptopOrLarger ? (
+            <div className="font-medium md:flex md:justify-between">
+              <ul>
+                <li>-ECQUEVILLY</li>
+                <li>-EVECQUEMONT</li>
+                <li>-FLINS SUR SEINE</li>
+                <li>-GAILLON-SUR-MONTCIENT</li>
+                <li>-HADRICOURT</li>
+              </ul>
+              <ul>
+                <li>-JAMBVILLE</li>
+                <li>-JUZIERS</li>
+                <li>-LAINVILLE</li>
+                <li>-LES MUREAUX</li>
+                <li>-MEULAN EN YVELINES</li>
+              </ul>
+              <ul>
+                <li>-MEZY-SUR-SEINE</li>
+                <li>-MONTALET LE BOIS</li>
+                <li>-NEZEL</li>
+                <li>-OINVILLE-SUR-MONTCIENT</li>
+                <li>-TESSANCOURT SUR AUBETTE</li>
+                <li>-VAUX SUR SEINE</li>
+              </ul>
+            </div>
+          ) : (
+            <div className="font-medium md:flex md:justify-between">
+              <ul>
+                <li>-ECQUEVILLY,</li>
+                <li>-EVECQUEMONT,</li>
+                <li>-FLINS SUR SEINE,</li>
+                <li>-GAILLON-SUR-MONTCIENT,</li>
+                <li>-HADRICOURT,</li>
+                <li>-JAMBVILLE,</li>
+                <li>-JUZIERS,</li>
+                <li>-LAINVILLE,</li>
+              </ul>
+              <ul>
+                <li>-LES MUREAUX,</li>
+                <li>-MEULAN EN YVELINES,</li>
+                <li>-MEZY-SUR-SEINE,</li>
+                <li>-MONTALET LE BOIS,</li>
+                <li>-NEZEL,</li>
+                <li>-OINVILLE-SUR-MONTCIENT,</li>
+                <li>-TESSANCOURT SUR AUBETTE,</li>
+                <li>-VAUX SUR SEINE,</li>
+              </ul>
+            </div>
+          )}
         </div>
       </div>
       {isLaptopOrLarger ? (
         <div className="bg-[#f6f6f6] mt-6 pt-2 pb-6 md:flex md:flex-col md:px-14 lg:px-20 lg:flex lg:flex-row lg:justify-center xl:justify-around">
           <div className="rounded-b-2xl rounded-t-md mt-6 mx-4 bg-white md:w-72">
-            <div className="bg-pink-500 rounded-md text-center py-1 text-white">
+            <div className="bg-[#A4195C] rounded-md text-center py-1 text-white">
               ANTENNE PRINCIPALE
             </div>
             <h2 className="font-semibold ml-4 mb-2">LES MUREAUX</h2>
@@ -73,7 +106,7 @@ function NosCommunes() {
             </div>
           </div>
           <div className="rounded-b-2xl rounded-t-md mt-6 mx-4 bg-white md:w-72">
-            <div className="bg-yellow-500 rounded-md text-center py-1 text-white">
+            <div className="bg-[#F29200] rounded-md text-center py-1 text-white">
               PERMANENCES
             </div>
             <h2 className="font-semibold ml-4 mb-2">MEULAN</h2>
@@ -87,7 +120,7 @@ function NosCommunes() {
             </div>
           </div>
           <div className="rounded-b-2xl rounded-t-md mt-6 mx-4 bg-white md:w-72">
-            <div className="bg-yellow-500 rounded-md text-center py-1 text-white">
+            <div className="bg-[#F29200] rounded-md text-center py-1 text-white">
               PERMANENCES
             </div>
             <h2 className="font-semibold ml-4 mb-2">AUBERGENVILLE</h2>
@@ -106,7 +139,7 @@ function NosCommunes() {
         <div className="bg-[#f6f6f6] mt-6 pt-2 pb-6 md:flex md:flex-col md:px-14">
           <div className="md:flex md:justify-center">
             <div className="rounded-b-2xl rounded-t-md mt-6 mx-4 bg-white md:w-72">
-              <div className="bg-pink-500 rounded-md text-center py-1 text-white">
+              <div className="bg-[#A4195C] rounded-md text-center py-1 text-white">
                 ANTENNE PRINCIPALE
               </div>
               <h2 className="font-semibold ml-4 mb-2">LES MUREAUX</h2>
@@ -119,7 +152,7 @@ function NosCommunes() {
           </div>
           <div className="md:flex md:justify-center">
             <div className="rounded-b-2xl rounded-t-md mt-6 mx-4 bg-white md:w-72">
-              <div className="bg-yellow-500 rounded-md text-center py-1 text-white">
+              <div className="bg-[#F29200] rounded-md text-center py-1 text-white">
                 PERMANENCES
               </div>
               <h2 className="font-semibold ml-4 mb-2">MEULAN</h2>
@@ -133,7 +166,7 @@ function NosCommunes() {
               </div>
             </div>
             <div className="rounded-b-2xl rounded-t-md mt-6 mx-4 bg-white md:w-72">
-              <div className="bg-yellow-500 rounded-md text-center py-1 text-white">
+              <div className="bg-[#F29200] rounded-md text-center py-1 text-white">
                 PERMANENCES
               </div>
               <h2 className="font-semibold ml-4 mb-2">AUBERGENVILLE</h2>

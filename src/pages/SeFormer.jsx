@@ -84,7 +84,7 @@ function SeFormer() {
           titre professionnel. Elles se composent de cours théoriques et de
           stages.
         </p>
-        <Link className="bg-[#D70B52] text-white font-semibold py-1 text-center rounded-lg mb-8 text-sm md:w-56">
+        <Link to="/formations" onClick={() => window.scrollTo(0, 0)} className="bg-[#D70B52] text-white font-semibold py-1 text-center rounded-lg mb-8 text-sm md:w-56">
           OFFRES DE FORMATIONS
         </Link>
       </div>

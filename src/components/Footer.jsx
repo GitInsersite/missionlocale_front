@@ -6,7 +6,7 @@ function Footer() {
     <>
       <div className="bg-[#252323] px-8 pb-8 pt-8 md:flex">
         <div className="md:w-[30%]">
-          <Link to="/">
+          <Link to="" onClick={() => window.scrollTo(0, 0)}>
             <img
               src="/public/logo1.png"
               alt=""
@@ -21,13 +21,19 @@ function Footer() {
         <div className="md:w-[20%] md:flex md:flex-col md:items-center">
           <h2 className="text-white mt-6 font-bold md:mb-4">ACCES RAPIDE</h2>
           <p className="text-white text-xs">
-            <Link to="/">LA MISSION LOCALE</Link>
+            <Link
+              to=""
+              className="cursor-pointer"
+              onClick={() => window.scrollTo(0, 0)}
+            >
+              LA MISSION LOCALE
+            </Link>
             <br />
-            <Link to="/se-former">SERVICES</Link> <br />
-            <Link to="/actualites">ACTUALITES</Link> <br />
-            <Link to="/ateliers">ATELIERS</Link> <br />
-            <Link to="/">ENTREPRISES</Link> <br />
-            <Link to="/">JEUNES</Link>
+            <Link to="/se-former" onClick={() => window.scrollTo(0, 0)}>SERVICES</Link> <br />
+            <Link to="/actualites" onClick={() => window.scrollTo(0, 0)}>ACTUALITES</Link> <br />
+            <Link to="/ateliers" onClick={() => window.scrollTo(0, 0)}>ATELIERS</Link> <br />
+            <Link to="/connexion-entreprise" onClick={() => window.scrollTo(0, 0)}>ENTREPRISES</Link> <br />
+            <Link to="/connexion-jeune" onClick={() => window.scrollTo(0, 0)}>JEUNES</Link>
           </p>
         </div>
         <div className="md:w-[20%] md:pr-4">

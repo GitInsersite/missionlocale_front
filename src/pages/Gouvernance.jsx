@@ -12,7 +12,7 @@ function Gouvernance() {
       <div>
         <div className=" flex flex-col items-center pt-6 md:items-start md:mx-14 lg:mx-20">
           <h2 className="font-bold text-black text-lg mb-8 w-[85%] md:text-2xl">
-            <span className="border-b-2 border-[#DB34C7] pb-[0.5px]">
+            <span className="border-b-2 border-[#A4195C] pb-[0.5px]">
               CONSEIL
             </span>{" "}
             D'ADMINISTRATION
@@ -34,7 +34,7 @@ function Gouvernance() {
         </div>
         <div className=" flex flex-col items-center md:items-start md:mx-14 lg:mx-20">
           <h2 className="font-bold text-black text-lg mb-8 mt-6 w-[85%] md:text-2xl">
-            <span className="border-b-2 border-[#DB34C7] pb-[0.5px]">
+            <span className="border-b-2 border-[#A4195C] pb-[0.5px]">
               BUREAU
             </span>
           </h2>
@@ -47,8 +47,8 @@ function Gouvernance() {
                   className="border-2 my-1 mx-2 rounded-3xl h-[90%] md:w-28 md:h-28 md:rounded-full md:mx-0 md:my-0"
                 />
               </div>
-              <div className="w-[60%] flex flex-col items-center justify-center md:mt-6">
-                <h3 className="font-bold leading-tight border-b-2 border-[#DB34C7] mb-2 md:pb-4">
+              <div className="w-[80%] flex flex-col justify-center md:mt-6">
+                <h3 className="font-bold leading-tight border-b-2 border-[#A4195C] mb-2 mr-10 md:pb-4">
                   PRENOM <br />
                   NOM
                 </h3>
@@ -63,8 +63,8 @@ function Gouvernance() {
                   className="border-2 my-1 mx-2 rounded-3xl h-[90%] md:w-28 md:h-28 md:rounded-full md:mx-0 md:my-0"
                 />
               </div>
-              <div className="w-[60%] flex flex-col items-center justify-center md:mt-6">
-                <h3 className="font-bold leading-tight border-b-2 border-[#DB34C7] mb-2 md:pb-4">
+              <div className="w-[80%] flex flex-col justify-center md:mt-6">
+                <h3 className="font-bold leading-tight border-b-2 border-[#D70B52] mb-2 mr-10 md:pb-4">
                   PRENOM <br />
                   NOM
                 </h3>
@@ -79,12 +79,12 @@ function Gouvernance() {
                   className="border-2 my-1 mx-2 rounded-3xl h-[90%] md:w-28 md:h-28 md:rounded-full md:mx-0 md:my-0"
                 />
               </div>
-              <div className="w-[60%] flex flex-col items-center justify-center md:mt-6">
-                <h3 className="font-bold leading-tight border-b-2 border-[#DB34C7] mb-2 md:pb-4">
+              <div className="w-[80%] flex flex-col justify-center md:mt-6">
+                <h3 className="font-bold leading-tight border-b-2 border-[#2997D6] mb-2 mr-10 md:pb-4">
                   PRENOM <br />
                   NOM
                 </h3>
-                <p className="md:mt-4">Vice-President</p>
+                <p className="md:mt-4">TRESORIER</p>
               </div>
             </div>
             <div className="bg-white mb-4 mx-10 h-28 rounded-xl flex w-3/4 md:flex-col md:w-52 md:items-center md:h-fit md:py-4 md:mx-0 md:mb-8">
@@ -95,12 +95,12 @@ function Gouvernance() {
                   className="border-2 my-1 mx-2 rounded-3xl h-[90%] md:w-28 md:h-28 md:rounded-full md:mx-0 md:my-0"
                 />
               </div>
-              <div className="w-[60%] flex flex-col items-center justify-center md:mt-6">
-                <h3 className="font-bold leading-tight border-b-2 border-[#DB34C7] mb-2 md:pb-4">
+              <div className="w-[80%] flex flex-col justify-center md:mt-6">
+                <h3 className="font-bold leading-tight border-b-2 border-[#95C221] mb-2 mr-10 md:pb-4">
                   PRENOM <br />
                   NOM
                 </h3>
-                <p className="md:mt-4">Vice-President</p>
+                <p className="md:mt-4">SECRETAIRE</p>
               </div>
             </div>
             <div className="bg-white mb-4 mx-10 h-28 rounded-xl flex w-3/4 md:flex-col md:w-52 md:items-center md:h-fit md:py-4 md:mx-0 md:mb-8">
@@ -111,12 +111,12 @@ function Gouvernance() {
                   className="border-2 my-1 mx-2 rounded-3xl h-[90%] md:w-28 md:h-28 md:rounded-full md:mx-0 md:my-0"
                 />
               </div>
-              <div className="w-[60%] flex flex-col items-center justify-center md:mt-6">
-                <h3 className="font-bold leading-tight border-b-2 border-[#DB34C7] mb-2 md:pb-4">
+              <div className="w-[80%] flex flex-col justify-center md:mt-6">
+                <h3 className="font-bold leading-tight border-b-2 border-[#F29200] mb-2 mr-10 md:pb-4">
                   PRENOM <br />
                   NOM
                 </h3>
-                <p className="md:mt-4">Vice-President</p>
+                <p className="md:mt-4">SECRETAIRE ADJOINT</p>
               </div>
             </div>
           </div>
@@ -125,7 +125,7 @@ function Gouvernance() {
       <div className="flex flex-col items-center pt-6 md:items-start md:mx-14 lg:mx-20">
         <div className="flex flex-col items-center md:items-start">
           <h2 className="font-bold text-black text-lg mb-8 mt-6 w-[85%] md:text-2xl md:mb-4">
-            <span className="border-b-2 border-[#DB34C7] pb-[0.5px]">
+            <span className="border-b-2 border-[#A4195C] pb-[0.5px]">
               RAPPORT
             </span>{" "}
             D'ACTIVITE
@@ -136,10 +136,10 @@ function Gouvernance() {
           </p>
         </div>
         <div className="flex flex-col md:flex-row  md:w-full md:mt-4">
-          <Link className="py-2 bg-[#DB34C7] mb-4 px-6 rounded-xl text-white mt-6 md:mt-0 md:px-8 md:py-2 md:mr-4">
+          <Link className="py-2 bg-[#A4195C] mb-4 px-6 rounded-xl text-white mt-6 md:mt-0 md:px-8 md:py-2 md:mr-4">
             2022
           </Link>
-          <Link className="py-2 bg-[#D60B52] mb-4 px-6 rounded-xl text-white md:px-8 md:py-2 md:mr-4">
+          <Link className="py-2 bg-[#D70B52] mb-4 px-6 rounded-xl text-white md:px-8 md:py-2 md:mr-4">
             2021
           </Link>
           <Link className="py-2 bg-[#2997D6] mb-6 px-6 rounded-xl text-white md:px-8 md:py-2 md:mb-4 md:mr-4">

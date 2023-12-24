@@ -24,7 +24,7 @@ const DropdownButtonMission = () => {
     >
       <button
         id="dropdownHoverButton"
-        className="font-semibold text-center inline-flex items-center"
+        className="font-semibold text-center inline-flex items-center hover:text-[#A4195C]"
         onClick={handleDropdownToggle}
         type="button"
       >
@@ -50,15 +50,15 @@ const DropdownButtonMission = () => {
       {isDropdownOpen && (
         <div
           id="dropdownHover"
-          className="z-10 absolute mt-[1px] origin-top-right bg-white divide-y divide-gray-100 rounded-lg shadow w-fit dark:bg-gray-700"
+          className="z-10 absolute mt-[0.5px] origin-top-right bg-white divide-y divide-gray-100 rounded-lg shadow w-fit dark:bg-gray-700"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <ul className="py-2 text-sm text-gray-700 dark:text-gray-200 flex flex-col items-start">
+          <ul className="text-sm text-gray-700 dark:text-gray-200 flex flex-col">
             <li>
               <Link
                 to="/nos-missions"
-                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                className="block text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 hover:rounded-t-lg dark:hover:text-white hover:text-[#A4195C]"
               >
                 Nos missions
               </Link>
@@ -66,7 +66,7 @@ const DropdownButtonMission = () => {
             <li>
               <Link
                 to="/nos-communes"
-                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                className="block text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white hover:text-[#A4195C]"
               >
                 Nos communes
               </Link>
@@ -74,7 +74,7 @@ const DropdownButtonMission = () => {
             <li>
               <Link
                 to="/gouvernance"
-                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                className="block text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white hover:text-[#A4195C]"
               >
                 La gouvernance
               </Link>
@@ -82,7 +82,7 @@ const DropdownButtonMission = () => {
             <li>
               <Link
                 to="/equipe"
-                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                className="block text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 hover:rounded-b-lg dark:hover:text-white hover:text-[#A4195C]"
               >
                 Notre équipe
               </Link>

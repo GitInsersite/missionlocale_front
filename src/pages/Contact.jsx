@@ -1,6 +1,7 @@
 import {  FaFacebook, FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import { useMediaQuery } from "react-responsive";
+import { Link } from "react-router-dom";
 
 function Contact() {
 
@@ -37,9 +38,9 @@ function Contact() {
             SUIVEZ-NOUS SUR LES RÉSEAUX
           </h2>
           <div className="flex justify-between w-[80%] mt-2 mb-2">
-            <FaLinkedin className="w-10 h-10"/>
-            <FaFacebook className="w-10 h-10"/>
-            <FaInstagram className="w-10 h-10"/>
+            <Link><FaLinkedin className="w-10 h-10"/></Link>
+            <Link><FaFacebook className="w-10 h-10"/></Link>
+            <Link><FaInstagram className="w-10 h-10"/></Link>
           </div>
         </div>
         {isLaptopOrLarger ? (<div className="flex flex-col items-center mx-4 rounded-lg mb-4 w-[90%]">

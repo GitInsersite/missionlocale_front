@@ -15,9 +15,8 @@ function Ateliers() {
       <div className="bg-[#f6f6f6] flex flex-col items-center pt-6 md:px-14 lg:px-20">
         <h2 className="font-bold text-black text-lg mb-8 w-[85%] md:text-2xl">
           <span className="border-b-2 border-[#95c11f] pb-[0.5px]">
-            CONSEIL
-          </span>{" "}
-          D&apos;ADMINISTRATION
+            LES AT
+          </span>ELIERS PROPOSES PAR LA MISSION LOCALE DES MUREAUX
         </h2>
         <div className="bg-white mx-10 h-40 mb-4 rounded-xl flex w-3/4 md:h-48">
           <div className="w-[50%] md:w-[35%] lg:w-[25%] xl:w-[15%]">
