@@ -13,6 +13,7 @@ function PreInscription() {
   console.log(watch("lastName"));
   console.log(watch("name"));
   console.log(watch("phone"));
+  console.log(watch("schooled"));
   console.log(watch("email"));
   console.log(watch("age"));
   console.log(watch("commune"));
@@ -26,7 +27,7 @@ function PreInscription() {
         className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52"
         style={{ backgroundImage: "url(/public/MicrosoftTeams-image12.png)" }}
       >
-        <h1 className="md:text-3xl">PRE-INSCRIPTION</h1>
+        <h1 className="md:text-3xl">PRÉ-INSCRIPTION</h1>
       </div>
       <div>
         <div className="flex flex-col px-4 pt-4 pb-6 font-semibold bg-[#F6F6F6] md:px-20 lg:px-56 xl:px-96">
@@ -45,10 +46,7 @@ function PreInscription() {
             en sa possession vos justificatifs (pièce d'identité et justificatif
             de domicile).
           </p>
-          <form
-            className="flex flex-col"
-            onSubmit={handleSubmit(onSubmit)}
-          >
+          <form className="flex flex-col" onSubmit={handleSubmit(onSubmit)}>
             {isLaptopOrLarger ? (
               <div className="flex flex-col">
                 <div className="flex justify-between">
@@ -79,9 +77,25 @@ function PreInscription() {
                       {...register("phone", { required: true })}
                       className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
                       placeholder="Téléphone*"
-                      type="number"
+                      type="tel"
                     />
                     {errors.phone && (
+                      <span className="text-red-600 text-center mb-4">
+                        Ce champ est obligatoire
+                      </span>
+                    )}
+
+                    <select
+                      {...register("schooled", { required: true })}
+                      className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
+                    >
+                      <option value="" disabled selected hidden>
+                        Scolarisé*
+                      </option>
+                      <option value="yes">Scolarisé: Oui</option>
+                      <option value="no">Scolarisé: Non</option>
+                    </select>
+                    {errors.schooled && (
                       <span className="text-red-600 text-center mb-4">
                         Ce champ est obligatoire
                       </span>
@@ -104,7 +118,7 @@ function PreInscription() {
                     <input
                       {...register("age", { required: true })}
                       className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
-                      placeholder="Age*"
+                      placeholder="Âge*"
                       type="number"
                     />
                     {errors.age && (
@@ -112,12 +126,44 @@ function PreInscription() {
                         Ce champ est obligatoire
                       </span>
                     )}
-
-                    <input
+                    <select
                       {...register("commune", { required: true })}
-                      className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-6"
-                      placeholder="Commune*"
-                    />
+                      className="rounded-md p-2 text-left mb-6"
+                    >
+                      <option value="" disabled selected hidden>
+                        Commune*
+                      </option>
+                      <option value="Aulnay Sur Mauldre">
+                        Aulnay Sur Mauldre
+                      </option>
+                      <option value="Aubergenville">Aubergenville</option>
+                      <option value="Bouafle">Bouafle</option>
+                      <option value="Brueil-En-Vexin">Brueil-En-Vexin</option>
+                      <option value="Ecquevilly">Ecquevilly</option>
+                      <option value="Evecquemont">Evecquemont</option>
+                      <option value="Flins Sur Seine">Flins Sur Seine</option>
+                      <option value="Gaillon-Sur-Montcient">
+                        Gaillon-Sur-Montcient
+                      </option>
+                      <option value="Hardricourt">Hardricourt</option>
+                      <option value="Jambville">Jambville</option>
+                      <option value="Juziers">Juziers</option>
+                      <option value="Lainville">Lainville</option>
+                      <option value="Les Mureaux">Les Mureaux</option>
+                      <option value="Meulan En Yvelines">
+                        Meulan En Yvelines
+                      </option>
+                      <option value="Mézy-Sur-Seine">Mézy-Sur-Seine</option>
+                      <option value="Montalet Le Bois">Montalet Le Bois</option>
+                      <option value="Nézel">Nézel</option>
+                      <option value="Oinville-Sur-Montcient">
+                        Oinville-Sur-Montcient
+                      </option>
+                      <option value="Tessancourt Sur Aubette">
+                        Tessancourt Sur Aubette
+                      </option>
+                      <option value="Vaux Sur Seine">Vaux Sur Seine</option>
+                    </select>
                     {errors.commune && (
                       <span className="text-red-600 text-center mb-4">
                         Ce champ est obligatoire
@@ -134,19 +180,19 @@ function PreInscription() {
                   </div>
                   <div>
                     <p className="font-bold">
-                      J'accepte d'être contactée par la Mission Locale des
+                      J'accepte d'être contacté par la Mission Locale des
                       Mureaux et j'accepte que les informations fournies
                       alimentent mon dossier d'inscription{" "}
                     </p>
                   </div>
                 </div>
                 <div className="flex justify-center">
-                <button
-                  type="submit"
-                  className="bg-[#D60B52] text-white py-1 p-2 rounded-md mb-8 font-semibold w-[80%]"
-                >
-                  ENVOYER MA DEMANDE DE PRE-INSCRIPTION
-                </button>
+                  <button
+                    type="submit"
+                    className="bg-[#D60B52] text-white py-1 p-2 rounded-md mb-8 font-semibold w-[80%]"
+                  >
+                    ENVOYER MA DEMANDE DE PRÉ-INSCRIPTION
+                  </button>
                 </div>
               </div>
             ) : (
@@ -177,9 +223,25 @@ function PreInscription() {
                   {...register("phone", { required: true })}
                   className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
                   placeholder="Téléphone*"
-                  type="number"
+                  type="tel"
                 />
                 {errors.phone && (
+                  <span className="text-red-600 text-center mb-4">
+                    Ce champ est obligatoire
+                  </span>
+                )}
+
+                <select
+                  {...register("schooled", { required: true })}
+                  className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
+                >
+                  <option value="" disabled selected hidden>
+                    Scolarisé*
+                  </option>
+                  <option value="yes">Scolarisé: Oui</option>
+                  <option value="no">Scolarisé: Non</option>
+                </select>
+                {errors.schooled && (
                   <span className="text-red-600 text-center mb-4">
                     Ce champ est obligatoire
                   </span>
@@ -200,7 +262,7 @@ function PreInscription() {
                 <input
                   {...register("age", { required: true })}
                   className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
-                  placeholder="Age*"
+                  placeholder="Âge*"
                   type="number"
                 />
                 {errors.age && (
@@ -208,12 +270,40 @@ function PreInscription() {
                     Ce champ est obligatoire
                   </span>
                 )}
-
-                <input
+                <select
                   {...register("commune", { required: true })}
-                  className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-6"
-                  placeholder="Commune*"
-                />
+                  className="rounded-md p-2 text-left mb-6"
+                >
+                  <option value="" disabled selected hidden>
+                    Commune*
+                  </option>
+                  <option value="Aulnay Sur Mauldre">Aulnay Sur Mauldre</option>
+                  <option value="Aubergenville">Aubergenville</option>
+                  <option value="Bouafle">Bouafle</option>
+                  <option value="Brueil-En-Vexin">Brueil-En-Vexin</option>
+                  <option value="Ecquevilly">Ecquevilly</option>
+                  <option value="Evecquemont">Evecquemont</option>
+                  <option value="Flins Sur Seine">Flins Sur Seine</option>
+                  <option value="Gaillon-Sur-Montcient">
+                    Gaillon-Sur-Montcient
+                  </option>
+                  <option value="Hardricourt">Hardricourt</option>
+                  <option value="Jambville">Jambville</option>
+                  <option value="Juziers">Juziers</option>
+                  <option value="Lainville">Lainville</option>
+                  <option value="Les Mureaux">Les Mureaux</option>
+                  <option value="Meulan En Yvelines">Meulan En Yvelines</option>
+                  <option value="Mézy-Sur-Seine">Mézy-Sur-Seine</option>
+                  <option value="Montalet Le Bois">Montalet Le Bois</option>
+                  <option value="Nézel">Nézel</option>
+                  <option value="Oinville-Sur-Montcient">
+                    Oinville-Sur-Montcient
+                  </option>
+                  <option value="Tessancourt Sur Aubette">
+                    Tessancourt Sur Aubette
+                  </option>
+                  <option value="Vaux Sur Seine">Vaux Sur Seine</option>
+                </select>
                 {errors.commune && (
                   <span className="text-red-600 text-center mb-4">
                     Ce champ est obligatoire
@@ -240,7 +330,7 @@ function PreInscription() {
                 </div>
                 <div>
                   <p className="font-bold">
-                    J'accepte d'être contactée par la Mission Locale des Mureaux
+                    J'accepte d'être contacté par la Mission Locale des Mureaux
                     et j'accepte que les informations fournies alimentent mon
                     dossier d'inscription{" "}
                   </p>

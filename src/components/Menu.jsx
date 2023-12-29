@@ -84,7 +84,7 @@ function Menu() {
                 <DropdownButtonService />
               </li>
               <li className="mr-4">
-                <Link to="/actualites" className="hover:text-[#2696D4]">ACTUALITES</Link>
+                <Link to="/actualites" className="hover:text-[#2696D4]">ACTUALITÉS</Link>
               </li>
               <li className="mr-4">
                 <Link to="/ateliers" className="hover:text-[#93C01F]">ATELIERS</Link>
@@ -155,7 +155,7 @@ function Menu() {
                     </Link>
                     <Link to="/sorienter" onClick={() => closeMenu()}>
                       <li className="border-b-2 py-2 text-[#646765]">
-                        S'orienter
+                        S&apos;orienter
                       </li>
                     </Link>
                     <Link to="/trouver-un-emploi" onClick={() => closeMenu()}>
@@ -172,7 +172,7 @@ function Menu() {
                 )}
                 <li>
                   <Link to="/actualites" onClick={() => closeMenu()}>
-                    ACTUALITES
+                    ACTUALITÉS
                   </Link>
                 </li>
                 <li>
@@ -192,12 +192,12 @@ function Menu() {
                     </Link>
                     <Link to="/demarche-rse" onClick={() => closeMenu()}>
                       <li className="border-b-2 py-2 text-[#646765]">
-                        S'engager dans une démarche RSE
+                        S&apos;engager dans une démarche RSE
                       </li>
                     </Link>
                     <Link to="/taxe-apprentissage" onClick={() => closeMenu()}>
                       <li className="border-b-2 py-2 text-[#646765]">
-                        Taxe d'apprentissage
+                        Taxe d&apos;apprentissage
                       </li>
                     </Link>
                   </ul>

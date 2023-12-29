@@ -14,12 +14,12 @@ function Footer() {
             />
           </Link>
           <p className="text-white text-xs">
-            LA MISSION LOCALE DES MUREAUX ACCOMPAGNE LES JEUNES DE 16 A 25 ANS
-            DANS LA RECHERCHE D'EMPLOI, DE FORMATION OU D'AlTERNANCE{" "}
+            LA MISSION LOCALE DES MUREAUX ACCOMPAGNE LES JEUNES DE 16 À 25 ANS
+            DANS LA RECHERCHE D&apos;EMPLOI, DE FORMATION OU D&apos;ALTERNANCE{" "}
           </p>
         </div>
         <div className="md:w-[20%] md:flex md:flex-col md:items-center">
-          <h2 className="text-white mt-6 font-bold md:mb-4">ACCES RAPIDE</h2>
+          <h2 className="text-white mt-6 font-bold md:mb-4">ACCÈS RAPIDE</h2>
           <p className="text-white text-xs">
             <Link
               to=""
@@ -30,7 +30,7 @@ function Footer() {
             </Link>
             <br />
             <Link to="/se-former" onClick={() => window.scrollTo(0, 0)}>SERVICES</Link> <br />
-            <Link to="/actualites" onClick={() => window.scrollTo(0, 0)}>ACTUALITES</Link> <br />
+            <Link to="/actualites" onClick={() => window.scrollTo(0, 0)}>ACTUALITÉS</Link> <br />
             <Link to="/ateliers" onClick={() => window.scrollTo(0, 0)}>ATELIERS</Link> <br />
             <Link to="/connexion-entreprise" onClick={() => window.scrollTo(0, 0)}>ENTREPRISES</Link> <br />
             <Link to="/connexion-jeune" onClick={() => window.scrollTo(0, 0)}>JEUNES</Link>
@@ -38,12 +38,12 @@ function Footer() {
         </div>
         <div className="md:w-[20%] md:pr-4">
           <h2 className="text-white mt-6 font-bold md:mb-4">
-            HORAIRES D'OUVERTURE:
+            HORAIRES D&apos;OUVERTURE:
           </h2>
           <p className="text-white text-xs">
             DU LUNDI AU VENDREDI <br />
-            DE 08H45 A 12H15 ET <br />
-            DE 13H30 A 17H30
+            DE 08H45 À 12H15 ET <br />
+            DE 13H30 À 17H30
           </p>
         </div>
         <div className="text-white text-xs mt-6 font-bold md:w-[30%]">
