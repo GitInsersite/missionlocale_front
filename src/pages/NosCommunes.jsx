@@ -44,49 +44,59 @@ function NosCommunes() {
           {isLaptopOrLarger ? (
             <div className="font-medium md:flex md:justify-between">
               <ul>
-                <li>-ECQUEVILLY</li>
-                <li>-EVECQUEMONT</li>
-                <li>-FLINS SUR SEINE</li>
-                <li>-GAILLON-SUR-MONTCIENT</li>
-                <li>-HADRICOURT</li>
+                <li>Aulnay Sur Mauldre</li>
+                <li>Aubergenville</li>
+                <li>Bouafle</li>
+                <li>Brueil-En-Vexin</li>
+                <li>Ecquevilly</li>
               </ul>
               <ul>
-                <li>-JAMBVILLE</li>
-                <li>-JUZIERS</li>
-                <li>-LAINVILLE</li>
-                <li>-LES MUREAUX</li>
-                <li>-MEULAN EN YVELINES</li>
+                <li>Evecquemont</li>
+                <li>Flins Sur Seine</li>
+                <li>Gaillon-Sur-Montcient</li>
+                <li>Hardricourt</li>
+                <li>Jambville</li>
               </ul>
               <ul>
-                <li>-MEZY-SUR-SEINE</li>
-                <li>-MONTALET LE BOIS</li>
-                <li>-NEZEL</li>
-                <li>-OINVILLE-SUR-MONTCIENT</li>
-                <li>-TESSANCOURT SUR AUBETTE</li>
-                <li>-VAUX SUR SEINE</li>
+                <li>Juziers</li>
+                <li>Lainville</li>
+                <li>Les Mureaux</li>
+                <li>Meulan En Yvelines</li>
+                <li>Mézy-Sur-Seine</li>
+              </ul>
+              <ul>
+                <li>Montalet Le Bois</li>
+                <li>Nézel</li>
+                <li>Oinville-Sur-Montcient</li>
+                <li>Tessancourt Sur Aubette</li>
+                <li>Vaux Sur Seine</li>
               </ul>
             </div>
           ) : (
             <div className="font-medium md:flex md:justify-between">
               <ul>
-                <li>-ECQUEVILLY,</li>
-                <li>-EVECQUEMONT,</li>
-                <li>-FLINS SUR SEINE,</li>
-                <li>-GAILLON-SUR-MONTCIENT,</li>
-                <li>-HADRICOURT,</li>
-                <li>-JAMBVILLE,</li>
-                <li>-JUZIERS,</li>
-                <li>-LAINVILLE,</li>
+                <li>Aulnay Sur Mauldre</li>
+                <li>Aubergenville</li>
+                <li>Bouafle</li>
+                <li>Brueil-En-Vexin</li>
+                <li>Ecquevilly</li>
+                <li>Evecquemont</li>
+                <li>Flins Sur Seine</li>
+                <li>Gaillon-Sur-Montcient</li>
+                <li>Hardricourt</li>
+                <li>Jambville</li>
               </ul>
               <ul>
-                <li>-LES MUREAUX,</li>
-                <li>-MEULAN EN YVELINES,</li>
-                <li>-MEZY-SUR-SEINE,</li>
-                <li>-MONTALET LE BOIS,</li>
-                <li>-NEZEL,</li>
-                <li>-OINVILLE-SUR-MONTCIENT,</li>
-                <li>-TESSANCOURT SUR AUBETTE,</li>
-                <li>-VAUX SUR SEINE,</li>
+                <li>Juziers</li>
+                <li>Lainville</li>
+                <li>Les Mureaux</li>
+                <li>Meulan En Yvelines</li>
+                <li>Mézy-Sur-Seine</li>
+                <li>Montalet Le Bois</li>
+                <li>Nézel</li>
+                <li>Oinville-Sur-Montcient</li>
+                <li>Tessancourt Sur Aubette</li>
+                <li>Vaux Sur Seine</li>
               </ul>
             </div>
           )}
@@ -101,6 +111,8 @@ function NosCommunes() {
             <h2 className="font-semibold ml-4 mb-2">LES MUREAUX</h2>
             <div className="text-xs ml-4 font-medium pb-2">
               <p>38 AV. PAUL RAOULT, 78130 LES MUREAUX</p>
+              <p>08h45 – 12h15 // 13h30 17 h30</p>
+              <p>hormis le vendredi 17h15</p>
               <p>01 30 91 21 50</p>
               <p>contact@missionlocalelesmureaux.org</p>
             </div>
@@ -112,11 +124,11 @@ function NosCommunes() {
             <h2 className="font-semibold ml-4 mb-2">MEULAN</h2>
             <div className="text-xs ml-4 font-medium pb-2">
               <p>
-                12 RUE DE LA FERME <br />
-                LE 1er ET 3eme MARDI
+                rue de la ferme du paradis <br />
+                Le 1er et 3ème mardi de chaque mois de
               </p>
-              <p>14H00 - 17H00</p>
-              <p>01 30 91 21 50</p>
+              <p>14h00 – 17h00</p>
+              <p>Contacter Les Mureaux</p>
             </div>
           </div>
           <div className="rounded-b-2xl rounded-t-md mt-6 mx-4 bg-white md:w-72">
@@ -145,6 +157,8 @@ function NosCommunes() {
               <h2 className="font-semibold ml-4 mb-2">LES MUREAUX</h2>
               <div className="text-xs ml-4 font-medium pb-2">
                 <p>38 AV. PAUL RAOULT, 78130 LES MUREAUX</p>
+                <p>08h45 – 12h15 // 13h30 17 h30</p>
+                <p>hormis le vendredi 17h15</p>
                 <p>01 30 91 21 50</p>
                 <p>contact@missionlocalelesmureaux.org</p>
               </div>
@@ -158,11 +172,11 @@ function NosCommunes() {
               <h2 className="font-semibold ml-4 mb-2">MEULAN</h2>
               <div className="text-xs ml-4 font-medium pb-2">
                 <p>
-                  12 RUE DE LA FERME <br />
-                  LE 1er ET 3eme MARDI
+                  rue de la ferme du paradis <br />
+                  Le 1er et 3ème mardi de chaque mois de
                 </p>
-                <p>14H00 - 17H00</p>
-                <p>01 30 91 21 50</p>
+                <p>14h00 – 17h00</p>
+                <p>Contacter Les Mureaux</p>
               </div>
             </div>
             <div className="rounded-b-2xl rounded-t-md mt-6 mx-4 bg-white md:w-72">
