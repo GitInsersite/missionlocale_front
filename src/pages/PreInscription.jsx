@@ -1,31 +1,64 @@
 import { useForm } from "react-hook-form";
 import { useMediaQuery } from "react-responsive";
+import axios from "axios";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function PreInscription() {
+  const [successMessage, setSuccessMessage] = useState("");
+
+  const isLaptopOrLarger = useMediaQuery({ minWidth: 1024 });
+
+  const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
-    watch,
+    setError, // Destructure setError from useForm
+    reset, // Destructure reset from useForm
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = async (data) => {
+    try {
+      const response = await axios.post(
+        "http://localhost:8000/api/registerCandidat",
+        data
+      );
+      console.log(response.data);
+      // Handle success or redirect if needed
 
-  console.log(watch("lastName"));
-  console.log(watch("name"));
-  console.log(watch("phone"));
-  console.log(watch("schooled"));
-  console.log(watch("email"));
-  console.log(watch("age"));
-  console.log(watch("commune"));
-  console.log(watch("acceptTerms"));
+      // Display success message
+      setSuccessMessage(response.data.message);
 
-  const isLaptopOrLarger = useMediaQuery({ minWidth: 1024 });
+      // Reset the form
+      reset();
+
+      // Redirect after 5 seconds
+      setTimeout(() => {
+        // Redirect to another page (replace '/' with the desired path)
+        navigate("/");
+      }, 5000);
+    } catch (error) {
+      if (error.response && error.response.status === 422) {
+        // Handle validation errors
+        const validationErrors = error.response.data.errors;
+
+        // Update the form errors with the validationErrors
+        Object.keys(validationErrors).forEach((fieldName) => {
+          const field = validationErrors[fieldName][0]; // Take the first error for simplicity
+          setError(fieldName, { type: "manual", message: field });
+        });
+      } else {
+        console.error("Error submitting form:", error);
+      }
+    }
+  };
 
   return (
     <div>
       <div
         className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52"
-        style={{ backgroundImage: "url(/public/MicrosoftTeams-image12.png)" }}
+        style={{ backgroundImage: "url(public/MicrosoftTeams-image12.png)" }}
       >
         <h1 className="md:text-3xl">PRÉ-INSCRIPTION</h1>
       </div>
@@ -46,35 +79,59 @@ function PreInscription() {
             en sa possession vos justificatifs (pièce d'identité et justificatif
             de domicile).
           </p>
+
+          {/* Display success message */}
+          {successMessage && (
+            <div className="text-green-600">{successMessage}</div>
+          )}
+
+          {/* Display validation errors */}
+          {Object.keys(errors).length > 0 && (
+            <div className="text-red-600">
+              Please fix the following errors:
+              <ul>
+                {Object.keys(errors).map((fieldName, index) => (
+                  <li key={index}>{errors[fieldName].message}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+
           <form className="flex flex-col" onSubmit={handleSubmit(onSubmit)}>
             {isLaptopOrLarger ? (
               <div className="flex flex-col">
                 <div className="flex justify-between">
                   <div className="flex flex-col w-[45%]">
                     <input
-                      {...register("lastName", { required: true })}
+                      {...register("last_name", {
+                        required: true,
+                      })}
                       className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
                       placeholder="Nom*"
                     />
-                    {errors.lastName && (
+                    {errors.last_name && (
                       <span className="text-red-600 text-center mb-4">
                         Ce champ est obligatoire
                       </span>
                     )}
 
                     <input
-                      {...register("name", { required: true })}
+                      {...register("first_name", {
+                        required: true,
+                      })}
                       className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
                       placeholder="Prénom*"
                     />
-                    {errors.name && (
+                    {errors.first_name && (
                       <span className="text-red-600 text-center mb-4">
                         Ce champ est obligatoire
                       </span>
                     )}
 
                     <input
-                      {...register("phone", { required: true })}
+                      {...register("phone", {
+                        required: true,
+                      })}
                       className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
                       placeholder="Téléphone*"
                       type="tel"
@@ -85,26 +142,53 @@ function PreInscription() {
                       </span>
                     )}
 
-                    <select
-                      {...register("schooled", { required: true })}
+                    <input
+                      {...register("dateOfBirth", {
+                        required: true,
+                      })}
                       className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
-                    >
-                      <option value="" disabled selected hidden>
-                        Scolarisé*
-                      </option>
-                      <option value="yes">Scolarisé: Oui</option>
-                      <option value="no">Scolarisé: Non</option>
-                    </select>
-                    {errors.schooled && (
+                      placeholder="Date de naissance"
+                      type="date"
+                    />
+                    {errors.dateOfBirth && (
                       <span className="text-red-600 text-center mb-4">
                         Ce champ est obligatoire
                       </span>
                     )}
+
+                    {/* <select
+                                        {...register("schooled", {
+                                            //required: true,
+                                        })}
+                                        className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
+                                    >
+                                        <option
+                                            value=""
+                                            disabled
+                                            selected
+                                            hidden
+                                        >
+                                            Scolarisé*
+                                        </option>
+                                        <option value="yes">
+                                            Scolarisé: Oui
+                                        </option>
+                                        <option value="no">
+                                            Scolarisé: Non
+                                        </option>
+                                    </select> */}
+                    {/* {errors.schooled && (
+                                        <span className="text-red-600 text-center mb-4">
+                                            Ce champ est obligatoire
+                                        </span>
+                                    )} */}
                   </div>
 
                   <div className="flex flex-col w-[45%]">
                     <input
-                      {...register("email", { required: true })}
+                      {...register("email", {
+                        required: true,
+                      })}
                       className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
                       placeholder="Adresse email*"
                       type="email"
@@ -116,18 +200,43 @@ function PreInscription() {
                     )}
 
                     <input
-                      {...register("age", { required: true })}
+                      {...register("password", {
+                        required: true,
+                      })}
                       className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
-                      placeholder="Âge*"
-                      type="number"
+                      placeholder="Mot de passe"
+                      type="password"
                     />
-                    {errors.age && (
+                    {errors.password && (
                       <span className="text-red-600 text-center mb-4">
                         Ce champ est obligatoire
                       </span>
                     )}
+
+                    <input
+                      {...register("password_confirmation", { required: true })}
+                      className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
+                      placeholder="Confirm Password*"
+                      type="password"
+                    />
+
+                    {/* <input
+                                        {...register("age", {
+                                            //required: true,
+                                        })}
+                                        className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
+                                        placeholder="Âge*"
+                                        type="number"
+                                    /> */}
+                    {/* {errors.age && (
+                                        <span className="text-red-600 text-center mb-4">
+                                            Ce champ est obligatoire
+                                        </span>
+                                    )} */}
                     <select
-                      {...register("commune", { required: true })}
+                      {...register("city", {
+                        required: true,
+                      })}
                       className="rounded-md p-2 text-left mb-6"
                     >
                       <option value="" disabled selected hidden>
@@ -164,28 +273,32 @@ function PreInscription() {
                       </option>
                       <option value="Vaux Sur Seine">Vaux Sur Seine</option>
                     </select>
-                    {errors.commune && (
+                    {errors.city && (
                       <span className="text-red-600 text-center mb-4">
                         Ce champ est obligatoire
                       </span>
                     )}
                   </div>
                 </div>
-                <div className="flex mb-6 mt-4">
-                  <div className="mr-2">
-                    <input
-                      {...register("acceptTerms", { required: true })}
-                      type="checkbox"
-                    />
-                  </div>
-                  <div>
-                    <p className="font-bold">
-                      J'accepte d'être contacté par la Mission Locale des
-                      Mureaux et j'accepte que les informations fournies
-                      alimentent mon dossier d'inscription{" "}
-                    </p>
-                  </div>
-                </div>
+                {/* <div className="flex mb-6 mt-4">
+                                <div className="mr-2">
+                                    <input
+                                        {...register("acceptTerms", {
+                                            required: true,
+                                        })}
+                                        type="checkbox"
+                                    />
+                                </div>
+                                <div>
+                                    <p className="font-bold">
+                                        J'accepte d'être contacté par la
+                                        Mission Locale des Mureaux et
+                                        j'accepte que les informations
+                                        fournies alimentent mon dossier
+                                        d'inscription{" "}
+                                    </p>
+                                </div>
+                            </div> */}
                 <div className="flex justify-center">
                   <button
                     type="submit"
@@ -198,22 +311,26 @@ function PreInscription() {
             ) : (
               <div className="flex flex-col md:mr-80">
                 <input
-                  {...register("lastName", { required: true })}
+                  {...register("last_name", {
+                    required: true,
+                  })}
                   className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
                   placeholder="Nom*"
                 />
-                {errors.lastName && (
+                {errors.last_name && (
                   <span className="text-red-600 text-center mb-4">
                     Ce champ est obligatoire
                   </span>
                 )}
 
                 <input
-                  {...register("name", { required: true })}
+                  {...register("first_name", {
+                    required: true,
+                  })}
                   className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
                   placeholder="Prénom*"
                 />
-                {errors.name && (
+                {errors.first_name && (
                   <span className="text-red-600 text-center mb-4">
                     Ce champ est obligatoire
                   </span>
@@ -231,21 +348,23 @@ function PreInscription() {
                   </span>
                 )}
 
-                <select
-                  {...register("schooled", { required: true })}
-                  className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
-                >
-                  <option value="" disabled selected hidden>
-                    Scolarisé*
-                  </option>
-                  <option value="yes">Scolarisé: Oui</option>
-                  <option value="no">Scolarisé: Non</option>
-                </select>
-                {errors.schooled && (
-                  <span className="text-red-600 text-center mb-4">
-                    Ce champ est obligatoire
-                  </span>
-                )}
+                {/* <select
+                                {...register("schooled", {
+                                    required: true,
+                                })}
+                                className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
+                            >
+                                <option value="" disabled selected hidden>
+                                    Scolarisé*
+                                </option>
+                                <option value="yes">Scolarisé: Oui</option>
+                                <option value="no">Scolarisé: Non</option>
+                            </select>
+                            {errors.schooled && (
+                                <span className="text-red-600 text-center mb-4">
+                                    Ce champ est obligatoire
+                                </span>
+                            )} */}
 
                 <input
                   {...register("email", { required: true })}
@@ -260,18 +379,32 @@ function PreInscription() {
                 )}
 
                 <input
-                  {...register("age", { required: true })}
+                  {...register("dateOfBirth", {
+                    required: true,
+                  })}
                   className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
-                  placeholder="Âge*"
-                  type="number"
+                  placeholder="Date de naissance"
+                  type="date"
                 />
-                {errors.age && (
+                {errors.dateOfBirth && (
                   <span className="text-red-600 text-center mb-4">
                     Ce champ est obligatoire
                   </span>
                 )}
+
+                {/* <input
+                                {...register("age", { required: true })}
+                                className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
+                                placeholder="Âge*"
+                                type="number"
+                            />
+                            {errors.age && (
+                                <span className="text-red-600 text-center mb-4">
+                                    Ce champ est obligatoire
+                                </span>
+                            )} */}
                 <select
-                  {...register("commune", { required: true })}
+                  {...register("city", { required: true })}
                   className="rounded-md p-2 text-left mb-6"
                 >
                   <option value="" disabled selected hidden>
@@ -304,11 +437,32 @@ function PreInscription() {
                   </option>
                   <option value="Vaux Sur Seine">Vaux Sur Seine</option>
                 </select>
-                {errors.commune && (
+                {errors.city && (
                   <span className="text-red-600 text-center mb-4">
                     Ce champ est obligatoire
                   </span>
                 )}
+
+                <input
+                  {...register("password", {
+                    required: true,
+                  })}
+                  className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
+                  placeholder="Mot de passe"
+                  type="password"
+                />
+                {errors.password && (
+                  <span className="text-red-600 text-center mb-4">
+                    Ce champ est obligatoire
+                  </span>
+                )}
+
+                <input
+                  {...register("password_confirmation", { required: true })}
+                  className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
+                  placeholder="Confirm Password*"
+                  type="password"
+                />
                 <button
                   type="submit"
                   className="bg-[#D60B52] text-white py-1 p-2 rounded-md mb-8 font-semibold w-[50%]"
@@ -322,12 +476,14 @@ function PreInscription() {
               ""
             ) : (
               <div className="flex mb-6">
-                <div className="mr-2">
-                  <input
-                    {...register("acceptTerms", { required: true })}
-                    type="checkbox"
-                  />
-                </div>
+                {/* <div className="mr-2">
+                                <input
+                                    {...register("acceptTerms", {
+                                        //required: true,
+                                    })}
+                                    type="checkbox"
+                                />
+                            </div> */}
                 <div>
                   <p className="font-bold">
                     J'accepte d'être contacté par la Mission Locale des Mureaux
