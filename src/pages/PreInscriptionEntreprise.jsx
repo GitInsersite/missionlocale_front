@@ -1,20 +1,55 @@
 import { useForm } from "react-hook-form";
+import axios from "axios";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function PreInscriptionEntreprise() {
+  const [successMessage, setSuccessMessage] = useState("");
+
+  const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
-    watch,
+    setError, // Destructure setError from useForm
+    reset, // Destructure reset from useForm
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = async (data) => {
+    try {
+      const response = await axios.post(
+        "http://localhost:8000/api/register-entreprise",
+        data
+      );
+      console.log(response.data);
+      // Handle success or redirect if needed
 
-  console.log(watch("entreprise"));
-  console.log(watch("siret"));
-  console.log(watch("interlocuteur"));
-  console.log(watch("telephone"));
-  console.log(watch("email"));
-  console.log(watch("acceptTerms"));
+      // Display success message
+      setSuccessMessage(response.data.message);
+
+      // Reset the form
+      reset();
+
+      // Redirect after 5 seconds
+      setTimeout(() => {
+        // Redirect to another page (replace '/' with the desired path)
+        navigate("/");
+      }, 5000);
+    } catch (error) {
+      if (error.response && error.response.status === 422) {
+        // Handle validation errors
+        const validationErrors = error.response.data.errors;
+
+        // Update the form errors with the validationErrors
+        Object.keys(validationErrors).forEach((fieldName) => {
+          const field = validationErrors[fieldName][0]; // Take the first error for simplicity
+          setError(fieldName, { type: "manual", message: field });
+        });
+      } else {
+        console.error("Error submitting form:", error);
+      }
+    }
+  };
 
   return (
     <div>
@@ -32,70 +67,105 @@ function PreInscriptionEntreprise() {
             </span>{" "}
             D'INSCRIPTION
           </h2>
-          <form
-            onSubmit={handleSubmit(onSubmit)}
-            className=""
-          >
-            <div className="flex flex-col md:mr-44 lg:mr-0">
-            <input
-              {...register("entreprise", { required: true })}
-              className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
-              placeholder="Entreprise*"
-            />
-            {errors.lastName && (
-              <span className="text-red-600 text-center mb-4">
-                Ce champ est obligatoire
-              </span>
-            )}
 
-            <input
-              {...register("siret", { required: true })}
-              className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
-              placeholder="Numéro SIRET*"
-              type="number"
-            />
-            {errors.name && (
-              <span className="text-red-600 text-center mb-4">
-                Ce champ est obligatoire
-              </span>
-            )}
+          {/* Display success message */}
+          {successMessage && (
+            <div className="text-green-600">{successMessage}</div>
+          )}
 
-            <input
-              {...register("interlocuteur", { required: true })}
-              className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
-              placeholder="Interlocuteur*"
-            />
-            {errors.phone && (
-              <span className="text-red-600 text-center mb-4">
-                Ce champ est obligatoire
-              </span>
-            )}
-
-            <input
-              {...register("telephone", { required: true })}
-              className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
-              placeholder="Téléphone*"
-              type="number"
-            />
-            {errors.age && (
-              <span className="text-red-600 text-center mb-4">
-                Ce champ est obligatoire
-              </span>
-            )}
-
-            <input
-              {...register("email", { required: true })}
-              className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
-              placeholder="Adresse email*"
-              type="email"
-            />
-            {errors.email && (
-              <span className="text-red-600 text-center mb-4">
-                Ce champ est obligatoire
-              </span>
-            )}
+          {/* Display validation errors */}
+          {Object.keys(errors).length > 0 && (
+            <div className="text-red-600">
+              Please fix the following errors:
+              <ul>
+                {Object.keys(errors).map((fieldName, index) => (
+                  <li key={index}>{errors[fieldName].message}</li>
+                ))}
+              </ul>
             </div>
-            <div className="flex mb-6">
+          )}
+
+          <form onSubmit={handleSubmit(onSubmit)} className="">
+            <div className="flex flex-col md:mr-44 lg:mr-0">
+              <input
+                {...register("company_name", { required: true })}
+                className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
+                placeholder="Entreprise*"
+                type="text"
+              />
+              {errors.company_name && (
+                <span className="text-red-600 text-center mb-4">
+                  Ce champ est obligatoire
+                </span>
+              )}
+
+              <input
+                {...register("siret", { required: true })}
+                className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
+                placeholder="Numéro SIRET*"
+                type="number"
+              />
+              {errors.siret && (
+                <span className="text-red-600 text-center mb-4">
+                  Ce champ est obligatoire
+                </span>
+              )}
+
+              <input
+                {...register("responsible_name", { required: true })}
+                className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
+                placeholder="Interlocuteur*"
+              />
+              {errors.responsible_name && (
+                <span className="text-red-600 text-center mb-4">
+                  Ce champ est obligatoire
+                </span>
+              )}
+
+              <input
+                {...register("company_phone", { required: true })}
+                className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
+                placeholder="Téléphone*"
+                type="tel"
+              />
+              {errors.company_phone && (
+                <span className="text-red-600 text-center mb-4">
+                  Ce champ est obligatoire
+                </span>
+              )}
+
+              <input
+                {...register("company_email", { required: true })}
+                className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
+                placeholder="Adresse email*"
+                type="email"
+              />
+              {errors.company_email && (
+                <span className="text-red-600 text-center mb-4">
+                  Ce champ est obligatoire
+                </span>
+              )}
+
+              <input
+                {...register("password", { required: true })}
+                className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
+                placeholder="Mot de passe*"
+                type="password"
+              />
+              {errors.password && (
+                <span className="text-red-600 text-center mb-4">
+                  Ce champ est obligatoire
+                </span>
+              )}
+
+              <input
+                {...register("password_confirmation", { required: true })}
+                className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
+                placeholder="Confirm Password*"
+                type="password"
+              />
+            </div>
+            {/* <div className="flex mb-6">
               <div className="mr-2">
                 <input
                   {...register("acceptTerms", { required: true })}
@@ -109,7 +179,7 @@ function PreInscriptionEntreprise() {
                   dossier d'inscription{" "}
                 </p>
               </div>
-            </div>
+            </div> */}
             <button
               type="submit"
               className="bg-[#F29200] text-white py-1 p-2 rounded-md mb-8 font-semibold w-[50%] md:w-32"
