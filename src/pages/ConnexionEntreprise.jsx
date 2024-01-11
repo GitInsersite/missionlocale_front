@@ -1,16 +1,58 @@
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import axios from "axios";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function ConnexionEntreprise() {
+  const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState(null);
+
+  const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
-    watch,
+    setError, // Destructure setError from useForm
+    reset, // Destructure reset from useForm
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = async (data) => {
+    try {
+      const response = await axios.post(
+        "http://localhost:8000/api/login/entreprise-juene",
+        data
+      );
+      console.log(response.data);
+      // Handle success or redirect if needed
 
-  console.log(watch("example"));
+      // Display success message
+      setSuccessMessage(response.data.message);
+
+      // Reset the form
+      reset();
+
+      // Clear error message
+      setErrorMessage(null);
+
+      // Redirect after 5 seconds
+      setTimeout(() => {
+        // Redirect to another page (replace '/' with the desired path)
+        navigate("/");
+      }, 5000);
+    } catch (error) {
+      if (error.response && error.response.status === 401) {
+        // Unauthorized (Invalid credentials) - Set error in component state
+        setErrorMessage(
+          error.response.data.error || "Invalid credentialssssss"
+        );
+      } else {
+        // Other errors - Log and handle as needed
+        console.error("API request failed with error:", error);
+      }
+    }
+  };
+
 
   return (
     <>
@@ -26,6 +68,18 @@ function ConnexionEntreprise() {
               <span className="border-[#FFA500] border-b-2 pb-1 md:pb-2">E ENTR</span>
               EPRISE
             </h2>
+
+            {/* Display success message */}
+            {successMessage && (
+              <div className="text-green-600">{successMessage}</div>
+            )}
+
+            {errorMessage && (
+              <div className="text-red-600 text-center mb-2">
+                {errorMessage}
+              </div>
+            )}
+
             <form
               className="flex flex-col mt-4"
               onSubmit={handleSubmit(onSubmit)}
@@ -55,7 +109,7 @@ function ConnexionEntreprise() {
             </form>
           </div>
           <div className="flex justify-between px-4 rounded-lg mb-4 pt-2 w-[90%]">
-            <Link className="font-bold text-sm border-b-2 border-black w-[45%] sm:w-fit">Créer un compte</Link>
+            <Link to="/pre-inscription-entreprise" className="font-bold text-sm border-b-2 border-black w-[45%] sm:w-fit">Créer un compte</Link>
             <Link className="font-bold text-sm border-b-2 border-black w-[45%] sm:w-fit">Mot de passe oublié</Link>
           </div>
         </div>
