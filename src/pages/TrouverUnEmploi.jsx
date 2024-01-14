@@ -1,6 +1,33 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import axios from "axios";
 
 function TrouverUnEmploi() {
+
+  const [error, setError] = useState(null);
+  const [success, setSuccess] = useState(null);
+
+  const handleInscription = () => {
+    // Make API call to register for the workshop
+    const registrationUrl =
+      "http://localhost:8000/api/notifierConseillerFormulaire";
+
+    axios
+      .post(registrationUrl)
+      .then((response) => {
+        console.log("Registration Response:", response);
+        // Handle success, e.g., show a success message or update the UI
+        setSuccess(response.data.success || "Registration successful.");
+      })
+      .catch((error) => {
+        console.error("Error registering for the workshop:", error);
+        // Handle error, e.g., show an error message to the user
+        // Set the error state to display the error message
+        setError(
+          error.response.data.error || "An error occurred while registering."
+        );
+      });
+  };
+
   return (
     <div className="bg-[#F6F6F6]">
       <div
@@ -17,9 +44,9 @@ function TrouverUnEmploi() {
           Locale t’accompagne vers l’emploi
         </h2>
         <h3 className="leading-tight">
-          L’objectif de la Mission Locale est simple : vous permettre de trouver
-          un emploi ! Des équipes spécialisées en lien avec votre conseiller
-          sont là pour :
+          L’objectif de la Mission Locale est simple: vous permettre de trouver
+          un emploi! Des équipes spécialisées en lien avec votre conseiller
+          sont là pour:
         </h3>
         <ul className="mb-6 mt-6 leading-tight">
           <li>- Négocier des offres d’emploi avec les entreprises</li>
@@ -42,7 +69,7 @@ function TrouverUnEmploi() {
         </h2>
         <p className="mb-6">
           Un conseiller est à votre disposition sans rendez-vous pour vous
-          accompagner dans la mise à jour de vos outils de recherche d’emploi :
+          accompagner dans la mise à jour de vos outils de recherche d’emploi:
           CV, lettre de motivation, compte LinkedIn… <br /> N’hésitez donc pas à
           prendre rendez-vous avec votre conseiller si vous êtes à la recherche
           d’un emploi et pour que l’on puisse vous présenter nos conseils et nos
@@ -60,13 +87,19 @@ function TrouverUnEmploi() {
           La Mission Locale propose de nombreux ateliers pour vous aider dans
           vos recherches, les métiers qui recrutent, simulations d’entretiens
           d’embauche… Pour consulter les ateliers, il vous suffit de consulter
-          notre page « Ateliers », qui détaille chaque semaine les différents
+          notre page «Ateliers», qui détaille chaque semaine les différents
           ateliers gratuits qui sont disponibles pour vous aider à développer
           vos compétences professionnelles.
         </p>
-        <Link className="bg-[#D60B52] text-white font-semibold py-1 text-center rounded-lg text-sm mb-6 md:w-64">
+        {error && <div className="text-red-500">{error}</div>}{" "}
+        {/* Display error message */}
+        {success && <div className="text-green-500">{success}</div>}{" "}
+        {/* Display success message */}
+        <button 
+        onClick={handleInscription}
+        className="bg-[#D60B52] text-white font-semibold py-1 text-center rounded-lg text-sm mb-6 md:w-64">
           PRENDRE RDV AVEC UN CONSEILLER
-        </Link>
+        </button>
       </div>
     </div>
   );

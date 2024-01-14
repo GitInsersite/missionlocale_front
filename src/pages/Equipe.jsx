@@ -1,6 +1,30 @@
-import React from "react";
+import { useState, useEffect } from "react";
 
 function Equipe() {
+  const [equipeData, setEquipeData] = useState({
+    direction: [],
+    structure: [],
+    technique: [],
+    photogroupe: [],
+  });
+
+  useEffect(() => {
+    // Fetch data from your API
+    fetch("http://localhost:8000/api/equipe")
+      .then((response) => response.json())
+      .then((data) => setEquipeData(data))
+      .catch((error) => console.error("Error fetching data:", error));
+  }, []);
+
+  const renderMembers = (members) => {
+    return members.map((member) => (
+      <div key={member.id} className="mb-8 mr-8">
+        <h3 className="text-lg font-bold">{`${member.first_name} ${member.last_name}`}</h3>
+        <p className="text-gray-600">{member.job}</p>
+      </div>
+    ));
+  };
+
   return (
     <div>
       <div
@@ -15,18 +39,12 @@ function Equipe() {
             <span className="border-b-2 border-[#A4195C] pb-[0.5px]">POLE</span>{" "}
             DIRECTION
           </h2>
-          <div>
-            <h3>Prenom NOM</h3>
-            <p className="mb-6">Fonction</p>
-          </div>
+          <div>{renderMembers(equipeData.direction)}</div>
           <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
             <span className="border-b-2 border-[#A4195C] pb-[0.5px]">POLE</span>{" "}
             STRUCTURE
           </h2>
-          <div>
-            <h3>Prenom NOM</h3>
-            <p className="mb-6">Fonction</p>
-          </div>
+          <div>{renderMembers(equipeData.structure)}</div>
         </div>
       </div>
       <div className="flex flex-col items-center bg-[#f6f6f6] md:items-start md:px-14 lg:px-20">
@@ -36,35 +54,12 @@ function Equipe() {
             TECHNIQUE
           </h2>
           <div className="lg:grid lg:grid-cols-3 xl:grid-cols-5">
-            <div className="lg:mr-40 xl:mr-36">
-              <h3>Prenom NOM</h3>
-              <p className="mb-6">Fonction</p>
-            </div>
-            <div className="lg:mr-40 xl:mr-36">
-              <h3>Prenom NOM</h3>
-              <p className="mb-6">Fonction</p>
-            </div>
-            <div className="lg:mr-40 xl:mr-36">
-              <h3>Prenom NOM</h3>
-              <p className="mb-6">Fonction</p>
-            </div>
-            <div className="lg:mr-40 xl:mr-36">
-              <h3>Prenom NOM</h3>
-              <p className="mb-6">Fonction</p>
-            </div>
-            <div className="lg:mr-40 xl:mr-36">
-              <h3>Prenom NOM</h3>
-              <p className="mb-6">Fonction</p>
-            </div>
+            {renderMembers(equipeData.technique)}
           </div>
         </div>
       </div>
       <div className="h-56 pt-4 flex justify-center items-center md:items-start md:justify-start md:px-14 lg:px-20">
-        <img
-          src=""
-          alt=""
-          className="w-[80%] h-[90%]"
-        />
+        <img src="" alt="" className="w-[80%] h-[90%]" />
       </div>
     </div>
   );

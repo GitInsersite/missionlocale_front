@@ -1,6 +1,32 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import axios from "axios";
 
 function Expertise() {
+  const [error, setError] = useState(null);
+  const [success, setSuccess] = useState(null);
+
+  const handleInscription = () => {
+    // Make API call to register for the workshop
+    const registrationUrl =
+      "http://localhost:8000/api/notifierConseillerFormulaire";
+
+    axios
+      .post(registrationUrl)
+      .then((response) => {
+        console.log("Registration Response:", response);
+        // Handle success, e.g., show a success message or update the UI
+        setSuccess(response.data.success || "Registration successful.");
+      })
+      .catch((error) => {
+        console.error("Error registering for the workshop:", error);
+        // Handle error, e.g., show an error message to the user
+        // Set the error state to display the error message
+        setError(
+          error.response.data.error || "An error occurred while registering."
+        );
+      });
+  };
+
   return (
     <div>
       <div
@@ -13,7 +39,7 @@ function Expertise() {
         <p className="mb-6">
           L’entreprise est au cœur de notre projet. La Mission Locale s’engage à
           vos côtés, vous accompagne et vous conseille au quotidien grâce à
-          l’expertise de nos chargés de relations entreprises !
+          l’expertise de nos chargés de relations entreprises!
         </p>
         <p className="mb-6">
           En tant que membre service public de l’emploi, la Mission Locale vous
@@ -25,12 +51,19 @@ function Expertise() {
           Vous avez besoin d’échanger sur le profil de poste adapté à votre
           organisation, d’avoir des informations sur les mesures d’aide à
           l’embauche (contrats aidés, alternance…), d’organiser une session de
-          recrutement ? Prenez contact avec nos experts métiers qui prendront en
+          recrutement? Prenez contact avec nos experts métiers qui prendront en
           charge l’intégralité de vos besoins.
         </p>
-        <Link className="bg-[#F29200] text-white font-semibold py-1 px-3 text-center rounded-lg text-sm mb-6 md:w-64">
+        {error && <div className="text-red-500">{error}</div>}{" "}
+        {/* Display error message */}
+        {success && <div className="text-green-500">{success}</div>}{" "}
+        {/* Display success message */}
+        <button
+          onClick={handleInscription}
+          className="bg-[#F29200] text-white font-semibold py-1 px-3 text-center rounded-lg text-sm mb-6 md:w-64"
+        >
           PRENDRE RDV
-        </Link>
+        </button>
       </div>
     </div>
   );

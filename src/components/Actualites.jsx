@@ -25,7 +25,7 @@ function Actualites({ latestNews }) {
           <img src={newsItem.image_path} alt={newsItem.title} className="border-[1px] h-[70%] rounded-t-lg lg:h-[75%] w-full" />
           <p className="text-[#87D2F0] text-xs mt-3 font-semibold ml-2">
             {/* Format the date as needed */}
-            {newsItem.date}
+            {new Date(newsItem.created_at).toLocaleDateString()}
           </p>
           <p className="font-bold text-xs ml-2">
             {newsItem.title}

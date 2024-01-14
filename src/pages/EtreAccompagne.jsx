@@ -1,6 +1,32 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import axios from "axios";
 
 function EtreAccompagne() {
+  const [error, setError] = useState(null);
+  const [success, setSuccess] = useState(null);
+
+  const handleInscription = () => {
+    // Make API call to register for the workshop
+    const registrationUrl =
+      "http://localhost:8000/api/notifierConseillerFormulaire";
+
+    axios
+      .post(registrationUrl)
+      .then((response) => {
+        console.log("Registration Response:", response);
+        // Handle success, e.g., show a success message or update the UI
+        setSuccess(response.data.success || "Registration successful.");
+      })
+      .catch((error) => {
+        console.error("Error registering for the workshop:", error);
+        // Handle error, e.g., show an error message to the user
+        // Set the error state to display the error message
+        setError(
+          error.response.data.error || "An error occurred while registering."
+        );
+      });
+  };
+
   return (
     <div className="bg-[#F6F6F6]">
       <div
@@ -109,15 +135,22 @@ function EtreAccompagne() {
         <p className="mb-6">
           Financés par le Conseil régional d’Île de France, les chèques mobilité
           représentent une véritable aide à la mobilité pour les jeunes. Cette
-          aide représente 80 % du coût d’un Pass Navigo, pour un trajet zone
-          4-5, pour une semaine ou un mois, ou du coût d’un ticket Mobilis pour
-          un déplacement ponctuel. Le Chèque Mobilité est attribué dans le cas
-          du 1er mois de stage, de formation professionnelle ou d’emploi, pour
-          vous aider à débuter dans la vie active.
+          aide représente 80% du coût d’un Pass Navigo, pour un trajet zone 4-5,
+          pour une semaine ou un mois, ou du coût d’un ticket Mobilis pour un
+          déplacement ponctuel. Le Chèque Mobilité est attribué dans le cas du
+          1er mois de stage, de formation professionnelle ou d’emploi, pour vous
+          aider à débuter dans la vie active.
         </p>
-        <Link className="bg-[#D60B52] text-white font-semibold py-1 text-center rounded-lg text-sm mb-6 md:w-64">
+        {error && <div className="text-red-500">{error}</div>}{" "}
+        {/* Display error message */}
+        {success && <div className="text-green-500">{success}</div>}{" "}
+        {/* Display success message */}
+        <button
+          onClick={handleInscription}
+          className="bg-[#D60B52] text-white font-semibold py-1 text-center rounded-lg text-sm mb-6 md:w-64"
+        >
           PRENDRE RDV AVEC UN CONSEILLER
-        </Link>
+        </button>
       </div>
     </div>
   );
