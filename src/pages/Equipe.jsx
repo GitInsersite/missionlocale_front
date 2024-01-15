@@ -7,12 +7,18 @@ function Equipe() {
     technique: [],
     photogroupe: [],
   });
+  const [photo, setPhoto] = useState()
 
   useEffect(() => {
     // Fetch data from your API
     fetch("http://localhost:8000/api/equipe")
       .then((response) => response.json())
-      .then((data) => setEquipeData(data))
+      .then((data) => {
+        console.log("Equipe Data:", data); // Log the data to the console
+        setEquipeData(data);
+        console.log(data.photogroupe[0].image_url)
+        setPhoto(data.photogroupe[0].image_url);
+      })
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
 
@@ -58,8 +64,12 @@ function Equipe() {
           </div>
         </div>
       </div>
-      <div className="h-56 pt-4 flex justify-center items-center md:items-start md:justify-start md:px-14 lg:px-20">
-        <img src="" alt="" className="w-[80%] h-[90%]" />
+      <div className="py-4 flex justify-center items-center md:items-start md:justify-start md:px-14 lg:px-20">
+        <img
+          src={photo}
+          alt="Equipe Image"
+          className="h-40 w-[80%] md:h-80 "
+        />
       </div>
     </div>
   );

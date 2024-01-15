@@ -22,7 +22,7 @@ function Actualites({ latestNews }) {
       {latestNews.map((newsItem) => (
         <div key={newsItem.id} className="border-[1px] w-40 h-56 rounded-xl mb-4 md:w-52 md:h-64 lg:h-72">
           {/* Update the src attribute with the actual image URL */}
-          <img src={newsItem.image_path} alt={newsItem.title} className="border-[1px] h-[70%] rounded-t-lg lg:h-[75%] w-full" />
+          <img src={newsItem.image_url} alt={newsItem.title} className="border-[1px] h-[70%] rounded-t-lg lg:h-[75%] w-full" />
           <p className="text-[#87D2F0] text-xs mt-3 font-semibold ml-2">
             {/* Format the date as needed */}
             {new Date(newsItem.created_at).toLocaleDateString()}

@@ -43,7 +43,7 @@ function Actualites() {
             <div className="bg-white mx-10 h-40 rounded-xl flex w-3/4 md:h-48 lg:w-[90%]">
               <div className="w-[50%] md:w-[35%] lg:w-[45%] xl:w-[30%]">
                 <img
-                  src={newsItem.image_path}
+                  src={newsItem.image_url}
                   alt={newsItem.title}
                   className="border-2 my-1 mx-2 rounded-3xl h-[90%]"
                 />

@@ -40,9 +40,10 @@ function UneActualite() {
         </div>
         <div className="flex flex-col px-4 bg-white rounded-lg mb-4 pt-2 w-[90%]">
           <img
-            src={actualite.image_path}
+            src={actualite.image_url}
             alt="image"
             className="mb-6 rounded-lg"
+            style={{ width: '20%', height: 'auto' }} 
           />
           <p className="mb-4">{actualite.description}</p>
         </div>

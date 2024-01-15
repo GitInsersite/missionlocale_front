@@ -45,12 +45,12 @@ function Gouvernance() {
             >
               <div className="w-[40%] md:w-[20%] lg:w-[15%] xl:w-[10%]">
                 <img
-                  src={member.picture || "placeholder.jpg"}
-                  alt=""
+                  src={member.image_url || "placeholder.jpg"}
+                  alt="image"
                   className="border-2 my-1 mx-2 rounded-3xl h-[90%]"
                 />
               </div>
-              <div className="w-[60%] flex flex-col items-center justify-center md:items-start md:ml-4">
+              <div className="w-[60%] flex flex-col items-center justify-center pl-4 md:items-start md:ml-4">
                 <h3 className="font-bold">{member.job}</h3>
                 <p>{`${member.first_name} ${member.last_name}`}</p>
               </div>
@@ -69,14 +69,14 @@ function Gouvernance() {
                 key={index}
                 className="bg-white mb-4 mx-10 h-28 rounded-xl flex w-3/4 md:flex-col md:w-52 md:items-center md:h-fit md:py-4 md:mx-0 md:mb-8"
               >
-                <div className="w-[40%] md:w-28 md:h-28 md:rounded-full">
+                <div className="w-[45%] flex items-center md:w-28 md:h-28 md:rounded-full">
                   <img
-                    src={member.picture || "placeholder.jpg"}
+                    src={member.image_url || "placeholder.jpg"}
                     alt=""
-                    className="border-2 my-1 mx-2 rounded-3xl h-[90%] md:w-28 md:h-28 md:rounded-full md:mx-0 md:my-0"
+                    className="border-2 my-1 mx-2 h-20 w-20 md:w-28 md:h-28 rounded-full md:mx-0 md:my-0"
                   />
                 </div>
-                <div className="w-[80%] flex flex-col justify-center md:mt-6">
+                <div className="w-[80%] flex flex-col justify-center pl-6 md:pl-0 md:mt-6">
                   <h3 className="font-bold leading-tight border-b-2 border-[#A4195C] mb-2 mr-10 md:pb-4">
                     {member.first_name}
                     <br />

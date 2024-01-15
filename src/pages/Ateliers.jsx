@@ -39,7 +39,7 @@ function Ateliers() {
           >
             <div className="w-[50%] md:w-[35%] lg:w-[25%] xl:w-[15%]">
               <img
-                src={atelier.image_path} // Replace 'image_url' with the actual property name from your API response
+                src={atelier.image_url} // Replace 'image_url' with the actual property name from your API response
                 alt={atelier.title} // Replace 'title' with the actual property name from your API response
                 className="border-2 my-1 mx-2 rounded-3xl h-[90%]"
               />
