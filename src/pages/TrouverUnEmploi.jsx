@@ -7,25 +7,43 @@ function TrouverUnEmploi() {
   const [success, setSuccess] = useState(null);
 
   const handleInscription = () => {
-    // Make API call to register for the workshop
-    const registrationUrl =
-      "http://localhost:8000/api/notifierConseillerFormulaire";
+    // Retrieve the token from local storage
+    const authToken = localStorage.getItem("authToken");
+    console.log("authToken:", authToken);
 
-    axios
-      .post(registrationUrl)
-      .then((response) => {
-        console.log("Registration Response:", response);
-        // Handle success, e.g., show a success message or update the UI
-        setSuccess(response.data.success || "Registration successful.");
-      })
-      .catch((error) => {
-        console.error("Error registering for the workshop:", error);
-        // Handle error, e.g., show an error message to the user
-        // Set the error state to display the error message
-        setError(
-          error.response.data.error || "An error occurred while registering."
-        );
-      });
+    // Check if authToken exists before making the request
+    if (authToken) {
+      // Set the Authorization header with the token
+      const headers = {
+        headers: {
+          Authorization: `Bearer ${authToken}`,
+        },
+      };
+
+      console.log("Request Headers:", headers);
+
+      // Make API call to register for the workshop
+      const registrationUrl = "http://localhost:8000/api/notifierConseillerFormulaire";
+
+      axios
+        .post(registrationUrl, null, headers)
+        .then((response) => {
+          console.log("Registration Response:", response);
+          // Handle success, e.g., show a success message or update the UI
+          setSuccess(response.data.success || "Registration successful.");
+        })
+        .catch((error) => {
+          console.error("Error registering for the workshop:", error);
+          // Handle error, e.g., show an error message to the user
+          // Set the error state to display the error message
+          setError(
+            error.response.data.error || "An error occurred while registering."
+          );
+        });
+    } else {
+      console.error("Auth token not found.");
+      // Handle the case where the auth token is not found
+    }
   };
 
   return (
