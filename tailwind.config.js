@@ -1,11 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html",
-  "./src/**/*.{js,ts,jsx,tsx}",],
+  "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     screens: {
-      'sm': '370px',
-      // => @media (min-width: 370px) { ... }
+      'sm': '640px',
+      // => @media (min-width: 640px) { ... }
 
       'md': '768px',
       // => @media (min-width: 768px) { ... }
@@ -19,8 +19,13 @@ export default {
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }
     },
-    extend: {},
+    extend: {
+      colors: {
+         // Ajoutez vos couleurs personnalisées ici
+         primary: '#4CAF50',
+         secondary: '#2196F3',
+      },
+    },
   },
   plugins: [],
 }
-
