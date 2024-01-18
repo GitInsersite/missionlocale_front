@@ -16,7 +16,7 @@ function SeFormer() {
 
       <div class="flex font-sans">
   <div class="flex-none w-56 relative">
-    <img src="/two-multiracial-women-working-together-cowokring.jpg" alt="" class="absolute inset-0 w-full h-full object-cover rounded-lg" loading="lazy" />
+    <img src="/women.jpg" alt="" class="absolute inset-0 w-full h-full object-cover rounded-lg" loading="lazy" />
   </div>
 
   <div>
