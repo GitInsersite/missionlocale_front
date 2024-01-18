@@ -58,6 +58,12 @@ export const AuthProvider = ({ children }) => {
         data
       );
 
+      // Retrieve the token from the response
+      const token = response.data.token;
+  
+      // Store the token in local storage for later use
+      localStorage.setItem("authToken", token);
+  
       // Handle success or redirect if needed
       setSuccessMessage(response.data.message);
       setName(response.data.information.first_name);
@@ -65,19 +71,23 @@ export const AuthProvider = ({ children }) => {
       setresponsible(response.data.information.responsible_name);
       setRole(response.data.role);
       setErrorMessage(false);
-      setIsAuthenticated(true);
-      console.log(response);
 
+      // Set isAuthenticated to true if the token exists
+      if (token) {
+        setIsAuthenticated(true);
+      } else {
+        // Handle the case where the token is missing in the response
+        console.error("Token is missing in the response");
+      }
+  
       // Redirect to another page (replace '/' with the desired path)
       navigate("/");
-
+  
       // Scroll to the top of the page
       window.scrollTo(0, 0);
 
-      // // Redirect after 5 seconds
-      // setTimeout(() => {
-
-      // }, 1000);
+      console.log(response)
+  
     } catch (error) {
       if (error.response && error.response.status === 401) {
         // Unauthorized (Invalid credentials) - Set error in component state
@@ -88,8 +98,12 @@ export const AuthProvider = ({ children }) => {
       }
     }
   };
+  
 
   const logout = () => {
+    // Remove the authentication token from local storage
+    localStorage.removeItem("authToken");
+
     // Perform your logout logic here
     // For simplicity, just setting isAuthenticated to false
     setIsAuthenticated(false);

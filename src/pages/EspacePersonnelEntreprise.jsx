@@ -1,6 +1,34 @@
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 function EspacePersonnelEntreprise() {
+  const [userData, setUserData] = useState(null);
+
+  useEffect(() => {
+    const authToken = localStorage.getItem("authToken");
+
+    // Check if authToken exists before making the request
+    if (authToken) {
+      // Use Axios to fetch user data from Laravel API with the token in headers
+      axios
+        .get("http://localhost:8000/api/espacepersoDetail", {
+          headers: {
+            Authorization: `Bearer ${authToken}`,
+          },
+        })
+        .then((response) => {
+          if (!response.data) {
+            throw new Error("Empty response data");
+          }
+          setUserData(response.data);
+        })
+        .catch((error) => console.error("Error fetching user data:", error));
+    }
+  }, []); // The empty dependency array ensures the effect runs only once when the component mounts
+
+  console.log("userData:", userData);
+
   return (
     <div id="infoSection">
       <div
@@ -17,11 +45,21 @@ function EspacePersonnelEntreprise() {
           PERSONNELLES
         </h2>
         <div className="flex flex-col w-64 h-48 rounded-3xl mt-4 mb-6 p-4 bg-white md:w-[360px]">
-          <p className="font-bold mb-2">Entreprise :</p>
-          <p className="font-bold mb-2">Numéro SIRET :</p>
-          <p className="font-bold mb-2">Interlocuteur :</p>
-          <p className="font-bold mb-2">Téléphone :</p>
-          <p id="offreSection" className="font-bold">Adresse mail :</p>
+          <p className="font-bold mb-2">
+            Entreprise : {userData.information.company_name}
+          </p>
+          <p className="font-bold mb-2">
+            Numéro SIRET : {userData.information.siret}
+          </p>
+          <p className="font-bold mb-2">
+            Interlocuteur : {userData.information.responsible_name}
+          </p>
+          <p className="font-bold mb-2">
+            Téléphone : {userData.information.company_phone}
+          </p>
+          <p id="offreSection" className="font-bold">
+            Adresse mail : {userData.information.company_email}
+          </p>
         </div>
       </div>
       <h2 className="font-bold text-black text-lg bg-white text-center md:text-2xl">
