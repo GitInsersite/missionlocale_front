@@ -2,13 +2,13 @@ import {  FaFacebook, FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
-import { useUser } from "../context/UserContext";
+import { useAuth } from "../context/AuthContext";
 
 function Contact() {
 
   const isLaptopOrLarger = useMediaQuery({ minWidth: 1024 });
 
-  const myValue = useUser();
+  const myValue = useAuth();
 
   console.log('myValue:', myValue);
 

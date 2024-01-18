@@ -29,12 +29,12 @@ function PreInscriptionEntreprise() {
 
       // Reset the form
       reset();
-
+      navigate("/");
       // Redirect after 5 seconds
-      setTimeout(() => {
-        // Redirect to another page (replace '/' with the desired path)
-        navigate("/");
-      }, 5000);
+      // setTimeout(() => {
+      //   // Redirect to another page (replace '/' with the desired path)
+      //   navigate("/");
+      // }, 5000);
     } catch (error) {
       if (error.response && error.response.status === 422) {
         // Handle validation errors

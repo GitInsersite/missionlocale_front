@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { HashLink as Link } from 'react-router-hash-link';
 
 function EspaceEntreprise() {
   return (
@@ -11,7 +11,7 @@ function EspaceEntreprise() {
       </div>
       <div className="flex flex-col items-center pb-6 md:px-32 xl:px-72">
         <div className="md:w-full md:grid md:grid-cols-2 md:px-8 md:gap-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-72">
-          <Link className="flex flex-col items-center justify-center w-48 h-48 rounded-3xl mt-6 bg-white">
+          <Link smooth to="/espace-personnel-entreprise#infoSection" className="flex flex-col items-center justify-center w-48 h-48 rounded-3xl mt-6 bg-white">
             <img
               src="/public/info-perso_entreprise.svg"
               alt=""
@@ -19,7 +19,7 @@ function EspaceEntreprise() {
             />
             <p className="font-bold text-center">INFORMATIONS PERSONNELLES</p>
           </Link>
-          <Link className="flex flex-col items-center justify-center w-48 h-48 rounded-3xl mt-6 bg-white">
+          <Link smooth to="/espace-personnel-entreprise#offreSection" className="flex flex-col items-center justify-center w-48 h-48 rounded-3xl mt-6 bg-white">
             <img src="/public/depot_offre-emploi.svg" alt="" className="w-32 h-32" />
             <p className="font-bold text-center">DEPOSER LES OFFRES D'EMPLOI</p>
           </Link>

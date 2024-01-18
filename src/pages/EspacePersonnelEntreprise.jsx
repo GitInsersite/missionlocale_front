@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function EspacePersonnelEntreprise() {
   return (
-    <div>
+    <div id="infoSection">
       <div
         className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52"
         style={{ backgroundImage: "url(/public/MicrosoftTeams-image14.png)" }}
@@ -21,7 +21,7 @@ function EspacePersonnelEntreprise() {
           <p className="font-bold mb-2">Numéro SIRET :</p>
           <p className="font-bold mb-2">Interlocuteur :</p>
           <p className="font-bold mb-2">Téléphone :</p>
-          <p className="font-bold">Adresse mail :</p>
+          <p id="offreSection" className="font-bold">Adresse mail :</p>
         </div>
       </div>
       <h2 className="font-bold text-black text-lg bg-white text-center md:text-2xl">

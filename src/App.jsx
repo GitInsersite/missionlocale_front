@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { UserProvider } from "./context/UserContext";
+import { AuthProvider } from "./context/AuthContext";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -34,8 +34,8 @@ import Formation from "./pages/Formation";
 
 function App() {
   return (
-    <UserProvider>
-      <BrowserRouter>
+    <BrowserRouter>
+      <AuthProvider>
         <Header />
         <Routes>
           <Route path="/" element={<Accueil />} />
@@ -83,8 +83,8 @@ function App() {
           <Route path="/offre-emploi" element={<OffreEmploi />} />
         </Routes>
         <Footer />
-      </BrowserRouter>
-    </UserProvider>
+      </AuthProvider>
+    </BrowserRouter>
   );
 }
 

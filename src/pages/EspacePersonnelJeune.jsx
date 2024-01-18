@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { HashLink as Link } from 'react-router-hash-link';
 
 function EspacePersonnelJeune() {
   return (
@@ -11,7 +11,9 @@ function EspacePersonnelJeune() {
       </div>
       <div className="flex flex-col items-center md:px-32">
         <div className="md:w-full md:grid md:grid-cols-2 md:px-8 md:gap-6 lg:grid-cols-3 xl:grid-cols-4">
-          <Link className="flex flex-col items-center justify-center w-48 h-48 rounded-3xl mt-6 bg-white">
+          <Link 
+          smooth to="/espace-personnel-juene2#contactSection"
+          className="flex flex-col items-center justify-center w-48 h-48 rounded-3xl mt-6 bg-white">
             <img
               src="/public/contact.svg"
               alt=""
@@ -19,11 +21,11 @@ function EspacePersonnelJeune() {
             />
             <p className="font-bold text-center">CONTACTER MON CONSEILLER</p>
           </Link>
-          <Link className="flex flex-col items-center justify-center w-48 h-48 rounded-3xl mt-6 bg-white">
+          <Link smooth to="/espace-personnel-juene2#infoSection" className="flex flex-col items-center justify-center w-48 h-48 rounded-3xl mt-6 bg-white">
             <img src="/public/info-perso.svg" alt="" className="w-32 h-32" />
             <p className="font-bold text-center">INFORMATIONS PERSONNELLES</p>
           </Link>
-          <Link className="flex flex-col items-center justify-center w-48 h-48 rounded-3xl mt-6 bg-white">
+          <Link smooth to="/espace-personnel-juene2#rendezvouzSection" className="flex flex-col items-center justify-center w-48 h-48 rounded-3xl mt-6 bg-white">
             <img
               src="/public/rendez-vous.svg"
               alt=""
@@ -31,23 +33,23 @@ function EspacePersonnelJeune() {
             />
             <p className="font-bold text-center">MES RENDEZ-VOUS</p>
           </Link>
-          <Link className="flex flex-col items-center justify-center w-48 h-48 rounded-3xl mt-6 bg-white">
+          <Link smooth to="/espace-personnel-juene2#docuSection" className="flex flex-col items-center justify-center w-48 h-48 rounded-3xl mt-6 bg-white">
             <img src="/public/documents.svg" alt="" className="w-32 h-32" />
             <p className="font-bold text-center">MES DOCUMENTS</p>
           </Link>
-          <Link className="flex flex-col items-center justify-center w-48 h-48 rounded-3xl mt-6 bg-white">
+          <Link smooth to="/espace-personnel-juene2#atelierSection" className="flex flex-col items-center justify-center w-48 h-48 rounded-3xl mt-6 bg-white">
             <img src="/public/ateliers.svg" alt="" className="w-32 h-32" />
             <p className="font-bold text-center">MES ATELIERS</p>
           </Link>
-          <Link className="flex flex-col items-center justify-center w-48 h-48 rounded-3xl mt-6 bg-white">
+          <Link smooth to="/espace-personnel-juene2#formationSection" className="flex flex-col items-center justify-center w-48 h-48 rounded-3xl mt-6 bg-white">
             <img src="/public/formations.svg" alt="" className="w-32 h-32" />
             <p className="font-bold text-center">MES FORMATIONS</p>
           </Link>
-          <Link className="flex flex-col items-center justify-center w-48 h-48 rounded-3xl mt-6 bg-white">
+          <Link smooth to="/espace-personnel-juene2#emploiSection" className="flex flex-col items-center justify-center w-48 h-48 rounded-3xl mt-6 bg-white">
             <img src="/public/offre-emploi.svg" alt="" className="w-32 h-32" />
             <p className="font-bold text-center">MES OFFRE D'EMPLOI</p>
           </Link>
-          <Link className="flex flex-col items-center justify-center w-48 h-48 rounded-3xl mt-6 mb-6 bg-white">
+          <Link smooth to="/espace-personnel-juene2#ressourcesSection" className="flex flex-col items-center justify-center w-48 h-48 rounded-3xl mt-6 mb-6 bg-white">
             <img
               src="/public/ressources-informations.svg"
               alt=""

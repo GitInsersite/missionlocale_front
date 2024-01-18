@@ -1,8 +1,21 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaUser } from "react-icons/fa";
+import { useAuth } from "../context/AuthContext";
 
 function DropdownButtonConnexionMo() {
+  const {
+    isAuthenticated,
+    login,
+    logout,
+    successMessage,
+    errorMessage,
+    name,
+    lastname,
+    responsible,
+    role,
+  } = useAuth();
+
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
   const handleButtonClick = () => {
@@ -27,6 +40,12 @@ function DropdownButtonConnexionMo() {
     };
   }, []); // Empty dependency array means the effect runs once when the component mounts
 
+  const displayText = isAuthenticated
+    ? role === "entreprise"
+      ? responsible
+      : `${name} ${lastname}`
+    : "CONNEXION";
+
   return (
     <div className="relative inline-block text-center">
       <button
@@ -36,7 +55,7 @@ function DropdownButtonConnexionMo() {
         type="button"
       >
         <FaUser className="mr-2" />
-        CONNEXION
+        {displayText}
       </button>
 
       {/* Dropdown menu */}
@@ -45,24 +64,37 @@ function DropdownButtonConnexionMo() {
           id="dropdownHover"
           className="z-10 absolute mt-[1px] origin-top-right bg-white divide-y divide-gray-100 rounded-lg shadow w-fit dark:bg-gray-700"
         >
-          <ul className="text-sm text-white bg-[#252323] flex flex-col items-start">
+          <ul className="text-sm text-white bg-[#252323] flex flex-col">
             <li>
               <Link
-                to="/connexion-jeune"
+                to={
+                  isAuthenticated
+                    ? role === "entreprise"
+                      ? "/espace-entreprise"
+                      : "/espace-personnel-juene"
+                    : "/connexion-jeune"
+                }
                 className="block text-left px-4 py-2 hover:bg-[#A4195C] dark:hover:bg-gray-600 dark:hover:text-white"
-                onClick={handleLinkClick}
               >
-                Espace Jeune
+                {isAuthenticated ? "Mon Espace" : "Espace Jeune"}
               </Link>
             </li>
             <li>
-              <Link
-                to="/connexion-entreprise"
-                className="block text-left px-4 py-2 hover:bg-[#F39101] dark:hover:bg-gray-600 dark:hover:text-white"
-                onClick={handleLinkClick}
-              >
-                Espace Entreprise
-              </Link>
+              {isAuthenticated ? (
+                <button
+                  onClick={logout}
+                  className="block text-left px-4 py-2 hover:bg-[#F39101] dark:hover:bg-gray-600 dark:hover:text-white"
+                >
+                  Déconnexion
+                </button>
+              ) : (
+                <Link
+                  to="/connexion-entreprise"
+                  className="block text-left px-4 py-2 hover:bg-[#F39101] dark:hover:bg-gray-600 dark:hover:text-white"
+                >
+                  Espace Entreprise
+                </Link>
+              )}
             </li>
           </ul>
         </div>
@@ -72,6 +104,3 @@ function DropdownButtonConnexionMo() {
 }
 
 export default DropdownButtonConnexionMo;
-
-
-

@@ -1,14 +1,9 @@
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import axios from "axios";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 function ConnexionEntreprise() {
-  const [successMessage, setSuccessMessage] = useState("");
-  const [errorMessage, setErrorMessage] = useState(null);
-
-  const navigate = useNavigate();
+  const { isAuthenticated, login, successMessage, errorMessage } = useAuth();
 
   const {
     register,
@@ -17,40 +12,13 @@ function ConnexionEntreprise() {
     reset, // Destructure reset from useForm
     formState: { errors },
   } = useForm();
+
   const onSubmit = async (data) => {
-    try {
-      const response = await axios.post(
-        "http://localhost:8000/api/login/entreprise-juene",
-        data
-      );
-      console.log(response.data);
-      // Handle success or redirect if needed
+    // Call the login function from the context
+    await login(data);
 
-      // Display success message
-      setSuccessMessage(response.data.message);
-
-      // Reset the form
-      reset();
-
-      // Clear error message
-      setErrorMessage(null);
-
-      // Redirect after 5 seconds
-      setTimeout(() => {
-        // Redirect to another page (replace '/' with the desired path)
-        navigate("/");
-      }, 5000);
-    } catch (error) {
-      if (error.response && error.response.status === 401) {
-        // Unauthorized (Invalid credentials) - Set error in component state
-        setErrorMessage(
-          error.response.data.error || "Invalid credentialssssss"
-        );
-      } else {
-        // Other errors - Log and handle as needed
-        console.error("API request failed with error:", error);
-      }
-    }
+    // Reset the form
+    reset();
   };
 
 
