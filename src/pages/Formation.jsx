@@ -24,23 +24,36 @@ function Formation() {
       });
   }, [id]);
 
-  const handleInscription = () => {
-    // Make API call to register for the workshop
-    const registrationUrl = `http://localhost:8000/api/formations/${id}/postuler`;
-
-    axios
-      .post(registrationUrl)
-      .then((response) => {
-        console.log("Registration Response:", response);
-        // Handle success, e.g., show a success message or update the UI
-        setSuccess(response.data.success || 'Registration successful.');
-      })
-      .catch((error) => {
-        console.error("Error registering for the workshop:", error);
-        // Handle error, e.g., show an error message to the user
-        // Set the error state to display the error message
-        setError(error.response.data.error || 'An error occurred while registering.');
-      });
+  const handleInscription = async () => {
+    try {
+      // Retrieve the token from local storage
+      const authToken = localStorage.getItem("authToken");
+      console.log("authToken:", authToken);
+  
+      const headers = {
+        headers: {
+          Authorization: `Bearer ${authToken}`,
+        },
+      };
+  
+      console.log("Request Headers:", headers);
+  
+      // Make API call to register for the workshop
+      const registrationUrl = `http://localhost:8000/api/formations/${id}/postuler`;
+  
+      const response = await axios.post(registrationUrl, null, headers);
+  
+      console.log("Registration Response:", response);
+  
+      // Handle success, e.g., show a success message or update the UI
+      setSuccess(response.data.success || 'Registration successful.');
+    } catch (error) {
+      console.error("Error registering for the workshop:", error);
+      
+      // Handle error, e.g., show an error message to the user
+      // Set the error state to display the error message
+      setError(error.response?.data?.error || 'An error occurred while registering.');
+    }
   };
 
   if (!formation) {

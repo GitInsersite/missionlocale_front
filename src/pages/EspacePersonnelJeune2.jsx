@@ -117,7 +117,7 @@ function EspacePersonnelJeune2() {
         INFORMATIONS PERSONNELLES
       </h2>
       <div className="px-4 flex flex-col items-center bg-[#F6F6F6]">
-        <div className="flex flex-col items-center w-[98%] border">
+        <div className="flex flex-col items-center w-[98%]">
           {userData && (
             <div className="md:w-[500px]">
               {/* Render the first section of personal information */}

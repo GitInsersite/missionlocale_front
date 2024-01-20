@@ -9,7 +9,7 @@ function TrouverUnEmploi() {
   const handleInscription = () => {
     // Retrieve the token from local storage
     const authToken = localStorage.getItem("authToken");
-    console.log("authToken:", authToken);
+    //console.log("authToken:", authToken);
 
     // Check if authToken exists before making the request
     if (authToken) {
@@ -20,7 +20,7 @@ function TrouverUnEmploi() {
         },
       };
 
-      console.log("Request Headers:", headers);
+      //console.log("Request Headers:", headers);
 
       // Make API call to register for the workshop
       const registrationUrl = "http://localhost:8000/api/notifierConseillerFormulaire";
