@@ -16,7 +16,7 @@ function Actualites() {
   : import.meta.env.VITE_API_URL_DEV;
 
   useEffect(() => {
-    const apiUrl = `http://${apiUrlEnv}/api/actualite?page=${currentPage}`;
+    const apiUrl = `${apiUrlEnv}/api/actualite?page=${currentPage}`;
 
     axios
       .get(apiUrl)
