@@ -9,11 +9,16 @@ import axios from "axios";
 
 function Accueil() {
 
+  // Dynamically get the API URL based on the environment
+  const apiUrlEnv = import.meta.env.MODE === 'production'
+  ? import.meta.env.VITE_API_URL_PROD
+  : import.meta.env.VITE_API_URL_DEV;
+
   const [latestNews, setLatestNews] = useState([]);
 
   useEffect(() => {
     // Define the API endpoint
-    const apiUrl = "http://localhost:8000/api/home";
+    const apiUrl = `${apiUrlEnv}/api/home`;
 
     // Make a GET request to the API
     axios.get(apiUrl)
