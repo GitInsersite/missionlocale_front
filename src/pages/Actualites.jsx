@@ -10,8 +10,13 @@ function Actualites() {
 
   const isLaptopOrLarger = useMediaQuery({ minWidth: 1024 });
 
+  // Dynamically get the API URL based on the environment
+  const apiUrlEnv = import.meta.env.MODE === 'production'
+  ? import.meta.env.VITE_API_URL_PROD
+  : import.meta.env.VITE_API_URL_DEV;
+
   useEffect(() => {
-    const apiUrl = `http://localhost:8000/api/actualite?page=${currentPage}`;
+    const apiUrl = `http://${apiUrlEnv}/api/actualite?page=${currentPage}`;
 
     axios
       .get(apiUrl)
