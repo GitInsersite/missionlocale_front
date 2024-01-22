@@ -53,10 +53,10 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (data) => {
     try {
-      // Dynamically get the API URL based on the environment
-    const apiUrl = process.env.NODE_ENV === 'production'
-    ? process.env.REACT_APP_API_URL_PROD
-    : process.env.REACT_APP_API_URL_DEV;
+    // Dynamically get the API URL based on the environment
+    const apiUrl = import.meta.env.MODE === 'production'
+      ? import.meta.env.VITE_API_URL_PROD
+      : import.meta.env.VITE_API_URL_DEV;
 
       const response = await axios.post(
       `${apiUrl}/api/login/entreprise-jeune`,
