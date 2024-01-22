@@ -8,6 +8,11 @@ function PreInscriptionEntreprise() {
 
   const navigate = useNavigate();
 
+  // Dynamically get the API URL based on the environment
+  const apiUrlEnv = import.meta.env.MODE === 'production'
+  ? import.meta.env.VITE_API_URL_PROD
+  : import.meta.env.VITE_API_URL_DEV;
+
   const {
     register,
     handleSubmit,
@@ -18,7 +23,7 @@ function PreInscriptionEntreprise() {
   const onSubmit = async (data) => {
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/register-entreprise",
+        `${apiUrlEnv}/api/register-entreprise`,
         data
       );
       console.log(response.data);

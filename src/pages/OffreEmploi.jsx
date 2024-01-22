@@ -5,8 +5,13 @@ import axios from "axios";
 function OffreEmploi() {
   const [offresEmploi, setOffresEmploi] = useState([]);
 
+  // Dynamically get the API URL based on the environment
+  const apiUrlEnv = import.meta.env.MODE === 'production'
+  ? import.meta.env.VITE_API_URL_PROD
+  : import.meta.env.VITE_API_URL_DEV;
+
   useEffect(() => {
-    const apiUrl = "http://localhost:8000/api/emploi";
+    const apiUrl = `${apiUrlEnv}/api/emploi`;
 
     axios
       .get(apiUrl)

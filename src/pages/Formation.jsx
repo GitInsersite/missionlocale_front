@@ -10,8 +10,13 @@ function Formation() {
 
   const { id } = useParams();
 
+  // Dynamically get the API URL based on the environment
+  const apiUrlEnv = import.meta.env.MODE === 'production'
+  ? import.meta.env.VITE_API_URL_PROD
+  : import.meta.env.VITE_API_URL_DEV;
+
   useEffect(() => {
-    const apiUrl = `http://localhost:8000/api/formations/${id}`;
+    const apiUrl = `${apiUrlEnv}/api/formations/${id}`;
 
     axios
       .get(apiUrl)
@@ -39,7 +44,7 @@ function Formation() {
       console.log("Request Headers:", headers);
   
       // Make API call to register for the workshop
-      const registrationUrl = `http://localhost:8000/api/formations/${id}/postuler`;
+      const registrationUrl = `${apiUrlEnv}/api/formations/${id}/postuler`;
   
       const response = await axios.post(registrationUrl, null, headers);
   

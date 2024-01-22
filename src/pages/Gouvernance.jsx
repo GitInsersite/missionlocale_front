@@ -8,10 +8,15 @@ function Gouvernance() {
     bureau: [],
   });
 
+  // Dynamically get the API URL based on the environment
+  const apiUrlEnv = import.meta.env.MODE === 'production'
+  ? import.meta.env.VITE_API_URL_PROD
+  : import.meta.env.VITE_API_URL_DEV;
+
   useEffect(() => {
     const fetchGovernanceData = async () => {
       try {
-        const res = await axios.get("http://localhost:8000/api/gouvernance");
+        const res = await axios.get(`${apiUrlEnv}/api/gouvernance`);
         setGovernanceData(res.data);
         console.log(res);
       } catch (error) {

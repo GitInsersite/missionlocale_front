@@ -11,6 +11,11 @@ function PreInscription() {
 
   const navigate = useNavigate();
 
+  // Dynamically get the API URL based on the environment
+  const apiUrlEnv = import.meta.env.MODE === 'production'
+  ? import.meta.env.VITE_API_URL_PROD
+  : import.meta.env.VITE_API_URL_DEV;
+
   const {
     register,
     handleSubmit,
@@ -21,7 +26,7 @@ function PreInscription() {
   const onSubmit = async (data) => {
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/registerCandidat",
+        `${apiUrlEnv}/api/registerCandidat`,
         data
       );
       console.log(response.data);

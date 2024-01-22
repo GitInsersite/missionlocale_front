@@ -9,9 +9,14 @@ function Equipe() {
   });
   const [photo, setPhoto] = useState()
 
+  // Dynamically get the API URL based on the environment
+  const apiUrlEnv = import.meta.env.MODE === 'production'
+  ? import.meta.env.VITE_API_URL_PROD
+  : import.meta.env.VITE_API_URL_DEV;
+
   useEffect(() => {
     // Fetch data from your API
-    fetch("http://localhost:8000/api/equipe")
+    fetch(`${apiUrlEnv}/api/equipe`)
       .then((response) => response.json())
       .then((data) => {
         console.log("Equipe Data:", data); // Log the data to the console

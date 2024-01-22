@@ -10,8 +10,13 @@ function Formations() {
 
   const isLaptopOrLarger = useMediaQuery({ minWidth: 1024 });
 
+  // Dynamically get the API URL based on the environment
+  const apiUrlEnv = import.meta.env.MODE === 'production'
+  ? import.meta.env.VITE_API_URL_PROD
+  : import.meta.env.VITE_API_URL_DEV;
+
   useEffect(() => {
-    const apiUrl = `http://localhost:8000/api/formations?page=${currentPage}`;
+    const apiUrl = `${apiUrlEnv}/api/formations?page=${currentPage}`;
 
     axios
       .get(apiUrl)
