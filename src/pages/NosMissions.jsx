@@ -36,7 +36,7 @@ function NosMissions() {
             <p className='mb-6 leading-tight font-medium'>Nous vous proposons donc un parcours spécialisé en fonction de vos attentes, vos aspirations et de vos compétences, pour optimiser vos chances de réussir sur le plan professionnel. Vous permettre d’être en contact avec des entreprises et des employeurs, mais aussi vous assister avec un suivi pour favoriser votre autonomie sociale et professionnelle.  </p>
             <p className='mb-6 leading-tight font-medium'>L’avenir des jeunes, et leur insertion à la fois professionnelle et sociale, est le pilier fondateur de la Mission Locale des Mureaux, et ce pour quoi nous continuons d’agir. </p>
             <h1 className='font-bold text-black text-lg mb-8 md:text-2xl'> <span className="border-b-2 border-[#A4195C] pb-[0.5px]">DISPOSITIFS</span></h1>
-            <Link className="bg-[#A4195C] text-white font-semibold py-1 text-center rounded-lg mb-8 text-sm md:w-56">TELECHARGER NOTRE GUIDE</Link>
+            <button className="bg-[#A4195C] text-white font-semibold py-1 text-center rounded-lg mb-8 text-sm md:w-56" onClick={handleDownload}>TELECHARGER NOTRE GUIDE</button>
         </div>
     </div>
   );
