@@ -11,20 +11,20 @@ function Soutien() {
   const slidesTwoImages = [
     {
       pair: [
-        { original: "./public/MicrosoftTeams-image5.png" },
-        { original: "./public/MicrosoftTeams-image6.png" },
+        { original: "MicrosoftTeams-image5.png" },
+        { original: "MicrosoftTeams-image6.png" },
       ],
     },
     {
       pair: [
-        { original: "./public/MicrosoftTeams-image7.png" },
-        { original: "./public/MicrosoftTeams-image8.png" },
+        { original: "MicrosoftTeams-image7.png" },
+        { original: "MicrosoftTeams-image8.png" },
       ],
     },
     {
       pair: [
-        { original: "./public/MicrosoftTeams-image9.png" },
-        { original: "./public/MicrosoftTeams-image10.png" },
+        { original: "MicrosoftTeams-image9.png" },
+        { original: "MicrosoftTeams-image10.png" },
       ],
     },
     // Add more pairs as needed
@@ -33,16 +33,16 @@ function Soutien() {
   const slidesThreeImages = [
     {
       pair: [
-        { original: "./public/MicrosoftTeams-image5.png" },
-        { original: "./public/MicrosoftTeams-image6.png" },
-        { original: "./public/MicrosoftTeams-image7.png" }, // Add the third image
+        { original: "MicrosoftTeams-image5.png" },
+        { original: "MicrosoftTeams-image6.png" },
+        { original: "MicrosoftTeams-image7.png" }, // Add the third image
       ],
     },
     {
       pair: [
-        { original: "./public/MicrosoftTeams-image8.png" },
-        { original: "./public/MicrosoftTeams-image9.png" },
-        { original: "./public/MicrosoftTeams-image10.png" }, // Add the third image
+        { original: "MicrosoftTeams-image8.png" },
+        { original: "MicrosoftTeams-image9.png" },
+        { original: "MicrosoftTeams-image10.png" }, // Add the third image
       ],
     },
     // Add more pairs as needed
@@ -51,22 +51,22 @@ function Soutien() {
   const slidesSixImages = [
     {
       pair: [
-        { original: "./public/MicrosoftTeams-image5.png" },
-        { original: "./public/MicrosoftTeams-image6.png" },
-        { original: "./public/MicrosoftTeams-image7.png" },
-        { original: "./public/MicrosoftTeams-image8.png" },
-        { original: "./public/MicrosoftTeams-image9.png" },
-        { original: "./public/MicrosoftTeams-image10.png" },
+        { original: "MicrosoftTeams-image5.png" },
+        { original: "MicrosoftTeams-image6.png" },
+        { original: "MicrosoftTeams-image7.png" },
+        { original: "MicrosoftTeams-image8.png" },
+        { original: "MicrosoftTeams-image9.png" },
+        { original: "MicrosoftTeams-image10.png" },
       ],
     },
     {
       pair: [
-        { original: "./public/MicrosoftTeams-image5.png" },
-        { original: "./public/MicrosoftTeams-image6.png" },
-        { original: "./public/MicrosoftTeams-image7.png" },
-        { original: "./public/MicrosoftTeams-image8.png" },
-        { original: "./public/MicrosoftTeams-image9.png" },
-        { original: "./public/MicrosoftTeams-image10.png" },
+        { original: "MicrosoftTeams-image5.png" },
+        { original: "MicrosoftTeams-image6.png" },
+        { original: "MicrosoftTeams-image7.png" },
+        { original: "MicrosoftTeams-image8.png" },
+        { original: "MicrosoftTeams-image9.png" },
+        { original: "MicrosoftTeams-image10.png" },
       ],
     },
     // Add more pairs as needed
