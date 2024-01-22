@@ -45,7 +45,7 @@ function UnAtelier() {
       console.log("Request Headers:", headers);
   
       // Make API call to register for the workshop
-      const registrationUrl = `http://localhost:8000/api/atelier/${id}/inscription`;
+      const registrationUrl = `${apiUrlEnv}/api/atelier/${id}/inscription`;
   
       const response = await axios.post(registrationUrl, null, headers);
   
