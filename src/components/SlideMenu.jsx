@@ -5,7 +5,7 @@ import "react-image-gallery/styles/css/image-gallery.css";
 function SlideMenu() {
   const slides = [
     {
-      original: "./public/MicrosoftTeams-image4.png",
+      original: "MicrosoftTeams-image4.png",
       description: (
         <>
           VOUS AVEZ ENTRE 16 ET 25 ANS ?<br />
@@ -18,7 +18,7 @@ function SlideMenu() {
       },
     },
     {
-      original: "./public/MicrosoftTeams-image2.png",
+      original: "MicrosoftTeams-image2.png",
       description: (
         <>
           VOUS AVEZ ENTRE 16 ET 25 ANS ?<br />
@@ -31,7 +31,7 @@ function SlideMenu() {
       },
     },
     {
-      original: "./public/MicrosoftTeams-image3.png",
+      original: "MicrosoftTeams-image3.png",
       description: (
         <>
           VOUS AVEZ ENTRE 16 ET 25 ANS ?<br />
