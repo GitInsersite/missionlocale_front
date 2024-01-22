@@ -1,6 +1,20 @@
-import { Link } from "react-router-dom"
-
 function NosMissions() {
+  const handleDownload = async () => {
+    try {
+      const response = await fetch("public/pdf/CRA-2018.pdf");
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(new Blob([blob]));
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "CRA-2018.pdf";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    } catch (error) {
+      console.error("Error downloading the file:", error);
+    }
+  };
+
   return (
     <div >
         <div className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52" style={{ backgroundImage: 'url(MicrosoftTeams-image11.png)' }}>
@@ -22,10 +36,10 @@ function NosMissions() {
             <p className='mb-6 leading-tight font-medium'>Nous vous proposons donc un parcours spécialisé en fonction de vos attentes, vos aspirations et de vos compétences, pour optimiser vos chances de réussir sur le plan professionnel. Vous permettre d’être en contact avec des entreprises et des employeurs, mais aussi vous assister avec un suivi pour favoriser votre autonomie sociale et professionnelle.  </p>
             <p className='mb-6 leading-tight font-medium'>L’avenir des jeunes, et leur insertion à la fois professionnelle et sociale, est le pilier fondateur de la Mission Locale des Mureaux, et ce pour quoi nous continuons d’agir. </p>
             <h1 className='font-bold text-black text-lg mb-8 md:text-2xl'> <span className="border-b-2 border-[#A4195C] pb-[0.5px]">DISPOSITIFS</span></h1>
-            <Link className="bg-[#A4195C] text-white font-semibold py-1 text-center rounded-lg mb-8 text-sm md:w-56">TELECHARGER NOTRE GUIDE</Link>
+            <button className="bg-[#A4195C] text-white font-semibold py-1 text-center rounded-lg mb-8 text-sm md:w-56" onClick={handleDownload}>TELECHARGER NOTRE GUIDE</button>
         </div>
     </div>
-  )
+  );
 }
 
-export default NosMissions
+export default NosMissions;

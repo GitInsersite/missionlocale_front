@@ -53,10 +53,15 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (data) => {
     try {
+      // Dynamically get the API URL based on the environment
+    const apiUrl = process.env.NODE_ENV === 'production'
+    ? process.env.REACT_APP_API_URL_PROD
+    : process.env.REACT_APP_API_URL_DEV;
+
       const response = await axios.post(
-        "http://localhost:8000/api/login/entreprise-jeune",
-        data
-      );
+      `${apiUrl}/api/login/entreprise-jeune`,
+      data
+    );
 
       // Retrieve the token from the response
       const token = response.data.token;
