@@ -28,7 +28,7 @@ function ConnexionEntreprise() {
       <div>
         <div className=" flex flex-col items-center bg-[#F6F6F6] md:px-20 lg:px-48 xl:px-96">
           <div className="flex flex-col px-4 rounded-lg w-[90%] md:items-center">
-            <img src="/public/logo-inscription.svg" alt="" className="md:w-96 md:h-96"/>
+            <img src="logo-inscription.svg" alt="" className="md:w-96 md:h-96"/>
           </div>
           <div className="flex flex-col items-center px-4 bg-white rounded-3xl pt-2 w-[90%] md:py-10">
             <h2 className="text-[#FFA500] font-bold mb-2 text-xl md:mb-4">

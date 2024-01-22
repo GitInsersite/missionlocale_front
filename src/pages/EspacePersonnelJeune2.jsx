@@ -48,7 +48,7 @@ function EspacePersonnelJeune2() {
       <div
         id="contactSection"
         className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52"
-        style={{ backgroundImage: "url(/public/MicrosoftTeams-image12.png)" }}
+        style={{ backgroundImage: "url(MicrosoftTeams-image12.png)" }}
       >
         <h1 className="md:text-3xl">ESPACE PERSONNEL</h1>
       </div>

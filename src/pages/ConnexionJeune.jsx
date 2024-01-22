@@ -31,7 +31,7 @@ function ConnexionJeune() {
         <div className=" flex flex-col items-center bg-[#F6F6F6] md:px-20 lg:px-48 xl:px-96">
           <div className="flex flex-col px-4 rounded-lg w-[90%] md:items-center">
             <img
-              src="/public/logo-inscription.svg"
+              src="logo-inscription.svg"
               alt=""
               className="md:w-96 md:h-96"
             />

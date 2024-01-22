@@ -69,7 +69,7 @@ function Menu() {
           <div>
             <Link to="/" onClick={() => window.scrollTo(0, 0)}>
               <img
-                src="/public/logo1.png"
+                src="logo1.png"
                 alt="logo-mission-local"
                 className="w-60 h-20"
               />
@@ -103,7 +103,7 @@ function Menu() {
           <div className="flex items-center justify-between ml-10 relative">
             <Link to="/">
               <img
-                src="/public/logo1.png"
+                src="logo1.png"
                 alt="logo-mission-local"
                 className="w-40 h-15"
               />
