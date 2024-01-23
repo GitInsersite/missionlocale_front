@@ -6,8 +6,13 @@ function UneActualite() {
   const [actualite, setActualite] = useState(null);
   const { id } = useParams();
 
+  // Dynamically get the API URL based on the environment
+  const apiUrlEnv = import.meta.env.MODE === 'production'
+  ? import.meta.env.VITE_API_URL_PROD
+  : import.meta.env.VITE_API_URL_DEV;
+
   useEffect(() => {
-    const apiUrl = `http://localhost:8000/api/actualite/${id}`;
+    const apiUrl = `${apiUrlEnv}/api/actualite/${id}`;
 
     axios
       .get(apiUrl)
