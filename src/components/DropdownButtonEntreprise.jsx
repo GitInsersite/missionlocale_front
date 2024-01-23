@@ -58,6 +58,7 @@ function DropdownButtonEntreprise() {
             <li>
               <Link
                 to="/expertise"
+                onClick={() => window.scrollTo(0, 0)}
                 className="block text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 hover:rounded-t-lg dark:hover:text-white hover:text-[#F29100]"
               >
                 Notre expertise
@@ -66,6 +67,7 @@ function DropdownButtonEntreprise() {
             <li>
               <Link
                 to="/demarche-rse"
+                onClick={() => window.scrollTo(0, 0)}
                 className="block text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white hover:text-[#F29100]"
               >
                 S'engager dans une démarche RSE
@@ -74,6 +76,7 @@ function DropdownButtonEntreprise() {
             <li>
               <Link
                 to="/taxe-apprentissage"
+                onClick={() => window.scrollTo(0, 0)}
                 className="block text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 hover:rounded-b-lg dark:hover:text-white hover:text-[#F29100]"
               >
                 Taxe d'apprentissage

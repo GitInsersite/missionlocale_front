@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import SessionExpiredPopup from "../components/SessionExpiredPopup";
 
 export const AuthContext = createContext();
 
@@ -35,6 +36,7 @@ export const AuthProvider = ({ children }) => {
     // Check local storage for role
     localStorage.getItem("role") || null
   );
+  const [showSessionExpiredPopup, setShowSessionExpiredPopup] = useState(false);
 
   const navigate = useNavigate();
 
@@ -49,7 +51,30 @@ export const AuthProvider = ({ children }) => {
     localStorage.setItem("responsible", responsible);
     // Update local storage when role changes
     localStorage.setItem("role", role);
+
+
+    const authToken = localStorage.getItem("authToken");
+    const expiresAt = localStorage.getItem("expiresAt");
+
+    if (authToken && expiresAt) {
+      const currentTimestamp = new Date().getTime();
+      const expiresTimestamp = new Date(expiresAt).getTime();
+
+      if (currentTimestamp > expiresTimestamp) {
+        // Token has expired, show the session expired popup
+        setShowSessionExpiredPopup(true);
+        // Perform logout after a delay (you can adjust the delay according to your needs)
+        setTimeout(() => {
+          logout();
+          //setShowSessionExpiredPopup(false);
+        }, 3000);
+      }
+    }
   }, [isAuthenticated, name, lastname, role, responsible]);
+
+  const closeSessionExpiredPopup = () => {
+    setShowSessionExpiredPopup(false);
+  };
 
   const login = async (data) => {
     try {
@@ -65,9 +90,11 @@ export const AuthProvider = ({ children }) => {
 
       // Retrieve the token from the response
       const token = response.data.token;
+      const expiresAt = response.data.expires_at;
   
       // Store the token in local storage for later use
       localStorage.setItem("authToken", token);
+      localStorage.setItem("expiresAt", expiresAt);
   
       // Handle success or redirect if needed
       setSuccessMessage(response.data.message);
@@ -108,6 +135,7 @@ export const AuthProvider = ({ children }) => {
   const logout = () => {
     // Remove the authentication token from local storage
     localStorage.removeItem("authToken");
+    localStorage.removeItem("expiresAt");
 
     // Perform your logout logic here
     // For simplicity, just setting isAuthenticated to false
@@ -138,6 +166,7 @@ export const AuthProvider = ({ children }) => {
       }}
     >
       {children}
+      {showSessionExpiredPopup && <SessionExpiredPopup onClose={closeSessionExpiredPopup} />}
     </AuthContext.Provider>
   );
 };

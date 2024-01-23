@@ -152,7 +152,7 @@ function PreInscription() {
                         required: true,
                       })}
                       className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
-                      placeholder="Date de naissance"
+                      //placeholder="Date de naissance"
                       type="date"
                     />
                     {errors.dateOfBirth && (
@@ -209,7 +209,7 @@ function PreInscription() {
                         required: true,
                       })}
                       className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
-                      placeholder="Mot de passe"
+                      placeholder="Mot de passe*"
                       type="password"
                     />
                     {errors.password && (
@@ -388,7 +388,7 @@ function PreInscription() {
                     required: true,
                   })}
                   className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
-                  placeholder="Date de naissance"
+                  //placeholder="Date de naissance"
                   type="date"
                 />
                 {errors.dateOfBirth && (
@@ -453,7 +453,7 @@ function PreInscription() {
                     required: true,
                   })}
                   className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
-                  placeholder="Mot de passe"
+                  placeholder="Mot de passe*"
                   type="password"
                 />
                 {errors.password && (

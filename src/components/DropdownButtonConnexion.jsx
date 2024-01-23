@@ -80,6 +80,7 @@ function DropdownButtonConnexion() {
             <li>
               <Link
                 to={isAuthenticated ? role === "entreprise" ? "/espace-entreprise" : "/espace-personnel-juene" : "/connexion-jeune"}
+                onClick={() => window.scrollTo(0, 0)}
                 className="block text-left px-4 py-2 hover:bg-[#A4195C] dark:hover:bg-gray-600 dark:hover:text-white"
               >
                 {isAuthenticated ? "Mon Espace" : "Espace Jeune"}
@@ -96,6 +97,7 @@ function DropdownButtonConnexion() {
               ) : (
                 <Link
                   to="/connexion-entreprise"
+                  onClick={() => window.scrollTo(0, 0)}
                   className="block text-left px-4 py-2 hover:bg-[#F39101] dark:hover:bg-gray-600 dark:hover:text-white"
                 >
                   Espace Entreprise
