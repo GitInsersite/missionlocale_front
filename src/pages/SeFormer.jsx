@@ -16,7 +16,7 @@ function SeFormer() {
 
       <div class="flex font-sans">
   <div class="flex-none w-56 relative">
-    <img src="/women.jpg" alt="" class="absolute inset-0 w-full h-full object-cover rounded-lg" loading="lazy" />
+    <img src="/" alt="" class="absolute inset-0 w-full h-full object-cover rounded-lg" loading="lazy" />
   </div>
 
   <div>
@@ -76,7 +76,7 @@ function SeFormer() {
     </div>  
   </form>
   <div class="flex-none w-56 relative">
-    <img src="/stage.jpg" alt="" class="absolute inset-0 w-full h-full object-cover rounded-lg" loading="lazy" />
+    <img src="/smileyrousse.jpg" alt="" class="absolute inset-0 w-full h-full object-cover rounded-lg" loading="lazy" />
     </div>
   </div>    
 </div>
