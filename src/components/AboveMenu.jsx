@@ -43,7 +43,10 @@ function AboveMenu() {
       ) : (
         <div className="bg-[#252323] text-white flex justify-end text-xs py-1">
           <div className="mr-4 flex items-center">
-            <BsFillTelephoneFill className="mr-2" /> 01 30 91 21 50
+            <BsFillTelephoneFill className="mr-2" />
+            <a href={`tel:${phoneNumber}`} className="cursor-pointer">
+              {phoneNumber}
+            </a>
           </div>
           <div className="mr-4 flex items-center">
             <DropdownButtonConnexionMo />

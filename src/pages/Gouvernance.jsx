@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -132,10 +131,10 @@ function Gouvernance() {
                 <img
                   src={member.image_url || "placeholder.jpg"}
                   alt="image"
-                  className="border-2 my-1 mx-2 rounded-3xl h-[90%]"
+                  className="border-2 my-1 mx-2 rounded-3xl h-[90%] "
                 />
               </div>
-              <div className="w-[60%] flex flex-col items-center justify-center pl-4 md:items-start md:ml-4">
+              <div className="w-[60%] flex flex-col items-start justify-center pl-4 md:items-start md:ml-4">
                 <h3 className="font-bold">{member.job}</h3>
                 <p>{`${member.first_name} ${member.last_name}`}</p>
               </div>
