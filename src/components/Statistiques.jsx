@@ -7,14 +7,12 @@ function Statistiques() {
   const [currentNumber2, setCurrentNumber2] = useState(0);
   const [currentNumber3, setCurrentNumber3] = useState(0);
   const [currentNumber4, setCurrentNumber4] = useState(0);
-  const [currentNumber5, setCurrentNumber5] = useState(0);
 
   const finalNumber = 10196;
   const finalNumber1 = 4050;
   const finalNumber2 = 7471;
   const finalNumber3 = 2973;
   const finalNumber4 = 16;
-  const finalNumber5 = 70274;
 
   const statisticsRef = useRef(null);
 
@@ -101,80 +99,99 @@ function Statistiques() {
     }
   }, [isIntersecting]);
 
-  useEffect(() => {
-    if (isIntersecting) {
-      const interval = setInterval(() => {
-        setCurrentNumber5((prevNumber) => {
-          const increment = Math.ceil((finalNumber5 - prevNumber) / 50);
-          return prevNumber + increment;
-        });
-      }, 20);
-
-      return () => clearInterval(interval);
-    }
-  }, [isIntersecting]);
-
   return (
-    <div ref={statisticsRef} className="flex flex-col items-center md:items-start md:px-10 md:mt-10">
+    <div
+      ref={statisticsRef}
+      className="flex flex-col items-center md:items-start md:px-10 md:pt-10 "
+    >
       <h1 className="mt-2 font-bold md:text-2xl">
         <span className="border-b-2 border-[#DB34C7] pb-[0.5px]">CETT</span>E
         ANNEE A LA MISSION LOCALE
       </h1>
       <div className="mb-4 font-semibold md:grid md:grid-cols-3 md:gap-4 md:w-full md:mb-10 lg:flex lg:justify-between">
-        <div className="border-[#DB34C7] border-2 w-36 h-20 mt-10 relative">
-          <p className="absolute top-[13px] left-1/2 transform -translate-x-1/2 -translate-y-full bg-white rounded-lg px-2 text-lg font-bold text-[#DB34C7]">
+        <div className="mt-10 flex-col justify-center items-center">
+          <div className="flex justify-center pb-4">
+            <img
+              src="JEUNES_ACCOMPAGNÉS.svg"
+              alt=""
+              className="w-12 h-12 flex justify-center"
+            />
+          </div>
+          <p className="flex justify-center pb-4 text-3xl font-bold" style={{ color: 'rgba(0, 0, 0, 0.5)' }}>
             {currentNumber.toLocaleString()}
           </p>
-          <p className="text-center leading-tight text-sm mt-5">
+          <p className="text-center leading-tight text-xs flex justify-center">
             JEUNES
             <br />
             ACCOMPAGNES
           </p>
         </div>
-        <div className="border-[#FF0000] border-2 w-36 h-20 mt-10 relative">
-          <p className="absolute top-[13px] left-1/2 transform -translate-x-1/2 -translate-y-full bg-white rounded-lg px-2 text-lg font-bold text-[#FF0000]">
+        <div className="mt-10 flex-col justify-center items-center">
+          <div className="flex justify-center pb-4">
+            <img
+              src="JEUNES_EMPLOI.svg"
+              alt=""
+              className="w-12 h-12 flex justify-center"
+            />
+          </div>
+          <p className="flex justify-center pb-4 text-3xl font-bold" style={{ color: 'rgba(0, 0, 0, 0.5)' }}>
             {currentNumber1.toLocaleString()}
           </p>
-          <p className="text-center leading-tight text-sm mt-5">
+          <p className="text-center leading-tight text-xs flex justify-center">
             JEUNES
             <br />
-            EN EMPLOI
+            ACCOMPAGNES
           </p>
         </div>
-        <div className="border-[#87D2F0] border-2 w-36 h-20 mt-10 relative">
-          <p className="absolute top-[13px] left-1/2 transform -translate-x-1/2 -translate-y-full bg-white rounded-lg px-2 text-lg font-bold text-[#87D2F0]">
+        <div className="mt-10 flex-col justify-center items-center">
+          <div className="flex justify-center pb-4">
+            <img
+              src="JEUNES_FORMATION.svg"
+              alt=""
+              className="w-12 h-12 flex justify-center"
+            />
+          </div>
+          <p className="flex justify-center pb-4 text-3xl font-bold" style={{ color: 'rgba(0, 0, 0, 0.5)' }}>
             {currentNumber2.toLocaleString()}
           </p>
-          <p className="text-center leading-tight text-sm mt-5">
+          <p className="text-center leading-tight text-xs flex justify-center">
             JEUNES
             <br />
-            EN FORMATION
+            ACCOMPAGNES
           </p>
         </div>
-        <div className="border-[#ADFF2F] border-2 w-36 h-20 mt-10 relative">
-          <p className="absolute top-[13px] left-1/2 transform -translate-x-1/2 -translate-y-full bg-white rounded-lg px-2 text-lg font-bold text-[#ADFF2F]">
+        <div className="mt-10 flex-col justify-center items-center">
+          <div className="flex justify-center pb-4">
+            <img
+              src="ENTRETIEN_ATELIER.svg"
+              alt=""
+              className="w-12 h-12 flex justify-center"
+            />
+          </div>
+          <p className="flex justify-center pb-4 text-3xl font-bold" style={{ color: 'rgba(0, 0, 0, 0.5)' }}>
             {currentNumber3.toLocaleString()}
           </p>
-          <p className="text-center leading-tight text-sm mt-5">
-            ENTRETIEN
+          <p className="text-center leading-tight text-xs flex justify-center">
+            JEUNES
             <br />
-            ET ATELIERS
+            ACCOMPAGNES
           </p>
         </div>
-        <div className="border-[#FFA500] border-2 w-36 h-20 mt-10 relative">
-          <p className="absolute top-[13px] left-1/2 transform -translate-x-1/2 -translate-y-full bg-white rounded-lg px-2 text-lg font-bold text-[#FFA500]">
-            {currentNumber5.toLocaleString()}
-          </p>
-          <p className="text-center leading-tight text-sm mt-5">
-             ATELIERS
-          </p>
-        </div>
-        <div className="border-[#FFFF00] border-2 w-36 h-20 mt-10 relative">
-          <p className="absolute top-[13px] left-1/2 transform -translate-x-1/2 -translate-y-full bg-white rounded-lg px-2 text-lg font-bold text-[#FFFF00]">
+        <div className="mt-10 flex-col justify-center items-center">
+          <div className="flex justify-center pb-4">
+            <img
+              src="PARTENAIRES.svg"
+              alt=""
+              className="w-12 h-12 flex justify-center"
+            />
+          </div>
+          <p className="flex justify-center pb-4 text-3xl font-bold" style={{ color: 'rgba(0, 0, 0, 0.5)' }}>
             {currentNumber4.toLocaleString()}
           </p>
-          <p className="text-center leading-tight text-sm mt-5">
-            PARTENAIRES
+          <p className="text-center leading-tight text-xs flex justify-center">
+            JEUNES
+            <br />
+            ACCOMPAGNES
           </p>
         </div>
       </div>
@@ -183,4 +200,3 @@ function Statistiques() {
 }
 
 export default Statistiques;
-
