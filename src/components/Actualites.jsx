@@ -7,8 +7,12 @@ function Actualites({ latestNews }) {
 
   return (
     <div
-      className="px-4 md:px-6 md:pb-10 border-2 bg-[#f6f6f6]"
-      style={isLaptopOrLarger ? { clipPath: "ellipse(150% 95% at 50% 0)" } : {clipPath: "ellipse(500% 100% at 50% 0)"}}
+      className="px-4 md:px-6 md:pb-10 bg-[#f6f6f6]"
+      style={
+        isLaptopOrLarger
+          ? { clipPath: "ellipse(150% 95% at 50% 0)" }
+          : { clipPath: "ellipse(500% 100% at 50% 0)" }
+      }
     >
       <div className="mb-4 lg:mb-10">
         <h1 className="font-bold mb-2 md:text-2xl">
@@ -16,9 +20,7 @@ function Actualites({ latestNews }) {
           ACTUALITES
         </h1>
         <p className="leading-tight">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-          dignissimos placeat saepe aut perferendis dolores maiores velit fugit
-          ex quo.
+          
         </p>
       </div>
       <div className="flex flex-col items-center md:mb-2">
@@ -31,7 +33,7 @@ function Actualites({ latestNews }) {
               <>
                 <div
                   key={newsItem.id}
-                  className="border-[2px] flex-col w-full rounded-xl mb-4 md:w-52 lg:hover:bg-blue-500 lg:hover:text-white transition-all"
+                  className="flex-col w-full rounded-xl mb-4 md:w-52 lg:hover:bg-blue-500 lg:hover:text-white transition-all shadow-lg"
                 >
                   <div className="">
                     <img
@@ -47,8 +49,6 @@ function Actualites({ latestNews }) {
                     </p>
                     <p className="font-bold text-xs ml-2">{newsItem.title}</p>
                   </div>
-
-                  {/* Update the src attribute with the actual image URL */}
                 </div>
               </>
             </Link>
