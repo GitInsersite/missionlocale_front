@@ -9,11 +9,13 @@ function Formations() {
   const [totalPages, setTotalPages] = useState(1);
 
   const isLaptopOrLarger = useMediaQuery({ minWidth: 1024 });
+  const isTabletOrLarger = useMediaQuery({ minWidth: 768 });
 
   // Dynamically get the API URL based on the environment
-  const apiUrlEnv = import.meta.env.MODE === 'production'
-  ? import.meta.env.VITE_API_URL_PROD
-  : import.meta.env.VITE_API_URL_DEV;
+  const apiUrlEnv =
+    import.meta.env.MODE === "production"
+      ? import.meta.env.VITE_API_URL_PROD
+      : import.meta.env.VITE_API_URL_DEV;
 
   useEffect(() => {
     const apiUrl = `${apiUrlEnv}/api/formations?page=${currentPage}`;
@@ -34,6 +36,14 @@ function Formations() {
     setCurrentPage(newPage);
   };
 
+  // Define a function to truncate text
+  const truncateText = (text, maxLength) => {
+    if (text.length > maxLength) {
+      return text.substring(0, maxLength) + "...";
+    }
+    return text;
+  };
+
   return (
     <div>
       <div
@@ -45,21 +55,28 @@ function Formations() {
       <div className="bg-[#f6f6f6] md:px-14 lg:px-20 lg:grid lg:grid-cols-2">
         {formations.map((newsItem, index) => (
           <div key={index} className="flex flex-col items-center pt-6 pb-6">
-            <div className="bg-white mx-10 h-40 rounded-xl flex w-3/4 md:h-48 lg:w-[90%]">
-              <div className="w-[50%] md:w-[35%] lg:w-[45%] xl:w-[30%]">
+            <div className="bg-white mx-10 h-40 rounded-xl flex w-[95%] md:h-48 lg:w-[90%]">
+              <div className="flex justify-center items-center w-[45%] md:w-[35%] lg:w-[45%] xl:w-[30%]">
                 <img
                   src={newsItem.image_url}
                   alt={newsItem.title}
-                  className="border-2 my-1 mx-2 rounded-3xl h-[90%]"
+                  className="border-2 my-1 mx-2 rounded-3xl h-[80%] sm:h-[90%] md:h-[85%]"
                 />
               </div>
-              <div className="w-[50%] flex flex-col items-center justify-center md:w-[65%] md:items-start md:pl-4 lg:w-[55%] xl:w-[70%]">
-                <h3 className="font-bold">{newsItem.title}</h3>
-                <p className="text-[#D70B52] text-sm md:mb-4">
+              <div className="w-[55%] flex flex-col items-center justify-center md:w-[65%] md:items-start md:pl-4 lg:w-[55%] xl:w-[70%]">
+                <h3 className="font-bold mb-1 leading-tight">
+                  {truncateText(newsItem.title, isTabletOrLarger ? 40 : 15)}
+                </h3>
+                <p className="text-[#D70B52] mb-1 text-sm md:mb-4">
                   {new Date(newsItem.created_at).toLocaleDateString()}
                 </p>{" "}
                 {/* Replace 'date' with the actual property name from your API response */}
-                <p className="md:mb-4">{newsItem.description}</p>{" "}
+                <p className="mb-1 md:mb-4 leading-tight">
+                  {truncateText(
+                    newsItem.description,
+                    isTabletOrLarger ? 40 : 18
+                  )}
+                </p>{" "}
                 {/* Replace 'description' with the actual property name from your API response */}
                 <Link
                   to={`/formations/${newsItem.id}`}
@@ -74,7 +91,7 @@ function Formations() {
       </div>
 
       {/* Pagination (larger dimensions) */}
-      {isLaptopOrLarger ? (
+      {isLaptopOrLarger && totalPages > 1 ? (
         <nav
           aria-label="Page navigation example"
           className="py-4 flex justify-center bg-[#f6f6f6]"

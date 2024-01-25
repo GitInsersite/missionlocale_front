@@ -95,7 +95,7 @@ function Soutien() {
             showThumbnails={false}
             showNav={false}
             autoPlay={true}
-            showBullets={true}
+            showBullets={false}
             slideInterval={5000}
             slideDuration={1000}
             renderItem={(item) => (
