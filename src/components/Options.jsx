@@ -18,31 +18,41 @@ function Options() {
         <div className="lg:flex lg:justify-center">
           {isTabletOrLarger ? (
             <div className="flex justify-center">
-              <img
-                src="Boule_preinscrire_avec_icone_V3.svg"
-                alt=""
-                className="w-32 h-32 lg:w-96 lg:h-72 border-2 hover:scale-105 transition-transform"
-              />
-              <img
-                src="Boule_OFFRE_EMPLOI_avec_icone_V3.svg"
-                alt=""
-                className="w-32 h-32 lg:w-96 lg:h-72 border-2 hover:scale-105 transition-transform"
-              />
-              <img
-                src="Boule_EVENEMENT_avec_icone_V3.svg"
-                alt=""
-                className="w-32 h-32 lg:w-96 lg:h-72 border-2 hover:scale-105 transition-transform"
-              />
-              <img
-                src="Boule_ateliers_avec_icone_V3.svg"
-                alt=""
-                className="w-32 h-32 lg:w-96 lg:h-72 border-2 hover:scale-105 transition-transform"
-              />
-              <img
-                src="Boule_FORMATION_avec_icone_V3.svg"
-                alt=""
-                className="w-32 h-32 lg:w-96 lg:h-72 border-2 hover:scale-105 transition-transform"
-              />
+              <Link to="/pre-inscription" onClick={() => window.scrollTo(0, 0)}>
+                <img
+                  src="Boule_preinscrire_avec_icone.svg"
+                  alt=""
+                  className="w-36 h-36 lg:w-44 lg:h-44 xl:w-60 xl:h-60 hover:scale-105 transition-transform"
+                />
+              </Link>
+              <Link to="/offre-emploi" onClick={() => window.scrollTo(0, 0)}>
+                <img
+                  src="Boule_OFFRE_EMPLOI_avec_icone.svg"
+                  alt=""
+                  className="w-36 h-36 lg:w-44 lg:h-44 xl:w-60 xl:h-60 hover:scale-105 transition-transform"
+                />
+              </Link>
+              <Link to="/actualites" onClick={() => window.scrollTo(0, 0)}>
+                <img
+                  src="Boule_EVENEMENT_avec_icone.svg"
+                  alt=""
+                  className="w-36 h-36 lg:w-44 lg:h-44 xl:w-60 xl:h-60 hover:scale-105 transition-transform mt-16 lg:mt-24"
+                />
+              </Link>
+              <Link to="/ateliers" onClick={() => window.scrollTo(0, 0)}>
+                <img
+                  src="Boule_ateliers_avec_icone.svg"
+                  alt=""
+                  className="w-36 h-36 lg:w-44 lg:h-44 xl:w-60 xl:h-60 hover:scale-105 transition-transform mt-9 lg:mt-11 xl:mt-16"
+                />
+              </Link>
+              <Link to="/formations" onClick={() => window.scrollTo(0, 0)}>
+                <img
+                  src="Boule_FORMATION_avec_icone.svg"
+                  alt=""
+                  className="w-36 h-36 lg:w-44 lg:h-44 xl:w-60 xl:h-60 relative top-[-36px] lg:top-[-45px]  xl:top-[-65px] hover:scale-105 transition-transform"
+                />
+              </Link>
             </div>
           ) : (
             <div className="flex-col justify-center">
@@ -62,7 +72,7 @@ function Options() {
                 <div className="flex-col items-center justify-center mb-4 hover:scale-105 transition-transform">
                   <img src="emploi-mobile.svg" alt="" className="w-52 h-52" />
                   <p className="text-center text-[#D60B53] font-bold text-xl">
-                    NOS OFFRES <br /> D'EMPLOIS
+                    NOS OFFRES <br /> D&apos;EMPLOIS
                   </p>
                 </div>
               </Link>

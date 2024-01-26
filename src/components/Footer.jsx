@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <>
-      <div className="bg-[#252323] px-8 pb-8 pt-8 md:flex">
+      <div className="bg-[#252323] px-8 pb-8 pt-8 md:flex xl:px-36">
         <div className="md:w-[30%]">
           <Link to="" onClick={() => window.scrollTo(0, 0)}>
             <img

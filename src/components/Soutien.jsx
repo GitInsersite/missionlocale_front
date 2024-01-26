@@ -78,12 +78,12 @@ function Soutien() {
 
   return (
     <div
-      className="relative bg-[#f6f6f6] bg-image bg-cover bg-center"
+      className="relative bg-[#f6f6f6] bg-image bg-cover bg-center xl:px-36"
       style={{ backgroundImage: "url(soutien.png)" }}
     >
+      <div className="absolute inset-0 bg-gray-400 opacity-50"></div>
       <div className="relative h-full py-10">
-        <div className="absolute inset-0 bg-gray-400 opacity-50"></div>
-        <h1 className="font-bold text-white ml-4 mt-2 md:text-2xl md:ml-11 md:mt-10 relative z-10">
+        <h1 className="font-bold text-white ml-4 mt-2 md:text-2xl md:ml-11 xl:ml-0 md:mt-10 relative z-10">
           <span className="border-b-2 border-white pb-[0.5px]">AVEC </span>
           LE SOUTIEN DE:
         </h1>

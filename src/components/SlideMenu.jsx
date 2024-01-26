@@ -73,7 +73,7 @@ function SlideMenu() {
                 />
                 <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center text-white">
                   <div className="flex flex-col items-start">
-                    <p className="text-base mb-2 text-left md:mb-6 md:text-xl">
+                    <p className="text-base mb-2 text-left md:mb-6 md:text-xl xl:text-4xl">
                       {item.description}
                     </p>
                     <Link

@@ -11,14 +11,14 @@
 	.st5{font-size:20px;}
 	.st6{fill:#FFFFFF;}
 </style>
-<circle class="st0" cx="182.7" cy="115.7" r="114"/>
-<circle class="st1" cx="182.7" cy="129.4" r="100.3"/>
-<line class="st2" x1="184.3" y1="211.8" x2="185.8" y2="315.9"/>
+<circle class="st0" cx="142.7" cy="115.7" r="114"/>
+<circle class="st1" cx="142.7" cy="129.4" r="100.3"/>
+<line class="st2" x1="174.3" y1="211.8" x2="185.8" y2="315.9"/>
 <line class="st2" x1="0.5" y1="313.7" x2="188.2" y2="313.7"/>
 <rect x="10" y="287.2" class="st3" width="173.1" height="14.9"/>
 <rect x="3.4" y="291.4" class="st3" width="173.6" height="14.9"/>
 <text transform="matrix(1 0 0 1 3.419 306.2477)" class="st1 st4 st5">NOS ÉVÉNEMENTS</text>
-<g>
+<g transform="translate(-35, 0)">
 	<g>
 		<g>
 			<path class="st6" d="M232.2,185.5c0.3-0.3-1.1,1.1,21.2-21.1l0,0c0,0,0,0,0-0.3c0,0,0-0.3,0.3-0.3v-0.3v-0.3l0,0V93.6

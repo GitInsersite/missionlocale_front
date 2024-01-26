@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useMediaQuery } from "react-responsive";
 
 function Statistiques() {
@@ -105,14 +105,14 @@ function Statistiques() {
   return (
     <div
       ref={statisticsRef}
-      className="flex flex-col items-center md:items-start md:px-10 md:pt-10 "
+      className="flex flex-col items-center md:items-start md:px-10 md:pt-10 xl:px-36"
     >
       <h1 className="mt-2 font-bold md:text-2xl">
         <span className="border-b-2 border-[#DB34C7] pb-[0.5px]">CETT</span>E
         ANNEE A LA MISSION LOCALE
       </h1>
       {isTabletOrLarger ? (
-        <div className="mb-4 font-semibold md:grid md:grid-cols-3 md:gap-4 md:w-full md:mb-10 lg:flex lg:justify-between">
+        <div className="mb-4 font-semibold md:grid md:grid-cols-3 md:gap-4 md:w-full md:mb-10 lg:flex lg:justify-between xl:px-10">
           <div className="mt-10 flex-col justify-center items-center">
             <div className="flex justify-center pb-4">
               <img
@@ -150,7 +150,7 @@ function Statistiques() {
             <p className="text-center leading-tight text-xs flex justify-center">
               JEUNES
               <br />
-              ACCOMPAGNES
+              EN EMPLOI
             </p>
           </div>
           <div className="mt-10 flex-col justify-center items-center">
@@ -170,7 +170,7 @@ function Statistiques() {
             <p className="text-center leading-tight text-xs flex justify-center">
               JEUNES
               <br />
-              ACCOMPAGNES
+              FORMATION
             </p>
           </div>
           <div className="mt-10 flex-col justify-center items-center">
@@ -188,9 +188,9 @@ function Statistiques() {
               {currentNumber3.toLocaleString()}
             </p>
             <p className="text-center leading-tight text-xs flex justify-center">
-              JEUNES
+              ENTRETIEN
               <br />
-              ACCOMPAGNES
+              ET ATELIERS
             </p>
           </div>
           <div className="mt-10 flex-col justify-center items-center">
@@ -208,9 +208,7 @@ function Statistiques() {
               {currentNumber4.toLocaleString()}
             </p>
             <p className="text-center leading-tight text-xs flex justify-center">
-              JEUNES
-              <br />
-              ACCOMPAGNES
+              PARTENAIRES
             </p>
           </div>
         </div>
@@ -254,7 +252,7 @@ function Statistiques() {
               <p className="text-center leading-tight text-xs flex justify-center">
                 JEUNES
                 <br />
-                ACCOMPAGNES
+                EN EMPLOI
               </p>
             </div>
           </div>
@@ -276,7 +274,7 @@ function Statistiques() {
               <p className="text-center leading-tight text-xs flex justify-center">
                 JEUNES
                 <br />
-                ACCOMPAGNES
+                EN FORMATION
               </p>
             </div>
             <div className="mt-10 flex-col justify-center items-center">
@@ -294,9 +292,9 @@ function Statistiques() {
                 {currentNumber3.toLocaleString()}
               </p>
               <p className="text-center leading-tight text-xs flex justify-center">
-                JEUNES
+                ENTRETIEN
                 <br />
-                ACCOMPAGNES
+                ET ATELIERS
               </p>
             </div>
           </div>
@@ -315,9 +313,7 @@ function Statistiques() {
               {currentNumber4.toLocaleString()}
             </p>
             <p className="text-center leading-tight text-xs flex justify-center">
-              JEUNES
-              <br />
-              ACCOMPAGNES
+              PARTENAIRES
             </p>
           </div>
         </div>
