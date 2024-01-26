@@ -31,6 +31,7 @@ import EspaceEntreprise from "./pages/EspaceEntreprise";
 import EspacePersonnelEntreprise from "./pages/EspacePersonnelEntreprise";
 import OffreEmploi from "./pages/OffreEmploi";
 import Formation from "./pages/Formation";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -81,6 +82,7 @@ function App() {
             element={<EspacePersonnelEntreprise />}
           />
           <Route path="/offre-emploi" element={<OffreEmploi />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </AuthProvider>

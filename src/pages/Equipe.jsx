@@ -9,9 +9,14 @@ function Equipe() {
   });
   const [photo, setPhoto] = useState()
 
+  // Dynamically get the API URL based on the environment
+  const apiUrlEnv = import.meta.env.MODE === 'production'
+  ? import.meta.env.VITE_API_URL_PROD
+  : import.meta.env.VITE_API_URL_DEV;
+
   useEffect(() => {
     // Fetch data from your API
-    fetch("http://localhost:8000/api/equipe")
+    fetch(`${apiUrlEnv}/api/equipe`)
       .then((response) => response.json())
       .then((data) => {
         console.log("Equipe Data:", data); // Log the data to the console
@@ -35,7 +40,7 @@ function Equipe() {
     <div>
       <div
         className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52"
-        style={{ backgroundImage: "url(/public/MicrosoftTeams-image11.png)" }}
+        style={{ backgroundImage: "url(MicrosoftTeams-image11.png)" }}
       >
         <h1 className="md:text-3xl">NOTRE EQUIPE</h1>
       </div>

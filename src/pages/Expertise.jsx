@@ -5,10 +5,15 @@ function Expertise() {
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
 
+  // Dynamically get the API URL based on the environment
+  const apiUrlEnv = import.meta.env.MODE === 'production'
+  ? import.meta.env.VITE_API_URL_PROD
+  : import.meta.env.VITE_API_URL_DEV;
+
   const handleInscription = () => {
     // Make API call to register for the workshop
     const registrationUrl =
-      "http://localhost:8000/api/notifierConseillerFormulaire";
+      `${apiUrlEnv}/api/notifierConseillerFormulaire`;
 
     axios
       .post(registrationUrl)
@@ -31,7 +36,7 @@ function Expertise() {
     <div>
       <div
         className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52"
-        style={{ backgroundImage: "url(/public/MicrosoftTeams-image14.png)" }}
+        style={{ backgroundImage: "url(MicrosoftTeams-image14.png)" }}
       >
         <h1 className="md:text-3xl">NOTRE EXPERTISE</h1>
       </div>

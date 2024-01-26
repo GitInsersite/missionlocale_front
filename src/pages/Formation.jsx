@@ -10,8 +10,13 @@ function Formation() {
 
   const { id } = useParams();
 
+  // Dynamically get the API URL based on the environment
+  const apiUrlEnv = import.meta.env.MODE === 'production'
+  ? import.meta.env.VITE_API_URL_PROD
+  : import.meta.env.VITE_API_URL_DEV;
+
   useEffect(() => {
-    const apiUrl = `http://localhost:8000/api/formations/${id}`;
+    const apiUrl = `${apiUrlEnv}/api/formations/${id}`;
 
     axios
       .get(apiUrl)
@@ -39,7 +44,7 @@ function Formation() {
       console.log("Request Headers:", headers);
   
       // Make API call to register for the workshop
-      const registrationUrl = `http://localhost:8000/api/formations/${id}/postuler`;
+      const registrationUrl = `${apiUrlEnv}/api/formations/${id}/postuler`;
   
       const response = await axios.post(registrationUrl, null, headers);
   
@@ -64,7 +69,7 @@ function Formation() {
     <div>
       <div
         className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52"
-        style={{ backgroundImage: "url(/public/MicrosoftTeams-image12.png)" }}
+        style={{ backgroundImage: "url(MicrosoftTeams-image12.png)" }}
       >
         <h1 className="md:text-3xl">FORMATION</h1>
       </div>

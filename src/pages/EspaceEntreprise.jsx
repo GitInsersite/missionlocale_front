@@ -5,7 +5,7 @@ function EspaceEntreprise() {
     <div className="bg-[#F6F6F6]">
       <div
         className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52"
-        style={{ backgroundImage: "url(/public/MicrosoftTeams-image14.png)" }}
+        style={{ backgroundImage: "url(MicrosoftTeams-image14.png)" }}
       >
         <h1 className="md:text-3xl">ESPACE ENTREPRISE</h1>
       </div>
@@ -17,7 +17,7 @@ function EspaceEntreprise() {
             className="flex flex-col items-center justify-center w-48 h-48 rounded-3xl mt-6 bg-white"
           >
             <img
-              src="/public/info-perso_entreprise.svg"
+              src="info-perso_entreprise.svg"
               alt=""
               className="w-32 h-32"
             />
@@ -29,7 +29,7 @@ function EspaceEntreprise() {
             className="flex flex-col items-center justify-center w-48 h-48 rounded-3xl mt-6 bg-white"
           >
             <img
-              src="/public/depot_offre-emploi.svg"
+              src="depot_offre-emploi.svg"
               alt=""
               className="w-32 h-32"
             />
