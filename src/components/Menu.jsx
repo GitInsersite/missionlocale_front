@@ -69,7 +69,7 @@ function Menu() {
           <div>
             <Link to="/" onClick={() => window.scrollTo(0, 0)}>
               <img
-                src="logo1.png"
+                src="/logo1.png"
                 alt="logo-mission-local"
                 className="w-60 h-20"
               />
@@ -118,16 +118,16 @@ function Menu() {
         </div>
       ) : (
         <div>
-          <div className="flex items-center justify-between ml-10 relative">
+          <div className="flex items-center justify-between relative">
             <Link to="/" onClick={() => window.scrollTo(0, 0)}>
               <img
-                src="logo1.png"
+                src="/logo1.png"
                 alt="logo-mission-local"
-                className="w-40 h-15"
+                className="w-60 h-20"
               />
             </Link>
             <GiHamburgerMenu
-              className="w-5 h-5 cursor-pointer mr-3"
+              className="w-10 h-10 cursor-pointer mr-3"
               onClick={() => toggleMenu()}
             />
           </div>

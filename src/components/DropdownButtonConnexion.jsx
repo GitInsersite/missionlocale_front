@@ -6,10 +6,7 @@ import { useAuth } from "../context/AuthContext";
 function DropdownButtonConnexion() {
   const {
     isAuthenticated,
-    login,
     logout,
-    successMessage,
-    errorMessage,
     name,
     lastname,
     responsible,

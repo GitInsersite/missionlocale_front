@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { useAuth } from "../context/AuthContext";
 
 function ConnexionJeune() {
-  const { isAuthenticated, login, successMessage, errorMessage } = useAuth();
+  const { login, successMessage, errorMessage } = useAuth();
 
   const {
     register,
@@ -91,12 +91,16 @@ function ConnexionJeune() {
           </div>
           <div className="flex justify-between px-4 rounded-lg mb-4 pt-2 w-[90%]">
             <Link
+              onClick={() => window.scrollTo(0, 0)}
               to="/pre-inscription"
               className="font-bold text-sm border-b-2 border-black w-[45%] sm:w-fit"
             >
               Créer un compte
             </Link>
-            <Link className="font-bold text-sm border-b-2 border-black w-[45%] sm:w-fit">
+            <Link
+              onClick={() => window.scrollTo(0, 0)}
+              className="font-bold text-sm border-b-2 border-black w-[45%] sm:w-fit"
+            >
               Mot de passe oublié
             </Link>
           </div>

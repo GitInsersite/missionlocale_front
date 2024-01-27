@@ -80,8 +80,8 @@ function PreInscription() {
             un conseilller qui vous proposera un rendez-vous.
           </p>
           <p className="mb-6 text-sm font-semibold">
-            NB: L'inscription sera définitive lorsque votre conseiller(ère) aura
-            en sa possession vos justificatifs (pièce d'identité et justificatif
+            NB: L&apos;inscription sera définitive lorsque votre conseiller(ère) aura
+            en sa possession vos justificatifs (pièce d&apos;identité et justificatif
             de domicile).
           </p>
 
@@ -388,7 +388,7 @@ function PreInscription() {
                     required: true,
                   })}
                   className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
-                  //placeholder="Date de naissance"
+                  placeholder="Date de naissance*"
                   type="date"
                 />
                 {errors.dateOfBirth && (
