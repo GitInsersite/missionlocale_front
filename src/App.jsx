@@ -32,6 +32,8 @@ import EspacePersonnelEntreprise from "./pages/EspacePersonnelEntreprise";
 import OffreEmploi from "./pages/OffreEmploi";
 import Formation from "./pages/Formation";
 import NotFound from "./pages/NotFound";
+import MotDePasseOublieJeune from "./pages/MotDePasseOublieJeune";
+import MotDePasseOublieEntreprise from "./pages/MotDePasseOublieEntreprise";
 
 function App() {
   return (
@@ -57,10 +59,12 @@ function App() {
           <Route path="/ateliers/:id" element={<UnAtelier />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/connexion-jeune" element={<ConnexionJeune />} />
+          <Route path="/mot-de-passe-oublie" element={<MotDePasseOublieJeune/>} />
           <Route
             path="/connexion-entreprise"
             element={<ConnexionEntreprise />}
           />
+          <Route path="/mot-de-passe-oublie-entreprise" element={<MotDePasseOublieEntreprise/>} />
           <Route path="/pre-inscription" element={<PreInscription />} />
           <Route
             path="/espace-personnel-juene"

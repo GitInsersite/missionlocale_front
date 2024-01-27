@@ -99,6 +99,7 @@ function ConnexionJeune() {
             </Link>
             <Link
               onClick={() => window.scrollTo(0, 0)}
+              to="/mot-de-passe-oublie"
               className="font-bold text-sm border-b-2 border-black w-[45%] sm:w-fit"
             >
               Mot de passe oublié
