@@ -8,7 +8,7 @@ function Footer() {
         <div className="md:w-[30%]">
           <Link to="" onClick={() => window.scrollTo(0, 0)}>
             <img
-              src="logo1.png"
+              src="/logo1.png"
               alt=""
               className="bg-white rounded-lg mb-6"
             />
