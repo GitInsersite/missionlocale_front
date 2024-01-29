@@ -44,8 +44,8 @@ function Equipe() {
       >
         <h1 className="md:text-3xl">NOTRE EQUIPE</h1>
       </div>
-      <div className="flex flex-col items-center md:items-start md:px-14 md:pt-4 lg:px-20">
-        <div>
+      <div className="flex flex-col items-center md:items-start md:px-14 md:pt-4 lg:px-20 xl:px-52">
+        <div className="pt-4">
           <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
             <span className="border-b-2 border-[#A4195C] pb-[0.5px]">POLE</span>{" "}
             DIRECTION
@@ -58,8 +58,8 @@ function Equipe() {
           <div>{renderMembers(equipeData.structure)}</div>
         </div>
       </div>
-      <div className="flex flex-col items-center bg-[#f6f6f6] md:items-start md:px-14 lg:px-20">
-        <div>
+      <div className="flex flex-col items-center bg-[#f6f6f6] md:items-start md:px-14 lg:px-20 xl:px-52">
+        <div className="pt-4">
           <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
             <span className="border-b-2 border-[#A4195C] pb-[0.5px]">POLE</span>{" "}
             TECHNIQUE
@@ -69,11 +69,11 @@ function Equipe() {
           </div>
         </div>
       </div>
-      <div className="py-4 flex justify-center items-center md:items-start md:justify-start md:px-14 lg:px-20">
+      <div className="py-4 flex justify-center items-center md:items-start md:justify-start md:px-14 lg:px-20 xl:px-52">
         <img
           src={photo}
           alt="Equipe Image"
-          className="h-40 w-[80%] md:h-80 "
+          className="w-[80%] "
         />
       </div>
     </div>

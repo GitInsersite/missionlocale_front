@@ -43,9 +43,9 @@ function Contact() {
             SUIVEZ-NOUS SUR LES RÉSEAUX
           </h2>
           <div className="flex justify-between w-[80%] mt-2 mb-2">
-            <Link><FaLinkedin className="w-10 h-10"/></Link>
-            <Link><FaFacebook className="w-10 h-10"/></Link>
-            <Link><FaInstagram className="w-10 h-10"/></Link>
+            <Link><FaLinkedin className="w-8 h-8 md:w-10 md:h-10"/></Link>
+            <Link><FaFacebook className="w-8 h-8 md:w-10 md:h-10"/></Link>
+            <Link><FaInstagram className="w-8 h-8 md:w-10 md:h-10"/></Link>
           </div>
         </div>
         {isLaptopOrLarger ? (<div className="flex flex-col items-center mx-4 rounded-lg mb-4 w-[90%]">

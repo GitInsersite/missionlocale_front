@@ -78,7 +78,7 @@ function Soutien() {
 
   return (
     <div
-      className="relative bg-[#f6f6f6] bg-image bg-cover bg-center xl:px-36"
+      className="relative bg-[#f6f6f6] bg-image bg-cover bg-center xl:px-52"
       style={{ backgroundImage: "url(soutien.png)" }}
     >
       <div className="absolute inset-0 bg-gray-400 opacity-50"></div>
@@ -105,7 +105,7 @@ function Soutien() {
                     key={index}
                     src={image.original}
                     alt={`Slide ${index + 1}`}
-                    className="w-32 h-32 mx-2 md:mx-8 lg:mx-4 xl:mx-10"
+                    className="w-32 h-32 mx-2 md:mx-8 lg:mx-4 xl:mx-4"
                   />
                 ))}
               </div>

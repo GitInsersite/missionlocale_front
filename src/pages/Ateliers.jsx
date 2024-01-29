@@ -44,7 +44,7 @@ function Ateliers() {
       >
         <h1 className="md:text-3xl">ATELIERS</h1>
       </div>
-      <div className="bg-[#f6f6f6] flex flex-col items-center pt-6 md:px-14 lg:px-20">
+      <div className="bg-[#f6f6f6] flex flex-col items-center pt-6 md:px-14 lg:px-20 xl:px-28">
         <h2 className="font-bold text-black text-lg mb-8 w-[85%] md:text-2xl">
           <span className="border-b-2 border-[#95c11f] pb-[0.5px]">LES AT</span>
           ELIERS PROPOSES PAR LA MISSION LOCALE DES MUREAUX

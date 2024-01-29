@@ -118,7 +118,7 @@ function Menu() {
         </div>
       ) : (
         <div>
-          <div className="flex items-center justify-between relative">
+          <div className="flex items-center justify-between md:px-12 relative">
             <Link to="/" onClick={() => window.scrollTo(0, 0)}>
               <img
                 src="/logo1.png"

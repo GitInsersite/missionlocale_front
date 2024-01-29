@@ -105,7 +105,7 @@ function Statistiques() {
   return (
     <div
       ref={statisticsRef}
-      className="flex flex-col items-center md:items-start md:px-10 md:pt-10 xl:px-36"
+      className="flex flex-col items-center py-4 md:items-start md:px-10 md:pt-10 xl:px-52 border-2"
     >
       <h1 className="mt-2 px-4 md:px-0 font-bold text-2xl lg:text-3xl">
         <span className="border-b-2 border-[#DB34C7] pb-[0.5px]">CETT</span>E

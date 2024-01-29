@@ -6,9 +6,10 @@ function EspacePersonnelEntreprise() {
   const [userData, setUserData] = useState(null);
 
   // Dynamically get the API URL based on the environment
-  const apiUrlEnv = import.meta.env.MODE === 'production'
-  ? import.meta.env.VITE_API_URL_PROD
-  : import.meta.env.VITE_API_URL_DEV;
+  const apiUrlEnv =
+    import.meta.env.MODE === "production"
+      ? import.meta.env.VITE_API_URL_PROD
+      : import.meta.env.VITE_API_URL_DEV;
 
   useEffect(() => {
     const authToken = localStorage.getItem("authToken");
@@ -33,6 +34,11 @@ function EspacePersonnelEntreprise() {
   }, []); // The empty dependency array ensures the effect runs only once when the component mounts
 
   console.log("userData:", userData);
+
+  if (!userData) {
+    // Render a loading state or return null, depending on your preference
+    return null;
+  }
 
   return (
     <div id="infoSection">

@@ -9,7 +9,7 @@ function EspacePersonnelJeune() {
       >
         <h1 className="md:text-3xl">ESPACE PERSONNEL</h1>
       </div>
-      <div className="flex flex-col items-center md:px-32">
+      <div className="flex flex-col items-center md:px-32 xl:px-40">
         <div className="md:w-full md:grid md:grid-cols-2 md:px-8 md:gap-6 lg:grid-cols-3 xl:grid-cols-4">
           <Link 
           smooth to="/espace-personnel-juene2#contactSection"

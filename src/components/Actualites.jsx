@@ -7,7 +7,7 @@ function Actualites({ latestNews }) {
 
   return (
     <div
-      className="px-4 md:px-6 md:pb-10 bg-[#f6f6f6] xl:px-36"
+      className="px-8 py-4 md:px-6 md:pb-10 bg-[#f6f6f6] xl:px-52 border-2"
       style={
         isLaptopOrLarger
           ? { clipPath: "ellipse(150% 95% at 50% 0)" }
@@ -29,7 +29,7 @@ function Actualites({ latestNews }) {
               to={`/actualites/${newsItem.id}`}
               onClick={() => window.scrollTo(0, 0)}
             >
-              <div className="flex-col w-full rounded-xl mb-4 md:w-52 lg:hover:bg-blue-500 lg:hover:text-white transition-all shadow-lg">
+              <div className="flex-col w-full rounded-xl mb-10 md:mb-4 md:w-52 lg:w-60 xl:w-72 lg:hover:bg-blue-500 lg:hover:text-white transition-all shadow-lg">
                 <div className="">
                   <img
                     src={newsItem.image_url}
@@ -52,7 +52,7 @@ function Actualites({ latestNews }) {
         <Link
           to="/actualites"
           onClick={() => window.scrollTo(0, 0)}
-          className="border-[#87D2F0] border-2 rounded-lg px-8 py-2 text-xs mt-4 font-semibold text-[#87D2F0] mb-2 md:px-10 md:text-sm hover:bg-blue-500 hover:text-white transition-all"
+          className="border-[#87D2F0] border-2 rounded-lg px-8 py-2 text-xs md:mt-4 font-semibold text-[#87D2F0] mb-2 md:px-10 md:text-sm hover:bg-blue-500 hover:text-white transition-all"
         >
           VOIR TOUTE L&apos;ACTUALITE
         </Link>

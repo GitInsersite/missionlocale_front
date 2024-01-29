@@ -40,7 +40,7 @@ function Expertise() {
       >
         <h1 className="md:text-3xl">NOTRE EXPERTISE</h1>
       </div>
-      <div className="flex flex-col pl-4 p-4 font-semibold md:px-14 lg:px-20">
+      <div className="flex flex-col pl-4 p-4 font-semibold md:px-14 lg:px-20 xl:px-52">
         <p className="mb-6">
           L’entreprise est au cœur de notre projet. La Mission Locale s’engage à
           vos côtés, vous accompagne et vous conseille au quotidien grâce à

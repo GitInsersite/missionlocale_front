@@ -10,7 +10,7 @@ function TaxeApprentissage() {
         <h1 className="md:text-3xl">Taxe d’Apprentissage </h1>
       </div>
       <div className="flex flex-col items-center">
-        <div className="flex flex-col px-4 font-semibold md:px-14 lg:px-20">
+        <div className="flex flex-col px-4 font-semibold md:px-14 lg:px-20 xl:px-52">
           <p className="mb-4 mt-4">
             Soutenez l’insertion des jeunes en versant le solde de votre taxe
             d’apprentissage 2023 à la Mission Locale des Mureaux !{" "}
@@ -29,7 +29,7 @@ function TaxeApprentissage() {
             aux entreprises.
           </p>
         </div>
-        <div className="flex flex-col px-4 font-semibold md:px-14 lg:px-20">
+        <div className="flex flex-col px-4 font-semibold md:px-14 lg:px-20 xl:px-52">
           <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
             <span className="border-b-2 border-[#F29200] pb-[0.5px]">
               Pourquoi
@@ -45,7 +45,7 @@ function TaxeApprentissage() {
             jeunes.
           </p>
         </div>
-        <div className="flex flex-col px-4 font-semibold md:px-14 lg:px-20">
+        <div className="flex flex-col px-4 font-semibold md:px-14 lg:px-20 xl:px-52">
           <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
             <span className="border-b-2 border-[#F29200] pb-[0.5px]">
               Comment

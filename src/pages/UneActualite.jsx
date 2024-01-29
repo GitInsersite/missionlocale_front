@@ -41,7 +41,7 @@ function UneActualite() {
       >
         <h1 className="md:text-3xl">ACTUALITE</h1>
       </div>
-      <div className="flex flex-col items-center pt-6 bg-[#F6F6F6] md:px-14 lg:px-20">
+      <div className="flex flex-col items-center pt-6 bg-[#F6F6F6] md:px-14 lg:px-20 xl:px-40">
         <div className="flex flex-col px-4 bg-white rounded-lg mb-4 pt-2 w-[90%]">
           <h2 className="text-lg mb-2 text-[#2897d5] font-bold">
             {actualite.title}

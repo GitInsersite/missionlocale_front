@@ -114,7 +114,7 @@ function Gouvernance() {
       >
         <h1 className="md:text-3xl">GOUVERNANCE</h1>
       </div>
-      <div>
+      <div className="xl:px-32">
         <div className="flex flex-col items-center pt-6 md:items-start md:mx-14 lg:mx-20">
           <h2 className="font-bold text-black text-lg mb-8 w-[85%] md:text-2xl">
             <span className="border-b-2 border-[#A4195C] pb-[0.5px]">
@@ -174,7 +174,7 @@ function Gouvernance() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center pt-6 md:items-start md:mx-14 lg:mx-20">
+      <div className="flex flex-col items-center pt-6 md:items-start md:mx-14 lg:mx-20 xl:px-32">
         <div className="flex flex-col items-center md:items-start">
           <h2 className="font-bold text-black text-lg mb-8 mt-6 w-[85%] md:text-2xl md:mb-4">
             <span className="border-b-2 border-[#A4195C] pb-[0.5px]">

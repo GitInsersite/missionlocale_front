@@ -80,13 +80,13 @@ function SlideMenu() {
                 />
                 <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center text-white">
                   <div className="flex flex-col items-start">
-                    <p className="text-base mb-2 text-left md:mb-6 md:text-xl lg:text-4xl xl:text-5xl">
+                    <p className="text-base mb-2 text-left sm:text-xl md:mb-6 md:text-3xl lg:text-4xl xl:text-5xl">
                       {item.description}
                     </p>
                     <Link
                       to={item.link.to}
                       onClick={() => window.scrollTo(0, 0)}
-                      className="bg-[#A51F60] text-white text-xs px-4 py-1 rounded md:text-base lg:text-lg xl:px-6 xl:py-2 xl:text-xl"
+                      className="bg-[#A51F60] text-white mt-3 text-xs px-4 py-1 rounded md:text-base lg:text-lg xl:px-6 xl:py-2 xl:text-xl"
                     >
                       {item.link.text}
                     </Link>
