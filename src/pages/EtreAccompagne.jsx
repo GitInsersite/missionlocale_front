@@ -36,24 +36,7 @@ function EtreAccompagne() {
         <h1 className="md:text-3xl">ETRE ACCOMPAGNE</h1>
       </div> <br /> <br />
 
-      <style>
-    {/* @keyframes rotation {
-      from {
-        transform: rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg);
-      }
-    } */}
 
-    .flex
-      width: 100px;
-      height: 100px;
-      background-color: blue;
-      animation: rotation 2s linear infinite;
-    
-  </style>
-  <div className="flex"></div> 
 
         <div>
       <div className="flex flex-col pl-4 p-4 px-4 pt-4 font-semibold bg-[#F6F6F6] md:px-14 lg:px-20">
