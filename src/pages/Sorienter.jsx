@@ -35,34 +35,38 @@ function Sorienter() {
       >
         <h1 className="md:text-3xl">S&apos;ORIENTER</h1>
       </div>
+      <br /><br />
 
 
-    <div className="flex px-4 pt-4 font-semibold md:px-14 lg:px-20">
-      <figure className="md:flex bg-white rounded-[20%] mx-auto p-8">
-        <img class=" rounded-[20%]" src="\jeunefemme.jpg" alt="" width="384" height="51"/>
-        <div className="transform translate-y-11 pt-6 space-y-4">
-          <blockquote>
+    <div >
+      <div className="flex flex-col px-4 pt-4  font-semibold bg-[#F6F6F6] md:px-14 lg:px-20">
+      <div class="flex font-sans">
+        <div class="flex-none w-56">
+        <img className="object-cover rounded-[20%]" loading="lazy" src="\jeunefemme.jpg" alt=""/>
+          </div>
+
+          <div className="bg-white rounded-[10%] flex font-sans">
+          <form class="flex-auto p-6 bg-white rounded-[10%]">
+          <div class="flex flex-wrap">
           <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
           <span className="border-b-2 border-[#D60B52] pb-[0.5px]">
-            Quel mét
+            QUEL MET
           </span>
-          ier est fait pour moi?
+          IER EST FAIT POUR MOI ?
         </h2>
-        <p className="mb-6">
+        <p class="text-sm text-slate-500">
           Au sein de la Mission Locale, nous vous informons sur toutes les
           possibilités de métiers et de formations professionnelles. Nous vous
           faisons tester de nombreux métiers, en fonction de vos appétences et
           de vos envies, et vous accompagnons dans l’élaboration de votre projet
           professionnel.
-        </p>
-        <p className="mb-6">
+        </p> <br />
+        <p class="text-sm text-slate-500">
           En fonction de vos centres d’intérêt, un grand nombre de possibilités
           s’ouvrent à vous. La Mission Locale vous donne la possibilité de
           découvrir les métiers et voies professionnelles possibles, en fonction
           de vos compétences et aspirations.
         </p>
-          </blockquote>
-        <figcaption class="text justify center ">
     
           <div className="flex flex-col px-4 pt-4 font-semibold md:px-14 lg:px-20">
         
@@ -76,14 +80,12 @@ function Sorienter() {
         >
           PRENDRE RDV AVEC UN CONSEILLER
         </button>
-      </div>
-        </figcaption>
-        </div>
-      </figure>
-      </div>
-
-      <br />
-      
+         </div>
+         </div>
+        </form>
+        </div> 
+      </div> <br /> <br />
+      </div> </div>
     </div>
   );
 }
