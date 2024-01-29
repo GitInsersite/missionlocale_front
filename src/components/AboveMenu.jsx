@@ -19,7 +19,7 @@ function AboveMenu() {
   return (
     <>
       {isTabletOrLarger ? (
-        <div className="bg-[#252323] text-white flex justify-end text-xs py-1 pr-10 lg:pr-0 xl:pr-[153px]">
+        <div className="bg-[#252323] text-white flex justify-end text-xs py-1 pr-10 lg:pr-0 xl:pr-[167px]">
           <div className="mr-6 lg:mr-10 flex items-center">
             <FaLocationDot className="mr-2" />
             <a

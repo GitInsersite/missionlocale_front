@@ -7,7 +7,7 @@ function Actualites({ latestNews }) {
 
   return (
     <div
-      className="px-8 py-4 md:px-6 md:pb-10 bg-[#f6f6f6] xl:px-52 border-2"
+      className="px-8 py-4 md:px-6 md:pb-10 bg-[#f6f6f6] xl:px-52"
       style={
         isLaptopOrLarger
           ? { clipPath: "ellipse(150% 95% at 50% 0)" }
