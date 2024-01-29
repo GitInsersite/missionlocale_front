@@ -5,12 +5,12 @@ function Footer() {
   return (
     <>
       <div className="bg-[#252323] px-8 pb-8 pt-8 md:flex">
-        <div className="md:w-[30%]">
+        <div className="md:w-[20%]">
           <Link to="" onClick={() => window.scrollTo(0, 0)}>
             <img
               src="/public/logo1.png"
               alt=""
-              className="bg-white rounded-lg mb-6"
+              className="bg-white rounded-lg mb-12"
             />
           </Link>
           <p className="text-white text-xs">
@@ -67,7 +67,7 @@ function Footer() {
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2618.0406529566458!2d1.9105878751635066!3d48.9907837913822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6928ec8766197%3A0x4a462aa9e0eb44c3!2s38%20Av.%20Paul%20Raoult%2C%2078130%20Les%20Mureaux!5e0!3m2!1sfr!2sfr!4v1699452035578!5m2!1sfr!2sfr"
               style={{ width: "100%", height: "150px" }}
-              className="rounded-lg"
+              className="rounded-{5%}"
             ></iframe>
           </div>
         </div>

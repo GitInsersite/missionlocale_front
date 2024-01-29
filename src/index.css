@@ -2,6 +2,114 @@
 @tailwind components;
 @tailwind utilities;
 
-@import 'tailwindcss/base';
+/* @import 'tailwindcss/base';
 @import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import 'tailwindcss/utilities'; */
+
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    padding: 100px 50px;
+  }
+   
+  .container .carte {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 480px;
+    height: 200px;
+    background: #f7f7f7;
+    border-radius: 20px;
+    box-shadow:  0 35px 80px rgba(0, 0, 0, 0.15);
+    transition: 0.5s;
+   
+  }
+   
+  .container .carte:hover {
+    height: 300px;
+  }
+   
+  .container .carte .imgBx {
+    position: absolute;
+    top: -180px;
+    right: 300px;
+    width: 320px;
+    height: 340px;
+    background: #333;
+    border-radius: 12px;
+    overflow: hidden;
+   
+    transition: 0.5s;
+  }
+  .container .carte:hover .imgBx {
+    top: -160px;
+    transform: scale(0.75);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+  }
+  .container .carte:hover .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+  }
+   
+  .container .carte .conten {
+    top: 70px;
+    left: 60px;
+    position: absolute;
+    width: 100%;
+    padding: 0 30px;
+    height: 45px;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  .container .carte:hover .conten {
+    position: absolute;
+    top: 130px;
+    left: -35px;
+    height: 250px;
+    transition: 1.5s;
+  }
+  .container .carte:hover::before .conten {
+    opacity: 0.5;
+  }
+   
+   
+  .container .carte .conten h2 {
+    font-size: 0.9em;
+    font-weight: 600;
+    color: black;
+    position: relative;
+    left: 14px;
+    top: 10px;
+   
+  }
+   
+   
+  .container .carte .conten p {
+   
+    color: #333;
+    position: relative;
+    left: 14px;
+  }
+  .container .carte  .conten a {
+    position: relative;
+    top: 15px;
+    display: inline-block;
+    padding: 12px 25px;
+    background: var(--clr);
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 8px;
+    left: 70px;
+  }

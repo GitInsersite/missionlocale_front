@@ -38,17 +38,23 @@ function TrouverUnEmploi() {
       </div>
 
       <br /> <br />
-      <div>
-      <div className="flex flex-col px-4 pt-4  font-semibold bg-[#F6F6F6] md:px-14 lg:px-20">
+      <div className="breadcrumb px-4 pt-4 font-semibold md:px-14 lg:px-20 xl:px-52">
+       <a href="/">Accueil</a>{'>'}
+        <a href="/Services">Services</a> {'>'}
+        <a className="text-[#D70B52]" href="/TrouverUnEmploi">Trouver un emploi</a>
+        </div> <br />
 
-            <div class="flex font-sans">
-              <div class="flex-none w-56">
+      <div>
+      <div className="flex flex-col px-4 pt-4  font-semibold bg-[#F6F6F6] md:px-14 lg:px-20 xl:px-52">
+
+            <div className="flex font-sans">
+              <div className="flex-none w-56">
                 <img src="/smileyrousse.jpg" alt="" className="object-cover rounded-[20%]" loading="lazy" />
               </div>
 
-              <div className="bg-white rounded-[10%] ">
+              <div className="bg-white rounded-[5%] ">
                 <form class="flex-auto p-6">
-                  <div class="flex flex-wrap t-20px l-20px relative">
+                  <div className="flex flex-wrap t-20px l-20px relative">
 
                   <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
           <span className="border-b-2 border-[#D60B52] pb-[0.5px]">

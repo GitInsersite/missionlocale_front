@@ -34,20 +34,25 @@ function Sorienter() {
         style={{ backgroundImage: "url(/public/MicrosoftTeams-image12.png)" }}
       >
         <h1 className="md:text-3xl">S&apos;ORIENTER</h1>
-      </div>
-      <br /><br />
+      </div> <br />
+      
 
+      <div className="breadcrumb px-4 pt-4 font-semibold md:px-14 lg:px-20 xl:px-52">
+       <a href="/">Accueil</a> {'>'}
+        <a href="/Services"> Services </a>{'>'}
+        <a className="text-[#D70B52]" href="/Sorientier"> S'orientier</a>
+        </div> <br />
 
     <div >
-      <div className="flex flex-col px-4 pt-4  font-semibold bg-[#F6F6F6] md:px-14 lg:px-20">
-      <div class="flex font-sans">
-        <div class="flex-none w-56">
+      <div className="flex flex-col px-4 pt-4  font-semibold bg-[#F6F6F6] md:px-14 lg:px-20 xl:px-52">
+      <div className="flex font-sans">
+        <div className="flex-none w-56">
         <img className="object-cover rounded-[20%]" loading="lazy" src="\jeunefemme.jpg" alt=""/>
           </div>
 
-          <div className="bg-white rounded-[10%] flex font-sans">
-          <form class="flex-auto p-6 bg-white rounded-[10%]">
-          <div class="flex flex-wrap">
+          <div className="bg-white rounded-[5%] flex font-sans">
+          <form class="flex-auto p-6 bg-white rounded-[5%]">
+          <div className="flex flex-wrap">
           <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
           <span className="border-b-2 border-[#D60B52] pb-[0.5px]">
             QUEL MET

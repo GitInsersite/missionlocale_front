@@ -11,7 +11,7 @@ function SeFormer() {
         <h1 className="md:text-3xl">SE FORMER</h1>
       </div>
 
-      <div className="flex flex-col px-4 pt-4 font-semibold md:px-14 lg:px-20">
+      <div className="flex flex-col px-4 pt-4 font-semibold md:px-14 lg:px-20 xl:px-40">
         <div className="flex-row justify-content px-4 pt-4  font-semibold bg-[#F6F6F6] md:px-14 lg:px-20">
           <div className="flex items-center">Accueil <IoIosArrowForward /> Services <IoIosArrowForward /><span className="text-[#D70B52]" aria-current="page">Se former</span></div>
         </div>
@@ -19,14 +19,14 @@ function SeFormer() {
         <div >
           <div className="flex flex-col px-4 pt-4  font-semibold bg-[#F6F6F6] md:px-14 lg:px-20">
 
-            <div class="flex font-sans">
-              <div class="flex-none w-56 relative">
+            <div className="flex font-sans">
+              <div className="flex-none w-56 relative">
                 <img src="/women.jpg" alt="" className="absolute inset-0 w-full h-full object-cover rounded-[20%]" loading="lazy" />
               </div>
 
-              <div className="bg-white rounded-[10%] ">
+              <div className="bg-white rounded-[5%] ">
                 <form class="flex-auto p-6">
-                  <div class="flex flex-wrap t-20px l-20px relative">
+                  <div className="flex flex-wrap t-20px l-20px relative">
 
                     <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
                       <span className="border-b-2 border-[#D70B52] pb-[0.5px]">
@@ -55,11 +55,11 @@ function SeFormer() {
         <div className="flex flex-col">
           <div >
             <div className="flex flex-col px-4 pt-4  font-semibold bg-[#F6F6F6] md:px-14 lg:px-20">
-              <div class="flex font-sans ">
+              <div className="flex font-sans ">
 
-                <form class="flex-auto p-6 bg-white rounded-[10%]">
-                  <div class="flex flex-wrap">
-                    <h2 className="font-bold text-slate-500 text-lg mb-4 md:text-2xl">
+                <form class="flex-auto p-6 bg-white rounded-[5%]">
+                  <div className="flex flex-wrap">
+                    <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
                       <span className="border-b-2 border-[#D70B52] pb-[0.5px]">
                         FORMA
                       </span>
@@ -80,7 +80,7 @@ function SeFormer() {
 
                   </div>
                 </form>
-                <div class="flex-none w-56 relative">
+                <div className="flex-none w-56 relative">
                   <img src="/travailleur.jpg" alt="" className="absolute inset-0 w-full h-full object-cover rounded-[20%]" loading="lazy" />
                 </div>
               </div>
