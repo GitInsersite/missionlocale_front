@@ -48,7 +48,7 @@ function EtreAccompagne() {
         <div className="container">
           <div className="carte" style="--clr:#ff0066;">
             <div className="imgBx">
-              <img src="/ouvriers.jpg" />
+              <img src="ouvriers.jpg" />
             </div>
             <div className="conten">
               <h2> UN ACCOMPAGNEMENT PERSONNALISE</h2>
