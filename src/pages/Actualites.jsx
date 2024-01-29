@@ -36,7 +36,9 @@ function Actualites() {
         style={{ backgroundImage: "url(/public/MicrosoftTeams-image15.png)" }}
       >
         <h1 className="md:text-3xl">ACTUALITES</h1>
+        
       </div>
+      
       <div className="bg-[#f6f6f6] md:px-14 lg:px-20 lg:grid lg:grid-cols-2">
         {actualites.map((newsItem, index) => (
           <div key={index} className="flex flex-col items-center pt-6 pb-6">

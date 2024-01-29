@@ -2,7 +2,7 @@ import React from "react";
 
 function Youtube() {
   return (
-    <div className="flex flex-col items-center bg-[#f6f6f6] md:items-start md:px-4">
+    <div className="flex flex-col items-center bg-[#f6f6f6] md:items-start md:px-4 object-cover rounded-s overflow-hidden">
       <div className="md:w-full md:px-6 md:my-10">
         <h1 className="font-bold mb-6 mt-3 md:text-2xl">
           <span className="border-b-2 border-[#ADFF2F] pb-[0.5px]">LA M</span>
