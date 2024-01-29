@@ -95,3 +95,5 @@ function App() {
 }
 
 export default App;
+
+<div className="sm:hidden">Contenu invisible sur les écrans de petite taille</div>
