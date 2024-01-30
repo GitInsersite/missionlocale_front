@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useMediaQuery } from "react-responsive";
+import React from "react";
+import '/Accompagnement.css'; // Importez les styles CSS
 
 function Actualites() {
   const [actualites, setActualites] = useState([]);
@@ -39,6 +41,7 @@ function Actualites() {
         
       </div>
       
+      
       <div className="bg-[#f6f6f6] md:px-14 lg:px-20 lg:grid lg:grid-cols-2">
         {actualites.map((newsItem, index) => (
           <div key={index} className="flex flex-col items-center pt-6 pb-6">
@@ -69,6 +72,24 @@ function Actualites() {
           </div>
         ))}
       </div>
+      <section>
+      <div className="container">
+        <div className="carte" style={{ '--clr': '#ff0066' }}>
+          <div className="imgBx">
+            <img src="/public/smil.jpg" alt="Accompagnement" />
+          </div>
+          <div className="conten">
+            <h2>UN ACCOMPAGNEMENT PERSONNALISE</h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis consectetur eligendi sapiente
+              blanditiis harum ex laboriosam tempora porro. Consectetur ratione quasi velit ipsam natus impedit
+              necessitatibus iusto quaerat culpa ut!
+            </p>
+            <a href="#">PRENDRE RDV AVEC UN CONSEILLER</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
       {/* Pagination (larger dimensions) */}
       {isLaptopOrLarger ? (
