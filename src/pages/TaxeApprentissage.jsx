@@ -5,12 +5,12 @@ function TaxeApprentissage() {
     <div>
       <div
         className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52"
-        style={{ backgroundImage: "url(/public/MicrosoftTeams-image14.png)" }}
+        style={{ backgroundImage: "url(MicrosoftTeams-image14.png)" }}
       >
         <h1 className="md:text-3xl">Taxe d’Apprentissage </h1>
       </div>
       <div className="flex flex-col items-center">
-        <div className="flex flex-col px-4 font-semibold md:px-14 lg:px-20">
+        <div className="flex flex-col px-4 font-semibold md:px-14 lg:px-20 xl:px-52">
           <p className="mb-4 mt-4">
             Soutenez l’insertion des jeunes en versant le solde de votre taxe
             d’apprentissage 2023 à la Mission Locale des Mureaux !{" "}
@@ -29,7 +29,7 @@ function TaxeApprentissage() {
             aux entreprises.
           </p>
         </div>
-        <div className="flex flex-col px-4 font-semibold md:px-14 lg:px-20">
+        <div className="flex flex-col px-4 font-semibold md:px-14 lg:px-20 xl:px-52">
           <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
             <span className="border-b-2 border-[#F29200] pb-[0.5px]">
               Pourquoi
@@ -45,7 +45,7 @@ function TaxeApprentissage() {
             jeunes.
           </p>
         </div>
-        <div className="flex flex-col px-4 font-semibold md:px-14 lg:px-20">
+        <div className="flex flex-col px-4 font-semibold md:px-14 lg:px-20 xl:px-52">
           <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
             <span className="border-b-2 border-[#F29200] pb-[0.5px]">
               Comment

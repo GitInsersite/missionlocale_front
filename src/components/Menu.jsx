@@ -69,7 +69,7 @@ function Menu() {
           <div>
             <Link to="/" onClick={() => window.scrollTo(0, 0)}>
               <img
-                src="/public/logo1.png"
+                src="/logo1.png"
                 alt="logo-mission-local"
                 className="w-60 h-20"
               />
@@ -84,32 +84,50 @@ function Menu() {
                 <DropdownButtonService />
               </li>
               <li className="mr-4">
-                <Link to="/actualites" className="hover:text-[#2696D4]">ACTUALITÉS</Link>
+                <Link
+                  to="/actualites"
+                  onClick={() => window.scrollTo(0, 0)}
+                  className="hover:text-[#2696D4]"
+                >
+                  ACTUALITÉS
+                </Link>
               </li>
               <li className="mr-4">
-                <Link to="/ateliers" className="hover:text-[#93C01F]">ATELIERS</Link>
+                <Link
+                  to="/ateliers"
+                  onClick={() => window.scrollTo(0, 0)}
+                  className="hover:text-[#93C01F]"
+                >
+                  ATELIERS
+                </Link>
               </li>
               <li className="flex items-center mr-4">
                 <DropdownButtonEntreprise />
               </li>
               <li>
-                <Link to="/contact" className="hover:text-[#434446]">CONTACTEZ-NOUS</Link>
+                <Link
+                  to="/contact"
+                  onClick={() => window.scrollTo(0, 0)}
+                  className="hover:text-[#434446]"
+                >
+                  CONTACTEZ-NOUS
+                </Link>
               </li>
             </ul>
           </div>
         </div>
       ) : (
         <div>
-          <div className="flex items-center justify-between ml-10 relative">
-            <Link to="/">
+          <div className="flex items-center justify-between md:px-12 relative">
+            <Link to="/" onClick={() => window.scrollTo(0, 0)}>
               <img
-                src="/public/logo1.png"
+                src="/logo1.png"
                 alt="logo-mission-local"
-                className="w-40 h-15"
+                className="w-60 h-20"
               />
             </Link>
             <GiHamburgerMenu
-              className="w-5 h-5 cursor-pointer mr-3"
+              className="w-10 h-10 cursor-pointer mr-3"
               onClick={() => toggleMenu()}
             />
           </div>
@@ -117,26 +135,27 @@ function Menu() {
             <div className="mt-4 ml-10">
               <ul>
                 <li className="flex items-center" onClick={toggleSubmenu1}>
-                  LA MISSION LOCAL {isSubmenuOpen1 ? <IoIosArrowUp /> : <IoIosArrowDown />}  
+                  LA MISSION LOCAL{" "}
+                  {isSubmenuOpen1 ? <IoIosArrowUp /> : <IoIosArrowDown />}
                 </li>
                 {isSubmenuOpen1 && (
                   <ul className="pl-6">
-                    <Link to="/nos-missions" onClick={() => closeMenu()}>
+                    <Link to="/nos-missions" onClick={() => { window.scrollTo(0, 0); closeMenu(); }}>
                       <li className="border-b-2 py-2 text-[#646765]">
                         Nos missions
                       </li>
                     </Link>
-                    <Link to="/nos-communes" onClick={() => closeMenu()}>
+                    <Link to="/nos-communes" onClick={() => { window.scrollTo(0, 0); closeMenu(); }}>
                       <li className="border-b-2 py-2 text-[#646765]">
                         Nos communes
                       </li>
                     </Link>
-                    <Link to="/gouvernance" onClick={() => closeMenu()}>
+                    <Link to="/gouvernance" onClick={() => { window.scrollTo(0, 0); closeMenu(); }}>
                       <li className="border-b-2 py-2 text-[#646765]">
                         La gouvernance
                       </li>
                     </Link>
-                    <Link to="/equipe" onClick={() => closeMenu()}>
+                    <Link to="/equipe" onClick={() => { window.scrollTo(0, 0); closeMenu(); }}>
                       <li className="border-b-2 py-2 text-[#646765]">
                         Notre équipe
                       </li>
@@ -144,26 +163,27 @@ function Menu() {
                   </ul>
                 )}
                 <li className="flex items-center" onClick={toggleSubmenu2}>
-                  SERVICES {isSubmenuOpen2 ? <IoIosArrowUp /> : <IoIosArrowDown />}
+                  SERVICES{" "}
+                  {isSubmenuOpen2 ? <IoIosArrowUp /> : <IoIosArrowDown />}
                 </li>
                 {isSubmenuOpen2 && (
                   <ul className="pl-6">
-                    <Link to="/se-former" onClick={() => closeMenu()}>
+                    <Link to="/se-former" onClick={() => { window.scrollTo(0, 0); closeMenu(); }}>
                       <li className="border-b-2 py-2 text-[#646765]">
                         Se former
                       </li>
                     </Link>
-                    <Link to="/sorienter" onClick={() => closeMenu()}>
+                    <Link to="/sorienter" onClick={() => { window.scrollTo(0, 0); closeMenu(); }}>
                       <li className="border-b-2 py-2 text-[#646765]">
                         S&apos;orienter
                       </li>
                     </Link>
-                    <Link to="/trouver-un-emploi" onClick={() => closeMenu()}>
+                    <Link to="/trouver-un-emploi" onClick={() => { window.scrollTo(0, 0); closeMenu(); }}>
                       <li className="border-b-2 py-2 text-[#646765]">
                         Trouver un emploi
                       </li>
                     </Link>
-                    <Link to="/etre-accompagne" onClick={() => closeMenu()}>
+                    <Link to="/etre-accompagne" onClick={() => { window.scrollTo(0, 0); closeMenu(); }}>
                       <li className="border-b-2 py-2 text-[#646765]">
                         Etre accompagne
                       </li>
@@ -171,31 +191,44 @@ function Menu() {
                   </ul>
                 )}
                 <li>
-                  <Link to="/actualites" onClick={() => closeMenu()}>
+                  <Link
+                    to="/actualites"
+                    onClick={() => {
+                      window.scrollTo(0, 0);
+                      closeMenu();
+                    }}
+                  >
                     ACTUALITÉS
                   </Link>
                 </li>
                 <li>
-                  <Link to="/ateliers" onClick={() => closeMenu()}>
+                  <Link
+                    to="/ateliers"
+                    onClick={() => {
+                      window.scrollTo(0, 0);
+                      closeMenu();
+                    }}
+                  >
                     ATELIERS
                   </Link>
                 </li>
                 <li className="flex items-center" onClick={toggleSubmenu3}>
-                  ENTREPRISES {isSubmenuOpen3 ? <IoIosArrowUp /> : <IoIosArrowDown />}
+                  ENTREPRISES{" "}
+                  {isSubmenuOpen3 ? <IoIosArrowUp /> : <IoIosArrowDown />}
                 </li>
                 {isSubmenuOpen3 && (
                   <ul className="pl-6">
-                    <Link to="/expertise" onClick={() => closeMenu()}>
+                    <Link to="/expertise" onClick={() => { window.scrollTo(0, 0); closeMenu(); }}>
                       <li className="border-b-2 py-2 text-[#646765]">
                         Notre expertise
                       </li>
                     </Link>
-                    <Link to="/demarche-rse" onClick={() => closeMenu()}>
+                    <Link to="/demarche-rse" onClick={() => { window.scrollTo(0, 0); closeMenu(); }}>
                       <li className="border-b-2 py-2 text-[#646765]">
                         S&apos;engager dans une démarche RSE
                       </li>
                     </Link>
-                    <Link to="/taxe-apprentissage" onClick={() => closeMenu()}>
+                    <Link to="/taxe-apprentissage" onClick={() => { window.scrollTo(0, 0); closeMenu(); }}>
                       <li className="border-b-2 py-2 text-[#646765]">
                         Taxe d&apos;apprentissage
                       </li>
@@ -203,7 +236,7 @@ function Menu() {
                   </ul>
                 )}
                 <li>
-                  <Link to="/contact" onClick={() => closeMenu()}>
+                  <Link to="/contact" onClick={() => { window.scrollTo(0, 0); closeMenu(); }}>
                     CONTACTEZ-NOUS
                   </Link>
                 </li>

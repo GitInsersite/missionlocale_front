@@ -6,33 +6,56 @@ function TrouverUnEmploi() {
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
 
-  const handleInscription = () => {
-    // Make API call to register for the workshop
-    const registrationUrl =
-      "http://localhost:8000/api/notifierConseillerFormulaire";
+  // Dynamically get the API URL based on the environment
+  const apiUrlEnv = import.meta.env.MODE === 'production'
+  ? import.meta.env.VITE_API_URL_PROD
+  : import.meta.env.VITE_API_URL_DEV;
 
-    axios
-      .post(registrationUrl)
-      .then((response) => {
-        console.log("Registration Response:", response);
-        // Handle success, e.g., show a success message or update the UI
-        setSuccess(response.data.success || "Registration successful.");
-      })
-      .catch((error) => {
-        console.error("Error registering for the workshop:", error);
-        // Handle error, e.g., show an error message to the user
-        // Set the error state to display the error message
-        setError(
-          error.response.data.error || "An error occurred while registering."
-        );
-      });
+  const handleInscription = () => {
+    // Retrieve the token from local storage
+    const authToken = localStorage.getItem("authToken");
+    //console.log("authToken:", authToken);
+
+    // Check if authToken exists before making the request
+    if (authToken) {
+      // Set the Authorization header with the token
+      const headers = {
+        headers: {
+          Authorization: `Bearer ${authToken}`,
+        },
+      };
+
+      //console.log("Request Headers:", headers);
+
+      // Make API call to register for the workshop
+      const registrationUrl = `${apiUrlEnv}/api/notifierConseillerFormulaire`;
+
+      axios
+        .post(registrationUrl, null, headers)
+        .then((response) => {
+          console.log("Registration Response:", response);
+          // Handle success, e.g., show a success message or update the UI
+          setSuccess(response.data.success || "Registration successful.");
+        })
+        .catch((error) => {
+          console.error("Error registering for the workshop:", error);
+          // Handle error, e.g., show an error message to the user
+          // Set the error state to display the error message
+          setError(
+            error.response.data.error || "An error occurred while registering."
+          );
+        });
+    } else {
+      console.error("Auth token not found.");
+      // Handle the case where the auth token is not found
+    }
   };
 
   return (
     <div className="bg-[#F6F6F6]">
       <div
         className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52"
-        style={{ backgroundImage: "url(/public/MicrosoftTeams-image12.png)" }}
+        style={{ backgroundImage: "url(MicrosoftTeams-image12.png)" }}
       >
         <h1 className="md:text-3xl">TROUVER UN EMPLOI</h1>
       </div>

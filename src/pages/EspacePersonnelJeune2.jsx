@@ -2,6 +2,8 @@ import { useForm } from "react-hook-form";
 import { FaPencil } from "react-icons/fa6";
 import { FaCheckCircle, FaTimesCircle, FaPauseCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 function EspacePersonnelJeune2() {
   const {
@@ -9,19 +11,58 @@ function EspacePersonnelJeune2() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+
+  const [userData, setUserData] = useState(null);
+
+  // Dynamically get the API URL based on the environment
+  const apiUrlEnv = import.meta.env.MODE === 'production'
+  ? import.meta.env.VITE_API_URL_PROD
+  : import.meta.env.VITE_API_URL_DEV;
+
+  useEffect(() => {
+    const authToken = localStorage.getItem("authToken");
+
+    // Check if authToken exists before making the request
+    if (authToken) {
+      // Use Axios to fetch user data from Laravel API with the token in headers
+      axios
+        .get(`${apiUrlEnv}/api/espacepersoDetail`, {
+          headers: {
+            Authorization: `Bearer ${authToken}`,
+          },
+        })
+        .then((response) => {
+          if (!response.data) {
+            throw new Error("Empty response data");
+          }
+          setUserData(response.data);
+        })
+        .catch((error) => console.error("Error fetching user data:", error));
+    }
+  }, []); // The empty dependency array ensures the effect runs only once when the component mounts
+
+  const onSubmit = (data) => {
+    // Implement logic to send data to Laravel API if needed
+    //console.log(data);
+  };
+
+  console.log("userData:", userData);
 
   return (
     <div>
       <div
+        id="contactSection"
         className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52"
-        style={{ backgroundImage: "url(/public/MicrosoftTeams-image12.png)" }}
+        style={{ backgroundImage: "url(MicrosoftTeams-image12.png)" }}
       >
         <h1 className="md:text-3xl">ESPACE PERSONNEL</h1>
       </div>
       <div className="px-4 flex flex-col items-center bg-[#F6F6F6]">
         <div className="flex flex-col items-center w-[98%]">
-          <h2 className="font-bold text-black text-lg mb-8 mt-6 md:text-3xl">
+          <h2
+            id="infoSection"
+            className="font-bold text-black text-lg mb-8 mt-6 md:text-3xl"
+          >
             JE CONTACTE MON CONSEILLER POUR :
           </h2>
           <form
@@ -82,45 +123,69 @@ function EspacePersonnelJeune2() {
       </h2>
       <div className="px-4 flex flex-col items-center bg-[#F6F6F6]">
         <div className="flex flex-col items-center w-[98%]">
-          <div className="flex flex-col rounded-3xl mt-4 mb-6 pt-6 p-4 bg-white relative w-full md:w-[70%] lg:w-[80%]">
-            <div className="absolute top-2 right-4">
-              <Link>
-                <FaPencil />
-              </Link>
+          {userData && (
+            <div className="md:w-[500px]">
+              {/* Render the first section of personal information */}
+              <div className="flex flex-col rounded-3xl mt-4 mb-6 pt-6 p-4 bg-white relative w-full md:w-[70%] lg:w-[80%]">
+                <div className="absolute top-2 right-4">
+                  <Link>
+                    <FaPencil />
+                  </Link>
+                </div>
+                <p className="font-bold mb-2">CIVILITE: </p>
+                <p className="font-bold mb-2">
+                  PRENOM: {userData.information.first_name}
+                </p>
+                <p className="font-bold mb-2">
+                  NOM: {userData.information.last_name}
+                </p>
+                <p className="font-bold mb-2">
+                  DATE DE NAISSANCE: {userData.information.dateOfBirth}
+                </p>
+              </div>
+
+              {/* Render the second section of personal information */}
+              <div className="flex flex-col rounded-3xl mt-4 mb-6 pt-6 p-4 bg-white relative w-full md:w-[70%] lg:w-[80%]">
+                <div className="absolute top-2 right-4">
+                  <Link>
+                    <FaPencil />
+                  </Link>
+                </div>
+                <p className="font-bold mb-2">PAYS: </p>
+                <p className="font-bold mb-2">CODE POSTAL: </p>
+                <p className="font-bold mb-2">
+                  COMMUNE: {userData.information.city}
+                </p>
+                <p className="font-bold mb-2 leading-tight">
+                  N°, TYPE, LIBELLE DE LA VOIE:
+                </p>
+                <p className="font-bold mb-2 leading-tight">
+                  COMPLEMENT DESTINATAIRE:
+                </p>
+              </div>
+
+              {/* Render the third section of personal information */}
+              <div className="flex flex-col rounded-3xl mt-4 mb-6 pt-6 p-4 bg-white relative w-full md:w-[70%] lg:w-[80%]">
+                <div className="absolute top-2 right-4">
+                  <Link>
+                    <FaPencil />
+                  </Link>
+                </div>
+                <p id="rendezvouzSection" className="font-bold mb-2">
+                  ADRESSE ELECTRONIQUE: {userData.information.email}
+                </p>
+                <p className="font-bold mb-2">
+                  TELEPHONE PRINCIPAL: {userData.information.phone}
+                </p>
+              </div>
             </div>
-            <p className="font-bold mb-2">CIVILITE :</p>
-            <p className="font-bold mb-2">PRENOM :</p>
-            <p className="font-bold mb-2">NOM :</p>
-            <p className="font-bold mb-2">DATE DE NAISSANCE :</p>
-          </div>
-          <div className="flex flex-col rounded-3xl mt-4 mb-6 pt-6 p-4 bg-white relative w-full md:w-[70%] lg:w-[80%]">
-            <div className="absolute top-2 right-4">
-              <Link>
-                <FaPencil />
-              </Link>
-            </div>
-            <p className="font-bold mb-2">PAYS :</p>
-            <p className="font-bold mb-2">CODE POSTAL :</p>
-            <p className="font-bold mb-2">COMMUNE :</p>
-            <p className="font-bold mb-2 leading-tight">
-              N°, TYPE, LIBELLE DE LA VOIE:
-            </p>
-            <p className="font-bold mb-2 leading-tight">
-              COMPLEMENT DESTINATAIRE :
-            </p>
-          </div>
-          <div className="flex flex-col rounded-3xl mt-4 mb-6 pt-6 p-4 bg-white relative w-full md:w-[70%] lg:w-[80%]">
-            <div className="absolute top-2 right-4">
-              <Link>
-                <FaPencil />
-              </Link>
-            </div>
-            <p className="font-bold mb-2">ADRESSE ELECTRONIQUE :</p>
-            <p className="font-bold mb-2">TELEPHONE PRINCIPAL :</p>
-          </div>
+          )}
         </div>
       </div>
-      <h2 className="font-bold text-black text-center text-lg md:text-2xl">
+      <h2
+        id="docuSection"
+        className="font-bold text-black text-center text-lg md:text-2xl"
+      >
         MES RENDEZ-VOUS
       </h2>
       <div className="px-4 flex flex-col items-center bg-[#F6F6F6]">
@@ -146,7 +211,10 @@ function EspacePersonnelJeune2() {
                 TELECHARGER
               </button>
             </div>
-            <div className="flex justify-between items-center mb-2">
+            <div
+              id="atelierSection"
+              className="flex justify-between items-center mb-2"
+            >
               <p className="font-semibold">LOREM IPSUM</p>
               <button className="font-semibold px-2 py-1 bg-gray-300 rounded-md">
                 TELECHARGER
@@ -161,11 +229,16 @@ function EspacePersonnelJeune2() {
           </div>
         </div>
       </div>
-      <h2 className="font-bold text-black text-center text-lg md:text-2xl">MES ATELIERS</h2>
+      <h2 className="font-bold text-black text-center text-lg md:text-2xl">
+        MES ATELIERS
+      </h2>
       <div className="px-4 flex flex-col items-center bg-[#F6F6F6]">
         <div className="flex flex-col items-center w-[98%]">
           <div className="flex flex-col mt-4 mb-6 p-4 w-full md:w-[70%] lg:w-[80%]">
-            <div className="flex justify-between items-center mb-2">
+            <div
+              id="formationSection"
+              className="flex justify-between items-center mb-2"
+            >
               <p className="font-semibold">COMMENT FAIRE UN BON CV</p>
               <p className="font-semibold ml-2">23/12/2023</p>
             </div>
@@ -206,7 +279,10 @@ function EspacePersonnelJeune2() {
               Date du plan de formation: <br />
               du 10/12/2023 au 22/12/2023
             </p>
-            <div className="flex justify-between items-center mb-2">
+            <div
+              id="emploiSection"
+              className="flex justify-between items-center mb-2"
+            >
               <p className="font-semibold leading-tight pr-2">
                 INITIATION A LA FORMATION
               </p>
@@ -234,7 +310,10 @@ function EspacePersonnelJeune2() {
           </div>
         </div>
       </div>
-      <h2 className="font-bold text-black text-center text-lg md:text-2xl">
+      <h2
+        id="ressourcesSection"
+        className="font-bold text-black text-center text-lg md:text-2xl"
+      >
         RESSOURCES / INFORMATIONS
       </h2>
       <div className="px-4 flex flex-col items-center bg-[#F6F6F6]">

@@ -11,6 +11,11 @@ function PreInscription() {
 
   const navigate = useNavigate();
 
+  // Dynamically get the API URL based on the environment
+  const apiUrlEnv = import.meta.env.MODE === 'production'
+  ? import.meta.env.VITE_API_URL_PROD
+  : import.meta.env.VITE_API_URL_DEV;
+
   const {
     register,
     handleSubmit,
@@ -21,7 +26,7 @@ function PreInscription() {
   const onSubmit = async (data) => {
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/registerCandidat",
+        `${apiUrlEnv}/api/registerCandidat`,
         data
       );
       console.log(response.data);
@@ -32,12 +37,11 @@ function PreInscription() {
 
       // Reset the form
       reset();
-
-      // Redirect after 5 seconds
+      // Redirect after 3 seconds
       setTimeout(() => {
         // Redirect to another page (replace '/' with the desired path)
         navigate("/");
-      }, 5000);
+      }, 3000);
     } catch (error) {
       if (error.response && error.response.status === 422) {
         // Handle validation errors
@@ -58,7 +62,7 @@ function PreInscription() {
     <div>
       <div
         className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52"
-        style={{ backgroundImage: "url(public/MicrosoftTeams-image12.png)" }}
+        style={{ backgroundImage: "url(MicrosoftTeams-image12.png)" }}
       >
         <h1 className="md:text-3xl">PRÉ-INSCRIPTION</h1>
       </div>
@@ -75,8 +79,8 @@ function PreInscription() {
             un conseilller qui vous proposera un rendez-vous.
           </p>
           <p className="mb-6 text-sm font-semibold">
-            NB: L'inscription sera définitive lorsque votre conseiller(ère) aura
-            en sa possession vos justificatifs (pièce d'identité et justificatif
+            NB: L&apos;inscription sera définitive lorsque votre conseiller(ère) aura
+            en sa possession vos justificatifs (pièce d&apos;identité et justificatif
             de domicile).
           </p>
 
@@ -147,7 +151,7 @@ function PreInscription() {
                         required: true,
                       })}
                       className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
-                      placeholder="Date de naissance"
+                      //placeholder="Date de naissance"
                       type="date"
                     />
                     {errors.dateOfBirth && (
@@ -204,7 +208,7 @@ function PreInscription() {
                         required: true,
                       })}
                       className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
-                      placeholder="Mot de passe"
+                      placeholder="Mot de passe*"
                       type="password"
                     />
                     {errors.password && (
@@ -383,7 +387,7 @@ function PreInscription() {
                     required: true,
                   })}
                   className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
-                  placeholder="Date de naissance"
+                  placeholder="Date de naissance*"
                   type="date"
                 />
                 {errors.dateOfBirth && (
@@ -448,7 +452,7 @@ function PreInscription() {
                     required: true,
                   })}
                   className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
-                  placeholder="Mot de passe"
+                  placeholder="Mot de passe*"
                   type="password"
                 />
                 {errors.password && (

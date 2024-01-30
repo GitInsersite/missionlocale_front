@@ -58,6 +58,7 @@ const DropdownButtonMission = () => {
             <li>
               <Link
                 to="/nos-missions"
+                onClick={() => window.scrollTo(0, 0)}
                 className="block text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 hover:rounded-t-lg dark:hover:text-white hover:text-[#A4195C]"
               >
                 Nos missions
@@ -66,6 +67,7 @@ const DropdownButtonMission = () => {
             <li>
               <Link
                 to="/nos-communes"
+                onClick={() => window.scrollTo(0, 0)}
                 className="block text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white hover:text-[#A4195C]"
               >
                 Nos communes
@@ -74,6 +76,7 @@ const DropdownButtonMission = () => {
             <li>
               <Link
                 to="/gouvernance"
+                onClick={() => window.scrollTo(0, 0)}
                 className="block text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white hover:text-[#A4195C]"
               >
                 La gouvernance
@@ -82,6 +85,7 @@ const DropdownButtonMission = () => {
             <li>
               <Link
                 to="/equipe"
+                onClick={() => window.scrollTo(0, 0)}
                 className="block text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 hover:rounded-b-lg dark:hover:text-white hover:text-[#A4195C]"
               >
                 Notre équipe
