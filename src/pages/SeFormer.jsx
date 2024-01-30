@@ -26,7 +26,7 @@ function SeFormer() {
             <div className="flex font-sans">
               <div className="flex-none w-56 relative">
                 <img
-                  src="/women.jpg"
+                  src="women.jpg"
                   alt=""
                   className="absolute inset-0 w-full h-full object-cover rounded-[20%]"
                   loading="lazy"
