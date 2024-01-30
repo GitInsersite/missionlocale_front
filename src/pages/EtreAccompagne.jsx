@@ -1,5 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
+import './Accompagnement.css'; // Importez les styles CSS
+
 
 function EtreAccompagne() {
   const [error, setError] = useState(null);
@@ -35,24 +37,36 @@ function EtreAccompagne() {
       >
         <h1 className="md:text-3xl">ETRE ACCOMPAGNE</h1>
       </div>
-      <div className="flex flex-col pl-4 p-4 font-semibold md:px-14 lg:px-20">
-        <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
+      
+      <section>
+      <div className="container">
+        <div className="carte" style={{ '--clr': '#ff0066' }}>
+          <div className="imgBx">
+            <img src="/public/alternance.jpg" alt="Accompagnement" />
+          </div>
+          <div className="conten">
+          <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
           <span className="border-b-2 border-[#D60B52] pb-[0.5px]">
             Un accom
           </span>
           pagnement personnalisé
-        </h2>
-        <p className="mb-6">
-          Un accompagnement vous sera proposé pour vous aider dans votre
+        </h2>     
+               <p className="mb-2">
+               Un accompagnement vous sera proposé pour vous aider dans votre
           recherche d’emploi ou de formation, personnalisé en fonction de vos
           attentes. Ces accompagnements seront aussi là pour vous aider sur le
           plan social, tels que la santé, le logement ou bien encore la
           mobilité. Un conseiller vous est assigné pour vous accompagner et vous
           aider dans toutes les démarches d’insertion, d’orientation, de
           formation ou de recherche d’emploi.
-        </p>
+              
+            </p>
+            <a href="#">PRENDRE RDV AVEC UN CONSEILLER</a>
+          </div>
+        </div>
       </div>
-      <div className="flex flex-col pl-4 p-4 font-semibold md:px-14 lg:px-20">
+    </section>
+     {/* <div className="flex flex-col pl-4 p-4 font-semibold md:px-14 lg:px-20">
         <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
           <span className="border-b-2 border-[#D60B52] pb-[0.5px]">
             Le PACEA
@@ -67,8 +81,8 @@ function EtreAccompagne() {
           répondre à vos besoins ou à vos attentes, notamment en termes de
           compétences.
         </p>
-      </div>
-      <div className="flex flex-col pl-4 p-4 font-semibold md:px-14 lg:px-20">
+          </div>*/}
+      {/*<div className="flex flex-col pl-4 p-4 font-semibold md:px-14 lg:px-20">
         <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
           <span className="border-b-2 border-[#D60B52] pb-[0.5px]">Le CEJ</span>{" "}
           (Contrat d’Engagement Jeunes)
@@ -85,8 +99,9 @@ function EtreAccompagne() {
           composé de différentes activités pour vous aider à trouver un emploi
           durable.
         </p>
-      </div>
-      <div className="flex flex-col pl-4 p-4 font-semibold md:px-14 lg:px-20">
+      </div> */}
+      
+     {/*<div className="flex flex-col pl-4 p-4 font-semibold md:px-14 lg:px-20">
         <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
           <span className="border-b-2 border-[#D60B52] pb-[0.5px]">Le Par</span>
           rainage
@@ -101,8 +116,9 @@ function EtreAccompagne() {
           réalités du monde du travail, à la culture d’entreprise, tout en
           travaillant votre confiance en soi.
         </p>
-      </div>
-      <div className="flex flex-col pl-4 p-4 font-semibold md:px-14 lg:px-20">
+      </div> */} 
+     
+     {/*  <div className="flex flex-col pl-4 p-4 font-semibold md:px-14 lg:px-20">
         <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
           <span className="border-b-2 border-[#D60B52] pb-[0.5px]">San</span>té
         </h2>
@@ -114,8 +130,9 @@ function EtreAccompagne() {
           dialogue et la possibilité de les orienter vers un bilan de santé
           gratuit.
         </p>
-      </div>
-      <div className="flex flex-col pl-4 p-4 font-semibold md:px-14 lg:px-20">
+      </div>*/} 
+    
+     {/*  <div className="flex flex-col pl-4 p-4 font-semibold md:px-14 lg:px-20">
         <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
           <span className="border-b-2 border-[#D60B52] pb-[0.5px]">Loge</span>
           ment
@@ -126,8 +143,9 @@ function EtreAccompagne() {
           (CLLAJ, Comité Local pour le Logement Autonome des Jeunes) afin qu’ils
           repartent avec toutes les informations et aides nécessaires.
         </p>
-      </div>
-      <div className="flex flex-col pl-4 p-4 font-semibold md:px-14 lg:px-20">
+      </div>*/} 
+    
+     {/* <div className="flex flex-col pl-4 p-4 font-semibold md:px-14 lg:px-20">
         <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
           <span className="border-b-2 border-[#D60B52] pb-[0.5px]">Chèque</span>{" "}
           Mobilité
@@ -141,17 +159,9 @@ function EtreAccompagne() {
           1er mois de stage, de formation professionnelle ou d’emploi, pour vous
           aider à débuter dans la vie active.
         </p>
-        {error && <div className="text-red-500">{error}</div>}{" "}
-        {/* Display error message */}
-        {success && <div className="text-green-500">{success}</div>}{" "}
-        {/* Display success message */}
-        <button
-          onClick={handleInscription}
-          className="bg-[#D60B52] text-white font-semibold py-1 text-center rounded-lg text-sm mb-6 md:w-64"
-        >
-          PRENDRE RDV AVEC UN CONSEILLER
-        </button>
-      </div>
+        
+      </div>*/} 
+     
     </div>
   );
 }
