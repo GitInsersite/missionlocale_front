@@ -5,15 +5,10 @@ function EtreAccompagne() {
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
 
-  // Dynamically get the API URL based on the environment
-  const apiUrlEnv = import.meta.env.MODE === 'production'
-  ? import.meta.env.VITE_API_URL_PROD
-  : import.meta.env.VITE_API_URL_DEV;
-
   const handleInscription = () => {
     // Make API call to register for the workshop
     const registrationUrl =
-      `${apiUrlEnv}/api/notifierConseillerFormulaire`;
+      "http://localhost:8000/api/notifierConseillerFormulaire";
 
     axios
       .post(registrationUrl)
@@ -36,7 +31,7 @@ function EtreAccompagne() {
     <div className="bg-[#F6F6F6]">
       <div
         className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52"
-        style={{ backgroundImage: "url(MicrosoftTeams-image12.png)" }}
+        style={{ backgroundImage: "url(/MicrosoftTeams-image12.png)" }}
       >
         <h1 className="md:text-3xl">ETRE ACCOMPAGNE</h1>
       </div> <br /> <br />
@@ -47,6 +42,8 @@ function EtreAccompagne() {
         <a href="/Services"> Services</a> {'>'}
         <a className="text-[#D70B52]" href="/Etreaccompagne"> Etre accompagné</a>
       </div> <br />
+
+ 
 
       <div>
         <div className="flex flex-col pl-4 p-4 px-4 pt-4 font-semibold bg-[#F6F6F6] md:px-10 sm:w-full lg:px-20 xl:px-52">
@@ -70,8 +67,7 @@ function EtreAccompagne() {
                   Ces accompagnements seront aussi là pour t’aider sur le plan social, tels que la santé, le logement ou bien encore la mobilité.
                   </p> <br />
                   <p className="text-sm text-slate-500">
-                  Un conseiller est assigné pour t’accompagner et t’aider dans toutes les démarches d’insertion, d’orientation, de formation ou de recherche d’emploi. 
-                  De nombreux dispositifs te seront alors présentés pour t’aider dans tes démarches professionnelles (PACEA, CEJ, Parrainage...) et sociales (Santé, Logement, Mobilité). 
+                  Un conseiller est assigné pour t’accompagner et t’aider dans toutes les démarches d’insertion, d’orientation, de formation ou de recherche d’emploi. De nombreux dispositifs te seront alors présentés pour t’aider dans tes démarches professionnelles (PACEA, CEJ, Parrainage...) et sociales (Santé, Logement, Mobilité). 
                   </p>
                   <div className="flex flex-col px-4 pt-4 font-semibold md:px-14 lg:px-20">
                     {error && <div className="text-red-500">{error}</div>}{" "}
