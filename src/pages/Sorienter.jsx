@@ -60,17 +60,12 @@ function Sorienter() {
           IER EST FAIT POUR MOI ?
         </h2>
         <p class="text-sm text-slate-500">
-          Au sein de la Mission Locale, nous vous informons sur toutes les
-          possibilités de métiers et de formations professionnelles. Nous vous
-          faisons tester de nombreux métiers, en fonction de vos appétences et
-          de vos envies, et vous accompagnons dans l’élaboration de votre projet
-          professionnel.
+        Au sein de la Mission Locale, nous t’informons sur toutes les possibilités de métiers et de formations professionnelles. 
+        En fonction de tes centres d’intérêt, un grand nombre de possibilités s’ouvrent à toi. La Mission Locale te donne la possibilité de découvrir les métiers et voies professionnelles possibles, en fonction de tes compétences et aspirations. 
         </p> <br />
         <p class="text-sm text-slate-500">
-          En fonction de vos centres d’intérêt, un grand nombre de possibilités
-          s’ouvrent à vous. La Mission Locale vous donne la possibilité de
-          découvrir les métiers et voies professionnelles possibles, en fonction
-          de vos compétences et aspirations.
+        Cela passe par différents parcours personnalisés, ateliers, 
+        et mises en situation réelles de travail pour vous aider à trouver votre voie dans le monde professionnel.
         </p>
     
           <div className="flex flex-col px-4 pt-4 font-semibold md:px-14 lg:px-20">

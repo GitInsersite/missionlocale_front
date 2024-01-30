@@ -35,12 +35,12 @@ function SeFormer() {
                       TION CONTINUE...
                     </h2>
                     <p class="text-sm text-slate-500">
-                      Une formation pré-qualifiante est, pourrait-on dire, une
-                      introduction, une découverte d’un métier ou d’un secteur
-                      professionnel. Durant celle-ci, vous seront présentées les bases
-                      constitutives, les pratiques courantes, pour y évoluer. Vous
-                      effectuerez aussi des stages qui vous permettront d’avoir une
-                      première expérience pratique dans le domaine choisi.{" "}
+                    La Mission Locale des Mureaux te soutient et t’accompagne dans ton projet de qualification professionnelle, avec des conseils sur les formations et les financements possibles, 
+                    de la recherche sur l’organisme de formation le plus adapté à ta situation, la mise en relation avec l’organisme, 
+                    la préparation à l’entrée en formation et le soutien tout au long du parcours. {" "}
+                    </p> <br />
+                    <p class="text-sm text-slate-500">
+                    Nous proposons parmi notre panel de formation des formations qualifiantes, pré-qualifiantes, ainsi que des remises à niveau.
                     </p>
 
                   </div>
@@ -66,12 +66,10 @@ function SeFormer() {
                       TION EN ALTERNANCE...
                     </h2>
                     <p class="text-sm text-slate-500">
-                      Les formations qualifiantes sont des formations de durée variable,
-                      mais longues pour la plupart, préparant à une qualification reconnue,
-                      que ce soit par le biais de la préparation à un diplôme ou encore à un
-                      titre professionnel. Elles se composent de cours théoriques et de
-                      stages.{" "}
-                    </p>
+                    Pour ce qui est de l’alternance, des ateliers sont proposés afin de présenter le contrat d’apprentissage ou de professionnalisation. 
+                    Avec ces ateliers, informe-toi sur les CFA correspondant aux formations choisies, les droits et les devoirs des apprentis, la rémunération ainsi que sur les aides financières aux entreprises.{" "}
+                    </p> <br />
+                    <p class="text-sm text-slate-500">Découvre aussi nos Prépa apprentissage, qui t’offrent un accompagnement complet pour sécuriser ton entrée en contrat d’apprentissage. </p>
                     <div className="flex flex-col px-4 pt-4 font-semibold justify:center md:px-14 lg:px-20">
                       <Link to="/formations" onClick={() => window.scrollTo(0, 0)} className="bg-[#D70B52] text-white font-semibold py-1 text-center rounded mb-8 text-sm md:w-56">
                         OFFRES DE FORMATIONS

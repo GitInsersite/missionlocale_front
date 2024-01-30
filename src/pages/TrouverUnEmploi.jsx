@@ -63,21 +63,14 @@ function TrouverUnEmploi() {
           LOCALE T’ACCOMPAGNE VERS L’EMPLOI
         </h2>
         <p className="text-sm text-slate-500">
-          Un conseiller est à votre disposition sans rendez-vous pour vous
-          accompagner dans la mise à jour de vos outils de recherche d’emploi:
-          CV, lettre de motivation, compte LinkedIn… <br /> N’hésitez donc pas à
-          prendre rendez-vous avec votre conseiller si vous êtes à la recherche
-          d’un emploi et pour que l’on puisse vous présenter nos conseils et nos
-          différents dispositifs d’insertion professionnelle.
+        Des équipes spécialisées en lien avec ton conseiller sont là pour t’aider à trouver une emploi ! 
+        Elles sont là pour négocier des offres d’emploi avec les entreprises, 
+        organiser des actions de recrutement ainsi que te préparer activement à la recherche d’emploi et à la rencontre avec les employeurs. 
         </p>
         <br />
         <p className="text-sm text-slate-500">
-          La Mission Locale propose de nombreux ateliers pour vous aider dans
-          vos recherches, les métiers qui recrutent, simulations d’entretiens
-          d’embauche… Pour consulter les ateliers, il vous suffit de consulter
-          notre page «Ateliers», qui détaille chaque semaine les différents
-          ateliers gratuits qui sont disponibles pour vous aider à développer
-          vos compétences professionnelles.
+        N’hésite donc pas à prendre rendez-vous avec ton conseiller si tu es à la recherche d’un emploi et pour que 
+        l’on puisse te présenter nos conseils et nos différents dispositifs d’insertion professionnelle. 
         </p>
         <div className="flex flex-col px-4 pt-4 font-semibold md:px-14 lg:px-20">
         {error && <div className="text-red-500">{error}</div>}{" "}

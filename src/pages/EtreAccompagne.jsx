@@ -1,6 +1,5 @@
 import { useState } from "react";
 import axios from "axios";
-import '../index.css';
 
 function EtreAccompagne() {
   const [error, setError] = useState(null);
@@ -44,23 +43,8 @@ function EtreAccompagne() {
         <a className="text-[#D70B52]" href="/Etreaccompagne"> Etre accompagné</a>
       </div> <br />
 
-      <section>
-        <div className="container">
-          <div className="carte" style="--clr:#ff0066;">
-            <div className="imgBx">
-              <img src="ouvriers.jpg" />
-            </div>
-            <div className="conten">
-              <h2> UN ACCOMPAGNEMENT PERSONNALISE</h2>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis consectetur eligendi sapiente blanditiis harum ex laboriosam tempora porro. Consectetur ratione quasi velit ipsam natus impedit necessitatibus iusto quaerat culpa ut!</p>
-              <a href="#">PRENDRE RDV AVEC UN CONSEILLER</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <div>
-        <div className="flex flex-col pl-4 p-4 px-4 pt-4 font-semibold bg-[#F6F6F6] md:px-14 lg:px-20 xl:px-52">
+        <div className="flex flex-col pl-4 p-4 px-4 pt-4 font-semibold bg-[#F6F6F6] md:px-10 sm:w-full lg:px-20 xl:px-52">
           <div className="flex font-sans">
             <div className="flex-none w-56">
               <img src="/ouvriers.jpg" alt="" className="object-cover rounded-[20%]" loading="lazy" />
@@ -77,13 +61,12 @@ function EtreAccompagne() {
                     PAGNEMENT PERSONNALISE
                   </h2>
                   <p className="text-sm text-slate-500">
-                    Un accompagnement vous sera proposé pour vous aider dans votre
-                    recherche d’emploi ou de formation, personnalisé en fonction de vos
-                    attentes. Ces accompagnements seront aussi là pour vous aider sur le
-                    plan social, tels que la santé, le logement ou bien encore la
-                    mobilité. Un conseiller vous est assigné pour vous accompagner et vous
-                    aider dans toutes les démarches d’insertion, d’orientation, de
-                    formation ou de recherche d’emploi.
+                  Un accompagnement est proposé pour t’aider dans ta recherche d’emploi ou de formation, personnalisé en fonction de tes attentes. 
+                  Ces accompagnements seront aussi là pour t’aider sur le plan social, tels que la santé, le logement ou bien encore la mobilité.
+                  </p> <br />
+                  <p className="text-sm text-slate-500">
+                  Un conseiller est assigné pour t’accompagner et t’aider dans toutes les démarches d’insertion, d’orientation, de formation ou de recherche d’emploi. 
+                  De nombreux dispositifs te seront alors présentés pour t’aider dans tes démarches professionnelles (PACEA, CEJ, Parrainage...) et sociales (Santé, Logement, Mobilité). 
                   </p>
                   <div className="flex flex-col px-4 pt-4 font-semibold md:px-14 lg:px-20">
                     {error && <div className="text-red-500">{error}</div>}{" "}
