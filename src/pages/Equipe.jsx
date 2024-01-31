@@ -43,7 +43,14 @@ function Equipe() {
         style={{ backgroundImage: "url(MicrosoftTeams-image11.png)" }}
       >
         <h1 className="md:text-3xl">NOTRE EQUIPE</h1>
-      </div>
+      </div> <br />
+
+      <div className="breadcrumb px-4 pt-4 font-semibold md:px-14 lg:px-20 xl:px-52">
+       <a href="/">Accueil</a> {'>'}
+        <a href="/LaMissionLocale">  La Mission Locale </a>{'>'}
+        <a className="text-[#D70B52]" href="/Equipe"> Notre équipe</a>
+        </div>
+
       <div className="flex flex-col items-center md:items-start md:px-14 md:pt-4 lg:px-20 xl:px-52">
         <div className="pt-4">
           <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
