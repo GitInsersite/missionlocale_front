@@ -228,6 +228,8 @@
   
     .container .carte:hover .conten h2 {
       display: flex;
+      white-space: nowrap; /* Empêcher le retour à la ligne du texte */
+      overflow: hidden; /* Cacher le débordement du texte */
       position: relative;
       left: 52px;
       transition: 0.5s;
