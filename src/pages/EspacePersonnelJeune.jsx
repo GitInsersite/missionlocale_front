@@ -12,7 +12,7 @@ function EspacePersonnelJeune() {
       <div className="flex flex-col items-center md:px-32 xl:px-40">
         <div className="md:w-full md:grid md:grid-cols-2 md:px-8 md:gap-6 lg:grid-cols-3 xl:grid-cols-4">
           <Link 
-          smooth to="/espace-personnel-juene2#contactSection"
+          smooth to="/espace-personnel-jeune2#contactSection"
           className="flex flex-col items-center justify-center w-48 h-48 rounded-3xl mt-6 bg-white">
             <img
               src="contact.svg"
@@ -21,11 +21,11 @@ function EspacePersonnelJeune() {
             />
             <p className="font-bold text-center">CONTACTER MON CONSEILLER</p>
           </Link>
-          <Link smooth to="/espace-personnel-juene2#infoSection" className="flex flex-col items-center justify-center w-48 h-48 rounded-3xl mt-6 bg-white">
+          <Link smooth to="/espace-personnel-jeune2#infoSection" className="flex flex-col items-center justify-center w-48 h-48 rounded-3xl mt-6 bg-white">
             <img src="info-perso.svg" alt="" className="w-32 h-32" />
             <p className="font-bold text-center">INFORMATIONS PERSONNELLES</p>
           </Link>
-          <Link smooth to="/espace-personnel-juene2#rendezvouzSection" className="flex flex-col items-center justify-center w-48 h-48 rounded-3xl mt-6 bg-white">
+          <Link smooth to="/espace-personnel-jeune2#rendezvouzSection" className="flex flex-col items-center justify-center w-48 h-48 rounded-3xl mt-6 bg-white">
             <img
               src="rendez-vous.svg"
               alt=""
@@ -33,23 +33,23 @@ function EspacePersonnelJeune() {
             />
             <p className="font-bold text-center">MES RENDEZ-VOUS</p>
           </Link>
-          <Link smooth to="/espace-personnel-juene2#docuSection" className="flex flex-col items-center justify-center w-48 h-48 rounded-3xl mt-6 bg-white">
+          <Link smooth to="/espace-personnel-jeune2#docuSection" className="flex flex-col items-center justify-center w-48 h-48 rounded-3xl mt-6 bg-white">
             <img src="documents.svg" alt="" className="w-32 h-32" />
             <p className="font-bold text-center">MES DOCUMENTS</p>
           </Link>
-          <Link smooth to="/espace-personnel-juene2#atelierSection" className="flex flex-col items-center justify-center w-48 h-48 rounded-3xl mt-6 bg-white">
+          <Link smooth to="/espace-personnel-jeune2#atelierSection" className="flex flex-col items-center justify-center w-48 h-48 rounded-3xl mt-6 bg-white">
             <img src="ateliers.svg" alt="" className="w-32 h-32" />
             <p className="font-bold text-center">MES ATELIERS</p>
           </Link>
-          <Link smooth to="/espace-personnel-juene2#formationSection" className="flex flex-col items-center justify-center w-48 h-48 rounded-3xl mt-6 bg-white">
+          <Link smooth to="/espace-personnel-jeune2#formationSection" className="flex flex-col items-center justify-center w-48 h-48 rounded-3xl mt-6 bg-white">
             <img src="formations.svg" alt="" className="w-32 h-32" />
             <p className="font-bold text-center">MES FORMATIONS</p>
           </Link>
-          <Link smooth to="/espace-personnel-juene2#emploiSection" className="flex flex-col items-center justify-center w-48 h-48 rounded-3xl mt-6 bg-white">
+          <Link smooth to="/espace-personnel-jeune2#emploiSection" className="flex flex-col items-center justify-center w-48 h-48 rounded-3xl mt-6 bg-white">
             <img src="offre-emploi.svg" alt="" className="w-32 h-32" />
-            <p className="font-bold text-center">MES OFFRE D'EMPLOI</p>
+            <p className="font-bold text-center">MES OFuFRE D'EMPLOI</p>
           </Link>
-          <Link smooth to="/espace-personnel-juene2#ressourcesSection" className="flex flex-col items-center justify-center w-48 h-48 rounded-3xl mt-6 mb-6 bg-white">
+          <Link smooth to="/espace-personnel-jeune2#ressourcesSection" className="flex flex-col items-center justify-center w-48 h-48 rounded-3xl mt-6 mb-6 bg-white">
             <img
               src="ressources-informations.svg"
               alt=""
