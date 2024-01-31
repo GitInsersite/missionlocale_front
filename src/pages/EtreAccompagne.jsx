@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import './Accompagnement.css'; // Importez les styles CSS
+import '/accompagnement.css'; // Importez les styles CSS
 
 
 function EtreAccompagne() {
@@ -35,8 +35,16 @@ function EtreAccompagne() {
         className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52"
         style={{ backgroundImage: "url(/public/MicrosoftTeams-image12.png)" }}
       >
+        <div className="titre">
         <h1 className="md:text-3xl">ETRE ACCOMPAGNE</h1>
       </div>
+      </div>
+      
+      <div className="breadcrumb px-4 pt-4 font-semibold md:px-14 lg:px-20 xl:px-52">
+        <a className="hover:text-[#D70B52]" href="/">Accueil</a> {'>'}
+        <a className="hover:text-[#D70B52]" href="/Services"> Services</a> {'>'}
+        <a className="hover:text-[#D70B52]" href="/Etreaccompagne"> Etre accompagné</a>
+      </div> 
       
       <section>
       <div className="container">
@@ -47,11 +55,11 @@ function EtreAccompagne() {
           <div className="conten">
           <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
           <span className="border-b-2 border-[#D60B52] pb-[0.5px]">
-            Un accom
+            UN ACCOM
           </span>
-          pagnement personnalisé
+          PAGNEMENT PERSONNALISE
         </h2>     
-               <p className="mb-2">
+               <p >
                Un accompagnement vous sera proposé pour vous aider dans votre
           recherche d’emploi ou de formation, personnalisé en fonction de vos
           attentes. Ces accompagnements seront aussi là pour vous aider sur le
@@ -61,7 +69,9 @@ function EtreAccompagne() {
           formation ou de recherche d’emploi.
               
             </p>
+            <div className="rdv">
             <a href="#">PRENDRE RDV AVEC UN CONSEILLER</a>
+            </div>
           </div>
         </div>
       </div>
