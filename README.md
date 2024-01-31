@@ -37,7 +37,7 @@ Assurez-vous d'être sur la branche de destination :
 ```bash
 git checkout branche_destination
 
-Utilisez git checkout --patch pour sélectionner les modifications du premier fichier
+# Utilisez git checkout --patch pour sélectionner les modifications du premier fichier
 
 ```bash
 git checkout --patch branche_source -- chemin/vers/le/premier_fichier ( exemple : git checkout --patch dev -- chemin/vers/le/fichier.jsx )
