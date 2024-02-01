@@ -1,5 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
+import '/accompagnement.css'; // Importez les styles CSS
+
 
 function Sorienter() {
   const [error, setError] = useState(null);
@@ -36,108 +38,41 @@ function Sorienter() {
         <h1 className="md:text-3xl">S&apos;ORIENTER</h1>
       </div>
       <div className="flex flex-col px-4 pt-4 font-semibold md:px-14 lg:px-20">
-        <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
+      
+        <section>
+      <div className="container">
+        <div className="carte" style={{ '--clr': '#ff0066' }}>
+          <div className="imgBx">
+            <img src="/public/think.jpg" alt="Accompagnement" />
+          </div>
+          <div className="conten">
+          <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
           <span className="border-b-2 border-[#D60B52] pb-[0.5px]">
-            Quel mét
+           QUEL MET 
           </span>
-          ier est fait pour moi?
-        </h2>
-        <p className="mb-6">
-          Au sein de la Mission Locale, nous vous informons sur toutes les
-          possibilités de métiers et de formations professionnelles. Nous vous
-          faisons tester de nombreux métiers, en fonction de vos appétences et
-          de vos envies, et vous accompagnons dans l’élaboration de votre projet
-          professionnel.
-        </p>
-        <p className="mb-6">
-          En fonction de vos centres d’intérêt, un grand nombre de possibilités
-          s’ouvrent à vous. La Mission Locale vous donne la possibilité de
-          découvrir les métiers et voies professionnelles possibles, en fonction
-          de vos compétences et aspirations.
-        </p>
+          IER EST FAIT POUR MOI
+        </h2>     
+               <p >
+               Un accompagnement est proposé pour t’aider dans ta recherche d’emploi ou de formation, personnalisé en fonction de tes attentes. Ces accompagnements seront aussi là pour t’aider sur le plan social, tels que la santé, le logement ou bien encore la mobilité.  
+
+ 
+
+Un conseiller est assigné pour t’accompagner et t’aider dans toutes les démarches d’insertion, d’orientation, de formation ou de recherche d’emploi. De nombreux dispositifs te seront alors présentés pour t’aider dans tes démarches professionnelles (PACEA, CEJ, Parrainage...) et sociales (Santé, Logement, Mobilité). 
+              
+            </p>
+            <div className="rdv">
+  <button onClick={handleInscription}>PRENDRE RDV AVEC UN CONSEILLER</button>
+</div>
+
+          </div>
+        </div>
       </div>
-      <div className="flex flex-col px-4 pt-4 font-semibold md:px-14 lg:px-20">
-        <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
-          <span className="border-b-2 border-[#D60B52] pb-[0.5px]">
-            Les pla
-          </span>
-          teaux techniques
-        </h2>
-        <p className="mb-6">
-          Découvrez un secteur professionnel par une mise en situation réelle de
-          travail (PMSMP), et apprenez-en pus sur le travail en équipe, les
-          conditions de travail, ainsi que sur les premiers gestes techniques.
-          Pendant 2 semaines, tout jeune sans projet professionnel ou souhaitant
-          valider un projet découvrira plusieurs métiers grâce à de la pratique,
-          des mises en situation, qui définiront alors plus précisément ses
-          objectifs d’orientation.
-        </p>
-      </div>
-      <div className="flex flex-col px-4 pt-4 font-semibold md:px-14 lg:px-20">
-        <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
-          <span className="border-b-2 border-[#D60B52] pb-[0.5px]">E2</span>C
-        </h2>
-        <p className="mb-6">
-          Un parcours qui vous propose un programme personnalisé pour accéder à
-          l’emploi, reposant sur l’amélioration des savoirs de base (français,
-          mathématiques, informatique) et le développement de compétences
-          professionnelles, sociales et personnelles. L’E2C propose un parcours
-          de formation en alternance de 10 et mois et demi maximum, ainsi que
-          des stages en entreprises pour découvrir des métiers et construire
-          ainsi votre projet professionnel. La formation est gratuite et
-          indemnisée après une validation de période d’essai d’un mois. Pour
-          entreprendre ce parcours, référez-vous en à votre conseiller de la
-          Mission Locale.
-        </p>
-      </div>
-      <div className="flex flex-col px-4 pt-4 font-semibold md:px-14 lg:px-20">
-        <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
-          <span className="border-b-2 border-[#D60B52] pb-[0.5px]">Le P</span>
-          EE
-        </h2>
-        <p className="mb-6">
-          Un dispositif régional pour vous aider à construire et/ou confirmer
-          votre projet professionnel et/ou à développer des compétences de base
-          en situation professionnelle. Des stages en entreprise, des plateaux
-          techniques et des stages dans le cadre des passerelles de découverte
-          de l’apprentissage… sont autant d’options disponibles dans ce
-          dispositif immersif pour accéder à une formation qualifiante ou à un
-          emploi direct, grâce à l’expérience acquise lors de ces stages.
-        </p>
-        <p className="mb-6">
-          La durée moyenne de ce parcours gratuit est de 736 heures en centre
-          auxquelles s’ajoutent 4 semaines en entreprise. Vous bénéficiez alors
-          du statut de stagiaire de la formation professionnelle ainsi que d’une
-          protection sociale.{" "}
-        </p>
-      </div>
-      <div className="flex flex-col px-4 pt-4 font-semibold md:px-14 lg:px-20">
-        <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
-          <span className="border-b-2 border-[#D60B52] pb-[0.5px]">L’EDI </span>
-          (Espace Dynamique d’Insertion)
-        </h2>
-        <p className="mb-6">
-          Un parcours qui vous propose un programme personnalisé pour accéder à
-          l’emploi, reposant sur l’amélioration des savoirs de base (français,
-          mathématiques, informatique) et le développement de compétences
-          professionnelles, sociales et personnelles. L’E2C propose un parcours
-          de formation en alternance de 10 et mois et demi maximum, ainsi que
-          des stages en entreprises pour découvrir des métiers et construire
-          ainsi votre projet professionnel. La formation est gratuite et
-          indemnisée après une validation de période d’essai d’un mois. Pour
-          entreprendre ce parcours, référez-vous en à votre conseiller de la
-          Mission Locale.
-        </p>
+    </section>
         {error && <div className="text-red-500">{error}</div>}{" "}
         {/* Display error message */}
         {success && <div className="text-green-500">{success}</div>}{" "}
         {/* Display success message */}
-        <button
-          onClick={handleInscription}
-          className="bg-[#D60B52] text-white font-semibold py-1 text-center rounded-lg text-sm mb-6 md:w-64"
-        >
-          PRENDRE RDV AVEC UN CONSEILLER
-        </button>
+       
       </div>
     </div>
   );
