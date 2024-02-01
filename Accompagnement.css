@@ -166,7 +166,7 @@
     transform: translateY(10px);
     display:inline-block;
     padding: 12px 25px;
-    background: var(--clr);
+    background: #D60B52;
     color: #fff;
     font-weight: 500;
     font-size: small;

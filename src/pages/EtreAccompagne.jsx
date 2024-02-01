@@ -50,7 +50,7 @@ function EtreAccompagne() {
       <div className="container">
         <div className="carte" style={{ '--clr': '#ff0066' }}>
           <div className="imgBx">
-            <img src="/public/alternance.jpg" alt="Accompagnement" />
+            <img src="/public/bosse.jpg" alt="Accompagnement" />
           </div>
           <div className="conten">
           <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
