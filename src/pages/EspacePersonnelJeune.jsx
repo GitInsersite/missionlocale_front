@@ -47,7 +47,7 @@ function EspacePersonnelJeune() {
           </Link>
           <Link smooth to="/espace-personnel-jeune2#emploiSection" className="flex flex-col items-center justify-center w-48 h-48 rounded-3xl mt-6 bg-white">
             <img src="offre-emploi.svg" alt="" className="w-32 h-32" />
-            <p className="font-bold text-center">MES OFuFRE D'EMPLOI</p>
+            <p className="font-bold text-center">MES OFFRES D'EMPLOI</p>
           </Link>
           <Link smooth to="/espace-personnel-jeune2#ressourcesSection" className="flex flex-col items-center justify-center w-48 h-48 rounded-3xl mt-6 mb-6 bg-white">
             <img
