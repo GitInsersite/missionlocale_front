@@ -4,6 +4,7 @@ import { FaCheckCircle, FaTimesCircle, FaPauseCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import moment from 'moment';
 
 function EspacePersonnelJeune2() {
   const {
@@ -72,16 +73,8 @@ function EspacePersonnelJeune2() {
             <div className="flex flex-col mb-2">
               <div className="flex flex-col ml-8">
                 <div className="mb-2">
-                  <input
-                    type="radio"
-                    id="rdvOption"
-                    {...register("option", { required: true })}
-                    value="avoir-un-rdv"
-                    className="mr-2"
-                  />
-                  <label htmlFor="rdvOption" className="mr-4">
-                    Avoir un RDV
-                  </label>
+                  <input type="radio" id="rdvOption" {...register("option", { required: true })} value="avoir-un-rdv" className="mr-2"/>
+                  <label htmlFor="rdvOption" className="mr-4">Avoir un RDV</label>
                 </div>
 
                 <div className="mb-2">
@@ -118,188 +111,123 @@ function EspacePersonnelJeune2() {
           </form>
         </div>
       </div>
-      <h2 className="font-bold text-black text-center text-lg md:text-2xl">
-        INFORMATIONS PERSONNELLES
-      </h2>
+      <h2 className="font-bold text-black text-center text-lg md:text-2xl">INFORMATIONS PERSONNELLES</h2>
       <div className="px-4 flex flex-col items-center bg-[#F6F6F6]">
         <div className="flex flex-col items-center w-[98%]">
           {userData && (
-            <div className="md:w-[500px]">
+            <div className="flex flex-col mt-4 mb-6 p-4 w-full md:w-[70%] lg:w-[80%] bg-white rounded-3xl">
               {/* Render the first section of personal information */}
-              <div className="flex flex-col rounded-3xl mt-4 mb-6 pt-6 p-4 bg-white relative w-full md:w-[70%] lg:w-[80%]">
-                <div className="absolute top-2 right-4">
-                  <Link>
-                    <FaPencil />
-                  </Link>
-                </div>
-                <p className="font-bold mb-2">CIVILITE: </p>
-                <p className="font-bold mb-2">
-                  PRENOM: {userData.information.first_name}
-                </p>
-                <p className="font-bold mb-2">
-                  NOM: {userData.information.last_name}
-                </p>
-                <p className="font-bold mb-2">
-                  DATE DE NAISSANCE: {userData.information.dateOfBirth}
-                </p>
-              </div>
 
-              {/* Render the second section of personal information */}
-              <div className="flex flex-col rounded-3xl mt-4 mb-6 pt-6 p-4 bg-white relative w-full md:w-[70%] lg:w-[80%]">
                 <div className="absolute top-2 right-4">
                   <Link>
                     <FaPencil />
                   </Link>
                 </div>
-                <p className="font-bold mb-2">PAYS: </p>
+                {/* <p className="font-bold mb-2">CIVILITE: </p> */}
+                <p className="font-bold mb-2">PRENOM: {userData.information.first_name}</p>
+                <p className="font-bold mb-2">NOM: {userData.information.last_name}</p>
+                <p className="font-bold mb-2">DATE DE NAISSANCE: {moment(userData.information.dateOfBirth).format('DD/MM/YYYY')}</p>
+                <p className="font-bold mb-2 leading-tight">N°, TYPE, LIBELLE DE LA VOIE:</p>
                 <p className="font-bold mb-2">CODE POSTAL: </p>
-                <p className="font-bold mb-2">
-                  COMMUNE: {userData.information.city}
-                </p>
-                <p className="font-bold mb-2 leading-tight">
-                  N°, TYPE, LIBELLE DE LA VOIE:
-                </p>
-                <p className="font-bold mb-2 leading-tight">
-                  COMPLEMENT DESTINATAIRE:
-                </p>
-              </div>
-
-              {/* Render the third section of personal information */}
-              <div className="flex flex-col rounded-3xl mt-4 mb-6 pt-6 p-4 bg-white relative w-full md:w-[70%] lg:w-[80%]">
-                <div className="absolute top-2 right-4">
-                  <Link>
-                    <FaPencil />
-                  </Link>
-                </div>
-                <p id="rendezvouzSection" className="font-bold mb-2">
-                  ADRESSE ELECTRONIQUE: {userData.information.email}
-                </p>
-                <p className="font-bold mb-2">
-                  TELEPHONE PRINCIPAL: {userData.information.phone}
-                </p>
-              </div>
+                <p className="font-bold mb-2">COMMUNE: {userData.information.city}</p>
+                <p id="rendezvouzSection" className="font-bold mb-2">ADRESSE ELECTRONIQUE: {userData.information.email}</p>
+                <p className="font-bold mb-2">TELEPHONE PRINCIPAL: {userData.information.phone}</p>
+          
             </div>
           )}
         </div>
       </div>
-      <h2
-        id="docuSection"
-        className="font-bold text-black text-center text-lg md:text-2xl"
-      >
-        MES RENDEZ-VOUS
-      </h2>
+      <h2 id="rendezvousSection" className="font-bold text-black text-center text-lg md:text-2xl">MES RENDEZ-VOUS</h2>
       <div className="px-4 flex flex-col items-center bg-[#F6F6F6]">
         <div className="flex flex-col items-center w-[98%]">
-          <div className="flex flex-col mt-4 mb-6 p-4 w-full md:w-[70%] lg:w-[80%]"></div>
+          {userData && userData.rendezVous && (
+            <div className="flex flex-col items-center mt-4 mb-6 p-4 w-full md:w-[70%] lg:w-[80%] bg-white rounded-3xl">
+              {userData.rendezVous.map((rendezVous, index) => (
+                <div key={index} className="flex flex-col text-start relative w-full">
+                  <p className="font-bold mb-2">Le {moment(rendezVous.date).format('DD/MM/YYYY')} à {moment(rendezVous.heure, 'HH:mm:ss').format('HH:mm')} avec {rendezVous.conseiller.information.first_name}</p>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
-      <h2 className="font-bold text-black text-center text-lg md:text-2xl">
-        MES DOCUMENTS
-      </h2>
+      <h2 id="docuSection" className="font-bold text-black text-center text-lg md:text-2xl">MES DOCUMENTS</h2>
       <div className="px-4 flex flex-col items-center bg-[#F6F6F6]">
         <div className="flex flex-col items-center w-[98%]">
-          <div className="flex flex-col mt-4 mb-6 p-4 w-full md:w-[70%] lg:w-[80%]">
-            <div className="flex justify-between items-center mb-2">
-              <p className="font-semibold">LOREM IPSUM</p>
-              <button className="font-semibold px-2 py-1 bg-gray-300 rounded-md">
-                TELECHARGER
-              </button>
+          {userData && userData.documents && (
+            <div className="flex flex-col mt-4 mb-6 p-4 w-full md:w-[70%] lg:w-[80%] bg-white rounded-3xl">
+              {userData.documents.map((documents, index) => (
+                <div key={index} className="flex justify-between items-center mb-2">
+                  <p className="font-bold mb-2">{documents.title}</p>
+                  <button className="font-semibold px-2 py-1 bg-gray-300 rounded-md">
+                    <a href={documents.document_url} target="_blank" rel="noopener noreferrer">
+                      Télécharger
+                    </a>
+                  </button>
+                </div>
+              ))}
             </div>
-            <div className="flex justify-between items-center mb-2">
-              <p className="font-semibold">LOREM IPSUM</p>
-              <button className="font-semibold px-2 py-1 bg-gray-300 rounded-md">
-                TELECHARGER
-              </button>
-            </div>
-            <div
-              id="atelierSection"
-              className="flex justify-between items-center mb-2"
-            >
-              <p className="font-semibold">LOREM IPSUM</p>
-              <button className="font-semibold px-2 py-1 bg-gray-300 rounded-md">
-                TELECHARGER
-              </button>
-            </div>
-            <div className="flex justify-between items-center mb-2">
-              <p className="font-semibold">LOREM IPSUM</p>
-              <button className="font-semibold px-2 py-1 bg-gray-300 rounded-md">
-                TELECHARGER
-              </button>
-            </div>
+          )}
+        </div>
+      </div>
+
+      <h2 id="atelierSection" className="font-bold text-black text-center text-lg md:text-2xl">MES ATELIERS</h2>
+      <div className="px-4 flex flex-col items-center bg-[#F6F6F6]">
+        <div className="flex flex-col items-center w-[98%]">
+          <div className="flex flex-col mt-4  p-4 w-full md:w-[70%] lg:w-[80%] bg-white rounded-3xl">
+            {userData.ateliers && userData.ateliers.length > 0 ? (
+              userData.ateliers.map((atelier) => (
+                <div key={atelier.id} className="flex justify-between items-center mb-2">
+                  <p className="font-semibold">{atelier.title}</p>
+                  {(() => {
+                    switch (atelier.pivot.status) {
+                      case 'accepte':
+                        return <p className="text-green-500 text-start">Inscription Acceptée</p>;
+                      case 'refuse':
+                        return <p className="text-red-500 text-start">Inscription Refusée</p>;
+                      default:
+                        return <p className="text-gray-500 text-start">Inscription en attente</p>;
+                    }
+                  })()}<br />
+                  <p className="font-semibold">{moment(atelier.date).format('DD/MM/YYYY')}</p>
+                </div>
+              ))
+            ) : (
+              <p>Aucun atelier disponible.</p>
+            )}
           </div>
         </div>
       </div>
-      <h2 className="font-bold text-black text-center text-lg md:text-2xl">
-        MES ATELIERS
-      </h2>
-      <div className="px-4 flex flex-col items-center bg-[#F6F6F6]">
-        <div className="flex flex-col items-center w-[98%]">
-          <div className="flex flex-col mt-4 mb-6 p-4 w-full md:w-[70%] lg:w-[80%]">
-            <div
-              id="formationSection"
-              className="flex justify-between items-center mb-2"
-            >
-              <p className="font-semibold">COMMENT FAIRE UN BON CV</p>
-              <p className="font-semibold ml-2">23/12/2023</p>
-            </div>
-            <div className="flex justify-between items-center mb-2">
-              <p className="font-semibold">FAIRE UNE LETTRE DE MOTIVATION</p>
-              <p className="font-semibold">23/12/2023</p>
-            </div>
+      
+      <h2 id="formationSection" className="font-bold text-black text-center text-lg md:text-2xl">MES FORMATIONS</h2>
+    <div className="px-4 flex flex-col items-center bg-[#F6F6F6]">
+      <div className="flex flex-col items-center w-[98%]">
+        {userData && userData.formations && userData.formations.length > 0 ? (
+          <div className="flex flex-col mt-4 p-4 w-full md:w-[70%] lg:w-[80%] bg-white rounded-3xl">
+            {userData.formations.map((formation) => (
+              <div key={formation.id} className="flex justify-between items-center mb-2">
+                <p className="font-semibold">{formation.title}</p>
+                {(() => {
+                  switch (formation.pivot.status) {
+                    case 'accepte':
+                      return <p className="text-green-500 text-start">Inscription Acceptée</p>;
+                    case 'refuse':
+                      return <p className="text-red-500 text-start">Inscription Refusée</p>;
+                    default:
+                      return <p className="text-gray-500 text-start">Inscription en attente</p>;
+                  }
+                })()}<br />
+                <p className="font-semibold">{moment(formation.start).format('DD/MM/YYYY')} - {moment(formation.end).format('DD/MM/YYYY')}</p>
+              </div>
+            ))}
           </div>
-        </div>
+        ) : (
+          <p>Aucune formation disponible.</p>
+        )}
       </div>
-      <h2 className="font-bold text-black text-center text-lg md:text-2xl">
-        MES FORMATIONS
-      </h2>
-      <div className="px-4 flex flex-col items-center bg-[#F6F6F6]">
-        <div className="flex flex-col items-center w-[98%]">
-          <div className="flex flex-col mt-4 mb-6 p-4 w-full md:w-[70%] lg:w-[80%]">
-            <div className="flex justify-between items-center mb-2">
-              <p className="font-semibold leading-tight pr-2">
-                INITIATION A LA FORMATION
-              </p>
-              <p className="text-xs md:text-base leading-tight text-gray-500 font-semibold md:flex justify-center items-center">
-                FORMATION EN ATTENTE <FaPauseCircle className="md:ml-2" />
-              </p>
-            </div>
-            <p className="text-sm font-semibold mb-4 leading-tight">
-              Date du plan de formation: <br />
-              du 10/12/2023 au 22/12/2023
-            </p>
-            <div className="flex justify-between items-center mb-2">
-              <p className="font-semibold leading-tight pr-2">
-                INITIATION A LA FORMATION
-              </p>
-              <p className="text-xs md:text-base leading-tight text-red-600 font-semibold md:flex justify-center items-center">
-                INSCRIPTION REFUSEE <FaTimesCircle className="md:ml-2" />
-              </p>
-            </div>
-            <p className="text-sm font-semibold mb-4 leading-tight">
-              Date du plan de formation: <br />
-              du 10/12/2023 au 22/12/2023
-            </p>
-            <div
-              id="emploiSection"
-              className="flex justify-between items-center mb-2"
-            >
-              <p className="font-semibold leading-tight pr-2">
-                INITIATION A LA FORMATION
-              </p>
-              <p className="text-xs md:text-base leading-tight text-green-500 font-semibold md:flex justify-center items-center">
-                FORMATION ACCEPTEE <FaCheckCircle className="md:ml-2" />
-              </p>
-            </div>
-            <p className="text-sm font-semibold mb-4 leading-tight">
-              Date du plan de formation: <br />
-              du 10/12/2023 au 22/12/2023
-            </p>
-          </div>
-        </div>
-      </div>
-      <h2 className="font-bold text-black text-center text-lg md:text-2xl">
-        MES OFFRES D'EMPLOI
-      </h2>
+    </div>
+
+      <h2 id="emploiSection" className="font-bold text-black text-center text-lg md:text-2xl">MES OFFRES D'EMPLOI</h2>
       <div className="px-4 flex flex-col items-center bg-[#F6F6F6]">
         <div className="flex flex-col items-center w-[98%]">
           <div className="flex flex-col mt-4 mb-6 p-4 w-full md:w-[70%] lg:w-[80%]">
@@ -310,12 +238,9 @@ function EspacePersonnelJeune2() {
           </div>
         </div>
       </div>
-      <h2
-        id="ressourcesSection"
-        className="font-bold text-black text-center text-lg md:text-2xl"
-      >
-        RESSOURCES / INFORMATIONS
-      </h2>
+
+
+      <h2 id="ressourcesSection" className="font-bold text-black text-center text-lg md:text-2xl">RESSOURCES / INFORMATIONS</h2>
       <div className="px-4 flex flex-col items-center bg-[#F6F6F6]">
         <div className="flex flex-col items-center w-[98%]">
           <div className="flex flex-col mt-4 mb-6 p-4 w-full md:w-[70%] lg:w-[80%]"></div>

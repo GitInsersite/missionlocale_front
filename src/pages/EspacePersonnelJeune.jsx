@@ -25,7 +25,7 @@ function EspacePersonnelJeune() {
             <img src="info-perso.svg" alt="" className="w-32 h-32" />
             <p className="font-bold text-center">INFORMATIONS PERSONNELLES</p>
           </Link>
-          <Link smooth to="/espace-personnel-jeune2#rendezvouzSection" className="flex flex-col items-center justify-center w-48 h-48 rounded-3xl mt-6 bg-white">
+          <Link smooth to="/espace-personnel-jeune2#rendezvousSection" className="flex flex-col items-center justify-center w-48 h-48 rounded-3xl mt-6 bg-white">
             <img
               src="rendez-vous.svg"
               alt=""
