@@ -36,6 +36,13 @@ export const AuthProvider = ({ children }) => {
     // Check local storage for role
     localStorage.getItem("role") || null
   );
+  const [ateliers, setAteliers] = useState(JSON.parse(localStorage.getItem("ateliers") || "[]"));
+  const [information, setInformation] = useState(JSON.parse(localStorage.getItem("information") || "{}"));
+  const [documents, setDocuments] = useState(JSON.parse(localStorage.getItem("documents") || "[]"));
+  const [formations, setFormations] = useState(JSON.parse(localStorage.getItem("formations") || "[]"));
+  const [jobOffers, setJobOffers] = useState(JSON.parse(localStorage.getItem("joboffers") || "[]"));
+  const [rendezVous, setRendezVous] = useState(JSON.parse(localStorage.getItem("rendezVous") || "[]"));
+
   const [showSessionExpiredPopup, setShowSessionExpiredPopup] = useState(false);
 
   const navigate = useNavigate();
@@ -51,8 +58,7 @@ export const AuthProvider = ({ children }) => {
     localStorage.setItem("responsible", responsible);
     // Update local storage when role changes
     localStorage.setItem("role", role);
-
-
+    
     const authToken = localStorage.getItem("authToken");
     const expiresAt = localStorage.getItem("expiresAt");
 
@@ -95,6 +101,18 @@ export const AuthProvider = ({ children }) => {
       // Store the token in local storage for later use
       localStorage.setItem("authToken", token);
       localStorage.setItem("expiresAt", expiresAt);
+      localStorage.setItem("isAuthenticated", true);
+      localStorage.setItem("name", response.data.information.first_name);
+      localStorage.setItem("lastname", response.data.information.last_name);
+      localStorage.setItem("responsible", response.data.information.responsible_name);
+      localStorage.setItem("role", response.data.role);
+      localStorage.setItem("ateliers", JSON.stringify(response.data.ateliers));
+      localStorage.setItem("information", JSON.stringify(response.data.information));
+      localStorage.setItem("documents", JSON.stringify(response.data.documents));
+      localStorage.setItem("formations", JSON.stringify(response.data.formations));
+      localStorage.setItem("jobOffers", JSON.stringify(response.data.jobOffers));
+      localStorage.setItem("rendezVous", JSON.stringify(response.data.rendezVous));
+
   
       // Handle success or redirect if needed
       setSuccessMessage(response.data.message);
@@ -102,6 +120,14 @@ export const AuthProvider = ({ children }) => {
       setLastname(response.data.information.last_name);
       setresponsible(response.data.information.responsible_name);
       setRole(response.data.role);
+      setAteliers(response.data.ateliers);
+      setInformation(response.data.information);
+      setDocuments(response.data.documents);
+      setFormations(response.data.formations);
+      setJobOffers(response.data.jobOffers);
+      setRendezVous(response.data.rendezVous);
+
+
       setErrorMessage(false);
 
       // Set isAuthenticated to true if the token exists
@@ -136,6 +162,18 @@ export const AuthProvider = ({ children }) => {
     // Remove the authentication token from local storage
     localStorage.removeItem("authToken");
     localStorage.removeItem("expiresAt");
+    localStorage.removeItem("isAuthenticated");
+    localStorage.removeItem("name");
+    localStorage.removeItem("lastname");
+    
+    localStorage.removeItem("responsible");
+    localStorage.removeItem("role");
+    localStorage.removeItem("ateliers");
+    localStorage.removeItem("information");
+    localStorage.removeItem("documents");
+    localStorage.removeItem("formations");
+    localStorage.removeItem("jobOffers");
+    localStorage.removeItem("rendezVous");
 
     // Perform your logout logic here
     // For simplicity, just setting isAuthenticated to false
@@ -145,6 +183,12 @@ export const AuthProvider = ({ children }) => {
     setLastname(null);
     setresponsible(null);
     setRole(null);
+    setAteliers([]); // Reset ateliers to an empty array
+    setInformation({}); // Reset information to an empty object
+    setDocuments([]); // Reset documents to an empty array
+    setFormations([]); // Reset formations to an empty array
+    setJobOffers([]); // Reset jobOffers to an empty array
+    setRendezVous([]); // Reset rendezVous to an empty array
     navigate("/");
 
     // Scroll to the top of the page
@@ -163,6 +207,12 @@ export const AuthProvider = ({ children }) => {
         lastname,
         responsible,
         role,
+        ateliers,
+        information,
+        documents,
+        formations,
+        jobOffers,
+        rendezVous,
       }}
     >
       {children}
