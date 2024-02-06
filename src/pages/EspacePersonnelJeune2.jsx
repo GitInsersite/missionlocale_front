@@ -35,7 +35,7 @@ function EspacePersonnelJeune2() {
         <div className="flex flex-col items-center w-[98%]">
           <h2 id="infoSection" className="font-bold text-black text-lg mb-8 mt-6 md:text-3xl">JE CONTACTE MON CONSEILLER POUR :</h2>
           <form
-            className="flex flex-col mt-4 w-full md:w-[70%] lg:w-[80%]"
+            className="flex flex-col mt-4 mb-6 p-4 w-full md:w-[70%] lg:w-[80%] bg-white rounded-3xl"
             onSubmit={handleSubmit(onSubmit)}
           >
             <div className="flex flex-col mb-2">
@@ -46,26 +46,12 @@ function EspacePersonnelJeune2() {
                 </div>
 
                 <div className="mb-2">
-                  <input
-                    type="radio"
-                    id="formationOption"
-                    {...register("option", { required: true })}
-                    value="chercher-une-formation"
-                    className="mr-2"
-                  />
-                  <label htmlFor="formationOption" className="mr-4">
-                    Chercher une formation
-                  </label>
+                  <input type="radio" id="formationOption"{...register("option", { required: true })}value="chercher-une-formation" className="mr-2"/>
+                  <label htmlFor="formationOption" className="mr-4">Chercher une formation</label>
                 </div>
 
                 <div className="mb-2">
-                  <input
-                    type="radio"
-                    id="emploiOption"
-                    {...register("option", { required: true })}
-                    value="trouver-un-emploi"
-                    className="mr-2"
-                  />
+                  <input type="radio" id="emploiOption"{...register("option", { required: true })}value="trouver-un-emploi"className="mr-2"/>
                   <label htmlFor="emploiOption">Trouver un emploi</label>
                 </div>
               </div>
@@ -108,7 +94,7 @@ function EspacePersonnelJeune2() {
       <h2 id="rendezvousSection" className="font-bold text-black text-center text-lg md:text-2xl">MES RENDEZ-VOUS</h2>
       <div className="px-4 flex flex-col items-center bg-[#F6F6F6]">
         <div className="flex flex-col items-center w-[98%]">
-            <div className="flex flex-col items-center mt-4 mb-6 p-4 w-full md:w-[70%] lg:w-[80%] bg-white rounded-3xl">
+            <div className="flex flex-col mt-4 mb-6 p-4 w-full md:w-[70%] lg:w-[80%] bg-white rounded-3xl">
               {rendezVous.map((rendezVous, index) => (
                 <div key={index} className="flex flex-col text-start relative w-full">
                   <p className="font-bold mb-2">Le {moment(rendezVous.date).format('DD/MM/YYYY')} à {moment(rendezVous.heure, 'HH:mm:ss').format('HH:mm')} avec {rendezVous.conseiller.information.first_name}</p>
@@ -139,7 +125,7 @@ function EspacePersonnelJeune2() {
       <h2 id="atelierSection" className="font-bold text-black text-center text-lg md:text-2xl">MES ATELIERS</h2>
       <div className="px-4 flex flex-col items-center bg-[#F6F6F6]">
         <div className="flex flex-col items-center w-[98%]">
-          <div className="flex flex-col mt-4  p-4 w-full md:w-[70%] lg:w-[80%] bg-white rounded-3xl">
+          <div className="flex flex-col mt-4 mb-6 p-4 w-full md:w-[70%] lg:w-[80%] bg-white rounded-3xl">
             {ateliers && ateliers.length > 0 ? (
               ateliers.map((atelier) => (
                 <div key={atelier.id} className="flex justify-between items-center mb-2">
@@ -168,14 +154,14 @@ function EspacePersonnelJeune2() {
       <div className="px-4 flex flex-col items-center bg-[#F6F6F6]">
         <div className="flex flex-col items-center w-[98%]">
           {formations && formations.length > 0 ? (
-            <div className="flex flex-col mt-4 p-4 w-full md:w-[70%] lg:w-[80%] bg-white rounded-3xl">
+            <div className="flex flex-col mt-4 mb-6 p-4 w-full md:w-[70%] lg:w-[80%] bg-white rounded-3xl">
               {formations.map((formation) => (
                 <div key={formation.id} className="flex justify-between items-center mb-2">
                   <p className="font-semibold">{formation.title}</p>
                   {(() => {
                     switch (formation.pivot.status) {
                       case 'accepte':
-                        return <p className="text-green-500 text-start">Accepté</p>;
+                        return <p className="text-green-500 text-start">Acceptée</p>;
                       case 'refuse':
                         return <p className="text-red-500 text-start">Refusée</p>;
                       default:
@@ -195,7 +181,7 @@ function EspacePersonnelJeune2() {
       <h2 id="emploiSection" className="font-bold text-black text-center text-lg md:text-2xl">MES OFFRES D'EMPLOI</h2>
       <div className="px-4 flex flex-col items-center bg-[#F6F6F6]">
         <div className="flex flex-col items-center w-[98%]">
-          <div className="flex flex-col mt-4 mb-6 p-4 w-full md:w-[70%] lg:w-[80%]">
+          <div className="flex flex-col mt-4 mb-6 p-4 w-full md:w-[70%] lg:w-[80%] bg-white rounded-3xl">
             <p className="leading-tight mb-2 font-semibold">
               TECHNICIEN DE MAINTENANCE
             </p>

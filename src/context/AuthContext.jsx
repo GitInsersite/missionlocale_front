@@ -36,6 +36,7 @@ export const AuthProvider = ({ children }) => {
     // Check local storage for role
     localStorage.getItem("role") || null
   );
+  
   const [ateliers, setAteliers] = useState(JSON.parse(localStorage.getItem("ateliers") || "[]"));
   const [information, setInformation] = useState(JSON.parse(localStorage.getItem("information") || "{}"));
   const [documents, setDocuments] = useState(JSON.parse(localStorage.getItem("documents") || "[]"));
