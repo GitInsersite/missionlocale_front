@@ -67,11 +67,11 @@ function App() {
           <Route path="/mot-de-passe-oublie-entreprise" element={<MotDePasseOublieEntreprise/>} />
           <Route path="/pre-inscription" element={<PreInscription />} />
           <Route
-            path="/espace-personnel-juene"
+            path="/espace-personnel-jeune"
             element={<EspacePersonnelJeune />}
           />
           <Route
-            path="/espace-personnel-juene2"
+            path="/espace-personnel-jeune2"
             element={<EspacePersonnelJeune2 />}
           />
           <Route path="/formations" element={<Formations />} />

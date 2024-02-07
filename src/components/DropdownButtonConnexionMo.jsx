@@ -71,7 +71,7 @@ function DropdownButtonConnexionMo() {
                   isAuthenticated
                     ? role === "entreprise"
                       ? "/espace-entreprise"
-                      : "/espace-personnel-juene"
+                      : "/espace-personnel-jeune"
                     : "/connexion-jeune"
                 }
                 onClick={() => window.scrollTo(0, 0)}

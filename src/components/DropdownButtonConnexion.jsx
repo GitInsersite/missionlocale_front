@@ -76,7 +76,7 @@ function DropdownButtonConnexion() {
           <ul className="text-sm text-white bg-[#252323] flex flex-col">
             <li>
               <Link
-                to={isAuthenticated ? role === "entreprise" ? "/espace-entreprise" : "/espace-personnel-juene" : "/connexion-jeune"}
+                to={isAuthenticated ? role === "entreprise" ? "/espace-entreprise" : "/espace-personnel-jeune" : "/connexion-jeune"}
                 onClick={() => window.scrollTo(0, 0)}
                 className="block text-left px-4 py-2 hover:bg-[#A4195C] dark:hover:bg-gray-600 dark:hover:text-white"
               >
