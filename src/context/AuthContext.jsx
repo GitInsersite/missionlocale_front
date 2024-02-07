@@ -14,70 +14,55 @@ export const useAuth = () => {
 };
 
 export const AuthProvider = ({ children }) => {
-  const [isAuthenticated, setIsAuthenticated] = useState(
-    // Check local storage for isAuthenticated
-    localStorage.getItem("isAuthenticated") === "true"
-  );
+  const [isAuthenticated, setIsAuthenticated] = useState(localStorage.getItem("isAuthenticated") === "true");
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState(null);
-  const [name, setName] = useState(
-    // Check local storage for name
-    localStorage.getItem("name") || null
-  );
-  const [lastname, setLastname] = useState(
-    // Check local storage for lastname
-    localStorage.getItem("lastname") || null
-  );
-  const [responsible, setresponsible] = useState(
-    // Check local storage for responsible
-    localStorage.getItem("responsible") || null
-  );
-  const [role, setRole] = useState(
-    // Check local storage for role
-    localStorage.getItem("role") || null
-  );
+  const [name, setName] = useState(localStorage.getItem("name") || null);
+  const [lastname, setLastname] = useState(localStorage.getItem("lastname") || null);
+  const [responsible, setresponsible] = useState(localStorage.getItem("responsible") || null);
+  const [role, setRole] = useState(localStorage.getItem("role") || null);
   
-  const [ateliers, setAteliers] = useState(JSON.parse(localStorage.getItem("ateliers") || "[]"));
-  const [information, setInformation] = useState(JSON.parse(localStorage.getItem("information") || "{}"));
-  const [documents, setDocuments] = useState(JSON.parse(localStorage.getItem("documents") || "[]"));
-  const [formations, setFormations] = useState(JSON.parse(localStorage.getItem("formations") || "[]"));
-  const [jobOffers, setJobOffers] = useState(JSON.parse(localStorage.getItem("joboffers") || "[]"));
-  const [rendezVous, setRendezVous] = useState(JSON.parse(localStorage.getItem("rendezVous") || "[]"));
+  const [ateliers, setAteliers] = useState(JSON.parse(localStorage.getItem("ateliers") || null));
+  const [information, setInformation] = useState(JSON.parse(localStorage.getItem("information") || null));
+  const [documents, setDocuments] = useState(JSON.parse(localStorage.getItem("documents") || null));
+  const [formations, setFormations] = useState(JSON.parse(localStorage.getItem("formations") || null));
+  const [jobOffers, setJobOffers] = useState(JSON.parse(localStorage.getItem("joboffers") || null));
+  const [rendezVous, setRendezVous] = useState(JSON.parse(localStorage.getItem("rendezVous") || null));
 
   const [showSessionExpiredPopup, setShowSessionExpiredPopup] = useState(false);
 
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Update local storage when isAuthenticated changes
     localStorage.setItem("isAuthenticated", isAuthenticated);
-    // Update local storage when name changes
     localStorage.setItem("name", name);
-    // Update local storage when lastname changes
     localStorage.setItem("lastname", lastname);
-    // Update local storage when responsible changes
     localStorage.setItem("responsible", responsible);
-    // Update local storage when role changes
     localStorage.setItem("role", role);
     
     const authToken = localStorage.getItem("authToken");
     const expiresAt = localStorage.getItem("expiresAt");
+
+    if (role === "jeune") {
+      // Mettre à jour les valeurs spécifiques au rôle "jeune"
+      localStorage.setItem("ateliers", JSON.stringify(ateliers));
+      localStorage.setItem("information", JSON.stringify(information));
+      localStorage.setItem("documents", JSON.stringify(documents));
+      localStorage.setItem("formations", JSON.stringify(formations));
+      localStorage.setItem("jobOffers", JSON.stringify(jobOffers));
+      localStorage.setItem("rendezVous", JSON.stringify(rendezVous));
+    }
 
     if (authToken && expiresAt) {
       const currentTimestamp = new Date().getTime();
       const expiresTimestamp = new Date(expiresAt).getTime();
 
       if (currentTimestamp > expiresTimestamp) {
-        // Token has expired, show the session expired popup
         setShowSessionExpiredPopup(true);
-        // Perform logout after a delay (you can adjust the delay according to your needs)
-        setTimeout(() => {
-          logout();
-          //setShowSessionExpiredPopup(false);
-        }, 3000);
+        setTimeout(() => {logout();}, 3000);
       }
     }
-  }, [isAuthenticated, name, lastname, role, responsible]);
+  }, [isAuthenticated, name, lastname, role, responsible,ateliers, information, documents, formations, jobOffers, rendezVous]);
 
   const closeSessionExpiredPopup = () => {
     setShowSessionExpiredPopup(false);
@@ -85,7 +70,6 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (data) => {
     try {
-    // Dynamically get the API URL based on the environment
     const apiUrl = import.meta.env.MODE === 'production'
       ? import.meta.env.VITE_API_URL_PROD
       : import.meta.env.VITE_API_URL_DEV;
@@ -107,6 +91,7 @@ export const AuthProvider = ({ children }) => {
       localStorage.setItem("lastname", response.data.information.last_name);
       localStorage.setItem("responsible", response.data.information.responsible_name);
       localStorage.setItem("role", response.data.role);
+
       localStorage.setItem("ateliers", JSON.stringify(response.data.ateliers));
       localStorage.setItem("information", JSON.stringify(response.data.information));
       localStorage.setItem("documents", JSON.stringify(response.data.documents));
@@ -121,6 +106,7 @@ export const AuthProvider = ({ children }) => {
       setLastname(response.data.information.last_name);
       setresponsible(response.data.information.responsible_name);
       setRole(response.data.role);
+      
       setAteliers(response.data.ateliers);
       setInformation(response.data.information);
       setDocuments(response.data.documents);
@@ -130,30 +116,24 @@ export const AuthProvider = ({ children }) => {
 
 
       setErrorMessage(false);
-
       // Set isAuthenticated to true if the token exists
       if (token) {
         setIsAuthenticated(true);
       } else {
-        // Handle the case where the token is missing in the response
         console.error("Token is missing in the response");
       }
+      
+      navigate("/"); // Redirect to another page (replace '/' with the desired path)
   
-      // Redirect to another page (replace '/' with the desired path)
-      navigate("/");
-  
-      // Scroll to the top of the page
-      window.scrollTo(0, 0);
+      window.scrollTo(0, 0); // Scroll to the top of the page
 
       console.log(response)
   
     } catch (error) {
       if (error.response && error.response.status === 401) {
-        // Unauthorized (Invalid credentials) - Set error in component state
-        setErrorMessage(error.response.data.error || "Invalid credentials");
+        setErrorMessage(error.response.data.error || "Invalid credentials");// Unauthorized (Invalid credentials) - Set error in component state
       } else {
-        // Other errors - Log and handle as needed
-        console.error("API request failed with error:", error);
+        console.error("API request failed with error:", error);// Other errors - Log and handle as needed
       }
     }
   };
@@ -176,8 +156,6 @@ export const AuthProvider = ({ children }) => {
     localStorage.removeItem("jobOffers");
     localStorage.removeItem("rendezVous");
 
-    // Perform your logout logic here
-    // For simplicity, just setting isAuthenticated to false
     setIsAuthenticated(false);
     setSuccessMessage(null);
     setName(null);
