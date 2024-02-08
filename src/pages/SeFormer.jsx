@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
+import '/former.css';
+import '/formacontinue.css';
+
 
 function SeFormer() {
   return (
-    <div>
+    <div className="bg-[#F6F6F6]">
       <div
         className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52"
         style={{ backgroundImage: "url(/public/MicrosoftTeams-image12.png)" }}
@@ -11,84 +14,58 @@ function SeFormer() {
       </div>
       <div className="flex flex-col items-center">
         <div>
-          <div className="flex flex-col px-4 pt-4 font-semibold md:px-14 lg:px-20">
-            <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
-              <span className="border-b-2 border-[#D70B52] pb-[0.5px]">
-                Aide à
-              </span>{" "}
-              l’accès à la formation
-            </h2>
-            <h3 className="leading-tight">
-              La Mission Locale des Mureaux vous soutient et vous accompagne
-              dans votre projet de qualification professionnelle :{" "}
-            </h3>
-            <ul className="mb-6 mt-6 leading-tight">
-              <li>
-                - conseils sur les formations et les financements possibles{" "}
-              </li>
-              <li>
-                - recherche de l’organisme de formation le plus adapté à votre
-                situation{" "}
-              </li>
-              <li>- mise en relation avec l’organisme de formations </li>
-              <li>- préparation à l’entrée en formations </li>
-              <li>- soutien tout au long du parcours de formations </li>
-            </ul>
-            <p className="mb-6 leading-tight">
-              Pour accéder à l’une de nos formations proposées, contactez votre
-              conseiller de la Mission Locale.
-            </p>
+           
+           
+            <section>
+      <div className="container">
+        <div className="carte" style={{ '--clr': '#ff0066' }}>
+          <div className="imgBx">
+            <img src="/public/gyal.jpg" alt="Accompagnement" />
           </div>
-          <div className="flex flex-col px-4 pt-4  font-semibold bg-[#F6F6F6] md:px-14 lg:px-20">
-            <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
+          <div className="conten">
+          <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
               <span className="border-b-2 border-[#D70B52] pb-[0.5px]">
-                Les for
+                FORMA
               </span>
-              mations pré-qualifiantes
-            </h2>
-            <p className="mb-6">
-              Une formation pré-qualifiante est, pourrait-on dire, une
-              introduction, une découverte d’un métier ou d’un secteur
-              professionnel. Durant celle-ci, vous seront présentées les bases
-              constitutives, les pratiques courantes, pour y évoluer. Vous
-              effectuerez aussi des stages qui vous permettront d’avoir une
-              première expérience pratique dans le domaine choisi.{" "}
+              TION CONTINUE
+            </h2> 
+               <p >
+               Des équipes spécialisées en lien avec ton conseiller sont là pour t’aider à trouver une emploi ! Elles sont là pour négocier des offres d’emploi avec les entreprises, organiser des actions de recrutement ainsi que te préparer activement à la recherche d’emploi et à la rencontre avec les employeurs. N’hésite donc pas à prendre rendez-vous avec ton conseiller si tu es à la recherche d’un emploi et pour que l’on puisse te présenter nos conseils et nos différents dispositifs d’insertion professionnelle. 
             </p>
           </div>
         </div>
       </div>
-      <div className="flex flex-col px-4 pt-4  font-semibold md:px-14 lg:px-20">
-        <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
-          <span className="border-b-2 border-[#D70B52] pb-[0.5px]">
-            Les for
-          </span>
-          mations qualifiantes
-        </h2>
-        <p className="mb-6">
-          Les formations qualifiantes sont des formations de durée variable,
-          mais longues pour la plupart, préparant à une qualification reconnue,
-          que ce soit par le biais de la préparation à un diplôme ou encore à un
-          titre professionnel. Elles se composent de cours théoriques et de
-          stages.
-        </p>
+    </section>
+            
+          </div>
+          
+        </div>
+        <section>
+      <div className="containeur">
+        <div className="carte" style={{ '--clr': '#ff0066' }}>
+          <div className="imgBxe">
+            <img src="/public/bizz.jpg" alt="Accompagnement" />
+          </div>
+          <div className="contente">
+          <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
+              <span className="border-b-2 border-[#D70B52] pb-[0.5px]">
+                FORMA
+              </span>
+              TION EN ALTERNANCE
+            </h2> 
+               <p >
+               Des équipes spécialisées en lien avec ton conseiller sont là pour t’aider à trouver une emploi ! Elles sont là pour négocier des offres d’emploi avec les entreprises, organiser des actions de recrutement ainsi que te préparer activement à la recherche d’emploi et à la rencontre avec les employeurs. N’hésite donc pas à prendre rendez-vous avec ton conseiller si tu es à la recherche d’un emploi et pour que l’on puisse te présenter nos conseils et nos différents dispositifs d’insertion professionnelle. 
+            </p>
+          </div>
+        </div>
       </div>
-      <div className="flex flex-col px-4 pt-4 font-semibold bg-[#F6F6F6] md:px-14 lg:px-20">
-        <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
-          <span className="border-b-2 border-[#D70B52] pb-[0.5px]">Appr</span>
-          entissage
-        </h2>
-        <p className="mb-6">
-          Les formations qualifiantes sont des formations de durée variable,
-          mais longues pour la plupart, préparant à une qualification reconnue,
-          que ce soit par le biais de la préparation à un diplôme ou encore à un
-          titre professionnel. Elles se composent de cours théoriques et de
-          stages.
-        </p>
+    </section>
+      <div className="rdv">
         <Link to="/formations" onClick={() => window.scrollTo(0, 0)} className="bg-[#D70B52] text-white font-semibold py-1 text-center rounded-lg mb-8 text-sm md:w-56">
           OFFRES DE FORMATIONS
         </Link>
       </div>
-    </div>
+      </div>
   );
 }
 
