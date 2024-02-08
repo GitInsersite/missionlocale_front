@@ -132,7 +132,7 @@ function Gouvernance() {
           {governanceData.conseil_admin.map((member, index) => (
             <div
               key={index}
-              className="bg-white mx-10 h-28 rounded-xl flex w-3/4 md:mx-0 md:w-[90%]"
+              className="bg-white mx-10 rounded-xl flex w-3/4 md:mx-0 md:w-[90%]"
             >
               <div className="w-[40%] md:w-[20%] lg:w-[15%] xl:w-[10%]">
                 <img
@@ -158,7 +158,7 @@ function Gouvernance() {
             {governanceData.bureau.map((member, index) => (
               <div
                 key={index}
-                className="bg-white mb-4 mx-10 h-28 rounded-xl flex w-3/4 md:flex-col md:w-52 md:items-center md:h-fit md:py-4 md:mx-0 md:mb-8"
+                className="bg-white mb-4 mx-10 rounded-xl flex w-3/4 md:flex-col md:w-52 md:items-center md:h-fit md:py-4 md:mx-0 md:mb-8"
               >
                 <div className="w-[45%] flex items-center md:w-28 md:h-28 md:rounded-full">
                   <img
