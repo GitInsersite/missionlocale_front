@@ -1,7 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import '/accompagnement.css'; // Importez les styles CSS
-
+import '/emploi.css';
 
 function TrouverUnEmploi() {
 
@@ -45,12 +44,12 @@ function TrouverUnEmploi() {
         <a className="hover:text-[#D70B52]" href="/Etreaccompagne"> Trouver un emploi</a>
       </div> 
       <section>
-      <div className="container">
+      <div className="containeur">
         <div className="carte" style={{ '--clr': '#ff0066' }}>
-          <div className="imgBx">
+          <div className="imgBxe">
             <img src="/public/roux.jpg" alt="Accompagnement" />
           </div>
-          <div className="conten">
+          <div className="contente">
           <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">    
           LA MISSION LOCALE T'ACCOMPAGNE VERS
           
