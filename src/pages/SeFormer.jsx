@@ -17,7 +17,7 @@ function SeFormer() {
            
            
             <section>
-      <div className="container">
+      <div className="containe">
         <div className="carte" style={{ '--clr': '#ff0066' }}>
           <div className="imgBx">
             <img src="/public/gyal.jpg" alt="Accompagnement" />
