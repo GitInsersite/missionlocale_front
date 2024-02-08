@@ -264,12 +264,16 @@
     .containeur .carte:hover .contente p {
       left: 27px;
       transition: 0.5s;
-      font-size:0.6em ;
+      width: 100%;
+      font-size:0.7em ;
       display: flex;
       position: relative;
     }
   
     .container .carte.carte:hover .contente .rdv {
+      position: relative;
+      justify-content: center;
+      display: inline-block;
       padding: 12px 12px ;
       top: 13px;
       transition: 0.5s;
