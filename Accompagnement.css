@@ -199,8 +199,8 @@
       position: absolute;
       top: -80px;
       left: 45px;
-      width: 200px;
-      height: 160px;
+      width: 180px;
+      height: 140px;
       border-radius: 12px 12px 20px 20px ;
       transform: scale(0.80);
       overflow: hidden;
@@ -244,6 +244,7 @@
       overflow: hidden; /* Cacher le débordement du texte */
       position: relative;
       left: 52px;
+      top: -7px;
       font-size: 0.9em;
       transition: 0.5s;
       visibility: visible;
@@ -252,15 +253,17 @@
   
     .container .carte:hover .conten p {
       left: 27px;
+      top: -12px;
+      width: 100%;
       transition: 0.5s;
-      font-size:0.6em ;
+      font-size:0.7em ;
       display: flex;
       position: relative;
     }
   
     .container .carte.carte:hover .conten .rdv {
       padding: 12px 12px ;
-      top: 13px;
+      top: -20px;
       transition: 0.5s;
       left: 49px;
     }
