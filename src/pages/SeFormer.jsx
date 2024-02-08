@@ -15,6 +15,11 @@ function SeFormer() {
       <div className="flex flex-col items-center">
         <div>
            
+        <div className="breadcrumb px-4 pt-4  md:px-14 lg:px-20 xl:px-52">
+        <a className="hover:text-[#D70B52]" href="/">Accueil</a> {'>'}
+        <a className="hover:text-[#D70B52]" href="/Services"> Services</a> {'>'}
+        <a className="hover:text-[#D70B52]" href="/Etreaccompagne"> Se former</a>
+      </div> 
            
             <section>
       <div className="containe">
@@ -56,15 +61,18 @@ function SeFormer() {
                <p >
                Des équipes spécialisées en lien avec ton conseiller sont là pour t’aider à trouver une emploi ! Elles sont là pour négocier des offres d’emploi avec les entreprises, organiser des actions de recrutement ainsi que te préparer activement à la recherche d’emploi et à la rencontre avec les employeurs. N’hésite donc pas à prendre rendez-vous avec ton conseiller si tu es à la recherche d’un emploi et pour que l’on puisse te présenter nos conseils et nos différents dispositifs d’insertion professionnelle. 
             </p>
-          </div>
-        </div>
-      </div>
-    </section>
-      <div className="rdv">
+            <div className="rdv">
         <Link to="/formations" onClick={() => window.scrollTo(0, 0)} className="bg-[#D70B52] text-white font-semibold py-1 text-center rounded-lg mb-8 text-sm md:w-56">
           OFFRES DE FORMATIONS
         </Link>
+            
+          </div>
+          
       </div>
+        </div>
+      </div>
+    </section>
+     
       </div>
   );
 }

@@ -38,6 +38,12 @@ function TrouverUnEmploi() {
       >
         <h1 className="md:text-3xl">TROUVER UN EMPLOI</h1>
       </div>
+
+      <div className="breadcrumb px-4 pt-4  md:px-14 lg:px-20 xl:px-52">
+        <a className="hover:text-[#D70B52]" href="/">Accueil</a> {'>'}
+        <a className="hover:text-[#D70B52]" href="/Services"> Services</a> {'>'}
+        <a className="hover:text-[#D70B52]" href="/Etreaccompagne"> Trouver un emploi</a>
+      </div> 
       <section>
       <div className="container">
         <div className="carte" style={{ '--clr': '#ff0066' }}>

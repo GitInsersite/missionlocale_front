@@ -9,6 +9,7 @@
 }
 
 
+
 .titre{
   animation: fadeIn 0.9s ease-out forwards; /* Ajouter une animation fadeIn de 2 secondes avec ease-out */
 
@@ -34,7 +35,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    top: 60px;
+    top: 80px;
     left: 97px;
     gap: 100px 50px;
     padding: 100px 50px;

@@ -15,6 +15,7 @@
 }
 .breadcrumb{
   animation: appearFromLeft 1.2s ease-out forwards;
+  
 
 }
 @keyframes appearFromLeft {
@@ -162,7 +163,9 @@
   .containeur .carte .contente .rdv {
   display: flex;
   position: relative; 
+  top: 34px;
   justify-content: flex-end;
+  
 
  }
 

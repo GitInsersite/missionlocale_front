@@ -37,7 +37,12 @@ function Sorienter() {
       >
         <h1 className="md:text-3xl">S&apos;ORIENTER</h1>
       </div>
-      <div className="flex flex-col px-4 pt-4 font-semibold md:px-14 lg:px-20">
+      <div className="flex flex-col px-4 pt-4  md:px-14 lg:px-20">
+      <div className="breadcrumb px-4 pt-4  md:px-14 lg:px-20 xl:px-52">
+        <a className="hover:text-[#D70B52]" href="/">Accueil</a> {'>'}
+        <a className="hover:text-[#D70B52]" href="/Services"> Services</a> {'>'}
+        <a className="hover:text-[#D70B52]" href="/Etreaccompagne"> S'orienter</a>
+      </div> 
       
         <section>
       <div className="container">
