@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import '/former.css';
 import '/formacontinue.css';
+import '/formalter.css';
 
 
 function SeFormer() {
