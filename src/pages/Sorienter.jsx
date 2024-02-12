@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import '/accompagnement.css'; // Importez les styles CSS
+import '/orienter.css'; // Importez les styles CSS
 
 
 function Sorienter() {
@@ -45,7 +45,7 @@ function Sorienter() {
       </div> 
       
         <section>
-      <div className="container">
+      <div className="bloc_orient">
         <div className="carte" style={{ '--clr': '#ff0066' }}>
           <div className="imgBx">
             <img src="/public/think.jpg" alt="Accompagnement" />
