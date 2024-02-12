@@ -124,8 +124,8 @@
     opacity: 0.5;
   }
 
-  .container_acc .carte:not(:hover) .contente {
-    transition: opacity 1.5s ease;
+  .container_acc .carte:not(:hover) .conten {
+    transition: opacity 0.5s ease;
 
   }
   
@@ -161,7 +161,9 @@
     font-size: 0.6em;
     top: 15px;
     transition: 0.5s;
+    
   }
+  
   
 
   .container_acc .carte.carte:hover  .conten .rdv {
@@ -187,7 +189,7 @@
   @media only screen and (max-width: 768px) {
     .container_acc {
       top: 20px;
-      left: 20px;
+      left: 0px;
       gap: 20px;
       padding: 50px 20px;
     }
@@ -260,11 +262,12 @@
       left: 27px;
       top: -12px;
       width: 100%;
-      transition: 0.5s;
+      transition: 0.1s;
       font-size:0.7em ;
       display: flex;
       position: relative;
     }
+    
   
     .container_acc .carte.carte:hover .conten .rdv {
       padding: 12px 12px ;
