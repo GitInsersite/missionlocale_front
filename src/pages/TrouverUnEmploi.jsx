@@ -44,7 +44,7 @@ function TrouverUnEmploi() {
         <a className="hover:text-[#D70B52]" href="/Etreaccompagne"> Trouver un emploi</a>
       </div> 
       <section>
-      <div className="containeur">
+      <div className="bloc">
         <div className="carte" style={{ '--clr': '#ff0066' }}>
           <div className="imgBxe">
             <img src="/public/roux.jpg" alt="Accompagnement" />

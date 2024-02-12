@@ -210,6 +210,7 @@
       width: 350px;
       height: 160px;
       top: 15px;
+      margin-bottom: 20px;
       left: -122px; /* Remplacer la largeur fixe par 100% pour occuper toute la largeur de l'écran */
       
     }
