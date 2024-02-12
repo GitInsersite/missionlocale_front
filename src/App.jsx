@@ -3,7 +3,7 @@ import { UserProvider } from "./context/UserContext";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-import Accueil from "./pages/accueil";
+import Accueil from "./pages/Accueil";
 import NosMissions from "./pages/NosMissions";
 import NosCommunes from "./pages/NosCommunes";
 import Gouvernance from "./pages/Gouvernance";
