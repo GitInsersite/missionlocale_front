@@ -1,6 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
 import { useMediaQuery } from "react-responsive";
+import '/orienter.css'; // Importez les styles CSS
+
 
 function Sorienter() {
   const [error, setError] = useState(null);
@@ -36,173 +38,56 @@ function Sorienter() {
   };
 
   return (
-    <>
-      {isTabletOrLarger ? (
-        <div className="bg-[#F6F6F6]">
-          <div
-            className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52"
-            style={{ backgroundImage: "url(MicrosoftTeams-image12.png)" }}
-          >
-            <h1 className="md:text-3xl">S&apos;ORIENTER</h1>
-          </div>{" "}
-          <br />
-          <div className="breadcrumb px-4 pt-4 font-semibold md:px-14 lg:px-20 xl:px-52">
-            <a href="/">Accueil</a> {">"}
-            <a href="/Services"> Services </a>
-            {">"}
-            <a className="text-[#D70B52]" href="/Sorientier">
-              {" "}
-              S&apos;orientier
-            </a>
-          </div>{" "}
-          <br />
-          <div>
-            <div className="flex flex-col px-4 pt-4  font-semibold bg-[#F6F6F6] md:px-14 lg:px-20 xl:px-52">
-              <div className="flex font-sans">
-                <div className="flex-none w-56">
-                  <img
-                    className="object-cover rounded-[20%]"
-                    loading="lazy"
-                    src="\jeunefemme.jpg"
-                    alt=""
-                  />
-                </div>
+    <div className="bg-[#F6F6F6]">
+      <div
+        className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52"
+        style={{ backgroundImage: "url(/public/MicrosoftTeams-image12.png)" }}
+      >
+        <h1 className="md:text-3xl">S&apos;ORIENTER</h1>
+      </div>
+      <div className="flex flex-col px-4 pt-4  md:px-14 lg:px-20">
+      <div className="breadcrumb px-4 pt-4  md:px-14 lg:px-20 xl:px-52">
+        <a className="hover:text-[#D70B52]" href="/">Accueil</a> {'>'}
+        <a className="hover:text-[#D70B52]" href="/Services"> Services</a> {'>'}
+        <a className="hover:text-[#D70B52]" href="/Etreaccompagne"> S'orienter</a>
+      </div> 
+      
+        <section>
+      <div className="bloc_orient">
+        <div className="carte" style={{ '--clr': '#ff0066' }}>
+          <div className="imgBx">
+            <img src="/public/think.jpg" alt="Accompagnement" />
+          </div>
+          <div className="conten">
+          <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
+          <span className="border-b-2 border-[#D60B52] pb-[0.5px]">
+           QUEL MET 
+          </span>
+          IER EST FAIT POUR MOI
+        </h2>     
+               <p >
+               Un accompagnement est proposé pour t’aider dans ta recherche d’emploi ou de formation, personnalisé en fonction de tes attentes. Ces accompagnements seront aussi là pour t’aider sur le plan social, tels que la santé, le logement ou bien encore la mobilité.  
 
-                <div className="bg-white rounded-[5%] flex font-sans">
-                  <form className="flex-auto p-6 bg-white rounded-[5%]">
-                    <div className="flex flex-wrap">
-                      <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
-                        <span className="border-b-2 border-[#D60B52] pb-[0.5px]">
-                          QUEL MET
-                        </span>
-                        IER EST FAIT POUR MOI ?
-                      </h2>
-                      <p className="text-sm text-slate-500">
-                        Au sein de la Mission Locale, nous t’informons sur
-                        toutes les possibilités de métiers et de formations
-                        professionnelles. En fonction de tes centres d’intérêt,
-                        un grand nombre de possibilités s’ouvrent à toi. La
-                        Mission Locale te donne la possibilité de découvrir les
-                        métiers et voies professionnelles possibles, en fonction
-                        de tes compétences et aspirations. Cela passe par
-                        différents parcours personnalisés, ateliers, et mises en
-                        situation réelles de travail pour vous aider à trouver
-                        votre voie dans le monde professionnel.
-                      </p>{" "}
-                      <br />
-                      <p className="text-sm text-slate-500">
-                        En fonction de vos centres d’intérêt, un grand nombre de
-                        possibilités s’ouvrent à vous. La Mission Locale vous
-                        donne la possibilité de découvrir les métiers et voies
-                        professionnelles possibles, en fonction de vos
-                        compétences et aspirations.
-                      </p>
-                      <div className="flex flex-col px-4 pt-4 font-semibold md:px-14 lg:px-20">
-                        {error && <div className="text-red-500">{error}</div>}{" "}
-                        {/* Display error message */}
-                        {success && (
-                          <div className="text-green-500">{success}</div>
-                        )}{" "}
-                        {/* Display success message */}
-                        <button
-                          onClick={handleInscription}
-                          className="bg-[#D60B52] text-white font-semibold py-1 text-center rounded-lg text-sm mb-6 md:w-64"
-                        >
-                          PRENDRE RDV AVEC UN CONSEILLER
-                        </button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>{" "}
-              <br /> <br />
-            </div>{" "}
+ 
+
+Un conseiller est assigné pour t’accompagner et t’aider dans toutes les démarches d’insertion, d’orientation, de formation ou de recherche d’emploi. De nombreux dispositifs te seront alors présentés pour t’aider dans tes démarches professionnelles (PACEA, CEJ, Parrainage...) et sociales (Santé, Logement, Mobilité). 
+              
+            </p>
+            <div className="rdv">
+  <button onClick={handleInscription}>PRENDRE RDV AVEC UN CONSEILLER</button>
+</div>
+
           </div>
         </div>
-      ) : (
-        <div className="bg-[#F6F6F6]">
-          <div
-            className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52"
-            style={{ backgroundImage: "url(MicrosoftTeams-image12.png)" }}
-          >
-            <h1 className="md:text-3xl">S&apos;ORIENTER</h1>
-          </div>{" "}
-          <br />
-          <div className="breadcrumb px-4 pt-4 font-semibold md:px-14 lg:px-20 xl:px-52">
-            <a href="/">Accueil</a> {">"}
-            <a href="/Services"> Services </a>
-            {">"}
-            <a className="text-[#D70B52]" href="/Sorientier">
-              {" "}
-              S&apos;orientier
-            </a>
-          </div>{" "}
-          <br />
-          <div>
-            <div className="flex flex-col px-4 pt-4  font-semibold bg-[#F6F6F6] md:px-14 lg:px-20 xl:px-52">
-              <div className="flex-col font-sans">
-                <div className="flex-none w-full">
-                  <img
-                    className="object-cover"
-                    loading="lazy"
-                    src="\jeunefemme.jpg"
-                    alt=""
-                  />
-                </div>
-
-                <div className="bg-white flex font-sans">
-                  <form className="flex-auto p-6 bg-white rounded-[5%]">
-                    <div className="flex flex-wrap">
-                      <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
-                        <span className="border-b-2 border-[#D60B52] pb-[0.5px]">
-                          QUEL MET
-                        </span>
-                        IER EST FAIT POUR MOI ?
-                      </h2>
-                      <p className="text-sm text-slate-500">
-                        Au sein de la Mission Locale, nous t’informons sur
-                        toutes les possibilités de métiers et de formations
-                        professionnelles. En fonction de tes centres d’intérêt,
-                        un grand nombre de possibilités s’ouvrent à toi. La
-                        Mission Locale te donne la possibilité de découvrir les
-                        métiers et voies professionnelles possibles, en fonction
-                        de tes compétences et aspirations. Cela passe par
-                        différents parcours personnalisés, ateliers, et mises en
-                        situation réelles de travail pour vous aider à trouver
-                        votre voie dans le monde professionnel.
-                      </p>{" "}
-                      <br />
-                      <p className="text-sm text-slate-500">
-                        En fonction de vos centres d’intérêt, un grand nombre de
-                        possibilités s’ouvrent à vous. La Mission Locale vous
-                        donne la possibilité de découvrir les métiers et voies
-                        professionnelles possibles, en fonction de vos
-                        compétences et aspirations.
-                      </p>
-                      <div className="flex flex-col px-4 pt-4 font-semibold md:px-14 lg:px-20">
-                        {error && <div className="text-red-500">{error}</div>}{" "}
-                        {/* Display error message */}
-                        {success && (
-                          <div className="text-green-500">{success}</div>
-                        )}{" "}
-                        {/* Display success message */}
-                        <button
-                          onClick={handleInscription}
-                          className="bg-[#D60B52] text-white font-semibold py-1 text-center rounded-lg text-sm mb-6 md:w-64"
-                        >
-                          PRENDRE RDV AVEC UN CONSEILLER
-                        </button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>{" "}
-              <br /> <br />
-            </div>{" "}
-          </div>
-        </div>
-      )}
-    </>
+      </div>
+    </section>
+        {error && <div className="text-red-500">{error}</div>}{" "}
+        {/* Display error message */}
+        {success && <div className="text-green-500">{success}</div>}{" "}
+        {/* Display success message */}
+       
+      </div>
+    </div>
   );
 }
 
