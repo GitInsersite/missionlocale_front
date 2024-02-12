@@ -20,6 +20,11 @@ function Contact() {
       >
         <h1 className="md:text-3xl">CONTACT</h1>
       </div>
+
+      <div className="breadcrumb px-4 pt-4 font-semibold md:px-14 lg:px-20 xl:px-52">
+       <a href="/Contact">Contactez-nous</a> {'>'}
+     </div> <br />
+
       <div className=" flex flex-col items-center pt-6 bg-[#F6F6F6] md:px-32 lg:px-56 xl:px-[410px]">
         <div className="flex flex-col items-center mx-4 bg-white rounded-lg mb-4 w-[90%]">
           <h2 className="font-semibold text-lg mb-2">ADRESSE</h2>

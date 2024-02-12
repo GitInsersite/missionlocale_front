@@ -9,6 +9,15 @@ function TaxeApprentissage() {
       >
         <h1 className="md:text-3xl">Taxe d’Apprentissage </h1>
       </div>
+
+      <br />
+      
+      <div className="breadcrumb px-4 pt-4 font-semibold md:px-14 lg:px-20 xl:px-52">
+       <a href="/">Accueil</a> {'>'}
+        <a href="/Entreprise">  Entreprise </a>{'>'}
+        <a className="text-[#D70B52]" href="/TaxeApprentissage"> Taxe d'apprentissage</a>
+        </div> 
+
       <div className="flex flex-col items-center">
         <div className="flex flex-col px-4 font-semibold md:px-14 lg:px-20 xl:px-52">
           <p className="mb-4 mt-4">

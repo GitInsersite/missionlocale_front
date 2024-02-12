@@ -113,7 +113,14 @@ function Gouvernance() {
         style={{ backgroundImage: "url(MicrosoftTeams-image11.png)" }}
       >
         <h1 className="md:text-3xl">GOUVERNANCE</h1>
-      </div>
+      </div> <br />
+
+      <div className="breadcrumb px-4 pt-4 font-semibold md:px-14 lg:px-20 xl:px-52">
+       <a href="/">Accueil</a> {'>'}
+        <a href="/LaMissionLocale">  La Mission Locale </a>{'>'}
+        <a className="text-[#D70B52]" href="/Gouvernance"> La gouvernance</a>
+        </div>
+
       <div className="xl:px-32">
         <div className="flex flex-col items-center pt-6 md:items-start md:mx-14 lg:mx-20">
           <h2 className="font-bold text-black text-lg mb-8 w-[85%] md:text-2xl">
