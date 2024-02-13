@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import '/accompagnement.css'; // Importez les styles CSS
+import '/Accompagnement.css'; // Importez les styles CSS
 
 import { useMediaQuery } from "react-responsive";
 
