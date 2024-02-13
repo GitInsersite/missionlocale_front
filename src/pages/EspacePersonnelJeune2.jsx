@@ -45,7 +45,7 @@ function EspacePersonnelJeune2() {
               `${apiUrlEnv}/api/soumettre-formulaire`,
               {
                 'jeune_id': information.id,
-                'choix': '1'
+                'choix': 'Avoir un RDV'
               },
               {
                 headers: {
@@ -74,7 +74,7 @@ function EspacePersonnelJeune2() {
               `${apiUrlEnv}/api/soumettre-formulaire`,
               {
                 'jeune_id': information.id,
-                'choix': '2'
+                'choix': 'Chercher une formation'
               },
               {
                 headers: {
@@ -104,7 +104,7 @@ function EspacePersonnelJeune2() {
                 `${apiUrlEnv}/api/soumettre-formulaire`,
                 {
                   'jeune_id': information.id,
-                  'choix': '3'
+                  'choix': 'Trouver un emploi'
                 },
                 {
                   headers: {
