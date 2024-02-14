@@ -28,7 +28,7 @@ function Gouvernance() {
 
   const handleDownload18 = async () => {
     try {
-      const response = await fetch("/pdf/CRA-2018.pdf");
+      const response = await fetch("/pdf/CRA 2018.pdf");
       const blob = await response.blob();
       const url = window.URL.createObjectURL(new Blob([blob]));
       const a = document.createElement("a");
@@ -44,12 +44,12 @@ function Gouvernance() {
 
   const handleDownload19 = async () => {
     try {
-      const response = await fetch("/pdf/CRA-2019.pdf");
+      const response = await fetch("/pdf/CRA 2019.pdf");
       const blob = await response.blob();
       const url = window.URL.createObjectURL(new Blob([blob]));
       const a = document.createElement("a");
       a.href = url;
-      a.download = "CRA-2018.pdf";
+      a.download = "CRA-2019.pdf";
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
@@ -60,12 +60,12 @@ function Gouvernance() {
 
   const handleDownload20 = async () => {
     try {
-      const response = await fetch("/pdf/CRA-2020.pdf");
+      const response = await fetch("/pdf/CRA 2020.pdf");
       const blob = await response.blob();
       const url = window.URL.createObjectURL(new Blob([blob]));
       const a = document.createElement("a");
       a.href = url;
-      a.download = "CRA-2018.pdf";
+      a.download = "CRA-2020.pdf";
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
@@ -76,12 +76,12 @@ function Gouvernance() {
 
   const handleDownload21 = async () => {
     try {
-      const response = await fetch("/pdf/CRA-2021.pdf");
+      const response = await fetch("/pdf/CRA 2021.pdf");
       const blob = await response.blob();
       const url = window.URL.createObjectURL(new Blob([blob]));
       const a = document.createElement("a");
       a.href = url;
-      a.download = "CRA-2018.pdf";
+      a.download = "CRA-2021.pdf";
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
@@ -92,12 +92,12 @@ function Gouvernance() {
 
   const handleDownload22 = async () => {
     try {
-      const response = await fetch("/pdf/CRA-2022.pdf");
+      const response = await fetch("/pdf/CRA 2022.pdf");
       const blob = await response.blob();
       const url = window.URL.createObjectURL(new Blob([blob]));
       const a = document.createElement("a");
       a.href = url;
-      a.download = "CRA-2018.pdf";
+      a.download = "CRA-2022.pdf";
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
