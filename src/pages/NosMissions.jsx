@@ -15,7 +15,7 @@ function NosMissions() {
             <p className='mb-6 leading-tight font-medium'> Notre objectif principal est d’accompagner tout jeune dans son entrée en vie active, en proposant des services et accompagnements personnalisés, et l’aidant ainsi à s’épanouir tout en construisant son avenir professionnel. L’avenir des jeunes, et leur insertion à la fois professionnelle et sociale, est le pilier fondateur de la Mission Locale des Mureaux, et ce pour quoi nous continuons d’agir.</p>
             
             <h1 className='font-bold text-black text-lg mb-8 md:text-2xl'> <span className="border-b-2 border-[#A4195C] pb-[0.5px]">DISPOSITIFS</span></h1>
-            <Link className="bg-[#A4195C] text-white font-semibold py-1 text-center rounded-lg mb-8 text-sm md:w-56">TELECHARGER NOTRE GUIDE</Link>
+            <Link className="bg-[#A4195C] text-white font-semibold py-1 text-center rounded-lg mb-8 text-sm md:w-56 hover:bg-pink-500 transition-all duration-300">TELECHARGER NOTRE GUIDE</Link>
         </div>
     </div>
   )
