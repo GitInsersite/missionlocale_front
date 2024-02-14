@@ -6,27 +6,17 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import moment from 'moment';
 import { useAuth } from '../context/AuthContext';
-// import mqtt from 'mqtt';
+
 
 function EspacePersonnelJeune2() {
-
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
-  // Dynamically get the API URL based on the environment
+  const {register,handleSubmit,formState: { errors },} = useForm();
   const apiUrlEnv =
     import.meta.env.MODE === "production"
       ? import.meta.env.VITE_API_URL_PROD
       : import.meta.env.VITE_API_URL_DEV;
 
-
-
-
   const { information, ateliers, documents, jobOffers, rendezVous, formations } = useAuth();
   const authToken = localStorage.getItem("authToken");
-
   const [oldSelectedOption, setOldSelectedOption] = useState(null);
 
   const onSubmit = async (data, e) => {
@@ -155,53 +145,30 @@ function EspacePersonnelJeune2() {
         style={{ backgroundImage: "url(MicrosoftTeams-image12.png)" }}>
         <h1 className="md:text-3xl">ESPACE PERSONNEL</h1>
       </div>
+      
       <div className="px-4 flex flex-col items-center bg-[#F6F6F6]">
         <div className="flex flex-col items-center w-[98%]">
           <h2 id="infoSection" className="font-bold text-black text-lg mb-8 mt-6 md:text-3xl">JE CONTACTE MON CONSEILLER POUR :</h2>
-          <form
-            className="flex flex-col mt-4 mb-6 p-4 w-full md:w-[70%] lg:w-[80%] bg-white rounded-3xl"
-            onSubmit={handleSubmit(onSubmit)}
-          >
+          <form className="flex flex-col mt-4 mb-6 p-4 w-full md:w-[70%] lg:w-[80%] bg-white rounded-3xl"onSubmit={handleSubmit(onSubmit)}>
             <div className="flex flex-col mb-2">
               <div className="flex flex-col ml-8">
+
                 <div className="mb-2">
-                  <input
-                    type="radio"
-                    id="rdvOption"
-                    {...register("option", { required: true })}
-                    value="1"
-                    className="mr-2" />
+                  <input type="radio" id="rdvOption"{...register("option", { required: true })}value="1"className="mr-2" />
                   <label htmlFor="rdvOption" className="mr-4">Avoir un RDV</label>
                 </div>
 
-                <div className="mb-2">
-                  <input
-                    type="radio"
-                    id="formationOption"
-                    {...register("option", { required: true })}
-                    value="2"
-                    className="mr-2" />
-                  <label htmlFor="formationOption"
-                    className="mr-2">Chercher une formation</label>
+                <div className="mb-2"><input type="radio" id="formationOption"{...register("option", { required: true })}value="2"className="mr-2" />
+                  <label htmlFor="formationOption"className="mr-2">Chercher une formation</label>
                 </div>
 
                 <div className="mb-2">
-                  <input
-                    type="radio"
-                    id="emploiOption"
-                    {...register("option", { required: true })}
-                    value="3"
-                    className="mr-2" />
+                  <input type="radio" id="emploiOption"{...register("option", { required: true })} value="3" className="mr-2" />
                   <label htmlFor="emploiOption">Trouver un emploi</label>
                 </div>
               </div>
             </div>
-            <button
-              type="submit"
-              className="bg-[#D60B52] text-white w-40 py-1 p-2 rounded-md mb-8 font-semibold"
-            >
-              ENVOYER
-            </button>
+            <button type="submit" className="bg-[#D60B52] text-white w-40 py-1 p-2 rounded-md mb-8 font-semibold">ENVOYER</button>
           </form>
         </div>
       </div>

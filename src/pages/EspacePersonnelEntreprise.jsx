@@ -1,92 +1,74 @@
-import { Link } from "react-router-dom";
+import { useForm } from "react-hook-form";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { useAuth } from '../context/AuthContext';
 
 function EspacePersonnelEntreprise() {
-  const [userData, setUserData] = useState(null);
+  const [selectedFileName, setSelectedFileName] = useState(null);
+  const {register,handleSubmit,formState: { errors },} = useForm();
+  const { information, documents } = useAuth();
+  const authToken = localStorage.getItem("authToken");
 
-  // Dynamically get the API URL based on the environment
   const apiUrlEnv =
     import.meta.env.MODE === "production"
       ? import.meta.env.VITE_API_URL_PROD
       : import.meta.env.VITE_API_URL_DEV;
 
-  useEffect(() => {
-    const authToken = localStorage.getItem("authToken");
+  const handleFileChange = (e) => {
+    const fileName = e.target.files[0]?.name;
+    setSelectedFileName(fileName);
+  };
 
-    // Check if authToken exists before making the request
-    if (authToken) {
-      // Use Axios to fetch user data from Laravel API with the token in headers
-      axios
-        .get(`${apiUrlEnv}/api/espacepersoDetail`, {
-          headers: {
-            Authorization: `Bearer ${authToken}`,
-          },
-        })
-        .then((response) => {
-          if (!response.data) {
-            throw new Error("Empty response data");
-          }
-          setUserData(response.data);
-        })
-        .catch((error) => console.error("Error fetching user data:", error));
-    }
-  }, []); // The empty dependency array ensures the effect runs only once when the component mounts
+  const onSubmit = async (data, e) => {
+    e.preventDefault();
+    const documentpdf = data.docpdf;
+    console.log("Envoyer un document");
 
-  console.log("userData:", userData);
-
-  if (!userData) {
-    // Render a loading state or return null, depending on your preference
-    return null;
+    // Logique pour obtenir le nom du fichier
+    const fileName = documentpdf[0]?.name;
+    console.log("Nom du fichier :", fileName);
   }
 
   return (
     <div id="infoSection">
-      <div
-        className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52"
-        style={{ backgroundImage: "url(MicrosoftTeams-image14.png)" }}
-      >
-        <h1 className="md:text-3xl">ESPACE ENTREPRISE</h1>
-      </div>
-      <div className="flex flex-col items-center bg-[#F6F6F6] md:px-32">
-        <h2 className="font-bold text-black text-lg mb-4 mt-4 md:text-2xl">
-          <span className="border-b-2 border-[#F29200] pb-[0.5px]">
-            INFORMATIONS
-          </span>{" "}
-          PERSONNELLES
-        </h2>
-        <div className="flex flex-col w-64 h-48 rounded-3xl mt-4 mb-6 p-4 bg-white md:w-[360px]">
-          <p className="font-bold mb-2">
-            Entreprise : {userData.information.company_name}
-          </p>
-          <p className="font-bold mb-2">
-            Numéro SIRET : {userData.information.siret}
-          </p>
-          <p className="font-bold mb-2">
-            Interlocuteur : {userData.information.responsible_name}
-          </p>
-          <p className="font-bold mb-2">
-            Téléphone : {userData.information.company_phone}
-          </p>
-          <p id="offreSection" className="font-bold">
-            Adresse mail : {userData.information.company_email}
-          </p>
-        </div>
-      </div>
-      <h2 className="font-bold text-black text-lg bg-white text-center md:text-2xl">
-        DEPOSER LES OFFRES D'EMPLOI
-      </h2>
-      <div className="flex flex-col items-center bg-[#F6F6F6]">
-        <div className="flex flex-col w-64 h-36 rounded-3xl p-4 md:w-[360px]">
-          <p className="pb-3">
-            Ce service vous permet de déposer vos offres d'emploi
-          </p>
-          <Link className="bg-[#F29200] text-white py-1 p-2 rounded-md mb-8 font-semibold w-56 text-center">
-            ENVOYER UN DOCUMENT
-          </Link>
-        </div>
-      </div>
+
+  <div className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52" style={{ backgroundImage: "url(MicrosoftTeams-image14.png)" }}>
+    <h1 className="md:text-3xl">ESPACE ENTREPRISE</h1>
+  </div>
+
+  <div className="flex flex-col items-center bg-[#F6F6F6]">
+    <h2 className="font-bold text-black text-lg mb-8 mt-6 md:text-3xl"><span className="border-b-2 border-[#F29200] pb-[0.5px]">INFORMATIONS</span>{" "}PERSONNELLES</h2>
+    <div className="flex flex-col rounded-3xl mt-4 mb-6 p-4 bg-white md:w-[360px]">
+      <p className="font-bold mb-2">Entreprise : {information.company_name}</p>
+      <p className="font-bold mb-2">Numéro SIRET : {information.siret}</p><p className="font-bold mb-2">Interlocuteur : {information.responsible_name}</p>
+      <p className="font-bold mb-2">Téléphone : {information.company_phone}</p>
+      <p id="offreSection" className="font-bold">Adresse mail : {information.company_email}</p>
     </div>
+  </div>
+
+  <div className="flex flex-col items-center bg-[#F6F6F6]">
+    <h2 className="font-bold text-black text-lg mb-8 mt-6 md:text-3xl"><span className="border-b-2 border-[#F29200] pb-[0.5px]">DEPOSER UNE O</span>FFRE D'EMPLOI</h2>
+    <form className="flex flex-col items-center justify-center rounded-3xl mt-4 mb-6 p-4 bg-white md:w-[360px]" onSubmit={handleSubmit(onSubmit)} encType="multipart/form-data" >
+        <div className="mb-2 relative flex items-center justify-center">
+          <label id="labelchoisir" htmlFor="choisirpdf" className="bg-[#F29200] text-white w-40 py-1 p-2 rounded-md mx-auto font-semibold text-center justify-center">
+            {selectedFileName ? selectedFileName : 'PARCOURIR'}
+          </label>
+          <input
+            type="file"
+            id="choisirpdf"
+            {...register("docpdf", { required: true })}
+            accept=".pdf"
+            className="hidden"
+            onChange={handleFileChange}
+          />
+        </div>
+        <button type="submit" className="bg-[#F29200] text-white w-40 py-1 p-2 rounded-md mx-auto mb-8 font-semibold">
+          ENVOYER
+        </button>
+      </form>
+  </div>
+
+</div>
   );
 }
 
