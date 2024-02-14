@@ -33,7 +33,6 @@ function Accueil() {
   return (
     <>
       <SlideMenu />
-      <Actualites latestNews={latestNews}/>
       <Youtube />
       <Statistiques />
       <Soutien />
