@@ -71,7 +71,7 @@
   
   }
   
-  .bloc_orient .carte:hover {
+  .bloc_orient:hover .carte {
     height: 260px;
     
   }
@@ -88,7 +88,7 @@
     opacity: 0.6;
     transition: 1.5s;
   }
-  .bloc_orient .carte:hover .imgBx {
+  .bloc_orient:hover .carte .imgBx {
     top: -60px;
     left: -165px;
     transform: scale(0.85);
@@ -96,7 +96,7 @@
     opacity: inherit;
     transition: 1.5s;
   }
-  .bloc_orient .carte:hover .imgBx img {
+  .bloc_orient:hover .carte .imgBx img {
     position: absolute;
     top: 0;
     left: 0;
@@ -115,7 +115,7 @@
     transition: 0.5s;
   }
   
-  .bloc_orient .carte:hover .conten {
+  .bloc_orient:hover .carte .conten {
     position: relative;
     flex-direction:row;
     top: 20px;
@@ -142,7 +142,7 @@
     top: 15px;
   
   }
-  .bloc_orient .carte:hover .conten h2 {
+  .bloc_orient:hover .carte .conten h2 {
   position: relative;
   display: flex;
   justify-content: left;
@@ -155,7 +155,7 @@
   }
   
   
-  .bloc_orient .carte:hover .conten p {
+  .bloc_orient:hover .carte .conten p {
     
     color: #333;
     position: relative;
@@ -175,7 +175,7 @@
 
  }
 
-  .bloc_orient .carte.carte:hover  .conten .rdv {
+  .bloc_orient:hover .carte.carte  .conten .rdv {
     position: relative;
     justify-content: center;
     transform: translateY(10px);
