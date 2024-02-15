@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useMediaQuery } from "react-responsive";
+import moment from 'moment';
 
 function OffreEmploi() {
   const [offresEmploi, setOffresEmploi] = useState([]);
@@ -96,20 +97,15 @@ function OffreEmploi() {
 
   return (
     <div className="bg-[#f6f6f6]">
-      <div
-        className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52"
-        style={{ backgroundImage: "url(MicrosoftTeams-image12.png)" }}
-      >
+      <div className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52" style={{ backgroundImage: "url(MicrosoftTeams-image12.png)" }}>
         <h1 className="md:text-3xl">OFFRE D&apos;EMPLOI</h1>
       </div>
-
       <div className="flex flex-col items-center pt-6 md:mx-16 lg:mx-32 xl:mx-52">
         {error && (
           <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-2 rounded-md mb-4">
             {error}
           </div>
         )}
-
         {success && (
           <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-2 rounded-md mb-4">
             {success}
@@ -117,17 +113,14 @@ function OffreEmploi() {
         )}
 
         {offresEmploi.map((offre, index) => (
-          <div
-            key={index}
-            className="bg-white mx-10 border-2 p-4 rounded-xl flex flex-col w-[95%] leading-tight mb-4 md:w-full"
-          >
+          <div key={index} className="bg-white mx-10 border-2 p-4 rounded-xl flex flex-col w-[95%] leading-tight mb-4 md:w-full">
             <div className="mb-4">
+              <h2 className="font-bold mb-2 text-xl">{offre.entreprise}</h2>
               <h3 className="font-bold mb-2 text-xl">{offre.title}</h3>
               <p className="text-base">{offre.description}</p>
             </div>
             <div>
               <div className="md:flex md:justify-between md:items-center">
-                <p className="md:mr-12">{offre.company_name}</p>
                 <div className="flex flex-col text-sm mb-4 md:mb-0 md:w-36">
                   <p className="flex flex-col w-fit">
                     <span className="text-center text-lg">{offre.type}</span>
@@ -137,12 +130,9 @@ function OffreEmploi() {
               </div>
               <div>
                 <p className="text-sm font-semibold md:mt-4">
-                  Publié {offre.publication}
+                  Publié le {moment(offre.publication).format('DD/MM/YYYY')}
                 </p>
-                <button
-                  className="bg-[#D60B52] text-white font-semibold py-1 px-2 text-center rounded-lg mt-2"
-                  onClick={() => handleInscription(offre.id)}
-                >
+                <button className="bg-[#D60B52] text-white font-semibold py-1 px-2 text-center rounded-lg mt-2"onClick={() => handleInscription(offre.id)}>
                   Postuler à cette offre
                 </button>
               </div>
