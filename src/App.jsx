@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { UserProvider } from "./context/UserContext";
+import { AuthProvider } from "./context/AuthContext";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -31,11 +31,14 @@ import EspaceEntreprise from "./pages/EspaceEntreprise";
 import EspacePersonnelEntreprise from "./pages/EspacePersonnelEntreprise";
 import OffreEmploi from "./pages/OffreEmploi";
 import Formation from "./pages/Formation";
+import NotFound from "./pages/NotFound";
+import MotDePasseOublieJeune from "./pages/MotDePasseOublieJeune";
+import MotDePasseOublieEntreprise from "./pages/MotDePasseOublieEntreprise";
 
 function App() {
   return (
-    <UserProvider>
-      <BrowserRouter>
+    <BrowserRouter>
+      <AuthProvider>
         <Header />
         <Routes>
           <Route path="/" element={<Accueil />} />
@@ -56,17 +59,19 @@ function App() {
           <Route path="/ateliers/:id" element={<UnAtelier />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/connexion-jeune" element={<ConnexionJeune />} />
+          <Route path="/mot-de-passe-oublie" element={<MotDePasseOublieJeune/>} />
           <Route
             path="/connexion-entreprise"
             element={<ConnexionEntreprise />}
           />
+          <Route path="/mot-de-passe-oublie-entreprise" element={<MotDePasseOublieEntreprise/>} />
           <Route path="/pre-inscription" element={<PreInscription />} />
           <Route
-            path="/espace-personnel-juene"
+            path="/espace-personnel-jeune"
             element={<EspacePersonnelJeune />}
           />
           <Route
-            path="/espace-personnel-juene2"
+            path="/espace-personnel-jeune2"
             element={<EspacePersonnelJeune2 />}
           />
           <Route path="/formations" element={<Formations />} />
@@ -81,10 +86,11 @@ function App() {
             element={<EspacePersonnelEntreprise />}
           />
           <Route path="/offre-emploi" element={<OffreEmploi />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
-      </BrowserRouter>
-    </UserProvider>
+      </AuthProvider>
+    </BrowserRouter>
   );
 }
 

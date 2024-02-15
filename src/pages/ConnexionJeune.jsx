@@ -1,56 +1,23 @@
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import axios from "axios";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 function ConnexionJeune() {
-  const [successMessage, setSuccessMessage] = useState("");
-  const [errorMessage, setErrorMessage] = useState(null);
-
-  const navigate = useNavigate();
+  const { login, successMessage, errorMessage } = useAuth();
 
   const {
     register,
     handleSubmit,
-    setError, // Destructure setError from useForm
-    reset, // Destructure reset from useForm
+    reset,
     formState: { errors },
   } = useForm();
+
   const onSubmit = async (data) => {
-    try {
-      const response = await axios.post(
-        "http://localhost:8000/api/login/entreprise-juene",
-        data
-      );
-      console.log(response.data);
-      // Handle success or redirect if needed
+    // Call the login function from the context
+    await login(data);
 
-      // Display success message
-      setSuccessMessage(response.data.message);
-
-      // Reset the form
-      reset();
-
-      // Clear error message
-      setErrorMessage(null);
-
-      // Redirect after 5 seconds
-      setTimeout(() => {
-        // Redirect to another page (replace '/' with the desired path)
-        navigate("/");
-      }, 5000);
-    } catch (error) {
-      if (error.response && error.response.status === 401) {
-        // Unauthorized (Invalid credentials) - Set error in component state
-        setErrorMessage(
-          error.response.data.error || "Invalid credentialssssss"
-        );
-      } else {
-        // Other errors - Log and handle as needed
-        console.error("API request failed with error:", error);
-      }
-    }
+    // Reset the form
+    reset();
   };
 
   return (
@@ -64,7 +31,7 @@ function ConnexionJeune() {
         <div className=" flex flex-col items-center bg-[#F6F6F6] md:px-20 lg:px-48 xl:px-96">
           <div className="flex flex-col px-4 rounded-lg w-[90%] md:items-center">
             <img
-              src="/public/logo-inscription.svg"
+              src="logo-inscription.svg"
               alt=""
               className="md:w-96 md:h-96"
             />
@@ -77,7 +44,6 @@ function ConnexionJeune() {
               </span>
               NE
             </h2>
-
             {/* Display success message */}
             {successMessage && (
               <div className="text-green-600">{successMessage}</div>
@@ -125,12 +91,17 @@ function ConnexionJeune() {
           </div>
           <div className="flex justify-between px-4 rounded-lg mb-4 pt-2 w-[90%]">
             <Link
+              onClick={() => window.scrollTo(0, 0)}
               to="/pre-inscription"
               className="font-bold text-sm border-b-2 border-black w-[45%] sm:w-fit"
             >
               Créer un compte
             </Link>
-            <Link className="font-bold text-sm border-b-2 border-black w-[45%] sm:w-fit">
+            <Link
+              onClick={() => window.scrollTo(0, 0)}
+              to="/mot-de-passe-oublie"
+              className="font-bold text-sm border-b-2 border-black w-[45%] sm:w-fit"
+            >
               Mot de passe oublié
             </Link>
           </div>

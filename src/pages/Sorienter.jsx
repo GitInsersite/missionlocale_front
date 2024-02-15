@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import { useMediaQuery } from "react-responsive";
 import '/orienter.css'; // Importez les styles CSS
 
 
@@ -7,10 +8,17 @@ function Sorienter() {
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
 
+  const isTabletOrLarger = useMediaQuery({ minWidth: 768 });
+
+  // Dynamically get the API URL based on the environment
+  const apiUrlEnv =
+    import.meta.env.MODE === "production"
+      ? import.meta.env.VITE_API_URL_PROD
+      : import.meta.env.VITE_API_URL_DEV;
+
   const handleInscription = () => {
     // Make API call to register for the workshop
-    const registrationUrl =
-      "http://localhost:8000/api/notifierConseillerFormulaire";
+    const registrationUrl = `${apiUrlEnv}/api/notifierConseillerFormulaire`;
 
     axios
       .post(registrationUrl)

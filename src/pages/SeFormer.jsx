@@ -2,8 +2,12 @@ import { Link } from "react-router-dom";
 import '/formacontinue.css';
 import '/formalter.css';
 
+import { IoIosArrowForward } from "react-icons/io";
+import { useMediaQuery } from "react-responsive";
 
 function SeFormer() {
+  const isTabletOrLarger = useMediaQuery({ minWidth: 768 });
+
   return (
     <div className="bg-[#F6F6F6]">
       <div

@@ -58,6 +58,7 @@ function DropdownButtonService() {
             <li>
               <Link
                 to="/se-former"
+                onClick={() => window.scrollTo(0, 0)}
                 className="block text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 hover:rounded-t-lg dark:hover:text-white hover:text-[#D60B51]"
               >
                 Se former
@@ -66,6 +67,7 @@ function DropdownButtonService() {
             <li>
               <Link
                 to="/sorienter"
+                onClick={() => window.scrollTo(0, 0)}
                 className="block text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white hover:text-[#D60B51]"
               >
                 S'orienter
@@ -74,6 +76,7 @@ function DropdownButtonService() {
             <li>
               <Link
                 to="/trouver-un-emploi"
+                onClick={() => window.scrollTo(0, 0)}
                 className="block text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white hover:text-[#D60B51]"
               >
                 Trouver un emploi
@@ -82,6 +85,7 @@ function DropdownButtonService() {
             <li>
               <Link
                 to="/etre-accompagne"
+                onClick={() => window.scrollTo(0, 0)}
                 className="block text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 hover:rounded-b-lg dark:hover:text-white hover:text-[#D60B51]"
               >
                 Etre accompagné

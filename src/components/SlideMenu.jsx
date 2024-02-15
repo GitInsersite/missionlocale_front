@@ -1,15 +1,19 @@
 import ImageGallery from "react-image-gallery";
 import { Link } from "react-router-dom";
 import "react-image-gallery/styles/css/image-gallery.css";
+import { useMediaQuery } from "react-responsive";
 
 function SlideMenu() {
+  const isTabletOrLarger = useMediaQuery({ minWidth: 768 });
+
   const slides = [
     {
-      original: "./public/MicrosoftTeams-image4.png",
+      original: "MicrosoftTeams-image4.png",
       description: (
         <>
           VOUS AVEZ ENTRE 16 ET 25 ANS ?<br />
-          LA MISSION LOCALE DES MUREAUX VOUS ACCOMPAGNE
+          LA MISSION LOCALE DES MUREAUX <br />
+          VOUS ACCOMPAGNE 
         </>
       ),
       link: {
@@ -18,11 +22,12 @@ function SlideMenu() {
       },  
     },
     {
-      original: "./public/MicrosoftTeams-image2.png",
+      original: "MicrosoftTeams-image2.png",
       description: (
         <>
           VOUS AVEZ ENTRE 16 ET 25 ANS ?<br />
-          LA MISSION LOCALE DES MUREAUX VOUS ACCOMPAGNE
+          LA MISSION LOCALE DES MUREAUX <br />
+          VOUS ACCOMPAGNE 
         </>
       ),
       link: {
@@ -31,11 +36,12 @@ function SlideMenu() {
       },
     },
     {
-      original: "./public/MicrosoftTeams-image3.png",
+      original: "MicrosoftTeams-image3.png",
       description: (
         <>
           VOUS AVEZ ENTRE 16 ET 25 ANS ?<br />
-          LA MISSION LOCALE DES MUREAUX VOUS ACCOMPAGNE
+          LA MISSION LOCALE DES MUREAUX <br />
+          VOUS ACCOMPAGNE 
         </>
       ),
       link: {
@@ -53,7 +59,11 @@ function SlideMenu() {
         alt=""
         className="h-1 md:h-[5px] xl:h-2 2xl:h-3"
       />
-      <div className="relative">
+      <div className="relative" style={
+        isTabletOrLarger
+          ? { clipPath: "ellipse(120% 95% at 50% 0)" }
+          : { clipPath: "ellipse(150% 95% at 50% 0)" }
+      }>
         <ImageGallery
           items={slides.map((item) => ({
             original: item.original,

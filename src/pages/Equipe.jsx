@@ -9,9 +9,14 @@ function Equipe() {
   });
   const [photo, setPhoto] = useState()
 
+  // Dynamically get the API URL based on the environment
+  const apiUrlEnv = import.meta.env.MODE === 'production'
+  ? import.meta.env.VITE_API_URL_PROD
+  : import.meta.env.VITE_API_URL_DEV;
+
   useEffect(() => {
     // Fetch data from your API
-    fetch("http://localhost:8000/api/equipe")
+    fetch(`${apiUrlEnv}/api/equipe`)
       .then((response) => response.json())
       .then((data) => {
         console.log("Equipe Data:", data); // Log the data to the console
@@ -35,12 +40,19 @@ function Equipe() {
     <div>
       <div
         className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52"
-        style={{ backgroundImage: "url(/public/MicrosoftTeams-image11.png)" }}
+        style={{ backgroundImage: "url(MicrosoftTeams-image11.png)" }}
       >
         <h1 className="md:text-3xl">NOTRE EQUIPE</h1>
-      </div>
-      <div className="flex flex-col items-center md:items-start md:px-14 md:pt-4 lg:px-20">
-        <div>
+      </div> <br />
+
+      <div className="breadcrumb px-4 pt-4 font-semibold md:px-14 lg:px-20 xl:px-52">
+       <a href="/">Accueil</a> {'>'}
+        <a href="/LaMissionLocale">  La Mission Locale </a>{'>'}
+        <a className="text-[#D70B52]" href="/Equipe"> Notre équipe</a>
+        </div>
+
+      <div className="flex flex-col items-center md:items-start md:px-14 md:pt-4 lg:px-20 xl:px-52">
+        <div className="pt-4">
           <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
             <span className="border-b-2 border-[#A4195C] pb-[0.5px]">POLE</span>{" "}
             DIRECTION
@@ -53,8 +65,8 @@ function Equipe() {
           <div>{renderMembers(equipeData.structure)}</div>
         </div>
       </div>
-      <div className="flex flex-col items-center bg-[#f6f6f6] md:items-start md:px-14 lg:px-20">
-        <div>
+      <div className="flex flex-col items-center bg-[#f6f6f6] md:items-start md:px-14 lg:px-20 xl:px-52">
+        <div className="pt-4">
           <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
             <span className="border-b-2 border-[#A4195C] pb-[0.5px]">POLE</span>{" "}
             TECHNIQUE
@@ -64,11 +76,11 @@ function Equipe() {
           </div>
         </div>
       </div>
-      <div className="py-4 flex justify-center items-center md:items-start md:justify-start md:px-14 lg:px-20">
+      <div className="py-4 flex justify-center items-center md:items-start md:justify-start md:px-14 lg:px-20 xl:px-52">
         <img
           src={photo}
           alt="Equipe Image"
-          className="h-40 w-[80%] md:h-80 "
+          className="w-[80%] "
         />
       </div>
     </div>

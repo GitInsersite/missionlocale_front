@@ -2,10 +2,13 @@ import { useState } from "react";
 import axios from "axios";
 import '/accompagnement.css'; // Importez les styles CSS
 
+import { useMediaQuery } from "react-responsive";
 
 function EtreAccompagne() {
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
+
+  const isTabletOrLarger = useMediaQuery({ minWidth: 768 });
 
   const handleInscription = () => {
     // Make API call to register for the workshop

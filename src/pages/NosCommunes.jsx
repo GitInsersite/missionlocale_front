@@ -8,12 +8,18 @@ function NosCommunes() {
     <div>
       <div
         className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52"
-        style={{ backgroundImage: "url(/public/MicrosoftTeams-image11.png)" }}
+        style={{ backgroundImage: "url(MicrosoftTeams-image11.png)" }}
       >
         <h1 className="md:text-3xl">NOS COMMUNES</h1>
-      </div>
+      </div> <br />
+      <div className="breadcrumb px-4 pt-4 font-semibold md:px-14 lg:px-20 xl:px-52">
+       <a href="/">Accueil</a> {'>'}
+        <a href="/LaMissionLocale">  La Mission Locale </a>{'>'}
+        <a className="text-[#D70B52]" href="/NosCommunes"> Nos communes</a>
+        </div> <br />
+
       {isTabletOrLarger ? (
-        <div className="bg-[#f6f6f6] pt-2 pb-6 md:px-14 lg:px-20 md:pt-6">
+        <div className="bg-[#f6f6f6] pt-2 pb-6 md:px-14 lg:px-20 xl:px-56 md:pt-6">
           <h1 className="font-bold text-black text-lg mb-8 md:text-2xl">
             <span className="border-b-2 border-[#A4195C] pb-[0.5px]">
               COMMUNES
@@ -22,7 +28,7 @@ function NosCommunes() {
           </h1>
           <div className="flex justify-center">
             <img
-              src="/public/carte_mission_locale_mureaux.svg"
+              src="carte_mission_locale_mureaux.svg"
               alt=""
               className="h-[500px]"
             />
@@ -31,8 +37,8 @@ function NosCommunes() {
       ) : (
         ""
       )}
-      <div className="flex flex-col items-center mt-6">
-        <div className="md:w-full md:px-14">
+      <div className="flex flex-col items-center mt-6 xl:px-56">
+        <div className="md:w-full md:px-14 xl:px-0">
           <h1 className="font-bold text-black text-lg mb-8 md:text-2xl">
             <span className="border-b-2 border-[#A4195C] pb-[0.5px]">
               COMMUNES
@@ -103,7 +109,7 @@ function NosCommunes() {
         </div>
       </div>
       {isLaptopOrLarger ? (
-        <div className="bg-[#f6f6f6] mt-6 pt-2 pb-6 md:flex md:flex-col md:px-14 lg:px-20 lg:flex lg:flex-row lg:justify-center xl:justify-around">
+        <div className="bg-[#f6f6f6] mt-6 pt-2 pb-6 md:flex md:flex-col md:px-14 lg:px-20 xl:px-56 lg:flex lg:flex-row lg:justify-center xl:justify-around">
           <div className="rounded-b-2xl rounded-t-md mt-6 mx-4 bg-white md:w-72">
             <div className="bg-[#A4195C] rounded-md text-center py-1 text-white">
               ANTENNE PRINCIPALE
