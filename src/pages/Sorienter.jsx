@@ -46,7 +46,7 @@ function Sorienter() {
       </div>
       <div className=" breadcrumb px-4 pt-4  md:px-14 lg:px-10 xl:px-56">
         <a href="/">Accueil</a> {">"}
-        <a href="/"> La Mission Locale </a>
+        <a href="/"> Services </a>
         {">"}
         <a className="text-[#A4195C]" href="/sorienter">
           {" "}
