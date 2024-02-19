@@ -86,7 +86,7 @@ function SlideMenu() {
                     <Link
                       to={item.link.to}
                       onClick={() => window.scrollTo(0, 0)}
-                      className="bg-[#A51F60] text-white mt-3 text-xs px-4 py-1 rounded md:text-base lg:text-lg xl:px-6 xl:py-2 xl:text-xl"
+                      className="bg-[#A51F60] text-white mt-3 text-xs px-4 py-1 rounded md:text-base lg:text-lg xl:px-6 xl:py-2 xl:text-xl  hover:bg-pink-500 transition-all duration-300 ease-in-out transform hover:scale-110"
                     >
                       {item.link.text}
                     </Link>
