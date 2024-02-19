@@ -12,10 +12,10 @@ function NosCommunes() {
       >
         <h1 className="md:text-3xl">NOS COMMUNES</h1>
       </div> <br />
-      <div className="breadcrumb px-4 pt-4 font-semibold md:px-14 lg:px-20 xl:px-52">
-       <a href="/">Accueil</a> {'>'}
-        <a href="/LaMissionLocale">  La Mission Locale </a>{'>'}
-        <a className="text-[#D70B52]" href="/NosCommunes"> Nos communes</a>
+      <div className="breadcrumb px-4 pt-4  md:px-14 lg:px-20 xl:px-52">
+       <a className="hover:text-[#D70B52]" href="/">Accueil</a> {'>'}
+        <a className="hover:text-[#D70B52]" href="/LaMissionLocale">  La Mission Locale </a>{'>'}
+        <a className="hover:text-[#D70B52]" href="/NosCommunes"> Nos communes</a>
         </div> <br />
 
       {isTabletOrLarger ? (

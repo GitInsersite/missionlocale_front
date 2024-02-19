@@ -45,8 +45,8 @@ function Ateliers() {
         <h1 className="md:text-3xl">ATELIERS</h1>
       </div>
 
-      <div className="breadcrumb px-4 pt-4 font-semibold md:px-14 lg:px-20 xl:px-52">
-       <a href="/Ateliers">Ateliers </a> {'>'}
+      <div className="breadcrumb px-4 pt-4  md:px-14 lg:px-20 xl:px-52">
+       <a className="hover:text-[#95c11f]" href="/Ateliers">Ateliers </a> {'>'}
         </div> <br />
 
       <div className="bg-[#f6f6f6] flex flex-col items-center pt-6 md:px-14 lg:px-20 xl:px-28">

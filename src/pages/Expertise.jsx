@@ -42,12 +42,12 @@ function Expertise() {
       </div><br />
       
       <div className="breadcrumb px-4 pt-4 font-semibold md:px-14 lg:px-20 xl:px-52">
-       <a href="/">Accueil</a> {'>'}
-        <a href="/Entreprise">  Entreprise </a>{'>'}
-        <a className="text-[#D70B52]" href="/Expertise"> Notre expertise</a>
+       <a className="hover:text-[#F29200]" href="/">Accueil</a> {'>'}
+        <a className="hover:text-[#F29200]" href="/Entreprise">  Entreprise </a>{'>'}
+        <a  className="hover:text-[#F29200]" href="/Expertise"> Notre expertise</a>
         </div> 
 
-      <div className="flex flex-col pl-4 p-4 font-semibold md:px-14 lg:px-20 xl:px-52">
+      <div className="flex flex-col pl-4 p-4  md:px-14 lg:px-20 xl:px-52">
         <p className="mb-6">
           L’entreprise est au cœur de notre projet. La Mission Locale s’engage à
           vos côtés, vous accompagne et vous conseille au quotidien grâce à
@@ -72,7 +72,7 @@ function Expertise() {
         {/* Display success message */}
         <button
           onClick={handleInscription}
-          className="bg-[#F29200] text-white font-semibold py-1 px-3 text-center rounded-lg text-sm mb-6 md:w-64"
+          className="bg-[#F29200] text-white font-semibold py-1 px-3 text-center rounded-lg text-sm mb-6 md:w-64  hover:bg-orange-500 transition-all duration-300"
         >
           PRENDRE RDV
         </button>

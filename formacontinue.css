@@ -164,31 +164,6 @@
     transition: 0.5s;
   }
   
-
-
-    
-
-  
-
-  .containe:hover .carte.carte  .conten .rdv {
-    position: relative;
-    justify-content: center;
-    left: 70px;
-    transform: translateY(10px);
-    display:inline-block;
-    padding: 12px 25px;
-    background: #D60B52;
-    color: #fff;
-    font-weight: 500;
-    font-size: small;
-    top: 18px;
-    left: 80px;
-    height: 35px;
-    text-decoration: none;
-    border-radius: 18px;
-    transition: 0.5s;
-    
-  }
   
    @media only screen and (max-width: 768px) {
     .containe {
