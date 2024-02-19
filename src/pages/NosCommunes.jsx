@@ -11,13 +11,18 @@ function NosCommunes() {
         style={{ backgroundImage: "url(MicrosoftTeams-image11.png)" }}
       >
         <h1 className="md:text-3xl">NOS COMMUNES</h1>
-      </div> <br />
-      <div className="breadcrumb px-4 pt-4 font-semibold md:px-14 lg:px-20 xl:px-52">
-       <a href="/">Accueil</a> {'>'}
-        <a href="/LaMissionLocale">  La Mission Locale </a>{'>'}
-        <a className="text-[#D70B52]" href="/NosCommunes"> Nos communes</a>
-        </div> <br />
-
+      </div>{" "}
+      <br />
+      <div className=" breadcrumb px-4 pt-4  md:px-14 lg:px-10 xl:px-56">
+        <a href="/">Accueil</a> {">"}
+        <a href="/"> La Mission Locale </a>
+        {">"}
+        <a className="text-[#A4195C]" href="/nos-communes">
+          {" "}
+          Nos Communes
+        </a>
+      </div>
+      <br />
       {isTabletOrLarger ? (
         <div className="bg-[#f6f6f6] pt-2 pb-6 md:px-14 lg:px-20 xl:px-56 md:pt-6">
           <h1 className="font-bold text-black text-lg mb-8 md:text-2xl">
@@ -120,7 +125,7 @@ function NosCommunes() {
               <p>08h45 – 12h15 // 13h30 17 h30</p>
               <p>hormis le vendredi 17h15</p>
               <p>01 30 91 21 50</p>
-              <p>contact@missionlocalelesmureaux.org</p>
+              <p>contact@mureaux-mlidf.org</p>
             </div>
           </div>
           <div className="rounded-b-2xl rounded-t-md mt-6 mx-4 bg-white md:w-72">
@@ -130,7 +135,7 @@ function NosCommunes() {
             <h2 className="font-semibold ml-4 mb-2">MEULAN</h2>
             <div className="text-xs ml-4 font-medium pb-2">
               <p>
-                rue de la ferme du paradis <br />
+                RUE DE LA FERME DU PARADIS <br />
                 Le 1er et 3ème mardi de chaque mois de
               </p>
               <p>14h00 – 17h00</p>
@@ -166,7 +171,7 @@ function NosCommunes() {
                 <p>08h45 – 12h15 // 13h30 17 h30</p>
                 <p>hormis le vendredi 17h15</p>
                 <p>01 30 91 21 50</p>
-                <p>contact@missionlocalelesmureaux.org</p>
+                <p>contact@mureaux-mlidf.org</p>
               </div>
             </div>
           </div>
