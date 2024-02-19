@@ -1,16 +1,15 @@
-import {  FaFacebook, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
 function Contact() {
-
   const isLaptopOrLarger = useMediaQuery({ minWidth: 1024 });
 
   const myValue = useAuth();
 
-  console.log('myValue:', myValue);
+  console.log("myValue:", myValue);
 
   return (
     <div>
@@ -20,11 +19,10 @@ function Contact() {
       >
         <h1 className="md:text-3xl">CONTACT</h1>
       </div>
-
-      <div className="breadcrumb px-4 pt-4 font-semibold md:px-14 lg:px-20 xl:px-52">
-       <a href="/Contact">Contactez-nous</a> {'>'}
-     </div> <br />
-
+      <div className="breadcrumb px-4 pt-4 md:px-14 lg:px-20 xl:px-52">
+        <a href="/contact">Contactez-nous</a> {">"}
+      </div>{" "}
+      <br />
       <div className=" flex flex-col items-center pt-6 bg-[#F6F6F6] md:px-32 lg:px-56 xl:px-[410px]">
         <div className="flex flex-col items-center mx-4 bg-white rounded-lg mb-4 w-[90%]">
           <h2 className="font-semibold text-lg mb-2">ADRESSE</h2>
@@ -32,7 +30,7 @@ function Contact() {
             38 AV.PAUL RAOULT, 78130 LES MUREAUX
           </p>
           <p className="mb-2">01 30 91 21 50</p>
-          <p className="mb-2">contact@missionlocale-mureaux.org</p>
+          <p className="mb-2">contact@mureaux-mlidf.org</p>
         </div>
         <div className="flex flex-col items-center mx-4 bg-white rounded-lg mb-4 w-[90%]">
           <h2 className="font-semibold text-lg mb-2">HEURES D'OUVERTURE</h2>
@@ -48,14 +46,24 @@ function Contact() {
             SUIVEZ-NOUS SUR LES RÉSEAUX
           </h2>
           <div className="flex justify-between w-[80%] mt-2 mb-2">
-            <Link><FaLinkedin className="w-8 h-8 md:w-10 md:h-10"/></Link>
-            <Link><FaFacebook className="w-8 h-8 md:w-10 md:h-10"/></Link>
-            <Link><FaInstagram className="w-8 h-8 md:w-10 md:h-10"/></Link>
+            <Link>
+              <FaLinkedin className="w-8 h-8 md:w-10 md:h-10" />
+            </Link>
+            <Link>
+              <FaFacebook className="w-8 h-8 md:w-10 md:h-10" />
+            </Link>
+            <Link>
+              <FaInstagram className="w-8 h-8 md:w-10 md:h-10" />
+            </Link>
           </div>
         </div>
-        {isLaptopOrLarger ? (<div className="flex flex-col items-center mx-4 rounded-lg mb-4 w-[90%]">
-        <img src="/carte_mission_locale_mureaux.svg" alt="" />
-        </div>) : ("")}
+        {isLaptopOrLarger ? (
+          <div className="flex flex-col items-center mx-4 rounded-lg mb-4 w-[90%]">
+            <img src="/carte_mission_locale_mureaux.svg" alt="" />
+          </div>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );
