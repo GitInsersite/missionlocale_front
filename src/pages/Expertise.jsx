@@ -6,14 +6,14 @@ function Expertise() {
   const [success, setSuccess] = useState(null);
 
   // Dynamically get the API URL based on the environment
-  const apiUrlEnv = import.meta.env.MODE === 'production'
-  ? import.meta.env.VITE_API_URL_PROD
-  : import.meta.env.VITE_API_URL_DEV;
+  const apiUrlEnv =
+    import.meta.env.MODE === "production"
+      ? import.meta.env.VITE_API_URL_PROD
+      : import.meta.env.VITE_API_URL_DEV;
 
   const handleInscription = () => {
     // Make API call to register for the workshop
-    const registrationUrl =
-      `${apiUrlEnv}/api/notifierConseillerFormulaire`;
+    const registrationUrl = `${apiUrlEnv}/api/notifierConseillerFormulaire`;
 
     axios
       .post(registrationUrl)
@@ -39,15 +39,20 @@ function Expertise() {
         style={{ backgroundImage: "url(MicrosoftTeams-image14.png)" }}
       >
         <h1 className="md:text-3xl">NOTRE EXPERTISE</h1>
-      </div><br />
-      
-      <div className="breadcrumb px-4 pt-4 font-semibold md:px-14 lg:px-20 xl:px-52">
-       <a href="/">Accueil</a> {'>'}
-        <a href="/Entreprise">  Entreprise </a>{'>'}
-        <a className="text-[#D70B52]" href="/Expertise"> Notre expertise</a>
-        </div> 
+      </div>
+      <br />
 
-      <div className="flex flex-col pl-4 p-4 font-semibold md:px-14 lg:px-20 xl:px-52">
+      <div className="breadcrumb px-4 pt-4 md:px-14 lg:px-20 xl:px-52">
+        <a href="/">Accueil</a> {">"}
+        <a href="/"> Entreprise </a>
+        {">"}
+        <a className="text-[#F29200]" href="/expertise">
+          {" "}
+          Notre expertise
+        </a>
+      </div>
+
+      <div className="flex flex-col pl-4 p-4 md:px-14 lg:px-20 xl:px-52">
         <p className="mb-6">
           L’entreprise est au cœur de notre projet. La Mission Locale s’engage à
           vos côtés, vous accompagne et vous conseille au quotidien grâce à

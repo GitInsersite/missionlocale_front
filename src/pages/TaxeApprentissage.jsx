@@ -11,12 +11,16 @@ function TaxeApprentissage() {
       </div>
 
       <br />
-      
-      <div className="breadcrumb px-4 pt-4 font-semibold md:px-14 lg:px-20 xl:px-52">
-       <a href="/">Accueil</a> {'>'}
-        <a href="/Entreprise">  Entreprise </a>{'>'}
-        <a className="text-[#D70B52]" href="/TaxeApprentissage"> Taxe d'apprentissage</a>
-        </div> 
+
+      <div className="breadcrumb px-4 pt-4 md:px-14 lg:px-20 xl:px-52">
+        <a href="/">Accueil</a> {">"}
+        <a href="/"> Entreprise </a>
+        {">"}
+        <a className="text-[#F29200]" href="/taxe-apprentissage">
+          {" "}
+          Taxe d'apprentissage
+        </a>
+      </div>
 
       <div className="flex flex-col items-center">
         <div className="flex flex-col px-4 font-semibold md:px-14 lg:px-20 xl:px-52">

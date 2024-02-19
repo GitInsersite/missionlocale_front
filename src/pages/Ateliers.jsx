@@ -44,11 +44,13 @@ function Ateliers() {
       >
         <h1 className="md:text-3xl">ATELIERS</h1>
       </div>
-
-      <div className="breadcrumb px-4 pt-4 font-semibold md:px-14 lg:px-20 xl:px-52">
-       <a href="/Ateliers">Ateliers </a> {'>'}
-        </div> <br />
-
+      <div className="breadcrumb px-4 pt-4  md:px-14 lg:px-20 xl:px-52">
+        <a className="text-[#95c11f]" href="/ateliers">
+          Ateliers{" "}
+        </a>{" "}
+        {">"}
+      </div>{" "}
+      <br />
       <div className="bg-[#f6f6f6] flex flex-col items-center pt-6 md:px-14 lg:px-20 xl:px-28">
         <h2 className="font-bold text-black text-lg mb-8 w-[85%] md:text-2xl">
           <span className="border-b-2 border-[#95c11f] pb-[0.5px]">LES AT</span>
@@ -67,9 +69,13 @@ function Ateliers() {
               />
             </div>
             <div className="w-[55%] flex flex-col items-center justify-center md:w-[65%] md:items-start md:pl-4 lg:w-[75%] xl:w-[85%]">
-              <h3 className="font-bold mb-1 md:mb-4 leading-tight">{truncateText(atelier.title, isTabletOrLarger ? 40 : 15)}</h3>{" "}
+              <h3 className="font-bold mb-1 md:mb-4 leading-tight">
+                {truncateText(atelier.title, isTabletOrLarger ? 40 : 15)}
+              </h3>{" "}
               {/* Replace 'title' with the actual property name from your API response */}
-              <p className="mb-1 md:mb-4 leading-tight">{truncateText(atelier.description, isTabletOrLarger ? 40 : 18)}</p>{" "}
+              <p className="mb-1 md:mb-4 leading-tight">
+                {truncateText(atelier.description, isTabletOrLarger ? 40 : 18)}
+              </p>{" "}
               {/* Replace 'description' with the actual property name from your API response */}
               <Link
                 to={`/ateliers/${atelier.id}`}
