@@ -6,6 +6,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import { useMediaQuery } from "react-responsive";
 
 function SeFormer() {
+  
   const isTabletOrLarger = useMediaQuery({ minWidth: 768 });
 
   return (

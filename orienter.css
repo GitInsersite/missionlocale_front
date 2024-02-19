@@ -35,7 +35,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    top: 120px;
+    top: 70px;
     left: 97px;
     gap: 100px 50px;
     padding: 100px 50px;
@@ -71,9 +71,31 @@
   
   }
   
-  .bloc_orient .carte:hover {
+  .bloc_orient .carte {
     height: 260px;
     
+  }
+
+  @keyframes animateImgBx {
+    0% {
+      top: -150px;
+      left: -120px;
+      transform: scale(0.80);
+      opacity: 0.6;
+    }
+    50% {
+      top: -105px; /* Animation à mi-chemin */
+      left: -143px; /* Animation à mi-chemin */
+      transform: scale(0.83); /* Animation à mi-chemin */
+      opacity: 0.8; /* Animation à mi-chemin */
+    }
+    100% {
+      top: -60px;
+      left: -165px;
+      transform: scale(0.85);
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+      opacity: 1;
+    }
   }
     
   .bloc_orient .carte .imgBx {
@@ -86,7 +108,8 @@
     transform: scale(0.80);
     overflow: hidden;
     opacity: 0.6;
-    transition: 1.5s;
+    transition: 0.5s;
+    animation: animateImgBx 3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   }
   .bloc_orient .carte:hover .imgBx {
     top: -60px;
@@ -96,7 +119,7 @@
     opacity: inherit;
     transition: 1.5s;
   }
-  .bloc_orient .carte:hover .imgBx img {
+  .bloc_orient .carte .imgBx img {
     position: absolute;
     top: 0;
     left: 0;
@@ -115,7 +138,7 @@
     transition: 0.5s;
   }
   
-  .bloc_orient .carte:hover .conten {
+  .bloc_orient .carte .conten {
     position: relative;
     flex-direction:row;
     top: 20px;
@@ -142,7 +165,7 @@
     top: 15px;
   
   }
-  .bloc_orient .carte:hover .conten h2 {
+  .bloc_orient:hover .carte .conten h2 {
   position: relative;
   display: flex;
   justify-content: left;
@@ -155,7 +178,7 @@
   }
   
   
-  .bloc_orient .carte:hover .conten p {
+  .bloc_orient .carte .conten p {
     
     color: #333;
     position: relative;
@@ -175,7 +198,7 @@
 
  }
 
-  .bloc_orient .carte.carte:hover  .conten .rdv {
+  .bloc_orient .carte.carte  .conten .rdv {
     position: relative;
     justify-content: center;
     transform: translateY(10px);
@@ -203,12 +226,14 @@
       
     }
 
+    
+
 
     
   
     .bloc_orient .carte {
       width: 350px;
-      height: 160px;
+      height: 260px;
       top: 18px;
       margin-bottom: 40px;
       left: -122px; /* Remplacer la largeur fixe par 100% pour occuper toute la largeur de l'écran */
@@ -216,24 +241,20 @@
     }
   
     .bloc_orient .carte .imgBx {
-      position: absolute;
-      top: -80px;
-      left: 65px;
-      width: 200px;
+      position:absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 250px;
       height: 160px;
       border-radius: 12px 12px 20px 20px ;
-      transform: scale(0.80);
-      overflow: hidden;
+      overflow: visible;
       opacity: 0.6;
       transition: 1.5s;
     }
   
-    .bloc_orient .carte:hover .imgBx {
-      top: -90px;
-      left: 50px;
-      transition: 1.5s;
-    }
-    .bloc_orient .carte:hover .imgBx img {
+    
+    .bloc_orient .carte .imgBx img {
        position: absolute;
        top: 0;
        left: 0;
@@ -243,22 +264,16 @@
     }
 
   
-    .bloc_orient .carte .conten {
-      left: 20px;
-    }
   
-    .bloc_orient .carte:hover .conten {
-      top: 60px;
+    .bloc_orient .carte .conten {
+      top: 54px;
       left: -45px;
       transition: 1.2s;
       font-size:small;
     }
   
+    
     .bloc_orient .carte .conten h2 {
-      visibility: hidden;
-    }
-  
-    .bloc_orient .carte:hover .conten h2 {
       display: flex;
       white-space: nowrap; /* Empêcher le retour à la ligne du texte */
       overflow: hidden; /* Cacher le débordement du texte */
@@ -270,18 +285,21 @@
       visibility: visible;
       
     }
+
+    
   
-    .bloc_orient .carte:hover .conten p {
+    .bloc_orient .carte .conten p {
       left: 27px;
       transition: 0.1s;
       width: 100%;
-      top: -4px;
+      top: -1px;
       font-size:0.7em ;
       display: flex;
       position: relative;
+      visibility: visible;
     }
   
-    .bloc_orient .carte.carte:hover .conten .rdv {
+    .bloc_orient .carte.carte .conten .rdv {
       position: relative;
       justify-content: center;
       display: inline-block;
