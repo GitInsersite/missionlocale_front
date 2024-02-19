@@ -34,7 +34,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    top: 60px;
+    top: 80px;
     left: 97px;
     gap: 100px 50px;
     padding: 100px 50px;
@@ -59,8 +59,11 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    width: 580px;
-    height: 160px;
+    width: 800px;
+    height: 260px;
+    top: -63px;
+    left: -20px;
+    height: 60px;
     background: #f7f7f7;
     border-radius: 12px ;
     box-shadow:  0 35px 80px rgba(0, 0, 0, 0.15);
@@ -68,15 +71,37 @@
   
   }
   
-  .container_acc .carte:hover {
+  .container_acc .carte {
     height: 260px;
     
   }
-    
+  
+  @keyframes animateImgBx {
+    0% {
+      top: -150px;
+      left: -120px;
+      transform: scale(0.80);
+      opacity: 0.6;
+    }
+    50% {
+      top: -105px; /* Animation à mi-chemin */
+      left: -143px; /* Animation à mi-chemin */
+      transform: scale(0.83); /* Animation à mi-chemin */
+      opacity: 0.8; /* Animation à mi-chemin */
+    }
+    100% {
+      top: -60px;
+      left: -165px;
+      transform: scale(0.85);
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+      opacity: 1;
+    }
+  }
+
   .container_acc .carte .imgBx {
     position: absolute;
-    top: -180px;
-    left: -90px;
+    top: -150px;
+    left: -120px;
     width: 300px;
     height: 270px;
     border-radius: 12px 12px 20px 20px ;
@@ -84,16 +109,18 @@
     overflow: hidden;
     opacity: 0.6;
     transition: 1.5s;
+    animation: animateImgBx 3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+
   }
   .container_acc .carte:hover .imgBx {
-    top: -160px;
-    left: -135px;
+    top: -60px;
+    left: -165px;
     transform: scale(0.85);
     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
     opacity: inherit;
     transition: 1.5s;
   }
-  .container_acc .carte:hover .imgBx img {
+  .container_acc .carte .imgBx img {
     position: absolute;
     top: 0;
     left: 0;
@@ -112,7 +139,7 @@
     transition: 0.5s;
   }
   
-  .container_acc .carte:hover .conten {
+  .container_acc .carte .conten {
     position: relative;
     flex-direction:row;
     top: 20px;
@@ -136,40 +163,34 @@
     color: black;
     position: relative;
     left: 94px;
-    top: 20px;
+    top: 1px;
   
   }
-  .container_acc .carte:hover .conten h2 {
-  position: relative;
-  display: flex;
-  justify-content: left;
-  flex-direction: row;
-  align-items: flex-start;
-  font-size: medium;
-  top: 11px;
-  left: 122px;
-  transition: 0.5s;
-  }
   
   
-  .container_acc .carte:hover .conten p {
-    
+  
+  .container_acc .carte .conten p { 
     color: #333;
     position: relative;
-    width: 300px;
-    left: 122px;
-    font-size: 0.6em;
+    width: 80%;
+    left: 62px;
+    font-size: 0.8em;
     top: 15px;
     transition: 0.5s;
     
   }
-  
+ 
+  .container_acc .carte .conten .rdv{
+  display: flex;
+  position: relative; 
+  top: 34px;
+  justify-content: flex-end;
+  }
   
 
-  .container_acc .carte.carte:hover  .conten .rdv {
+  .container_acc .carte.carte  .conten .rdv {
     position: relative;
     justify-content: center;
-    left: 70px;
     transform: translateY(10px);
     display:inline-block;
     padding: 12px 25px;
@@ -177,8 +198,8 @@
     color: #fff;
     font-weight: 500;
     font-size: small;
-    top: 18px;
-    left: 80px;
+    top: 31px;
+    left: 190px;
     height: 35px;
     text-decoration: none;
     border-radius: 18px;
@@ -189,7 +210,7 @@
   @media only screen and (max-width: 768px) {
     .container_acc {
       top: 20px;
-      left: 0px;
+      left: 120px;
       gap: 20px;
       padding: 50px 20px;
     }
@@ -198,29 +219,30 @@
     
   
     .container_acc .carte {
-      width: 100%; /* Remplacer la largeur fixe par 100% pour occuper toute la largeur de l'écran */
-      
+      width: 350px; /* Remplacer la largeur fixe par 100% pour occuper toute la largeur de l'écran */
+      height: 260px;
+      top: 10px;
+      margin-bottom: 20px;
+      left: -122px;
     }
   
     .container_acc .carte .imgBx {
       position: absolute;
-      top: -80px;
-      left: 45px;
-      width: 180px;
-      height: 140px;
+      top: -19%;
+      left: 42%;
+      transform: translate(-50%, -50%);
+      width: 230px;
+      height: 100px;
       border-radius: 12px 12px 20px 20px ;
       transform: scale(0.80);
       overflow: hidden;
       opacity: 0.6;
+      animation: none;
       transition: 1.5s;
     }
   
-    .container_acc .carte:hover .imgBx {
-      top: -80px;
-      left: 50px;
-      transition: 1.5s;
-    }
-    .container_acc .carte:hover .imgBx img {
+    
+    .container_acc .carte .imgBx img {
        position: absolute;
        top: 0;
        left: 0;
@@ -231,36 +253,32 @@
 
   
     .container_acc .carte .conten {
-      left: 20px;
-    }
-  
-    .container_acc .carte:hover .conten {
-      top: 60px;
+      top: 34px;
       left: -45px;
       transition: 1.2s;
       font-size:small;
     }
   
-    .container_acc .carte .conten h2 {
-      visibility: hidden;
-    }
+   
   
-    .container_acc .carte:hover .conten h2 {
+   
+  
+    .container_acc .carte .conten h2 {
       display: flex;
       white-space: nowrap; /* Empêcher le retour à la ligne du texte */
       overflow: hidden; /* Cacher le débordement du texte */
       position: relative;
-      left: 52px;
-      top: -7px;
+      left: 28px;
+      top: 8px;
       font-size: 0.9em;
       transition: 0.5s;
       visibility: visible;
       
     }
   
-    .container_acc .carte:hover .conten p {
+    .container_acc .carte .conten p {
       left: 27px;
-      top: -12px;
+      top: -2px;
       width: 100%;
       transition: 0.1s;
       font-size:0.7em ;
@@ -269,9 +287,9 @@
     }
     
   
-    .container_acc .carte.carte:hover .conten .rdv {
+    .container_acc .carte.carte .conten .rdv {
       padding: 12px 12px ;
-      top: -20px;
+      top: 17px;
       transition: 0.5s;
       left: 49px;
     }

@@ -35,7 +35,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    top: 70px;
+    top: 80px;
     left: 97px;
     gap: 100px 50px;
     padding: 100px 50px;
@@ -165,17 +165,7 @@
     top: 15px;
   
   }
-  .bloc_orient:hover .carte .conten h2 {
-  position: relative;
-  display: flex;
-  justify-content: left;
-  flex-direction: row;
-  align-items: flex-start;
-  font-size: medium;
-  top: 11px;
-  left: 62px;
-  transition: 0.5s;
-  }
+  
   
   
   .bloc_orient .carte .conten p {
@@ -242,14 +232,15 @@
   
     .bloc_orient .carte .imgBx {
       position:absolute;
-      top: 50%;
-      left: 50%;
+      top: 8%;
+      left: 26%;
       transform: translate(-50%, -50%);
-      width: 250px;
-      height: 160px;
+      width: 200px;
+      height: 70px;
       border-radius: 12px 12px 20px 20px ;
       overflow: visible;
-      opacity: 0.6;
+      opacity: 0.7;
+      animation: none;
       transition: 1.5s;
     }
   
