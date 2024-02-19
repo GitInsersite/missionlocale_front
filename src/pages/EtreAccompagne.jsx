@@ -43,11 +43,15 @@ function EtreAccompagne() {
       </div>
       </div>
       
-      <div className="breadcrumb px-4 pt-4  md:px-14 lg:px-20 xl:px-52">
-        <a className="hover:text-[#D70B52]" href="/">Accueil</a> {'>'}
-        <a className="hover:text-[#D70B52]" href="/Services"> Services</a> {'>'}
-        <a className="hover:text-[#D70B52]" href="/Etreaccompagne"> Etre accompagné</a>
-      </div> 
+      <div className=" breadcrumb px-4 pt-4  md:px-14 lg:px-10 xl:px-56">
+        <a href="/">Accueil</a> {">"}
+        <a href="/"> La Mission Locale </a>
+        {">"}
+        <a className="text-[#A4195C]" href="/sorienter">
+          {" "}
+          Etre Accompagné
+        </a>
+      </div>
       
       <section>
       <div className="container_acc">
