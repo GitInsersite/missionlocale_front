@@ -5,6 +5,7 @@ import axios from "axios";
 import { useAuth } from '../context/AuthContext';
 
 function EspacePersonnelEntreprise() {
+  const [submitCounter, setSubmitCounter] = useState(0);
   const [selectedImageName, setSelectedImageName] = useState(null);
   const [selectedPdfName, setSelectedPdfName] = useState(null);
   const [selectedImageFile, setSelectedImageFile] = useState(null);
@@ -61,49 +62,73 @@ function EspacePersonnelEntreprise() {
 
   const onSubmit = async (data, e) => {
     e.preventDefault();
-    const formData = new FormData();
-    // Ajouter les données du formulaire au FormData
-    formData.append("entreprise", e.target.entreprise.value);
-    formData.append("title", e.target.title.value);
-    formData.append("job", e.target.job.value);
-    formData.append("type", e.target.type.value);
-    formData.append("description", e.target.description.value);
-    formData.append("publication", e.target.publication.value);
-/*     formData.append("image", selectedImageFile);
-    formData.append("docpdf", selectedPdfFile); */
-    if (selectedImageFile !== null) {
-      formData.append("image", selectedImageFile);
-    } else{
-      formData.append("image", null);
-    }
-    if (selectedPdfFile !== null) {
-      formData.append("docpdf", selectedImageFile);
-    }else{
-      formData.append("docpdf", null);
-    }
-    console.log(formData);
-    // Envoi de la requête HTTP avec Axios
-    // try {
-    //   const response = await axios.post(apiUrlEnv, formData, {
-    //     headers: {
-    //       "Content-Type": "multipart/form-data",
-    //       Authorization: `Bearer ${authToken}`,
-    //     },
-    //   });
   
-    //   console.log("Response:", response.data);
-    // } catch (error) {
-    //   console.error("Error:", error);
-    // }
+    if (submitCounter > 0) {
+      console.log("Ne spammez pas !");
+    } else {
+      const formData = new FormData();
+      // Ajouter les données du formulaire au FormData
+      formData.append("entreprise", e.target.entreprise.value);
+      formData.append("title", e.target.title.value);
+      formData.append("job", e.target.job.value);
+      formData.append("type", e.target.type.value);
+      formData.append("description", e.target.description.value);
+      formData.append("publication", e.target.publication.value);
+      
+      if (selectedImageFile !== null) {
+        formData.append("image", selectedImageFile);
+      } else {
+        formData.append("image", null);
+      }
   
-    // Réinitialiser le formulaire et les états locaux
-    e.target.reset();
-    setValue("type", "");
-    setSelectedImageName(null);
-    setSelectedPdfName(null);
-    setSelectedImageFile(null);
-    setSelectedPdfFile(null);
+      if (selectedPdfFile !== null) {
+        formData.append("docpdf", selectedPdfFile);
+      } else {
+        formData.append("docpdf", null);
+      }
+  
+      console.log(formData);
+  
+      // Envoi de la requête HTTP avec Axios
+      try {
+        const response = await axios.post(
+          `${apiUrlEnv}/api/soumettre-joboffer`, // Correction de l'URL
+          formData,
+          {
+            headers: {
+              "Content-Type": "multipart/form-data",
+              Authorization: `Bearer ${authToken}`,
+            },
+          }
+        );
+  
+        console.log("Response:", response.data);
+  
+        // Gérer la réponse ici
+        if (response.data.success) {
+          // Succès
+          console.log("Formulaire soumis avec succès:", response.data.success);
+          // Faire quelque chose pour traiter le succès, si nécessaire
+        } else {
+          // Erreur
+          console.error("Erreur lors de la soumission du formulaire:", response.data.error);
+          // Faire quelque chose pour traiter l'erreur, si nécessaire
+        }
+      } catch (error) {
+        console.error("Error:", error);
+      }
+  
+      // Réinitialiser le formulaire et les états locaux
+      e.target.reset();
+      setValue("type", "");
+      setSelectedImageName(null);
+      setSelectedPdfName(null);
+      setSelectedImageFile(null);
+      setSelectedPdfFile(null);
+      setSubmitCounter(0);
+    }
   };
+  
       
 
   return (
