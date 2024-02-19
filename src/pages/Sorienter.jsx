@@ -42,7 +42,7 @@ function Sorienter() {
       </div> <br />
       
 
-      <div className="breadcrumb px-4 pt-4 font-semibold md:px-14 lg:px-20 xl:px-52">
+      <div className="breadcrumb px-4 pt-4 md:px-14 lg:px-20 xl:px-52">
        <a href="/">Accueil</a> {'>'}
         <a href="/Services"> Services </a>{'>'}
         <a className="text-[#D70B52]" href="/Sorientier"> S'orientier</a>
@@ -51,12 +51,12 @@ function Sorienter() {
     <div >
       <div className="flex flex-col px-4 pt-4  font-semibold bg-[#F6F6F6] md:px-14 lg:px-20 xl:px-52">
       <div className="flex font-sans">
-        <div className="flex-none w-56">
-        <img className="object-cover rounded-[20%]" loading="lazy" src="\jeunefemme.jpg" alt=""/>
+        <div className="flex-none w-96 relative">
+        <img src="\jeunefemme.jpg" alt="" className="absolute inset-0 w-full h-full object-cover rounded-[20%]" loading="lazy"/>
           </div>
 
           <div className="bg-white rounded-[5%] flex font-sans">
-          <form class="flex-auto p-6 bg-white rounded-[5%]">
+          <form className="flex-auto p-6 bg-white rounded-[5%]">
           <div className="flex flex-wrap">
           <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
           <span className="border-b-2 border-[#D60B52] pb-[0.5px]">
@@ -64,11 +64,11 @@ function Sorienter() {
           </span>
           IER EST FAIT POUR MOI ?
         </h2>
-        <p class="text-sm text-slate-500">
+        <p className="text-sm text-slate-500">
         Au sein de la Mission Locale, nous t’informons sur toutes les possibilités de métiers et de formations professionnelles. 
         En fonction de tes centres d’intérêt, un grand nombre de possibilités s’ouvrent à toi. La Mission Locale te donne la possibilité de découvrir les métiers et voies professionnelles possibles, en fonction de tes compétences et aspirations. 
         </p> <br />
-        <p class="text-sm text-slate-500">
+        <p className="text-sm text-slate-500">
         Cela passe par différents parcours personnalisés, ateliers, 
         et mises en situation réelles de travail pour vous aider à trouver votre voie dans le monde professionnel.
         </p>

@@ -53,8 +53,8 @@ function Actualites() {
         <h1 className="md:text-3xl">ACTUALITES</h1>
       </div>
 
-      <div className="breadcrumb px-4 pt-4 font-semibold md:px-14 lg:px-20 xl:px-52">
-       <a href="/Actualites">Actualités </a> {'>'}
+      <div className="breadcrumb px-4 pt-4  md:px-14 lg:px-20 xl:px-52">
+       <a className="text-[#2897d5]" href="/Actualites">Actualités </a> {'>'}
         </div> <br />
 
       <div className="bg-[#f6f6f6] md:px-14 lg:px-20 xl:px-44 lg:grid lg:grid-cols-2">

@@ -115,10 +115,10 @@ function Gouvernance() {
         <h1 className="md:text-3xl">GOUVERNANCE</h1>
       </div> <br />
 
-      <div className="breadcrumb px-4 pt-4 font-semibold md:px-14 lg:px-20 xl:px-52">
+      <div className="breadcrumb px-4 pt-4 md:px-14 lg:px-20 xl:px-52">
        <a href="/">Accueil</a> {'>'}
         <a href="/LaMissionLocale">  La Mission Locale </a>{'>'}
-        <a className="text-[#D70B52]" href="/Gouvernance"> La gouvernance</a>
+        <a className="text-[#A4195C]" href="/Gouvernance"> La gouvernance</a>
         </div>
 
       <div className="xl:px-32">
@@ -154,6 +154,13 @@ function Gouvernance() {
               BUREAU
             </span>
           </h2>
+          <p>Les Membres du BUREAU : </p>
+          <li>Madame BIENSO MATETA Salamata – Présidente ;</li>
+          <li>Madame OLIVIER Sabine – Vice Présidente ;</li> 
+          <li>Monsieur MEMISOGLU Ergin – Vice Président ;</li>
+          <li>Madame KOENIG FILISIKA Honorine – Trésorière ;</li>
+          <li>Monsieur MONTEL Bruno – Secrétaire</li>  
+    
           <div className="md:w-full md:grid md:grid-cols-2 lg:grid-cols-3">
             {governanceData.bureau.map((member, index) => (
               <div
@@ -190,7 +197,7 @@ function Gouvernance() {
             D&apos;ACTIVITE
           </h2>
           <p className="text-sm font-semibold flex flex-col items-center pl-4 md:pl-0">
-            VOUS POUVEZ CONSULTER NOS RAPPORTS D&apos;DACTIVITE DE SES 5
+            VOUS POUVEZ CONSULTER NOS RAPPORTS D&apos;ACTIVITE DE SES 5
             DERNIERES ANNEES
           </p>
         </div>

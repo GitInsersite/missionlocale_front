@@ -37,7 +37,7 @@ function EtreAccompagne() {
       </div> <br /> <br />
 
 
-      <div className="breadcrumb px-4 pt-4 font-semibold md:px-14 lg:px-20 xl:px-52">
+      <div className="breadcrumb px-4 pt-4 md:px-14 lg:px-20 xl:px-52">
         <a href="/">Accueil</a> {'>'}
         <a href="/Services"> Services</a> {'>'}
         <a className="text-[#D70B52]" href="/Etreaccompagne"> Etre accompagné</a>
@@ -48,8 +48,8 @@ function EtreAccompagne() {
       <div>
         <div className="flex flex-col pl-4 p-4 px-4 pt-4 font-semibold bg-[#F6F6F6] md:px-10 sm:w-full lg:px-20 xl:px-52">
           <div className="flex font-sans">
-            <div className="flex-none w-56">
-              <img src="/ouvriers.jpg" alt="" className="object-cover rounded-[20%]" loading="lazy" />
+            <div className="flex-none w-96 relative">
+              <img src="/ouvriers.jpg" alt="" className="absolute inset-0 w-full h-full object-cover rounded-[20%]" loading="lazy" />
             </div>
 
             <div className="bg-white rounded-[5%] ">

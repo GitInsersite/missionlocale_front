@@ -21,7 +21,7 @@ function Contact() {
         <h1 className="md:text-3xl">CONTACT</h1>
       </div>
 
-      <div className="breadcrumb px-4 pt-4 font-semibold md:px-14 lg:px-20 xl:px-52">
+      <div className="breadcrumb px-4 pt-4 md:px-14 lg:px-20 xl:px-52">
        <a href="/Contact">Contactez-nous</a> {'>'}
      </div> <br />
 
@@ -32,7 +32,7 @@ function Contact() {
             38 AV.PAUL RAOULT, 78130 LES MUREAUX
           </p>
           <p className="mb-2">01 30 91 21 50</p>
-          <p className="mb-2">contact@missionlocale-mureaux.org</p>
+          <p className="mb-2">contact@mureaux-mlidf.org</p>
         </div>
         <div className="flex flex-col items-center mx-4 bg-white rounded-lg mb-4 w-[90%]">
           <h2 className="font-semibold text-lg mb-2">HEURES D'OUVERTURE</h2>

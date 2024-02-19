@@ -11,21 +11,21 @@ function SeFormer() {
         <h1 className="md:text-3xl">SE FORMER</h1>
       </div>
 
-      <div className="flex flex-col px-4 pt-4 font-semibold md:px-14 lg:px-20 xl:px-40">
-        <div className="flex-row justify-content px-4 pt-4  font-semibold bg-[#F6F6F6] md:px-14 lg:px-20">
+      <div className="flex flex-col px-4 pt-4 md:px-14 lg:px-20 xl:px-40">
+        <div className="flex-row justify-content px-4 pt-4  bg-[#F6F6F6] md:px-14 lg:px-20">
           <div className="flex items-center">Accueil <IoIosArrowForward /> Services <IoIosArrowForward /><span className="text-[#D70B52]" aria-current="page">Se former</span></div>
         </div>
         <br />
+        
         <div >
           <div className="flex flex-col px-4 pt-4  font-semibold bg-[#F6F6F6] md:px-14 lg:px-20">
-
             <div className="flex font-sans">
               <div className="flex-none w-56 relative">
                 <img src="/women.jpg" alt="" className="absolute inset-0 w-full h-full object-cover rounded-[20%]" loading="lazy" />
               </div>
 
               <div className="bg-white rounded-[5%] ">
-                <form class="flex-auto p-6">
+                <form className="flex-auto p-6">
                   <div className="flex flex-wrap t-20px l-20px relative">
 
                     <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
@@ -34,12 +34,12 @@ function SeFormer() {
                       </span>
                       TION CONTINUE...
                     </h2>
-                    <p class="text-sm text-slate-500">
+                    <p className="text-sm text-slate-500">
                     La Mission Locale des Mureaux te soutient et t’accompagne dans ton projet de qualification professionnelle, avec des conseils sur les formations et les financements possibles, 
                     de la recherche sur l’organisme de formation le plus adapté à ta situation, la mise en relation avec l’organisme, 
                     la préparation à l’entrée en formation et le soutien tout au long du parcours. {" "}
                     </p> <br />
-                    <p class="text-sm text-slate-500">
+                    <p className="text-sm text-slate-500">
                     Nous proposons parmi notre panel de formation des formations qualifiantes, pré-qualifiantes, ainsi que des remises à niveau.
                     </p>
 
@@ -65,11 +65,11 @@ function SeFormer() {
                       </span>
                       TION EN ALTERNANCE...
                     </h2>
-                    <p class="text-sm text-slate-500">
+                    <p className="text-sm text-slate-500">
                     Pour ce qui est de l’alternance, des ateliers sont proposés afin de présenter le contrat d’apprentissage ou de professionnalisation. 
                     Avec ces ateliers, informe-toi sur les CFA correspondant aux formations choisies, les droits et les devoirs des apprentis, la rémunération ainsi que sur les aides financières aux entreprises.{" "}
                     </p> <br />
-                    <p class="text-sm text-slate-500">Découvre aussi nos Prépa apprentissage, qui t’offrent un accompagnement complet pour sécuriser ton entrée en contrat d’apprentissage. </p>
+                    <p className="text-sm text-slate-500">Découvre aussi nos Prépa apprentissage, qui t’offrent un accompagnement complet pour sécuriser ton entrée en contrat d’apprentissage. </p>
                     <div className="flex flex-col px-4 pt-4 font-semibold justify:center md:px-14 lg:px-20">
                       <Link to="/formations" onClick={() => window.scrollTo(0, 0)} className="bg-[#D70B52] text-white font-semibold py-1 text-center rounded mb-8 text-sm md:w-56">
                         OFFRES DE FORMATIONS
