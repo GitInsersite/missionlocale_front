@@ -7,12 +7,13 @@ function Equipe() {
     technique: [],
     photogroupe: [],
   });
-  const [photo, setPhoto] = useState()
+  const [photo, setPhoto] = useState();
 
   // Dynamically get the API URL based on the environment
-  const apiUrlEnv = import.meta.env.MODE === 'production'
-  ? import.meta.env.VITE_API_URL_PROD
-  : import.meta.env.VITE_API_URL_DEV;
+  const apiUrlEnv =
+    import.meta.env.MODE === "production"
+      ? import.meta.env.VITE_API_URL_PROD
+      : import.meta.env.VITE_API_URL_DEV;
 
   useEffect(() => {
     // Fetch data from your API
@@ -21,7 +22,7 @@ function Equipe() {
       .then((data) => {
         console.log("Equipe Data:", data); // Log the data to the console
         setEquipeData(data);
-        console.log(data.photogroupe[0].image_url)
+        console.log(data.photogroupe[0].image_url);
         setPhoto(data.photogroupe[0].image_url);
       })
       .catch((error) => console.error("Error fetching data:", error));
@@ -43,20 +44,32 @@ function Equipe() {
         style={{ backgroundImage: "url(MicrosoftTeams-image11.png)" }}
       >
         <h1 className="md:text-3xl">NOTRE EQUIPE</h1>
-      </div> <br />
-
-      <div className="breadcrumb px-4 pt-4 font-semibold md:px-14 lg:px-20 xl:px-52">
-       <a href="/">Accueil</a> {'>'}
-        <a href="/LaMissionLocale">  La Mission Locale </a>{'>'}
-        <a className="text-[#D70B52]" href="/Equipe"> Notre équipe</a>
-        </div>
-
+      </div>{" "}
+      <br />
+      <div className="breadcrumb px-4 pt-4 md:px-14 lg:px-20 xl:px-52">
+        <a href="/">Accueil</a> {">"}
+        <a href="/"> La Mission Locale </a>
+        {">"}
+        <a className="text-[#A4195C]" href="/equipe">
+          {" "}
+          Notre équipe
+        </a>
+      </div>
       <div className="flex flex-col items-center md:items-start md:px-14 md:pt-4 lg:px-20 xl:px-52">
         <div className="pt-4">
           <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
             <span className="border-b-2 border-[#A4195C] pb-[0.5px]">POLE</span>{" "}
             DIRECTION
           </h2>
+          <p>la liste de notre équipe est ci-dessous : </p>
+          <ul>4 Conseillères CEJ ;</ul>
+          <ul>10 Conseillers classiques dont 2 en congés maternité ;</ul>
+          <ul>1 Chargé d’accueil ;</ul>
+          <ul>1 Chargée de l’emploi et des relations entreprises ;</ul>
+          <ul>1 Responsable Administrative et Financières ;</ul>
+          <ul>1 Responsable de secteur ;</ul>
+          <br />
+
           <div>{renderMembers(equipeData.direction)}</div>
           <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
             <span className="border-b-2 border-[#A4195C] pb-[0.5px]">POLE</span>{" "}
@@ -77,11 +90,7 @@ function Equipe() {
         </div>
       </div>
       <div className="py-4 flex justify-center items-center md:items-start md:justify-start md:px-14 lg:px-20 xl:px-52">
-        <img
-          src={photo}
-          alt="Equipe Image"
-          className="w-[80%] "
-        />
+        {/* <img src={photo} alt="Equipe Image" className="w-[80%] " /> */}
       </div>
     </div>
   );
