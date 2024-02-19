@@ -69,8 +69,6 @@ function EspacePersonnelEntreprise() {
     formData.append("type", e.target.type.value);
     formData.append("description", e.target.description.value);
     formData.append("publication", e.target.publication.value);
-/*     formData.append("image", selectedImageFile);
-    formData.append("docpdf", selectedPdfFile); */
     if (selectedImageFile !== null) {
       formData.append("image", selectedImageFile);
     } else{
