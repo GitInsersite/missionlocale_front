@@ -62,36 +62,6 @@ function EspacePersonnelEntreprise() {
 
   const onSubmit = async (data, e) => {
     e.preventDefault();
-<<<<<<< HEAD
-    const formData = new FormData();
-    // Ajouter les données du formulaire au FormData
-    formData.append("entreprise", e.target.entreprise.value);
-    formData.append("title", e.target.title.value);
-    formData.append("job", e.target.job.value);
-    formData.append("type", e.target.type.value);
-    formData.append("description", e.target.description.value);
-    formData.append("publication", e.target.publication.value);
-    if (selectedImageFile !== null) {
-      formData.append("image", selectedImageFile);
-    } else{
-      formData.append("image", null);
-    }
-    if (selectedPdfFile !== null) {
-      formData.append("docpdf", selectedImageFile);
-    }else{
-      formData.append("docpdf", null);
-    }
-    console.log(formData);
-    // Envoi de la requête HTTP avec Axios
-    // try {
-    //   const response = await axios.post(apiUrlEnv, formData, {
-    //     headers: {
-    //       "Content-Type": "multipart/form-data",
-    //       Authorization: `Bearer ${authToken}`,
-    //     },
-    //   });
-=======
->>>>>>> 9bec985d59c53fa956e58508cea2ad6d99ca106d
   
     if (submitCounter > 0) {
       console.log("Ne spammez pas !");
