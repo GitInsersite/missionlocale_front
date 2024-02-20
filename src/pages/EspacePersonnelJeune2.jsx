@@ -212,43 +212,46 @@ function EspacePersonnelJeune2() {
 
       <h2 id="docuSection" className="font-bold text-black text-center text-lg md:text-2xl">MES RENDEZ-VOUS</h2>
       <div className="px-4 flex flex-col items-center bg-[#F6F6F6]">
-        <div className="flex flex-col items-center w-full md:w-[70%] lg:w-[80%]">
-          {rendezVous && rendezVous.length > 0 ? (
-            <div className="flex flex-col mt-4 mb-6 p-4 w-full bg-white rounded-3xl">
-              {rendezVous.map((rdv, index) => (
-                <div key={index} className="flex flex-col text-start relative w-full">
-                <p className="mb-2">Le {moment(rdv.date).format('DD/MM/YYYY')} à {moment(rdv.heure, 'HH:mm:ss').format('HH:mm')} avec {rdv.conseiller.information.first_name}</p>
-              </div>
-              ))}
-            </div>
-          ) : (
-            <p className="text-center">Vous n'avez pas de rendez-vous.</p>
-          )}
+        <div className="flex flex-col items-center w-[98%]">
+            <div className="flex flex-col mt-4 mb-6 p-4 w-full md:w-[70%] lg:w-[80%] bg-white rounded-3xl">
+
+              {rendezVous && rendezVous.length > 0 ? (
+                <div className="flex flex-col mt-4 mb-6 p-4 w-full bg-white rounded-3xl">
+                  {rendezVous.map((rdv, index) => (
+                    <div key={index} className="flex flex-col text-start relative w-full">
+                    <p className="mb-2">Le {moment(rdv.date).format('DD/MM/YYYY')} à {moment(rdv.heure, 'HH:mm:ss').format('HH:mm')} avec {rdv.conseiller.information.first_name}</p>
+                  </div>
+                  ))}
+                </div>
+              ) : (
+                <p className="text-center">Vous n'avez pas de rendez-vous.</p>
+              )}
+          </div>
         </div>
       </div>
 
       <h2 id="docuSection" className="font-bold text-black text-center text-lg md:text-2xl">MES DOCUMENTS</h2>
       <div className="px-4 flex flex-col items-center bg-[#F6F6F6]">
-        <div className="flex flex-col items-center w-full md:w-[70%] lg:w-[80%]">
-          {documents && documents.length > 0 ? (
-            <div className="flex flex-col mt-4 mb-6 p-4 w-full bg-white rounded-3xl">
-              {documents.map((document, index) => (
-                <div key={index} className="flex justify-between items-center mb-2">
-                  <p className="mb-2">{document.title}</p>
-                  <button className="px-2 py-1 bg-gray-300 rounded-md">
-                    <a href={document.document_url} target="_blank" rel="noopener noreferrer">
-                      Télécharger
-                    </a>
-                  </button>
-                </div>
-              ))}
-            </div>
-          ) : (
-            <p className="text-center">Aucun document disponible.</p>
-          )}
+      <div className="flex flex-col items-center w-[98%]">
+          <div className="flex flex-col mt-4 mb-6 p-4 w-full md:w-[70%] lg:w-[80%] bg-white rounded-3xl">
+
+            {documents && documents.length > 0 ? (
+                documents.map((document, index) => (
+                  <div key={index} className="flex justify-between items-center mb-2">
+                    <p className="mb-2">{document.title}</p>
+                    <button className="px-2 py-1 bg-gray-300 rounded-md">
+                      <a href={document.document_url} target="_blank" rel="noopener noreferrer">
+                        Télécharger
+                      </a>
+                    </button>
+                  </div>
+                ))
+            ) : (
+              <p className="text-center">Aucun document disponible.</p>
+            )}
+          </div>
         </div>
       </div>
-
 
       <h2 id="atelierSection" className="font-bold text-black text-center text-lg md:text-2xl">MES ATELIERS</h2>
       <div className="px-4 flex flex-col items-center bg-[#F6F6F6]">

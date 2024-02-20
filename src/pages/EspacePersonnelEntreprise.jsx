@@ -92,8 +92,11 @@ function EspacePersonnelEntreprise() {
       // Envoi de la requête HTTP avec Axios
       try {
         const response = await axios.post(
-          `${apiUrlEnv}/api/soumettre-joboffer`, // Correction de l'URL
-          formData,
+          `${apiUrlEnv}/api/soumettre-joboffer`, 
+          {
+            'entreprise_id': information.id,
+            formData
+          },
           {
             headers: {
               "Content-Type": "multipart/form-data",
