@@ -12,7 +12,7 @@ function SeFormer() {
     <div className="bg-[#F6F6F6]">
       <div
         className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52"
-        style={{ backgroundImage: "url(/public/MicrosoftTeams-image12.png)" }}
+        style={{ backgroundImage: "url(MicrosoftTeams-image12.png)" }}
       >
         <h1 className="md:text-3xl">SE FORMER</h1>
       </div>
@@ -31,7 +31,7 @@ function SeFormer() {
             <div className="containe">
               <div className="carte" style={{ "--clr": "#ff0066" }}>
                 <div className="imgBx">
-                  <img src="/public/gyal.jpg" alt="Accompagnement" />
+                  <img src="gyal.jpg" alt="Accompagnement" />
                 </div>
                 <div className="conten">
                   <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
@@ -61,7 +61,7 @@ function SeFormer() {
         <div className="containeur">
           <div className="carte" style={{ "--clr": "#ff0066" }}>
             <div className="imgBxe">
-              <img src="/public/bizz.jpg" alt="Accompagnement" />
+              <img src="bizz.jpg" alt="Accompagnement" />
             </div>
             <div className="contente">
               <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">

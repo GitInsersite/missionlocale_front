@@ -36,7 +36,7 @@ function EtreAccompagne() {
     <div className="bg-[#F6F6F6]">
       <div
         className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52"
-        style={{ backgroundImage: "url(/public/MicrosoftTeams-image12.png)" }}
+        style={{ backgroundImage: "url(MicrosoftTeams-image12.png)" }}
       >
         <div className="titre">
         <h1 className="md:text-3xl">ETRE ACCOMPAGNE</h1>
@@ -57,7 +57,7 @@ function EtreAccompagne() {
       <div className="container_acc">
         <div className="carte" style={{ '--clr': '#ff0066' }}>
           <div className="imgBx">
-            <img src="/public/bosse.jpg" alt="Accompagnement" />
+            <img src="bosse.jpg" alt="Accompagnement" />
           </div>
           <div className="conten">
           <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
