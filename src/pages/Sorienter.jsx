@@ -56,7 +56,7 @@ function Sorienter() {
       <div className="bloc_orient">
         <div className="carte" style={{ '--clr': '#ff0066' }}>
           <div className="imgBx">
-            <img src="/public/think.jpg" alt="Accompagnement" />
+            <img src="/think.jpg" alt="Accompagnement" />
           </div>
           <div className="conten">
           <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">

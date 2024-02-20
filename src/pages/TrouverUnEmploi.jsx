@@ -73,7 +73,7 @@ function TrouverUnEmploi() {
       <div className="bloc">
         <div className="carte" style={{ '--clr': '#ff0066' }}>
           <div className="imgBxe">
-            <img src="/public/roux.jpg" alt="Accompagnement" />
+            <img src="/roux.jpg" alt="Accompagnement" />
           </div>
           <div className="contente">
           <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">    

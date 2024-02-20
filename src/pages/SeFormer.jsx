@@ -30,7 +30,7 @@ function SeFormer() {
       <div className="containe">
         <div className="carte" style={{ '--clr': '#ff0066' }}>
           <div className="imgBx">
-            <img src="/public/gyal.jpg" alt="Accompagnement" />
+            <img src="/gyal.jpg" alt="Accompagnement" />
           </div>
           <div className="conten">
           <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
@@ -54,7 +54,7 @@ function SeFormer() {
       <div className="containeur">
         <div className="carte" style={{ '--clr': '#ff0066' }}>
           <div className="imgBxe">
-            <img src="/public/bizz.jpg" alt="Accompagnement" />
+            <img src="/bizz.jpg" alt="Accompagnement" />
           </div>
           <div className="contente">
           <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
