@@ -197,7 +197,7 @@
   @media only screen and (max-width: 768px) {
     .containeur {
       top: 20px;
-      left: 120px;
+      left: 0px;
       gap: 20px;
       padding: 50px 20px;
       
@@ -211,7 +211,7 @@
       height: 160px;
       top: 15px;
       margin-bottom: 20px;
-      left: -122px; /* Remplacer la largeur fixe par 100% pour occuper toute la largeur de l'écran */
+      left: -12px; /* Remplacer la largeur fixe par 100% pour occuper toute la largeur de l'écran */
       
     }
   
