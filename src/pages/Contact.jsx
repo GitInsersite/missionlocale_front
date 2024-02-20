@@ -2,7 +2,11 @@ import {  FaFacebook, FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
+import { FaInstagramSquare } from "react-icons/fa";
 import { useAuth } from "../context/AuthContext";
+import { TiSocialInstagramCircular } from "react-icons/ti";
+
+import '/instagram.css';
 
 function Contact() {
 
@@ -48,9 +52,9 @@ function Contact() {
             SUIVEZ-NOUS SUR LES RÉSEAUX
           </h2>
           <div className="flex justify-between w-[80%] mt-2 mb-2">
-            <Link><FaLinkedin className="w-8 h-8 md:w-10 md:h-10"/></Link>
-            <Link><FaFacebook className="w-8 h-8 md:w-10 md:h-10"/></Link>
-            <Link><FaInstagram className="w-8 h-8 md:w-10 md:h-10"/></Link>
+            <Link to="#" className="transition-all duration-500 hover:scale-110 hover:text-blue-500"><FaLinkedin className="w-8 h-8 md:w-10 md:h-10"/></Link>
+            <Link to="#" className="transition-all duration-500 hover:scale-110 hover:text-blue-500"><FaFacebook className="w-8 h-8 md:w-10 md:h-10"/></Link>
+            <Link to="#" className="instagram"><TiSocialInstagramCircular className="w-8 h-8 md:w-10 md:h-10"/></Link>
           </div>
         </div>
         {isLaptopOrLarger ? (<div className="flex flex-col items-center mx-4 rounded-lg mb-4 w-[90%]">

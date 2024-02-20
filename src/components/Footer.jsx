@@ -1,5 +1,7 @@
 import { FaLinkedinIn, FaFacebookF, FaInstagram } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import '/instagram.css';
+
 
 function Footer() {
   return (
@@ -50,13 +52,13 @@ function Footer() {
           <div>
             <h2 className="flex items-center md:mb-2">
               NOUS SUIVRE :
-              <Link to="https://www.linkedin.com/company/insersite/" target="_blank" rel="noopener noreferrer">
+              <Link to="https://fr.linkedin.com/in/la-mission-locale-intercommunale-des-mureaux-b403b52b0" target="_blank" rel="noopener noreferrer" className="transition-all duration-500 hover:scale-110 " >
                 <FaLinkedinIn className=" text-white ml-2" />
               </Link>
-              <Link to="https://www.facebook.com/insersite/?locale=fr_FR" target="_blank" rel="noopener noreferrer">
+              <Link to="https://www.facebook.com/mureauxmlidf/?locale=fr_FR" target="_blank" rel="noopener noreferrer" className="transition-all duration-500 hover:scale-110 ">
                 <FaFacebookF className=" text-white ml-2" />
               </Link>
-              <Link to="https://www.instagram.com/insersite78/" target="_blank" rel="noopener noreferrer">
+              <Link to="https://www.instagram.com/mlmureaux/?hl=fr" target="_blank" rel="noopener noreferrer">
                 <FaInstagram className=" text-white ml-2" />
               </Link>
             </h2>
