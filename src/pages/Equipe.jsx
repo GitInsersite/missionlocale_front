@@ -62,12 +62,15 @@ function Equipe() {
             DIRECTION
           </h2>
           <p>la liste de notre équipe est ci-dessous : </p>
-          <ul>4 Conseillères CEJ ;</ul>
-          <ul>10 Conseillers classiques dont 2 en congés maternité ;</ul>
-          <ul>1 Chargé d’accueil ;</ul>
-          <ul>1 Chargée de l’emploi et des relations entreprises ;</ul>
-          <ul>1 Responsable Administrative et Financières ;</ul>
-          <ul>1 Responsable de secteur ;</ul>
+          <ul>
+            <li>4 Conseillères CEJ ;</li>
+            <li>10 Conseillers classiques ;</li>
+            <li>1 Chargé d’accueil ;</li>
+            <li>1 Chargée de l’emploi et des relations entreprises ;</li>
+            <li>1 Responsable Administrative et Financières ;</li>
+            <li>1 Responsable de secteur ;</li>
+            <li>1 Chargé de Communication ;</li>
+          </ul>
           <br />
 
           <div>{renderMembers(equipeData.direction)}</div>
