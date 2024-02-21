@@ -36,7 +36,7 @@
     align-items: center;
     flex-wrap: wrap;
     top: 80px;
-    left: 180px;
+    left: 0px;
     gap: 100px 50px;
     padding: 100px 50px;
     opacity: 0; /* Définir l'opacité initiale à 0 */
@@ -60,9 +60,9 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    width: 880px;
-    height: 60px;
-    left: -125px;
+    width: 800px;
+    height: 160px;
+    left: -0px;
     background: #f7f7f7;
     border-radius: 12px ;
     box-shadow:  0 35px 80px rgba(0, 0, 0, 0.15);
@@ -70,10 +70,33 @@
   
   }
   
-  .containe:hover .carte {
+  .containe .carte {
     height: 260px;
     
   }
+
+  @keyframes animateImgBx {
+    0% {
+      top: -150px;
+      left: -120px;
+      transform: scale(0.80);
+      opacity: 0.6;
+    }
+    50% {
+      top: -105px; /* Animation à mi-chemin */
+      left: -143px; /* Animation à mi-chemin */
+      transform: scale(0.83); /* Animation à mi-chemin */
+      opacity: 0.8; /* Animation à mi-chemin */
+    }
+    100% {
+      top: -60px;
+      left: -165px;
+      transform: scale(0.85);
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+      opacity: 1;
+    }
+  }
+
     
   .containe .carte .imgBx {
     position: absolute;
@@ -85,7 +108,9 @@
     transform: scale(0.80);
     overflow: hidden;
     opacity: 0.6;
-    transition: 1.5s;
+    transition: 0.5s;
+    animation: animateImgBx 3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+
   }
   .containe:hover .carte .imgBx {
     top: -80px;
@@ -95,7 +120,7 @@
     opacity: inherit;
     transition: 1.5s;
   }
-  .containe:hover .carte .imgBx img {
+  .containe .carte .imgBx img {
     position: absolute;
     top: 0;
     left: 0;
@@ -114,7 +139,7 @@
     transition: 0.5s;
   }
   
-  .containe:hover .carte .conten {
+  .containe .carte .conten {
     position: relative;
     flex-direction:row;
     top: 20px;
@@ -140,26 +165,16 @@
     top: 15px;
   
   }
-  .containe:hover .carte .conten h2 {
-  position: relative;
-  display: flex;
-  justify-content: left;
-  flex-direction: row;
-  align-items: flex-start;
-  font-size: medium;
-  top: 11px;
-  left: 122px;
-  transition: 0.5s;
-  }
   
   
-  .containe:hover .carte .conten p {
+  
+  .containe .carte .conten p {
     
     color: #333;
     position: relative;
     width: 80%;
-    left: 122px;
-    font-size: 0.8em;
+    left: 89px;
+    font-size: 0.9em;
     top: 14px;
     transition: 0.5s;
   }
@@ -177,31 +192,29 @@
 
     .containe .carte{
       width: 350px;
-      height: 160px;
-      left: -12px;
+      height: 460px;
+      left: -2px;
     }
   
     
   
     .containe .carte .imgBx {
-      position: absolute;
-      top: -80px;
-      left: 65px;
-      width: 210px;
-      height: 160px;
+      position:absolute;
+      top: 2%;
+      left: 26%;
+      transform: translate(-50%, -50%);
+      width: 200px;
+      height: 70px;
       border-radius: 12px 12px 20px 20px ;
-      transform: scale(0.80);
-      overflow: hidden;
-      opacity: 0.6;
+      overflow: visible;
+      opacity: 0.7;
+      animation: none;
       transition: 1.5s;
+      
     }
   
-    .containe .carte:hover .imgBx {
-      top: -80px;
-      left: 50px;
-      transition: 1.5s;
-    }
-    .containe .carte:hover .imgBx img {
+    
+    .containe .carte .imgBx img {
        position: absolute;
        top: 0;
        left: 0;
@@ -211,40 +224,39 @@
     }
 
   
-    .containe .carte .conten {
-      left: 20px;
-    }
+    
   
-    .containe .carte:hover .conten {
-      top: 60px;
+    .containe .carte .conten {
+      top: 54px;
       left: -45px;
       transition: 1.2s;
       font-size:small;
     }
   
-    .containe .carte .conten h2 {
-      visibility: hidden;
-    }
+    
   
-    .containe .carte:hover .conten h2 {
+    .containe .carte .conten h2 {
       display: flex;
       white-space: nowrap; /* Empêcher le retour à la ligne du texte */
       overflow: hidden; /* Cacher le débordement du texte */
       position: relative;
-      left: 52px;
-      font-size: 0.9em;
+      left: 30px;
+      font-size: 18px;
+      top: 4px;
       transition: 0.5s;
       visibility: visible;
       
     }
   
-    .containe .carte:hover .conten p {
+    .containe .carte .conten p {
       left: 27px;
       transition: 0.1s;
       width: 100%;
-      font-size:0.7em ;
+      top: 12px;
+      font-size:15px ;
       display: flex;
       position: relative;
+      visibility: visible;
     }
   
     

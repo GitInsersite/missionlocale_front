@@ -36,7 +36,7 @@
     align-items: center;
     flex-wrap: wrap;
     top: 80px;
-    left: 97px;
+    left: 0px;
     gap: 100px 50px;
     padding: 100px 50px;
     opacity: 0; /* Définir l'opacité initiale à 0 */
@@ -223,7 +223,7 @@
   
     .bloc .carte {
       width: 350px;
-      height: 260px;
+      height: 460px;
       top: 10px;
       margin-bottom: 20px;
       left: -12px; /* Remplacer la largeur fixe par 100% pour occuper toute la largeur de l'écran */
@@ -232,7 +232,7 @@
   
     .bloc .carte .imgBxe {
       position: absolute;
-      top: -19%;
+      top: -12%;
       left: 42%;
       transform: translate(-50%, -50%);
       width: 230px;
@@ -266,12 +266,11 @@
   
     .bloc .carte .contente h2 {
       display: flex;
-      white-space: nowrap; /* Empêcher le retour à la ligne du texte */
       overflow: hidden; /* Cacher le débordement du texte */
       position: relative;
       left: 30px;
       top: 4px;
-      font-size: 0.9em;
+      font-size: 18px;
       transition: 0.5s;
       visibility: visible;
       
@@ -282,7 +281,7 @@
       transition: 0.1s;
       width: 100%;
       top: -1px;
-      font-size:0.8em ;
+      font-size:15px ;
       display: flex;
       position: relative;
       visibility:visible;
@@ -293,7 +292,7 @@
       justify-content: center;
       display: inline-block;
       padding: 12px 12px ;
-      top: 1px;
+      top: 7px;
       transition: 0.5s;
       left: 65px;
     }

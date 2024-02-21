@@ -36,7 +36,7 @@
     align-items: center;
     flex-wrap: wrap;
     top: 80px;
-    left: 97px;
+    left: 0px;
     gap: 100px 50px;
     padding: 100px 50px;
     opacity: 0; /* Définir l'opacité initiale à 0 */
@@ -217,22 +217,19 @@
     }
 
     
-
-
-    
   
     .bloc_orient .carte {
       width: 350px;
-      height: 260px;
-      top: 18px;
+      height: 540px;
+      top: -12px;
       margin-bottom: 40px;
-      left: -12px; /* Remplacer la largeur fixe par 100% pour occuper toute la largeur de l'écran */
+      left: 1px; /* Remplacer la largeur fixe par 100% pour occuper toute la largeur de l'écran */
       
     }
   
     .bloc_orient .carte .imgBx {
       position:absolute;
-      top: 8%;
+      top: 2%;
       left: 26%;
       transform: translate(-50%, -50%);
       width: 200px;
@@ -271,7 +268,7 @@
       position: relative;
       left: 30px;
       top: 3px;
-      font-size: 0.9em;
+      font-size: 18px;
       transition: 0.5s;
       visibility: visible;
       
@@ -284,7 +281,7 @@
       transition: 0.1s;
       width: 100%;
       top: -1px;
-      font-size:0.7em ;
+      font-size: 15px ;
       display: flex;
       position: relative;
       visibility: visible;
@@ -295,9 +292,9 @@
       justify-content: center;
       display: inline-block;
       padding: 12px 12px ;
-      top: -8px;
+      top: 10px;
       transition: 0.5s;
-      left: 40px;
+      left: 54px;
     }
   }
   
