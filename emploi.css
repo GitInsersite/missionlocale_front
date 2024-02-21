@@ -35,8 +35,8 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    top: 120px;
-    left: 97px;
+    top: 80px;
+    left: 0px;
     gap: 100px 50px;
     padding: 100px 50px;
     opacity: 0; /* Définir l'opacité initiale à 0 */
@@ -72,9 +72,31 @@
   
   }
   
-  .bloc .carte:hover {
+  .bloc .carte {
     height: 260px;
     
+  }
+
+  @keyframes animateImgBx {
+    0% {
+      top: -150px;
+      left: -120px;
+      transform: scale(0.80);
+      opacity: 0.6;
+    }
+    50% {
+      top: -105px; /* Animation à mi-chemin */
+      left: -143px; /* Animation à mi-chemin */
+      transform: scale(0.83); /* Animation à mi-chemin */
+      opacity: 0.8; /* Animation à mi-chemin */
+    }
+    100% {
+      top: -60px;
+      left: -165px;
+      transform: scale(0.85);
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+      opacity: 1;
+    }
   }
     
   .bloc .carte .imgBxe {
@@ -88,6 +110,8 @@
     overflow: hidden;
     opacity: 0.6;
     transition: 1.5s;
+    animation: animateImgBx 3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+
   }
   .bloc .carte:hover .imgBxe {
     top: -60px;
@@ -97,7 +121,7 @@
     opacity: inherit;
     transition: 1.5s;
   }
-  .bloc .carte:hover .imgBxe img {
+  .bloc .carte .imgBxe img {
     position: absolute;
     top: 0;
     left: 0;
@@ -116,7 +140,7 @@
     transition: 0.5s;
   }
   
-  .bloc .carte:hover .contente {
+  .bloc .carte .contente {
     position: relative;
     flex-direction:row;
     top: 20px;
@@ -143,20 +167,10 @@
     top: 15px;
   
   }
-  .bloc .carte:hover .contente h2 {
-  position: relative;
-  display: flex;
-  justify-content: left;
-  flex-direction: row;
-  align-items: flex-start;
-  font-size: medium;
-  top: 11px;
-  left: 62px;
-  transition: 0.5s;
-  }
   
   
-  .bloc .carte:hover .contente p {
+  
+  .bloc .carte .contente p {
     
     color: #333;
     position: relative;
@@ -176,7 +190,7 @@
 
  }
 
-  .bloc .carte.carte:hover  .contente .rdv {
+  .bloc .carte.carte  .contente .rdv {
     position: relative;
     justify-content: center;
     transform: translateY(10px);
@@ -198,7 +212,7 @@
   @media only screen and (max-width: 768px) {
     .bloc {
       top: 20px;
-      left: 120px;
+      left: 0px;
       gap: 20px;
       padding: 50px 20px;
       
@@ -209,32 +223,30 @@
   
     .bloc .carte {
       width: 350px;
-      height: 160px;
+      height: 460px;
       top: 10px;
       margin-bottom: 20px;
-      left: -122px; /* Remplacer la largeur fixe par 100% pour occuper toute la largeur de l'écran */
+      left: -12px; /* Remplacer la largeur fixe par 100% pour occuper toute la largeur de l'écran */
       
     }
   
     .bloc .carte .imgBxe {
       position: absolute;
-      top: -80px;
-      left: 65px;
-      width: 200px;
-      height: 160px;
+      top: -12%;
+      left: 42%;
+      transform: translate(-50%, -50%);
+      width: 230px;
+      height: 100px;
       border-radius: 12px 12px 20px 20px ;
       transform: scale(0.80);
-      overflow: hidden;
+      overflow: visible;
       opacity: 0.6;
+      animation: none;
       transition: 1.5s;
     }
   
-    .bloc .carte:hover .imgBxe {
-      top: -80px;
-      left: 50px;
-      transition: 1.5s;
-    }
-    .bloc .carte:hover .imgBxe img {
+    
+    .bloc .carte .imgBxe img {
        position: absolute;
        top: 0;
        left: 0;
@@ -245,47 +257,42 @@
 
   
     .bloc .carte .contente {
-      left: 20px;
-    }
-  
-    .bloc .carte:hover .contente {
-      top: 60px;
+      top: 34px;
       left: -45px;
       transition: 1.2s;
       font-size:small;
     }
   
-    .bloc .carte .contente h2 {
-      visibility: hidden;
-    }
   
-    .bloc .carte:hover .contente h2 {
+    .bloc .carte .contente h2 {
       display: flex;
-      white-space: nowrap; /* Empêcher le retour à la ligne du texte */
       overflow: hidden; /* Cacher le débordement du texte */
       position: relative;
       left: 30px;
-      font-size: 0.9em;
+      top: 4px;
+      font-size: 18px;
       transition: 0.5s;
       visibility: visible;
       
     }
   
-    .bloc .carte:hover .contente p {
+    .bloc .carte .contente p {
       left: 27px;
       transition: 0.1s;
       width: 100%;
-      font-size:0.7em ;
+      top: -1px;
+      font-size:15px ;
       display: flex;
       position: relative;
+      visibility:visible;
     }
   
-    .bloc .carte.carte:hover .contente .rdv {
+    .bloc .carte.carte .contente .rdv {
       position: relative;
       justify-content: center;
       display: inline-block;
       padding: 12px 12px ;
-      top: 13px;
+      top: 7px;
       transition: 0.5s;
       left: 65px;
     }

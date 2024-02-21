@@ -11,16 +11,12 @@ function TaxeApprentissage() {
       </div>
 
       <br />
-
-      <div className="breadcrumb px-4 pt-4 md:px-14 lg:px-20 xl:px-52">
-        <a href="/">Accueil</a> {">"}
-        <a href="/"> Entreprise </a>
-        {">"}
-        <a className="text-[#F29200]" href="/taxe-apprentissage">
-          {" "}
-          Taxe d'apprentissage
-        </a>
-      </div>
+      
+      <div className="breadcrumb px-4 pt-4  md:px-14 lg:px-20 xl:px-52">
+       <a className="hover:text-[#F29200]" href="/">Accueil</a> {'>'}
+        <a className="hover:text-[#F29200]" href="/Entreprise">  Entreprise </a>{'>'}
+        <a className="hover:text-[#F29200]" href="/TaxeApprentissage"> Taxe d'apprentissage</a>
+        </div> 
 
       <div className="flex flex-col items-center">
         <div className="flex flex-col px-4 font-semibold md:px-14 lg:px-20 xl:px-52">
@@ -34,7 +30,7 @@ function TaxeApprentissage() {
             </span>{" "}
             d’apprentissage, comment cela fonctionne ?
           </h2>
-          <p className="mb-6">
+          <p className=" mb-6">
             La Mission Locale est habilitée à percevoir le solde de la Taxe
             d’Apprentissage au titre d’ « Organisme participant au Service
             Public de l’Orientation tout au long de sa vie ». C’est le seul

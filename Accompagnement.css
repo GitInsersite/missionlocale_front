@@ -35,7 +35,7 @@
     align-items: center;
     flex-wrap: wrap;
     top: 80px;
-    left: 97px;
+    left: 0px;
     gap: 100px 50px;
     padding: 100px 50px;
     opacity: 0; /* Définir l'opacité initiale à 0 */
@@ -210,7 +210,7 @@
   @media only screen and (max-width: 768px) {
     .container_acc {
       top: 20px;
-      left: 120px;
+      left: 0px;
       gap: 20px;
       padding: 50px 20px;
     }
@@ -220,15 +220,15 @@
   
     .container_acc .carte {
       width: 350px; /* Remplacer la largeur fixe par 100% pour occuper toute la largeur de l'écran */
-      height: 260px;
+      height: 440px;
       top: 10px;
       margin-bottom: 20px;
-      left: -122px;
+      left: 0px;
     }
   
     .container_acc .carte .imgBx {
       position: absolute;
-      top: -19%;
+      top: -12%;
       left: 42%;
       transform: translate(-50%, -50%);
       width: 230px;
@@ -269,8 +269,8 @@
       overflow: hidden; /* Cacher le débordement du texte */
       position: relative;
       left: 28px;
-      top: 8px;
-      font-size: 0.9em;
+      top: 2px;
+      font-size: 15px;
       transition: 0.5s;
       visibility: visible;
       
@@ -281,7 +281,7 @@
       top: -2px;
       width: 100%;
       transition: 0.1s;
-      font-size:0.7em ;
+      font-size:14px ;
       display: flex;
       position: relative;
     }
@@ -289,8 +289,13 @@
   
     .container_acc .carte.carte .conten .rdv {
       padding: 12px 12px ;
-      top: 17px;
+      top: 1px;
       transition: 0.5s;
       left: 49px;
     }
   }
+  
+  
+  
+   
+  
