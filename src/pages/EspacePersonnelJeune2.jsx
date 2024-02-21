@@ -14,9 +14,14 @@ function EspacePersonnelJeune2() {
       ? import.meta.env.VITE_API_URL_PROD
       : import.meta.env.VITE_API_URL_DEV;
 
-  const { information, ateliers, documents, jobOffers, rendezVous, formations } = useAuth();
+  const { information, ateliers, documents, jobOffers, rendezVous, formations, userData } = useAuth();
   const authToken = localStorage.getItem("authToken");
   const [oldSelectedOption, setOldSelectedOption] = useState(null);
+
+  useEffect(() => {
+    userData();
+  }, []); 
+
 
   const onSubmit = async (data, e) => {
     const selectedOption = data.option;
