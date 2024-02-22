@@ -49,7 +49,19 @@ function UneActualite() {
           <p className="mb-4">
             {new Date(actualite.created_at).toLocaleDateString()}
           </p>
-          <p className="mb-4 text-[#2897d5]">#{actualite.hashtag}</p>
+              <p className="mb-4 text-[#2897d5]">
+                {actualite.hashtag && (
+                  <>
+                    {actualite.hashtag.split(', ').map((tag, index) => (
+                      <span key={index}>
+                        #{tag} {/* Ajoutez une balise de saut de ligne après chaque hashtag */}
+                      </span>
+                    ))}
+                  </>
+                )}
+              </p>
+              
+
         </div>
         {isLaptopOrLarger ? (
           <div className="flex px-4 bg-white rounded-lg mb-4 pt-2 w-[90%]">
