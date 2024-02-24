@@ -206,7 +206,7 @@ const handleImageChange = () => {
           <div className="w-full flex flex-col md:flex-row md:justify-between">
             <div className="my-1 md:w-[calc(50%-10px)] relative flex items-center justify-center">
               <label id="labelchoisir" htmlFor="choisirimage" className="bg-[#F29200] text-white w-full py-1 p-2 rounded-md mx-auto font-semibold text-center justify-center">
-                {selectedImageName ? selectedImageName : 'Ajouter un logo'}
+                {selectedImageName ? selectedImageName : 'Ajouter un Jpg'}
               </label>
               <input type="file" id="choisirimage" {...register("image")} ref={imageInputRef} name="image" accept="image/*" className="hidden" onChange={handleImageChange} />
 

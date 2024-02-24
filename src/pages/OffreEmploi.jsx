@@ -117,6 +117,15 @@ function OffreEmploi() {
             <div className="mb-4">
               <h2 className="font-bold mb-2 text-xl">{offre.entreprise}</h2>
               <h3 className="font-bold mb-2 text-xl">{offre.title}</h3>
+              <div className="flex justify-start items-start w-[45%] md:w-[35%] lg:w-[45%] xl:w-[40%]">
+                {offre.image_url ? (
+                  <img
+                    src={offre.image_url}
+                    alt={offre.title}
+                    className="border-2 my-1 mx-2 rounded-3xl h-[80%] sm:h-[90%] md:h-[85%]"
+                  />
+                ) : null}
+              </div>
               <p className="text-base">{offre.description}</p>
             </div>
             <div>
@@ -136,6 +145,14 @@ function OffreEmploi() {
                   Postuler à cette offre
                 </button>
               </div>
+              <div className="flex justify-start items-start w-[45%] md:w-[35%] lg:w-[45%] xl:w-[40%]">
+              {/* Condition pour afficher le document PDF */}
+              {offre.job_url ? (
+                <a href={offre.job_url} target="_blank" rel="noopener noreferrer" className="bg-[#D60B52] text-white font-semibold py-1 px-2 text-center rounded-lg mt-2">
+                  Télécharger le document PDF
+                </a>
+              ) : null}
+            </div>
             </div>
           </div>
         ))}
