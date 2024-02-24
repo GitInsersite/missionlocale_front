@@ -36,17 +36,37 @@ function EspacePersonnelEntreprise() {
       ? import.meta.env.VITE_API_URL_PROD
       : import.meta.env.VITE_API_URL_DEV;
 
-  const handleImageChange = () => {
+  // const handleImageChange = () => {
+  //   const file = imageInputRef.current?.files[0];
+  //   if (file) {
+  //     setSelectedImageName(file.name);
+  //     const reader = new FileReader();
+  //     reader.onload = () => {
+  //       setSelectedImageFile(reader.result);
+  //     };
+  //     reader.readAsDataURL(file);
+  //   }
+  // };
+
+const MAX_IMAGE_SIZE_BYTES = 8 * 1024 * 1024;
+
+const handleImageChange = () => {
     const file = imageInputRef.current?.files[0];
     if (file) {
-      setSelectedImageName(file.name);
-      const reader = new FileReader();
-      reader.onload = () => {
-        setSelectedImageFile(reader.result);
-      };
-      reader.readAsDataURL(file);
+        if (file.size > MAX_IMAGE_SIZE_BYTES) {
+            console.log("L'image est trop grande.");
+            return; // Arrête l'exécution de la fonction si l'image est trop grande
+        }
+        setSelectedImageName(file.name);
+        const reader = new FileReader();
+        reader.onload = () => {
+            setSelectedImageFile(reader.result);
+            // console.log("Selected Image File:", reader.result); // Ajout du console.log pour vérifier selectedImageFile
+        };
+        reader.readAsDataURL(file);
     }
-  };
+};
+  
     
   const handlePdfChange = () => {
     const file = pdfInputRef.current?.files[0];
@@ -61,13 +81,11 @@ function EspacePersonnelEntreprise() {
   };
 
   const onSubmit = async (data, e) => {
-    e.preventDefault();
-  
     if (submitCounter > 0) {
       console.log("Ne spammez pas !");
     } else {
-      const formData = new FormData();
-      // Ajouter les données du formulaire au FormData
+      const formData = new FormData(e.target); // Utilisez FormData directement depuis l'événement
+      formData.append("entreprise_id", information.id); // Ajout de l'entreprise_id directement ici
       formData.append("entreprise", e.target.entreprise.value);
       formData.append("title", e.target.title.value);
       formData.append("job", e.target.job.value);
@@ -75,28 +93,28 @@ function EspacePersonnelEntreprise() {
       formData.append("description", e.target.description.value);
       formData.append("publication", e.target.publication.value);
       
-      if (selectedImageFile !== null) {
+  
+      if (selectedImageFile !== "") {
+        console.log(selectedImageFile);
         formData.append("image", selectedImageFile);
-      } else {
-        formData.append("image", null);
+      } else{
+        formData.append("image", "");
       }
   
-      if (selectedPdfFile !== null) {
+      if (selectedPdfFile !== "") {
         formData.append("docpdf", selectedPdfFile);
       } else {
-        formData.append("docpdf", null);
+        formData.append("docpdf", "");
       }
   
-      console.log(formData);
+      
   
       // Envoi de la requête HTTP avec Axios
       try {
+        console.log("in try-catch: FormData:", formData);
         const response = await axios.post(
-          `${apiUrlEnv}/api/soumettre-joboffer`, 
-          {
-            'entreprise_id': information.id,
-            formData
-          },
+          `${apiUrlEnv}/api/soumettre-joboffer`,
+          formData,
           {
             headers: {
               "Content-Type": "multipart/form-data",
@@ -104,21 +122,25 @@ function EspacePersonnelEntreprise() {
             },
           }
         );
-  
+      
         console.log("Response:", response.data);
-  
+      
         // Gérer la réponse ici
-        if (response.data.success) {
+        if (response.data.hasOwnProperty("success") && response.data.success === true) {
           // Succès
           console.log("Formulaire soumis avec succès:", response.data.success);
           // Faire quelque chose pour traiter le succès, si nécessaire
         } else {
           // Erreur
-          console.error("Erreur lors de la soumission du formulaire:", response.data.error);
+          console.error(
+            "Erreur lors de la soumission du formulaire:",
+            response.data.error
+          );
           // Faire quelque chose pour traiter l'erreur, si nécessaire
         }
       } catch (error) {
-        console.error("Error:", error);
+        console.error("Oops! Error:", error);
+        console.log("Error Details:", error.response.data);
       }
   
       // Réinitialiser le formulaire et les états locaux
@@ -154,7 +176,7 @@ function EspacePersonnelEntreprise() {
   
       <div className="flex flex-col items-center bg-[#F6F6F6]">
         <h2 className="font-bold text-black text-lg my-8 md:text-3xl"><span className="border-b-2 border-[#F29200] pb-[0.5px]">DEPOSER UNE O</span>FFRE D'EMPLOI</h2>
-        <form className="flex flex-col items-center justify-center rounded-3xl mt-4 mb-6 p-4 bg-white md:w-[360px]" onSubmit={handleSubmit(onSubmit)} >
+        <form className="flex flex-col items-center justify-center rounded-3xl mt-4 mb-6 p-4 bg-white md:w-[360px]" onSubmit={handleSubmit(onSubmit)} encType="multipart/form-data" >
           <input {...register("entreprise", { required: true })} name="entreprise" className="w-full border-2 rounded-md p-2  placeholder-black placeholder-opacity-75 my-1 md:mb-6" placeholder="Entreprise*" />
           <input {...register("title", { required: true })} name="title" className="w-full border-2  rounded-md p-2 placeholder-black placeholder-opacity-75 my-1 md:mb-6" placeholder="Titre*" />
           <input {...register("job", { required: true })} name="job" className="w-full border-2  rounded-md p-2 placeholder-black placeholder-opacity-75 my-1 md:mb-6" placeholder="Job visé*" />
