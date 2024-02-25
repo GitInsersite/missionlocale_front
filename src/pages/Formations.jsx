@@ -50,8 +50,15 @@ function Formations() {
         className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52"
         style={{ backgroundImage: "url(MicrosoftTeams-image12.png)" }}
       >
-        <h1 className="md:text-3xl">Formations</h1>
+        <h1 className="md:text-3xl">FORMATIONS</h1>
       </div>
+      <div className="breadcrumb px-4 pt-4  md:px-14 lg:px-20 xl:px-52">
+        <a className="text-[#D70B52]" href="/formations">
+          Formations{" "}
+        </a>{" "}
+        {">"}
+      </div>{" "}
+      <br />
       <div className="bg-[#f6f6f6] md:px-14 lg:px-20 xl:px-44 lg:grid lg:grid-cols-2">
         {formations.map((newsItem, index) => (
           <div key={index} className="flex flex-col items-center pt-6 pb-6">
@@ -60,7 +67,7 @@ function Formations() {
                 <img
                   src={newsItem.image_url}
                   alt={newsItem.title}
-                  className="border-2 my-1 mx-2 rounded-3xl h-[80%] sm:h-[90%] md:h-[85%]"
+                  className="border-2 my-1 mx-2 rounded-3xl h-[80%] sm:h-[90%] md:h-[85%] object-cover"
                 />
               </div>
               <div className="w-[55%] flex flex-col items-center justify-center md:w-[65%] md:items-start md:pl-4 lg:w-[55%] xl:w-[60%]">

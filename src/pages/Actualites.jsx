@@ -64,11 +64,11 @@ function Actualites() {
           <div key={index} className="flex flex-col items-center pt-6 pb-6">
             <div className="bg-white mx-10 h-40 rounded-xl flex w-[95%] md:h-48 lg:w-[90%]">
               <div className="flex justify-center items-center w-[45%] md:w-[35%] lg:w-[45%] xl:w-[40%]">
-                <img
-                  src={newsItem.image_url}
-                  alt={newsItem.title}
-                  className="border-2 my-1 mx-2 rounded-3xl h-[80%] sm:h-[90%] md:h-[85%]"
-                />
+              <img
+                src={newsItem.image_url}
+                alt={newsItem.title}
+                className="border-2 my-1 mx-2 rounded-3xl h-[80%] sm:h-[90%] md:h-[85%] object-cover"
+              />
               </div>
               <div className="w-[55%] flex flex-col items-center justify-center md:w-[65%] md:items-start md:pl-4 lg:w-[55%] xl:w-[60%]">
                 <h3 className="font-bold mb-1 leading-tight">
