@@ -8,8 +8,8 @@ function Ateliers() {
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
 
-  const isLaptopOrLarger = useMediaQuery({ minWidth: 1024 });
-  const isTabletOrLarger = useMediaQuery({ minWidth: 768 });
+  const isLaptopOrLarger = useMediaQuery({ minWidth: 1920 });
+  const isTabletOrLarger = useMediaQuery({ minWidth: 480 });
 
   // Dynamically get the API URL based on the environment
   const apiUrlEnv =
@@ -75,20 +75,19 @@ function Ateliers() {
               )}  
               
               <div className="w-[55%] flex flex-col items-center justify-center md:w-[65%] md:items-start md:pl-4 lg:w-[55%] xl:w-[60%]">
-                <h3 className="font-bold mb-1 leading-tight">
-                  {truncateText(atelier.title, isTabletOrLarger ? 30 : 15)}
+                <h3 className="font-bold mb-1">
+                  {truncateText(atelier.title, isTabletOrLarger ? 12 : 10)}
                 </h3>
                 <p className="text-[#95c11f] mb-1 text-sm md:mb-4">
                   {new Date(atelier.created_at).toLocaleDateString()}
-                </p>{" "}
+                </p>
                 {/* Replace 'date' with the actual property name from your API response */}
-                <p className="mb-1 md:mb-4 leading-tight">
-                  {" "}
+                <p className="mb-1 md:mb-4 overflow-hidden break-words">
                   {truncateText(
                     atelier.description,
-                    isTabletOrLarger ? 30 : 18
+                    isTabletOrLarger ? 10 : 10
                   )}
-                </p>{" "}
+                </p>
                 {/* Replace 'description' with the actual property name from your API response */}
                 <Link
                   to={`/ateliers/${atelier.id}`}

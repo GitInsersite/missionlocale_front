@@ -72,7 +72,7 @@ function Actualites() {
               </div>
               <div className="w-[55%] flex flex-col items-center justify-center md:w-[65%] md:items-start md:pl-4 lg:w-[55%] xl:w-[60%]">
                 <h3 className="font-bold mb-1 leading-tight">
-                  {truncateText(newsItem.title, isTabletOrLarger ? 20 : 15)}
+                  {truncateText(newsItem.title, isTabletOrLarger ? 15 : 10)}
                 </h3>
                 <p className="text-[#2897d5] mb-1 text-sm md:mb-4">
                   {new Date(newsItem.created_at).toLocaleDateString()}
@@ -82,7 +82,7 @@ function Actualites() {
                   {" "}
                   {truncateText(
                     newsItem.description,
-                    isTabletOrLarger ? 20 : 13
+                    isTabletOrLarger ? 15 : 13
                   )}
                 </p>{" "}
                 {/* Replace 'description' with the actual property name from your API response */}
