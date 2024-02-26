@@ -1,4 +1,4 @@
-import { FaLinkedinIn, FaFacebookF, FaInstagram } from "react-icons/fa";
+import { FaLinkedinIn, FaFacebookF, FaInstagram } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 
@@ -14,14 +14,14 @@ function Footer() {
               className="bg-white rounded-lg mb-6 w-60"
             />
           </Link>
-          <p className="text-white text-xs">
+          <p className="text-white text-sm">
             LA MISSION LOCALE DES MUREAUX ACCOMPAGNE LES JEUNES DE 16 À 25 ANS
             DANS LA RECHERCHE D&apos;EMPLOI, DE FORMATION OU D&apos;ALTERNANCE{" "}
           </p>
         </div>
         <div className="md:w-[20%] md:flex md:flex-col md:items-center pb-4 md:pb-0">
           <h2 className="text-white font-bold md:mb-4">ACCÈS RAPIDE</h2>
-          <p className="text-white text-xs">
+          <p className="text-white text-sm">
             <Link
               to=""
               className="cursor-pointer"
@@ -41,7 +41,7 @@ function Footer() {
           <h2 className="text-white font-bold md:mb-4">
             HORAIRES D&apos;OUVERTURE:
           </h2>
-          <p className="text-white text-xs">
+          <p className="text-white text-sm">
             DU LUNDI AU VENDREDI <br />
             DE 08H45 À 12H15 ET <br />
             DE 13H30 À 17H30
@@ -51,13 +51,13 @@ function Footer() {
           <div>
             <h2 className="flex items-center font-bold md:mb-3">
               NOUS SUIVRE :
-              <Link to="https://fr.linkedin.com/in/la-mission-locale-intercommunale-des-mureaux-b403b52b0" target="_blank" rel="noopener noreferrer" className="transition-all duration-500 hover:scale-110 " >
+              <Link to="https://fr.linkedin.com/in/la-mission-locale-intercommunale-des-mureaux-b403b52b0" target="_blank" rel="noopener noreferrer" className="transition-all duration-500 hover:scale-110" >
                 <FaLinkedinIn className=" text-white ml-2" />
               </Link>
               <Link to="https://www.facebook.com/mureauxmlidf/?locale=fr_FR" target="_blank" rel="noopener noreferrer" className="transition-all duration-500 hover:scale-110 ">
                 <FaFacebookF className=" text-white ml-2" />
               </Link>
-              <Link to="https://www.instagram.com/mlmureaux/?hl=fr" target="_blank" rel="noopener noreferrer">
+              <Link to="https://www.instagram.com/mlmureaux/?hl=fr" target="_blank" rel="noopener noreferrer" className="transition-all duration-500 hover:scale-110 ">
                 <FaInstagram className=" text-white ml-2" />
               </Link>
             </h2>
