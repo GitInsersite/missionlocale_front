@@ -7,7 +7,7 @@ function UneActualite() {
   const [actualite, setActualite] = useState(null);
   const { id } = useParams();
 
-  const isLaptopOrLarger = useMediaQuery({ minWidth: 1440 });
+  const isLaptopOrLarger = useMediaQuery({ minWidth: 1920 });
 
   // Dynamically get the API URL based on the environment
   const apiUrlEnv =
@@ -53,8 +53,8 @@ function UneActualite() {
                 {actualite.hashtag && (
                   <>
                     {actualite.hashtag.split(', ').map((tag, index) => (
-                      <span key={index}>
-                        #{tag} {/* Ajoutez une balise de saut de ligne après chaque hashtag */}
+                      <span className="mb-4 py-3 overflow-hidden break-words" key={index}>
+                        {"#"+tag + " "}
                       </span>
                     ))}
                   </>
@@ -63,6 +63,7 @@ function UneActualite() {
               
 
         </div>
+
         {isLaptopOrLarger ? (
           <div className="flex px-4 bg-white rounded-lg mb-4 pt-2 w-[90%]">
             <img
@@ -82,6 +83,9 @@ function UneActualite() {
             <p className="mb-4 px-4 py-3 overflow-hidden break-words">{actualite.description}</p>
           </div>
         )}
+
+        
+
       </div>
     </div>
   );

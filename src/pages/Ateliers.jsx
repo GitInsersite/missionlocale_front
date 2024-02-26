@@ -63,16 +63,20 @@ function Ateliers() {
         {ateliers.map((atelier, index) => (
           <div key={index} className="flex flex-col items-center pt-6 pb-6">
             <div className="bg-white mx-10 h-40 rounded-xl flex w-[95%] md:h-48 lg:w-[90%]">
-              <div className="flex justify-center items-center w-[45%] md:w-[35%] lg:w-[45%] xl:w-[40%]">
-              <img
-                src={atelier.image_url}
-                alt={atelier.title}
-                className="border-2 my-1 mx-2 rounded-3xl h-[80%] sm:h-[90%] md:h-[85%] object-cover"
-              />
-              </div>
+              
+            {atelier.image_url ? (
+                  <img
+                      src={atelier.image_url}
+                      alt={atelier.title}
+                      className="border-2 my-1 mx-2 rounded-3xl h-[80%] sm:h-[90%] md:h-[85%] object-cover"
+                  />
+              ) : (
+                  <div className=" my-1 mx-2 sm:h-[90%] md:h-[85%]"></div>
+              )}  
+              
               <div className="w-[55%] flex flex-col items-center justify-center md:w-[65%] md:items-start md:pl-4 lg:w-[55%] xl:w-[60%]">
                 <h3 className="font-bold mb-1 leading-tight">
-                  {truncateText(atelier.title, isTabletOrLarger ? 40 : 15)}
+                  {truncateText(atelier.title, isTabletOrLarger ? 30 : 15)}
                 </h3>
                 <p className="text-[#95c11f] mb-1 text-sm md:mb-4">
                   {new Date(atelier.created_at).toLocaleDateString()}
@@ -82,7 +86,7 @@ function Ateliers() {
                   {" "}
                   {truncateText(
                     atelier.description,
-                    isTabletOrLarger ? 40 : 18
+                    isTabletOrLarger ? 30 : 18
                   )}
                 </p>{" "}
                 {/* Replace 'description' with the actual property name from your API response */}
