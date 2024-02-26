@@ -49,7 +49,7 @@ function Footer() {
         </div>
         <div className="md:w-[20%] md:pr-4 text-white pb-4 md:pb-0">
           <div>
-            <h2 className="flex items-center font-bold md:mb-2">
+            <h2 className="flex items-center font-bold md:mb-3">
               NOUS SUIVRE :
               <Link to="https://fr.linkedin.com/in/la-mission-locale-intercommunale-des-mureaux-b403b52b0" target="_blank" rel="noopener noreferrer" className="transition-all duration-500 hover:scale-110 " >
                 <FaLinkedinIn className=" text-white ml-2" />
@@ -63,8 +63,8 @@ function Footer() {
             </h2>
           </div>
           <h2 className="font-bold md:mb-2">NOUS CONTACTER :</h2>
-          <h3 className="md:mb-2">Sschneider@mureaux-mlidf.org</h3>
-          <h4 className="md:mb-2">01.30.91.21.50</h4>
+          <h3 className="text-white text-sm md:mb-2">Sschneider@mureaux-mlidf.org</h3>
+          <h4 className="text-white text-sm md:mb-3">01.30.91.21.50</h4>
 
           <h2 className="font-bold md:mb-2">NOUS LOCALISER :</h2>
           <div className="mt-4">
