@@ -1,6 +1,5 @@
 import { FaLinkedinIn, FaFacebookF, FaInstagram } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import '/instagram.css';
 
 
 function Footer() {
@@ -48,9 +47,9 @@ function Footer() {
             DE 13H30 À 17H30
           </p>
         </div>
-        <div className="text-white text-xs mt-6 font-bold md:w-[30%]">
+        <div className="md:w-[20%] md:pr-4 text-white pb-4 md:pb-0">
           <div>
-            <h2 className="flex items-center md:mb-2">
+            <h2 className="flex items-center font-bold md:mb-2">
               NOUS SUIVRE :
               <Link to="https://fr.linkedin.com/in/la-mission-locale-intercommunale-des-mureaux-b403b52b0" target="_blank" rel="noopener noreferrer" className="transition-all duration-500 hover:scale-110 " >
                 <FaLinkedinIn className=" text-white ml-2" />
@@ -63,11 +62,11 @@ function Footer() {
               </Link>
             </h2>
           </div>
-          <h2 className="md:mb-2">NOUS CONTACTER :</h2>
-          <h3 className="md:mb-2">contact@insersite.org</h3>
+          <h2 className="font-bold md:mb-2">NOUS CONTACTER :</h2>
+          <h3 className="md:mb-2">Sschneider@mureaux-mlidf.org</h3>
           <h4 className="md:mb-2">01.30.91.21.50</h4>
 
-          <h2 className="md:mb-2">NOUS LOCALISER :</h2>
+          <h2 className="font-bold md:mb-2">NOUS LOCALISER :</h2>
           <div className="mt-4">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2618.0406529566458!2d1.9105878751635066!3d48.9907837913822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6928ec8766197%3A0x4a462aa9e0eb44c3!2s38%20Av.%20Paul%20Raoult%2C%2078130%20Les%20Mureaux!5e0!3m2!1sfr!2sfr!4v1699452035578!5m2!1sfr!2sfr"
