@@ -109,7 +109,7 @@
     overflow: hidden;
     opacity: 0.6;
     transition: 1.5s;
-    animation: animateImgBx 3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation: animateImgBx 2s cubic-bezier(0.1, 0, 0, 0) forwards;
 
   }
   .container_acc .carte:hover .imgBx {
@@ -220,7 +220,7 @@
   
     .container_acc .carte {
       width: 350px; /* Remplacer la largeur fixe par 100% pour occuper toute la largeur de l'écran */
-      height: 440px;
+      height: 470px;
       top: 10px;
       margin-bottom: 20px;
       left: 0px;
@@ -228,13 +228,12 @@
   
     .container_acc .carte .imgBx {
       position: absolute;
-      top: -12%;
-      left: 42%;
+      top: -2%;
+      left: 50%;
       transform: translate(-50%, -50%);
-      width: 230px;
+      width: 300px;
       height: 100px;
       border-radius: 12px 12px 20px 20px ;
-      transform: scale(0.80);
       overflow: hidden;
       opacity: 0.6;
       animation: none;
@@ -269,7 +268,7 @@
       overflow: hidden; /* Cacher le débordement du texte */
       position: relative;
       left: 28px;
-      top: 2px;
+      top: 12px;
       font-size: 15px;
       transition: 0.5s;
       visibility: visible;
@@ -278,7 +277,7 @@
   
     .container_acc .carte .conten p {
       left: 27px;
-      top: -2px;
+      top: 12px;
       width: 100%;
       transition: 0.1s;
       font-size:14px ;
@@ -289,9 +288,9 @@
   
     .container_acc .carte.carte .conten .rdv {
       padding: 12px 12px ;
-      top: 1px;
+      top: 18px;
       transition: 0.5s;
-      left: 49px;
+      left: 59px;
     }
   }
   

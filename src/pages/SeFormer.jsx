@@ -66,12 +66,11 @@ function SeFormer() {
                <p >
                Des équipes spécialisées en lien avec ton conseiller sont là pour t’aider à trouver une emploi ! Elles sont là pour négocier des offres d’emploi avec les entreprises, organiser des actions de recrutement ainsi que te préparer activement à la recherche d’emploi et à la rencontre avec les employeurs. N’hésite donc pas à prendre rendez-vous avec ton conseiller si tu es à la recherche d’un emploi et pour que l’on puisse te présenter nos conseils et nos différents dispositifs d’insertion professionnelle. 
             </p>
-            <div className="rdv">
-        <Link to="/formations" onClick={() => window.scrollTo(0, 0)} className="bg-[#D70B52] text-white font-semibold py-1 text-center rounded-lg mb-8 text-sm md:w-56">
-          OFFRES DE FORMATIONS
-        </Link>
-            
-          </div>
+  <Link to="/formations" onClick={() => window.scrollTo(0, 0)} className="rdv transition-transform duration-300 transform hover:scale-110">
+    OFFRES DE FORMATIONS
+  </Link>
+  
+
           
       </div>
         </div>

@@ -110,7 +110,7 @@
     overflow: hidden;
     opacity: 0.6;
     transition: 1.5s;
-    animation: animateImgBx 3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation: animateImgBx 2s cubic-bezier(0.1, 0, 0, 0) forwards;
 
   }
   .bloc .carte:hover .imgBxe {
@@ -208,6 +208,11 @@
     transition: 0.5s;
     
   }
+
+  .bloc .carte.carte  .contente .rdv button {
+    width: 250px;
+  }
+
   
   @media only screen and (max-width: 768px) {
     .bloc {
@@ -223,7 +228,7 @@
   
     .bloc .carte {
       width: 350px;
-      height: 460px;
+      height: 490px;
       top: 10px;
       margin-bottom: 20px;
       left: -12px; /* Remplacer la largeur fixe par 100% pour occuper toute la largeur de l'écran */
@@ -232,13 +237,12 @@
   
     .bloc .carte .imgBxe {
       position: absolute;
-      top: -12%;
-      left: 42%;
+      top: -1%;
+      left: 50%;
       transform: translate(-50%, -50%);
-      width: 230px;
-      height: 100px;
+      width: 300px;
+      height: 120px;
       border-radius: 12px 12px 20px 20px ;
-      transform: scale(0.80);
       overflow: visible;
       opacity: 0.6;
       animation: none;
@@ -269,7 +273,7 @@
       overflow: hidden; /* Cacher le débordement du texte */
       position: relative;
       left: 30px;
-      top: 4px;
+      top: 34px;
       font-size: 18px;
       transition: 0.5s;
       visibility: visible;
@@ -280,7 +284,7 @@
       left: 27px;
       transition: 0.1s;
       width: 100%;
-      top: -1px;
+      top: 31px;
       font-size:15px ;
       display: flex;
       position: relative;
@@ -292,7 +296,7 @@
       justify-content: center;
       display: inline-block;
       padding: 12px 12px ;
-      top: 7px;
+      top: 36px;
       transition: 0.5s;
       left: 65px;
     }
