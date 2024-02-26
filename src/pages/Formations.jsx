@@ -98,7 +98,7 @@ function Formations() {
       </div>
 
       {/* Pagination (larger dimensions) */}
-      {isLaptopOrLarger && totalPages > 1 ? (
+      {totalPages > 1 ? (
         <nav
           aria-label="Page navigation example"
           className="py-4 flex justify-center bg-[#f6f6f6]"
