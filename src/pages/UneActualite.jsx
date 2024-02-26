@@ -68,9 +68,9 @@ function UneActualite() {
             <img
               src={actualite.image_url}
               alt="image"
-              className="px-4 mb-6 rounded-lg w-[500px] h-auto xl:w-[300px]"
+              className="px-4 mb-6 rounded-lg w-[500px] h-auto xl:w-[600px]"
             />
-            <p className="mb-4 p-4">{actualite.description}</p>
+            <p className="mb-4 px-2 py-3 overflow-hidden break-words">{actualite.description}</p>
           </div>
         ) : (
           <div className="flex-col px-4 bg-white rounded-lg mb-4 pt-2 w-[90%]">
