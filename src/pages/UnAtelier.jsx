@@ -106,13 +106,13 @@ function UnAtelier() {
         </div>
         <div className="border-2 border-[#95c11f] flex flex-col px-4 bg-white rounded-lg mb-4 pt-2 w-[90%]">
           <h2 className="font-semibold text-lg mb-2">RESUME</h2>
-          <p className="mb-4">{atelier.resume}</p>
+          <p className="mb-4 px-2 py-3 overflow-hidden break-words">{atelier.resume}</p>
         </div>
         <div className="border-2 border-[#95c11f] flex flex-col px-4 bg-white rounded-lg mb-4 pt-2 w-[90%]">
           <h2 className="font-semibold text-lg mb-2">
             OBJETIF DE L&apos;ATELIER
           </h2>
-          <p className="mb-4">{atelier.objectif}</p>
+          <p className="mb-4 px-2 py-3 overflow-hidden break-words">{atelier.objectif}</p>
         </div>
       </div>
     </div>
