@@ -82,7 +82,7 @@ function Actualites() {
                   {" "}
                   {truncateText(
                     newsItem.description,
-                    isTabletOrLarger ? 40 : 18
+                    isTabletOrLarger ? 20 : 13
                   )}
                 </p>{" "}
                 {/* Replace 'description' with the actual property name from your API response */}
