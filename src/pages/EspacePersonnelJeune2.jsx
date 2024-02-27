@@ -17,11 +17,13 @@ function EspacePersonnelJeune2() {
   const { information, ateliers, documents, jobOffers, rendezVous, formations, userData } = useAuth();
   const authToken = localStorage.getItem("authToken");
   const [oldSelectedOption, setOldSelectedOption] = useState(null);
+  // Déclaration des états
+  const [error, setError] = useState(null);
+  const [success, setSuccess] = useState(null);
 
   useEffect(() => {
     userData();
   }, []); 
-
 
   const onSubmit = async (data, e) => {
     const selectedOption = data.option;
@@ -29,6 +31,8 @@ function EspacePersonnelJeune2() {
 
     if (oldSelectedOption === selectedOption) {
       console.log("Ne spammez pas votre manager !");
+      setError("Vous avez déjà envoyé un demande");
+      setSuccess(null);
     } else {
       try {
         let response;
@@ -54,7 +58,8 @@ function EspacePersonnelJeune2() {
             if (response.data.success) {
               // Succès
               console.log("Formulaire soumis avec succès:", response.data.success);
-              // Faire quelque chose pour traiter le succès, si nécessaire
+              setSuccess(response.data.success);
+              setError(null);
             } else {
               // Erreur
               console.error("Erreur lors de la soumission du formulaire:", response.data.error);
@@ -84,7 +89,8 @@ function EspacePersonnelJeune2() {
             if (response.data.success) {
               // Succès
               console.log("Formulaire soumis avec succès:", response.data.success);
-              // Faire quelque chose pour traiter le succès, si nécessaire
+              setSuccess(response.data.success);
+              setError(null);
             } else {
               // Erreur
               console.error("Erreur lors de la soumission du formulaire:", response.data.error);
@@ -114,7 +120,8 @@ function EspacePersonnelJeune2() {
               if (response.data.success) {
                 // Succès
                 console.log("Formulaire soumis avec succès:", response.data.success);
-                // Faire quelque chose pour traiter le succès, si nécessaire
+                setSuccess(response.data.success);
+                setError(null);
               } else {
                 // Erreur
                 console.error("Erreur lors de la soumission du formulaire:", response.data.error);
@@ -127,19 +134,29 @@ function EspacePersonnelJeune2() {
             break;
         }
       } catch (error) {
-        console.error("Erreur lors de la requête Axios:", error);
         console.log("Détails:", error.response);
-        if (error.response && error.response.status === 401) {
-          console.log("Erreur d'authentification");
+        if (error.response) {
+          if (error.response.status === 409) {
+            console.log("Conflit détecté: ", error.response.data.error);
+            setError(error.response?.data?.error );
+            setSuccess(null);
+          } else if (error.response.status === 401) {
+            console.log("Erreur d'authentification");
+            setError(error.response?.data?.error );
+            setSuccess(null);
+          } else {
+            setError(error.response?.data?.error );
+            setSuccess(null);
+          }
+        } else {
+          setError(error.response?.data?.error );
+            setSuccess(null);
         }
       }
-
+      
     }
-
     setOldSelectedOption(selectedOption); // Mise à jour de l'état local
   };
-
-
 
   return (
     <div>
@@ -153,6 +170,16 @@ function EspacePersonnelJeune2() {
       <div className="px-4 flex flex-col items-center bg-[#F6F6F6]">
         <div className="flex flex-col items-center w-[98%]">
           <h2 id="infoSection" className="font-bold text-black text-lg mb-8 mt-6 md:text-3xl">JE CONTACTE MON CONSEILLER POUR :</h2>
+            {error && (
+              <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-2 rounded-md mb-4 text-center">
+                {error}
+              </div>
+            )}
+            {success && (
+              <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-2 rounded-md mb-4 text-center">
+                {success}
+              </div>
+            )}
           <form className="flex flex-col mt-4 mb-6 p-4 w-full md:w-[70%] lg:w-[80%] bg-white rounded-3xl"onSubmit={handleSubmit(onSubmit)}>
             <div className="flex flex-col mb-2">
               <div className="flex flex-col ml-8">
@@ -200,19 +227,6 @@ function EspacePersonnelJeune2() {
           </div>
         </div>
       </div>
-
-      {/* <h2 id="rendezvousSection" className="font-bold text-black text-center text-lg md:text-2xl">MES RENDEZ-VOUS</h2>
-      <div className="px-4 flex flex-col items-center bg-[#F6F6F6]">
-        <div className="flex flex-col items-center w-[98%]">
-          <div className="flex flex-col mt-4 mb-6 p-4 w-full md:w-[70%] lg:w-[80%] bg-white rounded-3xl">
-            {rendezVous.map((rendezVous, index) => (
-              <div key={index} className="flex flex-col text-start relative w-full">
-                <p className="mb-2">Le {moment(rendezVous.date).format('DD/MM/YYYY')} à {moment(rendezVous.heure, 'HH:mm:ss').format('HH:mm')} avec {rendezVous.conseiller.information.first_name}</p>
-              </div>
-            ))}
-          
-        </div>
-      </div> */}
 
       <h2 id="docuSection" className="font-bold text-black text-center text-lg md:text-2xl">MES RENDEZ-VOUS</h2>
       <div className="px-4 flex flex-col items-center bg-[#F6F6F6]">
@@ -284,7 +298,6 @@ function EspacePersonnelJeune2() {
           </div>
         </div>
       </div>
-
 
       <h2 id="emploiSection" className="font-bold text-black text-center text-lg md:text-2xl">MES FORMATIONS</h2>
       <div className="px-4 flex flex-col items-center bg-[#F6F6F6]">

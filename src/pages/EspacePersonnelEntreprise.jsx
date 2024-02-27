@@ -36,18 +36,6 @@ function EspacePersonnelEntreprise() {
       ? import.meta.env.VITE_API_URL_PROD
       : import.meta.env.VITE_API_URL_DEV;
 
-  // const handleImageChange = () => {
-  //   const file = imageInputRef.current?.files[0];
-  //   if (file) {
-  //     setSelectedImageName(file.name);
-  //     const reader = new FileReader();
-  //     reader.onload = () => {
-  //       setSelectedImageFile(reader.result);
-  //     };
-  //     reader.readAsDataURL(file);
-  //   }
-  // };
-
 const MAX_IMAGE_SIZE_BYTES = 8 * 1024 * 1024;
 
 const handleImageChange = () => {

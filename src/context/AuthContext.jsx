@@ -190,7 +190,7 @@ export const AuthProvider = ({ children }) => {
           }
         });
 
-        console.log("userdata: "+response);
+        console.log("userdata:",response);
 
         // Mise à jour des données utilisateur dans le contexte et le local storage
         setAteliers(response.data.ateliers);
