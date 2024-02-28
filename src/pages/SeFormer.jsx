@@ -17,7 +17,7 @@ function SeFormer() {
       >
         <h1 className="md:text-3xl">SE FORMER</h1>
       </div>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col justify-center">
         <div>
            
         <div className="breadcrumb px-4 pt-4  md:px-14 lg:px-20 xl:px-52">
