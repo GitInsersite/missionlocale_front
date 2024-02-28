@@ -137,7 +137,7 @@ function Gouvernance() {
               <div className="w-[40%] md:w-[20%] lg:w-[15%] xl:w-[10%]">
                 <img
                   src={member.image_url || "placeholder.jpg"}
-                  alt="image"
+                  alt="image" width={300} height={200}
                   className="border-2 my-1 mx-2 rounded-3xl h-[90%] "
                 />
               </div>
@@ -170,7 +170,7 @@ function Gouvernance() {
                 <div className="w-[45%] flex items-center md:w-28 md:h-28 md:rounded-full">
                   <img
                     src={member.image_url || "placeholder.jpg"}
-                    alt=""
+                    alt="" width={300} height={200}
                     className="border-2 my-1 mx-2 h-20 w-20 md:w-28 md:h-28 rounded-full md:mx-0 md:my-0"
                   />
                 </div>
