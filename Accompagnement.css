@@ -198,14 +198,19 @@
     color: #fff;
     font-weight: 500;
     font-size: small;
-    top: 31px;
+    top: 28px;
     left: 190px;
-    height: 35px;
+    height: 38px;
     text-decoration: none;
     border-radius: 18px;
     transition: 0.5s;
     
   }
+
+  .container_acc .carte.carte .conten .rdv:hover {
+    transform: scale(1.1); /* Change l'échelle du bouton au survol */
+    background-color: #ff1962;
+}
   
   @media only screen and (max-width: 768px) {
     .container_acc {

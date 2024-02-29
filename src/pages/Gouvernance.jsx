@@ -28,7 +28,7 @@ function Gouvernance() {
 
   const handleDownload18 = async () => {
     try {
-      const response = await fetch("/pdf/CRA-2018.pdf");
+      const response = await fetch("/pdf/CRA 2018.pdf");
       const blob = await response.blob();
       const url = window.URL.createObjectURL(new Blob([blob]));
       const a = document.createElement("a");
@@ -44,12 +44,12 @@ function Gouvernance() {
 
   const handleDownload19 = async () => {
     try {
-      const response = await fetch("/pdf/CRA-2019.pdf");
+      const response = await fetch("/pdf/CRA 2019.pdf");
       const blob = await response.blob();
       const url = window.URL.createObjectURL(new Blob([blob]));
       const a = document.createElement("a");
       a.href = url;
-      a.download = "CRA-2018.pdf";
+      a.download = "CRA-2019.pdf";
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
@@ -60,12 +60,12 @@ function Gouvernance() {
 
   const handleDownload20 = async () => {
     try {
-      const response = await fetch("/pdf/CRA-2020.pdf");
+      const response = await fetch("/pdf/CRA 2020.pdf");
       const blob = await response.blob();
       const url = window.URL.createObjectURL(new Blob([blob]));
       const a = document.createElement("a");
       a.href = url;
-      a.download = "CRA-2018.pdf";
+      a.download = "CRA-2020.pdf";
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
@@ -76,12 +76,12 @@ function Gouvernance() {
 
   const handleDownload21 = async () => {
     try {
-      const response = await fetch("/pdf/CRA-2021.pdf");
+      const response = await fetch("/pdf/CRA 2021.pdf");
       const blob = await response.blob();
       const url = window.URL.createObjectURL(new Blob([blob]));
       const a = document.createElement("a");
       a.href = url;
-      a.download = "CRA-2018.pdf";
+      a.download = "CRA-2021.pdf";
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
@@ -92,12 +92,12 @@ function Gouvernance() {
 
   const handleDownload22 = async () => {
     try {
-      const response = await fetch("/pdf/CRA-2022.pdf");
+      const response = await fetch("/pdf/CRA 2022.pdf");
       const blob = await response.blob();
       const url = window.URL.createObjectURL(new Blob([blob]));
       const a = document.createElement("a");
       a.href = url;
-      a.download = "CRA-2018.pdf";
+      a.download = "CRA-2022.pdf";
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
@@ -116,9 +116,9 @@ function Gouvernance() {
       </div> <br />
 
       <div className="breadcrumb px-4 pt-4 md:px-14 lg:px-20 xl:px-52">
-       <a className="hover:text-[#D70B52]" href="/">Accueil</a> {'>'}
-        <a className="hover:text-[#D70B52]" href="/LaMissionLocale">  La Mission Locale </a>{'>'}
-        <a className="hover:text-[#D70B52]" href="/Gouvernance"> La gouvernance</a>
+       <a href="/">Accueil</a> {'>'}
+        <a href="/LaMissionLocale">  La Mission Locale </a>{'>'}
+        <a className="text-[#A4195C]" href="/gouvernance"> La Gouvernance </a>
         </div>
 
       <div className="xl:px-32">
@@ -132,7 +132,7 @@ function Gouvernance() {
           {governanceData.conseil_admin.map((member, index) => (
             <div
               key={index}
-              className="bg-white mx-10 rounded-xl flex w-3/4 md:mx-0 md:w-[90%]"
+              className="bg-white mx-10 h-28 rounded-xl flex w-3/4 md:mx-0 md:w-[90%]"
             >
               <div className="w-[40%] md:w-[20%] lg:w-[15%] xl:w-[10%]">
                 <img
@@ -154,11 +154,18 @@ function Gouvernance() {
               BUREAU
             </span>
           </h2>
+          <p>Les Membres du BUREAU : </p>
+          <li>Madame BIENSO MATETA Salamata – Présidente ;</li>
+          <li>Madame OLIVIER Sabine – Vice Présidente ;</li> 
+          <li>Monsieur MEMISOGLU Ergin – Vice Président ;</li>
+          <li>Madame KOENIG FILISIKA Honorine – Trésorière ;</li>
+          <li>Monsieur MONTEL Bruno – Secrétaire</li>  
+    
           <div className="md:w-full md:grid md:grid-cols-2 lg:grid-cols-3">
             {governanceData.bureau.map((member, index) => (
               <div
                 key={index}
-                className="bg-white mb-4 mx-10 rounded-xl flex w-3/4 md:flex-col md:w-52 md:items-center md:h-fit md:py-4 md:mx-0 md:mb-8"
+                className="bg-white mb-4 mx-10 h-28 rounded-xl flex w-3/4 md:flex-col md:w-52 md:items-center md:h-fit md:py-4 md:mx-0 md:mb-8"
               >
                 <div className="w-[45%] flex items-center md:w-28 md:h-28 md:rounded-full">
                   <img
@@ -190,7 +197,7 @@ function Gouvernance() {
             D&apos;ACTIVITE
           </h2>
           <p className="text-sm font-semibold flex flex-col items-center pl-4 md:pl-0">
-            VOUS POUVEZ CONSULTER NOS RAPPORTS D&apos;DACTIVITE DE SES 5
+            VOUS POUVEZ CONSULTER NOS RAPPORTS D&apos;ACTIVITE DE SES 5
             DERNIERES ANNEES
           </p>
         </div>

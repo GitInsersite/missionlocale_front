@@ -34,6 +34,8 @@ import Formation from "./pages/Formation";
 import NotFound from "./pages/NotFound";
 import MotDePasseOublieJeune from "./pages/MotDePasseOublieJeune";
 import MotDePasseOublieEntreprise from "./pages/MotDePasseOublieEntreprise";
+import InfoLegale from "./pages/InfoLegale";
+import Politique from "./pages/Politique";
 
 function App() {
   return (
@@ -87,6 +89,8 @@ function App() {
           />
           <Route path="/offre-emploi" element={<OffreEmploi />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/info-legale" element={<InfoLegale />}/>
+          <Route path="/politique-confidentialite" element={< Politique/>}/>
         </Routes>
         <Footer />
       </AuthProvider>

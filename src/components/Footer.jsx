@@ -89,8 +89,8 @@ function Footer() {
       </div>
       <div className="w-100% bg-black py-3 border-t-2 border-gray-500">
         <p className="text-white text-[8px] text-center md:text-xs">
-          © 2023 MISSION LOCALE DES MUREAUX - TOUS DROITS RESERVES - INFORMATION
-          LEGALES - POLITIQUE DE CONFIDENTIALITE
+          © 2023 MISSION LOCALE DES MUREAUX - TOUS DROITS RESERVES - <Link to="/info-legale">INFORMATION
+          LEGALES</Link> - <Link to="/politique-confidentialite">POLITIQUE DE CONFIDENTIALITE</Link>
         </p>
       </div>
     </>
