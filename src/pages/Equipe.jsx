@@ -61,10 +61,8 @@ function Equipe() {
             <span className="border-b-2 border-[#A4195C] pb-[0.5px]">POLE</span>{" "}
             DIRECTION
           </h2>
-          <p>la liste de notre équipe est ci-dessous : </p>
+         
           <ul>
-            <li>4 Conseillères CEJ ;</li>
-            <li>10 Conseillers classiques ;</li>
             <li>1 Chargé d’accueil ;</li>
             <li>1 Chargée de l’emploi et des relations entreprises ;</li>
             <li>1 Responsable Administrative et Financières ;</li>
@@ -78,6 +76,11 @@ function Equipe() {
             <span className="border-b-2 border-[#A4195C] pb-[0.5px]">POLE</span>{" "}
             STRUCTURE
           </h2>
+          <ul>
+          <li>4 Conseillères CEJ ;</li>
+          <li>10 Conseillers classiques ;</li>
+          </ul> <br />
+
           <div>{renderMembers(equipeData.structure)}</div>
         </div>
       </div>
