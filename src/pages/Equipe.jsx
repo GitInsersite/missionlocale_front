@@ -63,11 +63,13 @@ function Equipe() {
           </h2>
          
           <ul>
-            <li>1 Chargé d’accueil ;</li>
-            <li>1 Chargée de l’emploi et des relations entreprises ;</li>
+            
             <li>1 Responsable Administrative et Financières ;</li>
             <li>1 Responsable de secteur ;</li>
+            <li>1 Chargée de l’emploi et des relations entreprises ;</li>
             <li>1 Chargé de Communication ;</li>
+            <li>1 Chargé d’accueil ;</li>
+           
           </ul>
           <br />
 
@@ -79,12 +81,12 @@ function Equipe() {
           <ul>
           <li>4 Conseillères CEJ ;</li>
           <li>10 Conseillers classiques ;</li>
-          </ul> <br />
+          </ul>
 
           <div>{renderMembers(equipeData.structure)}</div>
         </div>
       </div>
-      <div className="flex flex-col items-center bg-[#f6f6f6] md:items-start md:px-14 lg:px-20 xl:px-52">
+      <div className="flex flex-col items-center md:items-start md:px-14 lg:px-20 xl:px-52">
         <div className="pt-4">
           <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
             <span className="border-b-2 border-[#A4195C] pb-[0.5px]">POLE</span>{" "}
