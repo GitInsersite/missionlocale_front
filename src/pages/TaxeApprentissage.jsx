@@ -11,15 +11,25 @@ function TaxeApprentissage() {
       </div>
 
       <br />
-      
+
       <div className="breadcrumb px-4 pt-4  md:px-14 lg:px-20 xl:px-52">
-       <a className="hover:text-[#F29200]" href="/">Accueil</a> {'>'}
-        <a className="hover:text-[#F29200]" href="/Entreprise">  Entreprise </a>{'>'}
-        <a className="hover:text-[#F29200]" href="/TaxeApprentissage"> Taxe d'apprentissage</a>
-        </div> 
+        <a className="hover:text-[#F29200]" href="/">
+          Accueil
+        </a>{" "}
+        {">"}
+        <a className="hover:text-[#F29200]" href="/Entreprise">
+          {" "}
+          Entreprise{" "}
+        </a>
+        {">"}
+        <a className="hover:text-[#F29200]" href="/TaxeApprentissage">
+          {" "}
+          Taxe d'apprentissage
+        </a>
+      </div>
 
       <div className="flex flex-col items-center">
-        <div className="flex flex-col px-4 md:px-14 lg:px-20 xl:px-52">
+        <div className="flex flex-col px-4 font-semibold md:px-14 lg:px-20 xl:px-52">
           <p className="mb-4 mt-4">
             Soutenez l’insertion des jeunes en versant le solde de votre taxe
             d’apprentissage 2023 à la Mission Locale des Mureaux !{" "}
@@ -38,7 +48,7 @@ function TaxeApprentissage() {
             aux entreprises.
           </p>
         </div>
-        <div className="flex flex-col px-4 md:px-14 lg:px-20 xl:px-52">
+        <div className="flex flex-col px-4 font-semibold md:px-14 lg:px-20 xl:px-52">
           <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
             <span className="border-b-2 border-[#F29200] pb-[0.5px]">
               Pourquoi
@@ -54,7 +64,7 @@ function TaxeApprentissage() {
             jeunes.
           </p>
         </div>
-        <div className="flex flex-col px-4 md:px-14 lg:px-20 xl:px-52">
+        <div className="flex flex-col px-4 font-semibold md:px-14 lg:px-20 xl:px-52">
           <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
             <span className="border-b-2 border-[#F29200] pb-[0.5px]">
               Comment
@@ -62,7 +72,7 @@ function TaxeApprentissage() {
             verser votre Taxe d’Apprentissage à la Mission Locale des Mureaux ?
           </h2>
           <p className="mb-6">
-            En prenant directement contact avec nous, pour nous puissions en
+            En prenant directement contact avec nous, pour que nous puissions en
             détail parcourir les différentes étapes à effectuer. Une fois la
             contribution effectuée, vous recevrez un reçu libératoire pour
             justifier votre paiement auprès de l’URSAFF et/ou de votre
