@@ -16,9 +16,7 @@ function Cookie() {
       overlay
       enableDeclineButton
       declineButtonText="Refuser"
-      onDecline={() => {
-        alert("Pour accéder au site, vous devez accepter l'utilisation de cookies.");
-      }}
+      
     >
       <div className="cookie-content">
         <img src="/public/cooks.png" alt="Cookie image" className="cookie-image"/>
