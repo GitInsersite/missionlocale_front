@@ -63,7 +63,7 @@ function Sorienter() {
           <span className="border-b-2 border-[#D60B52] pb-[0.5px]">
            QUEL MET 
           </span>
-          IER EST FAIT POUR MOI
+          IER EST FAIT POUR MOI ?
         </h2>     
                <p >
                Un accompagnement est proposé pour t’aider dans ta recherche d’emploi ou de formation, personnalisé en fonction de tes attentes. Ces accompagnements seront aussi là pour t’aider sur le plan social, tels que la santé, le logement ou bien encore la mobilité.  
