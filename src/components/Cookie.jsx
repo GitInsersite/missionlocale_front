@@ -6,7 +6,6 @@ function Cookie() {
   return (
     <CookieConsent
       location="bottom"
-      visible=""
       buttonText="Accepter"
       cookieName="myAwesomeCookieName2"
       expires={150}
