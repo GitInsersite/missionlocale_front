@@ -137,7 +137,7 @@ function Gouvernance() {
               <div className="w-[40%] md:w-[20%] lg:w-[15%] xl:w-[10%]">
                 <img
                   src={member.image_url || "placeholder.jpg"}
-                  alt="image" width={300} height={200}
+                  alt="image"
                   className="border-2 my-1 mx-2 rounded-3xl h-[90%] "
                 />
               </div>
