@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+
 import axios from "axios";
 import { useMediaQuery } from "react-responsive";
 import '/orienter.css'; // Importez les styles CSS
@@ -9,6 +9,8 @@ function Sorienter() {
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
   const [isClicked, setIsClicked] = useState(false); // État pour vérifier si le bouton a été cliqué
+
+
   const handleRedirectToConnexion = () => {
     history.push("/connexion-jeune?redirectFrom=sorienter");
   };

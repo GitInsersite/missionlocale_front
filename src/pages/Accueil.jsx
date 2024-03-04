@@ -3,6 +3,8 @@ import Actualites from "../components/Actualites";
 import Options from "../components/Options";
 import Statistiques from "../components/Statistiques";
 import Soutien from "../components/Soutien";
+import CookieConsent from "react-cookie-consent"
+
 
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -41,6 +43,17 @@ function Accueil() {
       <SlideMenu />
       <div className="bg-[#f6f6f6]">
         <Options />
+        <CookieConsent
+            location="bottom"
+            buttonText="Bien sûr!!"
+            cookieName="myAwesomeCookieName2"
+            style={{ background: "#2B373B" }}
+            buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
+            expires={150}
+            >
+          En utilisant ce site, vous acceptez l'utilisation de cookies.
+        </CookieConsent>
+
       </div>
       <Actualites latestNews={latestNews} />
       <Statistiques />
