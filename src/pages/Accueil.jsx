@@ -3,7 +3,9 @@ import Actualites from "../components/Actualites";
 import Options from "../components/Options";
 import Statistiques from "../components/Statistiques";
 import Soutien from "../components/Soutien";
-import CookieConsent from "react-cookie-consent"
+import CookieConsent, { Cookies, getCookieConsentValue, resetCookieConsentValue } from "react-cookie-consent";
+import Cookie from "../components/Cookie";
+
 
 
 import { useState, useEffect } from "react";
@@ -43,23 +45,21 @@ function Accueil() {
       <SlideMenu />
       <div className="bg-[#f6f6f6]">
         <Options />
-        <CookieConsent
-            location="bottom"
-            buttonText="Bien sûr!!"
-            cookieName="myAwesomeCookieName2"
-            style={{ background: "#2B373B" }}
-            buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
-            expires={150}
-            >
-          En utilisant ce site, vous acceptez l'utilisation de cookies.
-        </CookieConsent>
+        <Cookie />
+            
 
       </div>
       <Actualites latestNews={latestNews} />
       <Statistiques />
       <Soutien />
     </>
+    
   );
+  
 }
+console.log(getCookieConsentValue("your_custom_cookie_name"));
+console.log(resetCookieConsentValue());
+
+
 
 export default Accueil;
