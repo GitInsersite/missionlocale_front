@@ -62,11 +62,8 @@ function TaxeApprentissage() {
             verser votre Taxe d’Apprentissage à la Mission Locale des Mureaux ?
           </h2>
           <p className="mb-6">
-            En prenant directement contact avec nous, pour nous puissions en
-            détail parcourir les différentes étapes à effectuer. Une fois la
-            contribution effectuée, vous recevrez un reçu libératoire pour
-            justifier votre paiement auprès de l’URSAFF et/ou de votre
-            expert-comptable.
+          En prenant directement contact avec nous, pour que nous puissions en détail parcourir les différentes étapes à effectuer.
+          Une fois la contribution effectuée, vous recevrez un reçu libératoire pour justifier votre paiement auprès de l’URSAFF et/ou de votre expert-comptable.
           </p>
         </div>
         <div className="flex flex-col px-4 font-semibold md:w-full md:items-center md:px-14 lg:px-20">
