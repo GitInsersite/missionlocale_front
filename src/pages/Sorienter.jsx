@@ -1,8 +1,11 @@
+import React from 'react';
 import { useState } from "react";
 import axios from "axios";
 import { useMediaQuery } from "react-responsive";
 import '/orienter.css'; // Importez les styles CSS
-
+import { toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Sorienter() {
   const [error, setError] = useState(null);
@@ -17,6 +20,10 @@ function Sorienter() {
       : import.meta.env.VITE_API_URL_DEV;
 
   const handleInscription = () => {
+    // Affiche la notification
+    toast.success('Bouton actif !', {
+      position: toast.POSITION.TOP_RIGHT,}); 
+
     // Make API call to register for the workshop
     const registrationUrl = `${apiUrlEnv}/api/notifierConseillerFormulaire`;
 
@@ -75,7 +82,9 @@ Un conseiller est assigné pour t’accompagner et t’aider dans toutes les dé
             </p>
             <div className="rdv">
   <button onClick={handleInscription}>PRENDRE RDV AVEC UN CONSEILLER</button>
-</div>
+      {/* Conteneur pour les notifications */}
+      <ToastContainer>Pour prendre RDV, il vous faut créer un compte sur notre site </ToastContainer>
+  </div>
 
           </div>
         </div>
@@ -89,6 +98,6 @@ Un conseiller est assigné pour t’accompagner et t’aider dans toutes les dé
       </div>
     </div>
   );
-}
+};
 
 export default Sorienter;
