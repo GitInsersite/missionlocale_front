@@ -1,9 +1,15 @@
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useAuth } from "../context/AuthContext";
+import { useLocation } from "react-router-dom";
+
 
 function ConnexionJeune() {
   const { login, successMessage, errorMessage } = useAuth();
+
+  const location = useLocation();
+  const isRedirectedFromSorienter = location.search.includes("redirectFrom=sorienter");
+
 
   const {
     register,
@@ -37,6 +43,10 @@ function ConnexionJeune() {
             />
           </div>
           <div className="flex flex-col items-center px-4 bg-white rounded-3xl pt-2 w-[90%] md:py-10">
+          {isRedirectedFromSorienter && (
+        <div className="text-red-500">Connectez-vous pour accéder à cette fonctionnalité.</div>
+      )}
+
             <h2 className="text-[#D60B52] font-bold mb-2 text-xl md:mb-4">
               ESP
               <span className="border-[#D60B52] border-b-2 pb-1 md:pb-2">

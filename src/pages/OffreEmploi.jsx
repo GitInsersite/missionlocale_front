@@ -118,15 +118,16 @@ function OffreEmploi() {
               ) : null}
 
             <div className="p-4">
-              <h3 className="font-bold my-1 overflow-x-auto">
+              <h3 className="font-bold mb-1 leading-tight">
+
                 {offre.title}
               </h3>
               <p className="text-[#D70B52] mb-1 text-sm">
                 Publié le {moment(offre.publication).format("DD/MM/YYYY")}
               </p>
-              {/* <p className="mb-3 leading-tight px-2">
+              <p className="mb-3 leading-tight px-2">
                 {offre.description}
-              </p> */}
+              </p>
               <div className="flex justify-between">
                 <button
                     className="bg-[#D60B52] text-white font-semibold py-1 px-2 text-center rounded-lg "

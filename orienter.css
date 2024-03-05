@@ -109,7 +109,7 @@
     overflow: hidden;
     opacity: 0.6;
     transition: 0.5s;
-    animation: animateImgBx 3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation: animateImgBx 2s cubic-bezier(0.1, 0, 0, 0) forwards;
   }
   .bloc_orient .carte:hover .imgBx {
     top: -60px;
@@ -192,7 +192,7 @@
     position: relative;
     justify-content: center;
     transform: translateY(10px);
-    display:inline-block;
+    display:flex;
     padding: 12px 25px;
     background: #D60B52;
     color: #fff;
@@ -200,12 +200,18 @@
     font-size: small;
     top: 24px;
     left: 190px;
-    height: 35px;
+    height: 38px;
+    width: 280px;
     text-decoration: none;
     border-radius: 18px;
-    transition: 0.5s;
+    transition: transform 0.3s ease; /* Ajoute une transition à la propriété transform */
     
   }
+
+  .bloc_orient .carte.carte .conten .rdv:hover {
+    transform: scale(1.1); /* Change l'échelle du bouton au survol */
+    background-color: #ff1962;
+}
   
   @media only screen and (max-width: 768px) {
     .bloc_orient {
@@ -230,10 +236,10 @@
     .bloc_orient .carte .imgBx {
       position:absolute;
       top: 2%;
-      left: 26%;
+      left: 50%;
       transform: translate(-50%, -50%);
-      width: 200px;
-      height: 70px;
+      width: 300px;
+      height: 90px;
       border-radius: 12px 12px 20px 20px ;
       overflow: visible;
       opacity: 0.7;

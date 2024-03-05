@@ -75,23 +75,22 @@
     height: 260px;
     
   }
-
-  @keyframes animateImgBx {
+  @keyframes animateImgBxe {
     0% {
       top: -150px;
-      left: -120px;
+      right: -120px;
       transform: scale(0.80);
       opacity: 0.6;
     }
     50% {
       top: -105px; /* Animation à mi-chemin */
-      left: -143px; /* Animation à mi-chemin */
+      right: -143px; /* Animation à mi-chemin */
       transform: scale(0.83); /* Animation à mi-chemin */
       opacity: 0.8; /* Animation à mi-chemin */
     }
     100% {
       top: -60px;
-      left: -165px;
+      right: -165px;
       transform: scale(0.85);
       box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
       opacity: 1;
@@ -101,7 +100,7 @@
   .containeur .carte .imgBxe {
     position: absolute;
     top: -150px;
-    left: 620px;
+    right: 50px;
     width: 300px;
     height: 270px;
     border-radius: 12px 12px 20px 20px ;
@@ -109,10 +108,11 @@
     overflow: hidden;
     opacity: 0.6;
     transition: 1.5s;
+    animation: animateImgBxe 2s cubic-bezier(0.1, 0, 0, 0) forwards;
     
     
   }
-  .containeur:hover .carte .imgBxe {
+  .containeur .carte .imgBxe {
     top: -60px;
     left: 685px;
     transform: scale(0.85);
@@ -193,12 +193,17 @@
     font-size: small;
     top: 24px;
     left: 190px;
-    height: 35px;
+    height: 38px;
     text-decoration: none;
     border-radius: 18px;
     transition: 0.5s;
     
   }
+
+  .containeur .carte .contente .rdv:hover {
+    background-color: #ff1962;
+  }
+
   
   @media only screen and (max-width: 768px) {
     .containeur {
@@ -224,10 +229,10 @@
     .containeur .carte .imgBxe {
       position:absolute;
       top: 2%;
-      left: 74%;
+      left: 50%;
       transform: translate(-50%, -50%);
-      width: 200px;
-      height: 70px;
+      width: 300px;
+      height: 90px;
       border-radius: 12px 12px 20px 20px ;
       overflow: visible;
       opacity: 0.7;
