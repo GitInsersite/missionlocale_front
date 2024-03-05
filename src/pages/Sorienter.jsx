@@ -5,7 +5,6 @@ import axios from "axios";
 import { useMediaQuery } from "react-responsive";
 import '/orienter.css'; // Importez les styles CSS
 import { Link } from "react-router-dom";
-import { Link } from "react-router-dom";
 
 function Sorienter() {
   const [error, setError] = useState(null);
