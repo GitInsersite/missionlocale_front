@@ -76,19 +76,16 @@ function Ateliers() {
               )}  
               
               <div className="w-[55%] flex flex-col items-center justify-center md:w-[65%] md:items-start md:pl-4 lg:w-[55%] xl:w-[60%]">
-                <h3 className="font-bold mb-1">
-                  {truncateText(atelier.title, isTabletOrLarger ? 12 : 10)}
+                <h3 className="font-bold my-1 overflow-x-auto">
+                  {atelier.title}
                 </h3>
-                <p className="text-[#95c11f] mb-1 text-sm md:mb-4">
+                <p className="text-[#95c11f] text-sm p-4">
                   {new Date(atelier.created_at).toLocaleDateString()}
                 </p>
-                {/* Replace 'date' with the actual property name from your API response */}
+                {/* Replace 'date' with the actual property name from your API response
                 <p className="mb-1 md:mb-4 overflow-hidden break-words">
-                  {truncateText(
-                    atelier.description,
-                    isTabletOrLarger ? 10 : 10
-                  )}
-                </p>
+                  {atelier.description}
+                </p> */}
                 {/* Replace 'description' with the actual property name from your API response */}
                 <Link
                   to={`/ateliers/${atelier.id}`}

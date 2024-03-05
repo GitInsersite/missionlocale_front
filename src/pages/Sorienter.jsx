@@ -1,13 +1,22 @@
+import React from 'react';
 import { useState } from "react";
 
 import axios from "axios";
 import { useMediaQuery } from "react-responsive";
 import '/orienter.css'; // Importez les styles CSS
 import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Sorienter() {
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
+  const [isClicked, setIsClicked] = useState(false); // État pour vérifier si le bouton a été cliqué
+
+
+  const handleRedirectToConnexion = () => {
+    history.push("/connexion-jeune?redirectFrom=sorienter");
+  };
+
 
   const isTabletOrLarger = useMediaQuery({ minWidth: 768 });
 
@@ -18,6 +27,10 @@ function Sorienter() {
       : import.meta.env.VITE_API_URL_DEV;
 
   const handleInscription = () => {
+    // Affiche la notification
+    toast.success('Bouton actif !', {
+      position: toast.POSITION.TOP_RIGHT,}); 
+
     // Make API call to register for the workshop
     const registrationUrl = `${apiUrlEnv}/api/notifierConseillerFormulaire`;
 
@@ -27,6 +40,8 @@ function Sorienter() {
         console.log("Registration Response:", response);
         // Handle success, e.g., show a success message or update the UI
         setSuccess(response.data.success || "Registration successful.");
+        setIsClicked(true); // Mettre à jour l'état lorsque le bouton est cliqué
+
       })
       .catch((error) => {
         console.error("Error registering for the workshop:", error);
@@ -63,7 +78,7 @@ function Sorienter() {
           </a>
         </div>
         <section>
-      <div className="bloc_orient">
+        <div className={`bloc_orient ${isClicked ? "transition-transform duration-500 transform translate-y-10" : ""}`}>
         <div className="carte" style={{ '--clr': '#ff0066' }}>
           <div className="imgBx">
             <img src="/think.jpg" alt="Accompagnement" />
@@ -84,10 +99,11 @@ Un conseiller est assigné pour t’accompagner et t’aider dans toutes les dé
               
             </p>
             <div className="rdv">
-  <button onClick={handleInscription}>PRENDRE RDV AVEC UN CONSEILLER</button>
-      {/* Conteneur pour les notifications */}
-      <ToastContainer>Pour prendre RDV, il vous faut créer un compte sur notre site </ToastContainer>
-  </div>
+              
+              <Link to="/connexion-jeune"  >PRENDRE RDV AVEC UN CONSEILLER</Link>
+
+             
+</div>
 
           </div>
         </div>
@@ -100,6 +116,6 @@ Un conseiller est assigné pour t’accompagner et t’aider dans toutes les dé
       </div>
     </div>
   );
-}
+};
 
 export default Sorienter;
