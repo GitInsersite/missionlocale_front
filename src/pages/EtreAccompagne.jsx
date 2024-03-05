@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import '/Accompagnement.css'; // Importez les styles CSS
-
+import { Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 
 function EtreAccompagne() {
@@ -71,7 +71,8 @@ Un conseiller est assigné pour t’accompagner et t’aider dans toutes les dé
               
             </p>
             <div className="rdv">
-  <button onClick={handleInscription}>PRENDRE RDV AVEC UN CONSEILLER</button>
+            <Link to="/connexion-jeune"  >PRENDRE RDV AVEC UN CONSEILLER</Link>
+
 </div>
 
           </div>

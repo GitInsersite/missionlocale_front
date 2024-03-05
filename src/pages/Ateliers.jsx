@@ -52,6 +52,7 @@ function Ateliers() {
       >
         <h1 className="md:text-3xl">ATELIERS</h1>
       </div>
+
       <div className="breadcrumb px-4 pt-4  md:px-14 lg:px-20 xl:px-52">
         <a className="text-[#95c11f]" href="/ateliers">
           Ateliers{" "}
