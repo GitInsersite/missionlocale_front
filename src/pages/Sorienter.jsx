@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 import { useState } from "react";
 
 import axios from "axios";
 import { useMediaQuery } from "react-responsive";
-import '/orienter.css'; // Importez les styles CSS
+import "/orienter.css"; // Importez les styles CSS
 import { Link } from "react-router-dom";
 
 function Sorienter() {
@@ -11,11 +11,9 @@ function Sorienter() {
   const [success, setSuccess] = useState(null);
   const [isClicked, setIsClicked] = useState(false); // État pour vérifier si le bouton a été cliqué
 
-
   const handleRedirectToConnexion = () => {
     history.push("/connexion-jeune?redirectFrom=sorienter");
   };
-
 
   const isTabletOrLarger = useMediaQuery({ minWidth: 768 });
 
@@ -27,8 +25,9 @@ function Sorienter() {
 
   const handleInscription = () => {
     // Affiche la notification
-    toast.success('Bouton actif !', {
-      position: toast.POSITION.TOP_RIGHT,}); 
+    toast.success("Bouton actif !", {
+      position: toast.POSITION.TOP_RIGHT,
+    });
 
     // Make API call to register for the workshop
     const registrationUrl = `${apiUrlEnv}/api/notifierConseillerFormulaire`;
@@ -40,7 +39,6 @@ function Sorienter() {
         // Handle success, e.g., show a success message or update the UI
         setSuccess(response.data.success || "Registration successful.");
         setIsClicked(true); // Mettre à jour l'état lorsque le bouton est cliqué
-
       })
       .catch((error) => {
         console.error("Error registering for the workshop:", error);
@@ -77,37 +75,45 @@ function Sorienter() {
           </a>
         </div>
         <section>
-        <div className={`bloc_orient ${isClicked ? "transition-transform duration-500 transform translate-y-10" : ""}`}>
-        <div className="carte" style={{ '--clr': '#ff0066' }}>
-          <div className="imgBx">
-            <img src="/think.jpg" alt="Accompagnement" />
+          <div
+            className={`bloc_orient ${
+              isClicked
+                ? "transition-transform duration-500 transform translate-y-10"
+                : ""
+            }`}
+          >
+            <div className="carte" style={{ "--clr": "#ff0066" }}>
+              <div className="imgBx">
+                <img src="/think.jpg" alt="Accompagnement" />
+              </div>
+              <div className="conten">
+                <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
+                  <span className="border-b-2 border-[#D60B52] pb-[0.5px]">
+                    QUEL MET
+                  </span>
+                  IER EST FAIT POUR MOI ?
+                </h2>
+                <p>
+                  Un accompagnement est proposé pour t’aider dans ta recherche
+                  d’emploi ou de formation, personnalisé en fonction de tes
+                  attentes. Ces accompagnements seront aussi là pour t’aider sur
+                  le plan social, tels que la santé, le logement ou bien encore
+                  la mobilité. Un conseiller est assigné pour t’accompagner et
+                  t’aider dans toutes les démarches d’insertion, d’orientation,
+                  de formation ou de recherche d’emploi. De nombreux dispositifs
+                  te seront alors présentés pour t’aider dans tes démarches
+                  professionnelles (PACEA, CEJ, Parrainage...) et sociales
+                  (Santé, Logement, Mobilité).
+                </p>
+                <div className="rdv">
+                  <Link to="/connexion-jeune">
+                    PRENDRE RDV AVEC UN CONSEILLER
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="conten">
-          <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
-          <span className="border-b-2 border-[#D60B52] pb-[0.5px]">
-           QUEL MET 
-          </span>
-          IER EST FAIT POUR MOI ?
-        </h2>     
-               <p >
-               Un accompagnement est proposé pour t’aider dans ta recherche d’emploi ou de formation, personnalisé en fonction de tes attentes. Ces accompagnements seront aussi là pour t’aider sur le plan social, tels que la santé, le logement ou bien encore la mobilité.  
-
- 
-
-Un conseiller est assigné pour t’accompagner et t’aider dans toutes les démarches d’insertion, d’orientation, de formation ou de recherche d’emploi. De nombreux dispositifs te seront alors présentés pour t’aider dans tes démarches professionnelles (PACEA, CEJ, Parrainage...) et sociales (Santé, Logement, Mobilité). 
-              
-            </p>
-            <div className="rdv">
-              
-              <Link to="/connexion-jeune"  >PRENDRE RDV AVEC UN CONSEILLER</Link>
-
-             
-</div>
-
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
         {error && <div className="text-red-500">{error}</div>}{" "}
         {/* Display error message */}
         {success && <div className="text-green-500">{success}</div>}{" "}
@@ -115,6 +121,6 @@ Un conseiller est assigné pour t’accompagner et t’aider dans toutes les dé
       </div>
     </div>
   );
-};
+}
 
 export default Sorienter;

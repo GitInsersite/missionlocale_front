@@ -1,7 +1,6 @@
 import React from "react";
 import CookieConsent from "react-cookie-consent";
-import "/CookieBanner.css"; 
-
+import "/CookieBanner.css";
 
 function Cookie() {
   return (
@@ -16,12 +15,15 @@ function Cookie() {
       overlay
       enableDeclineButton
       declineButtonText="Refuser"
-      
     >
       <div className="cookie-content">
-        <img src="/public/cooks.png" alt="Cookie image" className="cookie-image"/>
-        <p>      Ce site utilise des cookies pour améliorer votre expérience. En continuant à naviguer sur le site, vous acceptez l'utilisation de cookies.
-</p>
+        <img src="cooks.png" alt="Cookie image" className="cookie-image" />
+        <p>
+          {" "}
+          Ce site utilise des cookies pour améliorer votre expérience. En
+          continuant à naviguer sur le site, vous acceptez l'utilisation de
+          cookies.
+        </p>
       </div>
     </CookieConsent>
   );
