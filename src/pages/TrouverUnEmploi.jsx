@@ -2,6 +2,8 @@ import { useState } from "react";
 import axios from "axios";
 import '/emploi.css';
 import { useMediaQuery } from "react-responsive";
+import { Link } from "react-router-dom";
+
 
 function TrouverUnEmploi() {
   const [error, setError] = useState(null);
@@ -93,7 +95,7 @@ N’hésite donc pas à prendre rendez-vous avec ton conseiller si tu es à la r
               
             </p>
             <div className="rdv">
-  <button onClick={handleInscription}>PRENDRE RDV AVEC UN CONSEILLER</button>
+            <Link to="/connexion-jeune"  >PRENDRE RDV AVEC UN CONSEILLER</Link>
 </div>
 
           </div>

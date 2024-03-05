@@ -3,6 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useMediaQuery } from "react-responsive";
 import '/orienter.css'; // Importez les styles CSS
+import { Link } from "react-router-dom";
 
 
 function Sorienter() {
@@ -85,7 +86,7 @@ Un conseiller est assigné pour t’accompagner et t’aider dans toutes les dé
             </p>
             <div className="rdv">
               
-              <button onClick={handleRedirectToConnexion}  >PRENDRE RDV AVEC UN CONSEILLER</button>
+              <Link to="/connexion-jeune"  >PRENDRE RDV AVEC UN CONSEILLER</Link>
 
              
 </div>
