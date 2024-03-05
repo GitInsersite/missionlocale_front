@@ -5,8 +5,11 @@ import { useMediaQuery } from "react-responsive";
 
 function Ateliers() {
   const [ateliers, setAteliers] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
 
-  const isTabletOrLarger = useMediaQuery({ minWidth: 768 });
+  const isLaptopOrLarger = useMediaQuery({ minWidth: 1920 });
+  const isTabletOrLarger = useMediaQuery({ minWidth: 480 });
 
   // Dynamically get the API URL based on the environment
   const apiUrlEnv =
@@ -15,18 +18,23 @@ function Ateliers() {
       : import.meta.env.VITE_API_URL_DEV;
 
   useEffect(() => {
-    const apiUrl = `${apiUrlEnv}/api/ateliers`;
+    const apiUrl = `${apiUrlEnv}/api/ateliers?page=${currentPage}`;
 
     axios
       .get(apiUrl)
       .then((response) => {
         console.log("API Response:", response);
-        setAteliers(response.data.ateliers);
+        setAteliers(response.data.ateliers.data);
+        setTotalPages(response.data.pagination.last_page);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
-  }, []);
+  }, [currentPage]);
+
+  const handlePageChange = (newPage) => {
+    setCurrentPage(newPage);
+  };
 
   // Define a function to truncate text
   const truncateText = (text, maxLength) => {
@@ -46,41 +54,128 @@ function Ateliers() {
       </div>
 
       <div className="breadcrumb px-4 pt-4  md:px-14 lg:px-20 xl:px-52">
-       <a className="hover:text-[#95c11f]" href="/Ateliers">Ateliers </a> {'>'}
-        </div> <br />
-
-      <div className="bg-[#f6f6f6] flex flex-col items-center pt-6 md:px-14 lg:px-20 xl:px-28">
-        <h2 className="font-bold text-black text-lg mb-8 w-[85%] md:text-2xl">
-          <span className="border-b-2 border-[#95c11f] pb-[0.5px]">LES AT</span>
-          ELIERS PROPOSES PAR LA MISSION LOCALE DES MUREAUX
-        </h2>
+        <a className="text-[#95c11f]" href="/ateliers">
+          Ateliers{" "}
+        </a>{" "}
+        {">"}
+      </div>{" "}
+      <br />
+      <div className="bg-[#f6f6f6] md:px-14 lg:px-20 xl:px-44 lg:grid lg:grid-cols-2">
         {ateliers.map((atelier, index) => (
-          <div
-            key={index}
-            className="bg-white mx-10 h-40 mb-4 rounded-xl flex w-[95%] md:w-3/4 md:h-48"
-          >
-            <div className="flex justify-center items-center w-[45%] md:w-[35%] lg:w-[45%] xl:w-[30%]">
-              <img
-                src={atelier.image_url} // Replace 'image_url' with the actual property name from your API response
-                alt={atelier.title} // Replace 'title' with the actual property name from your API response
-                className="border-2 my-1 mx-2 rounded-3xl h-[80%] sm:h-[90%] md:h-[85%]"
-              />
-            </div>
-            <div className="w-[55%] flex flex-col items-center justify-center md:w-[65%] md:items-start md:pl-4 lg:w-[75%] xl:w-[85%]">
-              <h3 className="font-bold mb-1 md:mb-4 leading-tight">{truncateText(atelier.title, isTabletOrLarger ? 40 : 15)}</h3>{" "}
-              {/* Replace 'title' with the actual property name from your API response */}
-              <p className="mb-1 md:mb-4 leading-tight">{truncateText(atelier.description, isTabletOrLarger ? 40 : 18)}</p>{" "}
-              {/* Replace 'description' with the actual property name from your API response */}
-              <Link
-                to={`/ateliers/${atelier.id}`}
-                className="bg-[#95c11f] text-white py-1 px-2 text-center rounded-xl text-sm mb-6 md:px-6"
-              >
-                Lire la suite
-              </Link>
+          <div key={index} className="flex flex-col items-center pt-6 pb-6">
+            <div className="bg-white mx-10 h-40 rounded-xl flex w-[95%] md:h-48 lg:w-[90%]">
+              
+            {atelier.image_url ? (
+                  <img
+                      src={atelier.image_url}
+                      alt={atelier.title}
+                      className="border-2 my-1 mx-2 rounded-3xl h-[80%] sm:h-[90%] md:h-[85%] object-cover"
+                  />
+              ) : (
+                  <div className=" my-1 mx-2 sm:h-[90%] md:h-[85%]"></div>
+              )}  
+              
+              <div className="w-[55%] flex flex-col items-center justify-center md:w-[65%] md:items-start md:pl-4 lg:w-[55%] xl:w-[60%]">
+                <h3 className="font-bold my-1 overflow-x-auto">
+                  {atelier.title}
+                </h3>
+                <p className="text-[#95c11f] text-sm p-4">
+                  {new Date(atelier.created_at).toLocaleDateString()}
+                </p>
+                {/* Replace 'date' with the actual property name from your API response
+                <p className="mb-1 md:mb-4 overflow-hidden break-words">
+                  {atelier.description}
+                </p> */}
+                {/* Replace 'description' with the actual property name from your API response */}
+                <Link
+                  to={`/ateliers/${atelier.id}`}
+                  className="bg-[#95c11f] text-white py-1 px-2 text-center rounded-xl text-sm mb-6"
+                >
+                  Lire la suite
+                </Link>
+              </div>
             </div>
           </div>
         ))}
       </div>
+      {/* Pagination (larger dimensions) */}
+      {totalPages > 1 ? (
+        <nav
+          aria-label="Page navigation example"
+          className="py-4 flex justify-center bg-[#f6f6f6]"
+        >
+          <ul className="flex items-center -space-x-px h-10 text-base">
+            <li>
+              <a
+                href="#"
+                className="flex items-center justify-center px-4 h-10 ms-0 leading-tight text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                onClick={() => handlePageChange(currentPage - 1)}
+                disabled={currentPage === 1}
+              >
+                <span className="sr-only">Previous</span>
+                <svg
+                  className="w-3 h-3 rtl:rotate-180"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 6 10"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 1 1 5l4 4"
+                  />
+                </svg>
+              </a>
+            </li>
+            {/* Generate pagination items based on totalPages */}
+            {Array.from({ length: totalPages }, (_, index) => (
+              <li key={index}>
+                <a
+                  href="#"
+                  className={`flex items-center justify-center px-4 h-10 leading-tight ${
+                    currentPage === index + 1
+                      ? "text-blue-600 border border-blue-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white"
+                      : "text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                  }`}
+                  onClick={() => handlePageChange(index + 1)}
+                >
+                  {index + 1}
+                </a>
+              </li>
+            ))}
+            <li>
+              <a
+                href="#"
+                className="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                onClick={() => handlePageChange(currentPage + 1)}
+                disabled={currentPage === totalPages}
+              >
+                <span className="sr-only">Next</span>
+                <svg
+                  className="w-3 h-3 rtl:rotate-180"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 6 10"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="m1 9 4-4-4-4"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      ) : (
+        ""
+      )}
     </div>
   );
 }

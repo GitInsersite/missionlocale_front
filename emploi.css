@@ -242,6 +242,7 @@
   
     .bloc .carte .imgBxe {
       position: absolute;
+
       top: -1%;
       left: 50%;
       transform: translate(-50%, -50%);

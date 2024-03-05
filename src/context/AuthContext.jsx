@@ -174,6 +174,48 @@ export const AuthProvider = ({ children }) => {
     window.scrollTo(0, 0);
   };
 
+
+  const userData = async () => {
+    try {
+      const apiUrl = import.meta.env.MODE === 'production'
+        ? import.meta.env.VITE_API_URL_PROD
+        : import.meta.env.VITE_API_URL_DEV;
+
+      const authToken = localStorage.getItem("authToken");
+      
+      if (authToken) {
+        const response = await axios.get(`${apiUrl}/api/userdata`, {
+          headers: {
+            Authorization: `Bearer ${authToken}`
+          }
+        });
+
+        console.log("userdata:",response);
+
+        // Mise à jour des données utilisateur dans le contexte et le local storage
+        setAteliers(response.data.ateliers);
+        setInformation(response.data.information);
+        setDocuments(response.data.documents);
+        setFormations(response.data.formations);
+        setJobOffers(response.data.jobOffers);
+        setRendezVous(response.data.rendezVous);
+
+        localStorage.setItem("ateliers", JSON.stringify(response.data.ateliers));
+        localStorage.setItem("information", JSON.stringify(response.data.information));
+        localStorage.setItem("documents", JSON.stringify(response.data.documents));
+        localStorage.setItem("formations", JSON.stringify(response.data.formations));
+        localStorage.setItem("jobOffers", JSON.stringify(response.data.jobOffers));
+        localStorage.setItem("rendezVous", JSON.stringify(response.data.rendezVous));
+
+        // Logique supplémentaire si nécessaire
+      }
+    } catch (error) {
+      console.error('Error updating user data:', error);
+    }
+  };
+
+
+
   return (
     <AuthContext.Provider
       value={{
@@ -192,6 +234,7 @@ export const AuthProvider = ({ children }) => {
         formations,
         jobOffers,
         rendezVous,
+        userData,
       }}
     >
       {children}

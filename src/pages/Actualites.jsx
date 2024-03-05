@@ -52,37 +52,39 @@ function Actualites() {
       >
         <h1 className="md:text-3xl">ACTUALITES</h1>
       </div>
-
-      <div className="breadcrumb px-4 pt-4 md:px-14 lg:px-20 xl:px-52">
-       <a className="hover:text-[#2897d5]" href= "/Actualites">Actualités </a> {'>'}
-        </div> <br />
-
+      <div className="breadcrumb px-4 pt-4  md:px-14 lg:px-20 xl:px-52">
+        <a className="text-[#2897d5]" href="/actualites">
+          Actualités{" "}
+        </a>{" "}
+        {">"}
+      </div>{" "}
+      <br />
       <div className="bg-[#f6f6f6] md:px-14 lg:px-20 xl:px-44 lg:grid lg:grid-cols-2">
         {actualites.map((newsItem, index) => (
           <div key={index} className="flex flex-col items-center pt-6 pb-6">
             <div className="bg-white mx-10 h-40 rounded-xl flex w-[95%] md:h-48 lg:w-[90%]">
               <div className="flex justify-center items-center w-[45%] md:w-[35%] lg:w-[45%] xl:w-[40%]">
-                <img
-                  src={newsItem.image_url}
-                  alt={newsItem.title}
-                  className="border-2 my-1 mx-2 rounded-3xl h-[80%] sm:h-[90%] md:h-[85%]"
-                />
+              <img
+                src={newsItem.image_url}
+                alt={newsItem.title}
+                className="border-2 my-1 mx-2 rounded-3xl h-[80%] sm:h-[90%] md:h-[85%] object-cover"
+              />
               </div>
               <div className="w-[55%] flex flex-col items-center justify-center md:w-[65%] md:items-start md:pl-4 lg:w-[55%] xl:w-[60%]">
-                <h3 className="font-bold mb-1 leading-tight">
-                  {truncateText(newsItem.title, isTabletOrLarger ? 40 : 15)}
+                <h3 className="font-bold mb-1 overflow-x-auto leading-tight">
+                  {newsItem.title}
                 </h3>
                 <p className="text-[#2897d5] mb-1 text-sm md:mb-4">
                   {new Date(newsItem.created_at).toLocaleDateString()}
                 </p>{" "}
                 {/* Replace 'date' with the actual property name from your API response */}
-                <p className="mb-1 md:mb-4 leading-tight">
+                {/* <p className="my-1 md:mb-4 leading-tight">
                   {" "}
                   {truncateText(
                     newsItem.description,
-                    isTabletOrLarger ? 40 : 18
+                    isTabletOrLarger ? 15 : 13
                   )}
-                </p>{" "}
+                </p>{" "} */}
                 {/* Replace 'description' with the actual property name from your API response */}
                 <Link
                   to={`/actualites/${newsItem.id}`}
@@ -95,9 +97,8 @@ function Actualites() {
           </div>
         ))}
       </div>
-
       {/* Pagination (larger dimensions) */}
-      {isLaptopOrLarger && totalPages > 1 ? (
+      {totalPages > 1 ? (
         <nav
           aria-label="Page navigation example"
           className="py-4 flex justify-center bg-[#f6f6f6]"
