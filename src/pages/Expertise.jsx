@@ -39,6 +39,7 @@ function Expertise() {
         style={{ backgroundImage: "url(MicrosoftTeams-image14.png)" }}
       >
         <h1 className="md:text-3xl">NOTRE EXPERTISE</h1>
+
       </div>
       <br />
 
@@ -77,7 +78,7 @@ function Expertise() {
         {/* Display success message */}
         <button
           onClick={handleInscription}
-          className="bg-[#F29200] text-white font-semibold py-1 px-3 text-center rounded-lg text-sm mb-6 md:w-64"
+          className="bg-[#F29200] text-white font-semibold py-1 px-3 text-center rounded-lg text-sm mb-6 md:w-64  hover:bg-orange-500 transition-all duration-300"
         >
           PRENDRE RDV
         </button>

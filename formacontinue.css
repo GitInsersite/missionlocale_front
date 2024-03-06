@@ -74,30 +74,6 @@
     height: 260px;
     
   }
-
-  @keyframes animateImgBx {
-    0% {
-      top: -150px;
-      left: -120px;
-      transform: scale(0.80);
-      opacity: 0.6;
-    }
-    50% {
-      top: -105px; /* Animation à mi-chemin */
-      left: -143px; /* Animation à mi-chemin */
-      transform: scale(0.83); /* Animation à mi-chemin */
-      opacity: 0.8; /* Animation à mi-chemin */
-    }
-    100% {
-      top: -60px;
-      left: -165px;
-      transform: scale(0.85);
-      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
-      opacity: 1;
-    }
-  }
-
-    
   .containe .carte .imgBx {
     position: absolute;
     top: -150px;
@@ -108,9 +84,7 @@
     transform: scale(0.80);
     overflow: hidden;
     opacity: 0.6;
-    transition: 0.5s;
-    animation: animateImgBx 3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-
+    animation: animateImgBx 1.5s cubic-bezier(0.1, 0, 0, 0) forwards;
   }
   .containe:hover .carte .imgBx {
     top: -80px;
@@ -201,10 +175,10 @@
     .containe .carte .imgBx {
       position:absolute;
       top: 2%;
-      left: 26%;
+      left: 50%;
       transform: translate(-50%, -50%);
-      width: 200px;
-      height: 70px;
+      width: 300px;
+      height: 90px;
       border-radius: 12px 12px 20px 20px ;
       overflow: visible;
       opacity: 0.7;

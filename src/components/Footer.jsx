@@ -49,7 +49,7 @@ function Footer() {
           </p>
           
           <h2 className="font-bold md:mb-2">NOUS CONTACTER :</h2>
-          <h3 className="text-white text-sm md:mb-2">contact@mureaux-mlidf.org</h3>
+          <h3 className="text-white text-sm md:mb-2">contact@missionlocale-mureaux.org</h3>
           <h4 className="text-white text-sm md:mb-3">01.30.91.21.50</h4>
           <div>
             <h2 className="flex items-center font-bold md:mb-3">
@@ -89,8 +89,8 @@ function Footer() {
       </div>
       <div className="w-100% bg-black py-3 border-t-2 border-gray-500">
         <p className="text-white text-[8px] text-center md:text-xs">
-          © 2023 MISSION LOCALE DES MUREAUX - TOUS DROITS RESERVES - INFORMATION
-          LEGALES - POLITIQUE DE CONFIDENTIALITE
+          © 2023 MISSION LOCALE DES MUREAUX - TOUS DROITS RESERVES - <Link to="/info-legale">INFORMATION
+          LEGALES</Link> - <Link to="/politique-confidentialite">POLITIQUE DE CONFIDENTIALITE</Link>
         </p>
       </div>
     </>

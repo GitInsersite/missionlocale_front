@@ -104,29 +104,36 @@ function OffreEmploi() {
         </div>
       )}
       <div className="bg-[#f6f6f6] md:px-14 lg:px-20 xl:px-44 lg:grid lg:grid-cols-2">
-      {offresEmploi.map((offre, index) => (
-        <div key={index} className="flex flex-col items-center p-6">
-          <div className="bg-white mx-10 mb-10 rounded-xl w-full">
-            
+        {offresEmploi.map((offre, index) => (
+          <div key={index} className="flex flex-col items-center p-6">
+            <div className="bg-white mx-10 mb-10 rounded-xl w-full">
               {offre.image_url ? (
                 <div className="flex justify-start items-center">
-                <img
-                  src={offre.image_url} alt={offre.title}
-                  style={{ maxWidth: "50%", maxHeight: "50%", width: "auto", height: "auto" }}
-                  className="border-2 my-1 mx-2 rounded-3xl h-[80%] sm:h-[90%] md:h-[85%] object-cover"
-                /></div>
+                  <img
+                    src={offre.image_url}
+                    alt={offre.title}
+                    style={{
+                      maxWidth: "50%",
+                      maxHeight: "50%",
+                      width: "auto",
+                      height: "auto",
+                    }}
+                    className="border-2 my-1 mx-2 rounded-3xl h-[80%] sm:h-[90%] md:h-[85%] object-cover"
+                  />
+                </div>
               ) : null}
 
             <div className="p-4">
-              <h3 className="font-bold my-1 overflow-x-auto">
+              <h3 className="font-bold mb-1 leading-tight">
+
                 {offre.title}
               </h3>
               <p className="text-[#D70B52] mb-1 text-sm">
                 Publié le {moment(offre.publication).format("DD/MM/YYYY")}
               </p>
-              {/* <p className="mb-3 leading-tight px-2">
+              <p className="mb-3 leading-tight px-2">
                 {offre.description}
-              </p> */}
+              </p>
               <div className="flex justify-between">
                 <button
                     className="bg-[#D60B52] text-white font-semibold py-1 px-2 text-center rounded-lg "
@@ -134,19 +141,22 @@ function OffreEmploi() {
                   >
                     Postuler à cette offre
                   </button>
-                {offre.job_url && (
-                  <a href={offre.job_url} target="_blank" rel="noopener noreferrer">
-                    <button className="bg-[#D60B52] text-white font-semibold py-1 px-2 text-center rounded-lg">
-                      Télécharger le PDF
-                    </button>
-                  </a>
-                )}
-                
+                  {offre.job_url && (
+                    <a
+                      href={offre.job_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <button className="bg-[#D60B52] text-white font-semibold py-1 px-2 text-center rounded-lg">
+                        Télécharger le PDF
+                      </button>
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
       </div>
       {/* Pagination (larger dimensions) */}
       {totalPages > 1 ? (

@@ -3,6 +3,10 @@ import Actualites from "../components/Actualites";
 import Options from "../components/Options";
 import Statistiques from "../components/Statistiques";
 import Soutien from "../components/Soutien";
+import CookieConsent, { Cookies, getCookieConsentValue, resetCookieConsentValue } from "react-cookie-consent";
+import Cookie from "../components/Cookie";
+
+
 
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -41,12 +45,21 @@ function Accueil() {
       <SlideMenu />
       <div className="bg-[#f6f6f6]">
         <Options />
+        <Cookie />
+            
+
       </div>
       <Actualites latestNews={latestNews} />
       <Statistiques />
       <Soutien />
     </>
+    
   );
+  
 }
+console.log(getCookieConsentValue("your_custom_cookie_name"));
+console.log(resetCookieConsentValue());
+
+
 
 export default Accueil;

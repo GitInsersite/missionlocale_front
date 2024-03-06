@@ -1,7 +1,9 @@
 import { useState } from "react";
 import axios from "axios";
-import '/emploi.css';
+import "/emploi.css";
 import { useMediaQuery } from "react-responsive";
+import { Link } from "react-router-dom";
+
 
 function TrouverUnEmploi() {
   const [error, setError] = useState(null);
@@ -65,10 +67,20 @@ function TrouverUnEmploi() {
       </div>
 
       <div className="breadcrumb px-4 pt-4  md:px-14 lg:px-20 xl:px-52">
-        <a className="hover:text-[#D70B52]" href="/">Accueil</a> {'>'}
-        <a className="hover:text-[#D70B52]" href="/Services"> Services</a> {'>'}
-        <a className="hover:text-[#D70B52]" href="/Etreaccompagne"> Trouver un emploi</a>
-      </div> 
+        <a className="hover:text-[#D70B52]" href="/">
+          Accueil
+        </a>{" "}
+        {">"}
+        <a className="hover:text-[#D70B52]" href="/Services">
+          {" "}
+          Services
+        </a>{" "}
+        {">"}
+        <a className="hover:text-[#D70B52]" href="/Etreaccompagne">
+          {" "}
+          Trouver un emploi
+        </a>
+      </div>
       <section>
       <div className="bloc">
         <div className="carte" style={{ '--clr': '#ff0066' }}>
@@ -93,7 +105,7 @@ N’hésite donc pas à prendre rendez-vous avec ton conseiller si tu es à la r
               
             </p>
             <div className="rdv">
-  <button onClick={handleInscription}>PRENDRE RDV AVEC UN CONSEILLER</button>
+            <Link to="/connexion-jeune"  >PRENDRE RDV AVEC UN CONSEILLER</Link>
 </div>
 
           </div>
