@@ -155,10 +155,10 @@ function Gouvernance() {
             </span>
           </h2>
           <p>Les Membres du BUREAU : </p>
-          <li>Madame BIENSO MATETA Salamata – Présidente ;</li>
-          <li>Madame OLIVIER Sabine – Vice Présidente ;</li> 
-          <li>Monsieur MEMISOGLU Ergin – Vice Président ;</li>
-          <li>Madame KOENIG FILISIKA Honorine – Trésorière ;</li>
+          <li>Madame BIENSO MATETA Salamata – Présidente </li>
+          <li>Madame OLIVIER Sabine – Vice Présidente </li> 
+          <li>Monsieur MEMISOGLU Ergin – Vice Président </li>
+          <li>Madame KOENIG FILISIKA Honorine – Trésorière </li>
           <li>Monsieur MONTEL Bruno – Secrétaire</li>  
     
           <div className="md:w-full md:grid md:grid-cols-2 lg:grid-cols-3">

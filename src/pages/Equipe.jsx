@@ -64,11 +64,11 @@ function Equipe() {
          
           <ul>
             
-            <li>1 Responsable Administrative et Financières ;</li>
-            <li>1 Responsable de secteur ;</li>
-            <li>1 Chargée de l’emploi et des relations entreprises ;</li>
-            <li>1 Chargé de Communication ;</li>
-            <li>1 Chargé d’accueil ;</li>
+            <li>1 Responsable Administrative et Financières </li>
+            <li>1 Responsable de secteur </li>
+            <li>1 Chargée de l’emploi et des relations entreprises </li>
+            <li>1 Chargé de Communication </li>
+            <li>1 Chargé d’accueil </li>
            
           </ul>
           <br />
@@ -79,8 +79,8 @@ function Equipe() {
             STRUCTURE
           </h2>
           <ul>
-          <li>4 Conseillères CEJ ;</li>
-          <li>10 Conseillers classiques ;</li>
+          <li>4 Conseillères CEJ </li>
+          <li>10 Conseillers classiques </li>
           </ul>
 
           <div>{renderMembers(equipeData.structure)}</div>
