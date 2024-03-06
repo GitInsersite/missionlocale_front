@@ -3,11 +3,13 @@ import { useMediaQuery } from "react-responsive";
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import moment from 'moment';
 
 function PreInscription() {
   const [successMessage, setSuccessMessage] = useState("");
   const isLaptopOrLarger = useMediaQuery({ minWidth: 1024 });
-
+  const dateMin = moment().subtract(25, 'years').format('YYYY-MM-DD');
+  const dateMax = moment().subtract(16, 'years').format('YYYY-MM-DD');
 
   const navigate = useNavigate();
 
@@ -151,7 +153,7 @@ function PreInscription() {
                         required: true,
                       })}
                       className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
-                      //placeholder="Date de naissance"
+                      defaultValue={dateMin} min={dateMin} max={dateMax}
                       type="date"
                     />
                     {errors.dateOfBirth && (
