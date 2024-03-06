@@ -119,6 +119,7 @@ function OffreEmploi() {
 
             <div className="p-4">
               <h3 className="font-bold mb-1 leading-tight">
+
                 {offre.title}
               </h3>
               <p className="text-[#D70B52] mb-1 text-sm">

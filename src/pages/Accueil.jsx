@@ -29,7 +29,7 @@ function Accueil() {
       .get(apiUrl)
       .then((response) => {
         // Log the entire response to the console
-        //console.log("API Response:", response);
+        console.log("API Response:", response);
 
         // Update the state with the fetched data
         setLatestNews(response.data.latestNews);

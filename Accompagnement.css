@@ -225,6 +225,7 @@
   
     .container_acc .carte {
       width: 350px; /* Remplacer la largeur fixe par 100% pour occuper toute la largeur de l'écran */
+
       height: 470px;
       top: 10px;
       margin-bottom: 20px;

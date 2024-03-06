@@ -78,7 +78,7 @@ function UnAtelier() {
       <div className="flex flex-col items-center pt-6 bg-[#F6F6F6] md:px-14 lg:px-20 xl:px-40">
         <div className="border-2 border-[#95c11f] flex flex-col px-4 bg-white rounded-lg mb-4 pt-2 w-[90%]">
           <h2 className="font-semibold text-lg mb-2">{atelier.title}</h2>
-          <p className="mb-4">{atelier.description}</p>
+          <p className="mb-4 px-2 py-3 overflow-hidden break-words">{atelier.description}</p>
           {error && <div className="text-red-500">{error}</div>} {/* Display error message */}
           {success && <div className="text-green-500">{success}</div>} {/* Display success message */}
           <button
@@ -106,13 +106,13 @@ function UnAtelier() {
         </div>
         <div className="border-2 border-[#95c11f] flex flex-col px-4 bg-white rounded-lg mb-4 pt-2 w-[90%]">
           <h2 className="font-semibold text-lg mb-2">RESUME</h2>
-          <p className="mb-4">{atelier.resume}</p>
+          <p className="mb-4 px-2 py-3 overflow-hidden break-words">{atelier.resume}</p>
         </div>
         <div className="border-2 border-[#95c11f] flex flex-col px-4 bg-white rounded-lg mb-4 pt-2 w-[90%]">
           <h2 className="font-semibold text-lg mb-2">
             OBJETIF DE L&apos;ATELIER
           </h2>
-          <p className="mb-4">{atelier.objectif}</p>
+          <p className="mb-4 px-2 py-3 overflow-hidden break-words">{atelier.objectif}</p>
         </div>
       </div>
     </div>

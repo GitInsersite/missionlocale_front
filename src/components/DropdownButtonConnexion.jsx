@@ -14,8 +14,8 @@ function DropdownButtonConnexion() {
   } = useAuth();
 
   const [isDropdownOpen, setDropdownOpen] = useState(false);
-  console.log(responsible)
-  console.log(role)
+  // console.log(responsible)
+  // console.log(role)
 
   const handleDropdownToggle = () => {
     setDropdownOpen(!isDropdownOpen);

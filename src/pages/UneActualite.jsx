@@ -7,7 +7,7 @@ function UneActualite() {
   const [actualite, setActualite] = useState(null);
   const { id } = useParams();
 
-  const isLaptopOrLarger = useMediaQuery({ minWidth: 1440 });
+  const isLaptopOrLarger = useMediaQuery({ minWidth: 1920 });
 
   // Dynamically get the API URL based on the environment
   const apiUrlEnv =
@@ -41,7 +41,7 @@ function UneActualite() {
       >
         <h1 className="md:text-3xl">ACTUALITE</h1>
       </div>
-      <div className="flex flex-col items-center pt-6 bg-[#F6F6F6] md:px-14 lg:px-20 xl:px-40">
+      <div className="flex flex-col items-center p-6 bg-[#F6F6F6] md:px-14 lg:px-20 xl:px-40">
         <div className="flex flex-col px-4 bg-white rounded-lg mb-4 pt-2 w-[90%]">
           <h2 className="text-lg mb-2 text-[#2897d5] font-bold">
             {actualite.title}
@@ -49,27 +49,43 @@ function UneActualite() {
           <p className="mb-4">
             {new Date(actualite.created_at).toLocaleDateString()}
           </p>
-          <p className="mb-4 text-[#2897d5]">#{actualite.hashtag}</p>
+              <p className="mb-4 text-[#2897d5]">
+                {actualite.hashtag && (
+                  <>
+                    {actualite.hashtag.split(', ').map((tag, index) => (
+                      <span className="mb-4 py-3 overflow-hidden break-words" key={index}>
+                        {"#"+tag + " "}
+                      </span>
+                    ))}
+                  </>
+                )}
+              </p>
+              
+
         </div>
+
         {isLaptopOrLarger ? (
           <div className="flex px-4 bg-white rounded-lg mb-4 pt-2 w-[90%]">
             <img
               src={actualite.image_url}
               alt="image"
-              className="mb-6 rounded-lg w-[500px] h-auto xl:w-[300px]"
+              className="px-4 mb-6 rounded-lg w-[500px] h-auto xl:w-[600px]"
             />
-            <p className="mb-4 p-4">{actualite.description}</p>
+            <p className="mb-4 px-2 py-3 overflow-hidden break-words">{actualite.description}</p>
           </div>
         ) : (
           <div className="flex-col px-4 bg-white rounded-lg mb-4 pt-2 w-[90%]">
             <img
               src={actualite.image_url}
               alt="image"
-              className="mb-6 rounded-lg w-[500px] h-auto"
+              className="mb-6 px-4 rounded-lg w-[500px] h-auto"
             />
-            <p className="mb-4">{actualite.description}</p>
+            <p className="mb-4 px-4 py-3 overflow-hidden break-words">{actualite.description}</p>
           </div>
         )}
+
+        
+
       </div>
     </div>
   );

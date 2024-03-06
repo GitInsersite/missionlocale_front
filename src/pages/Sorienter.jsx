@@ -1,10 +1,10 @@
+import React from 'react';
 import { useState } from "react";
 
 import axios from "axios";
 import { useMediaQuery } from "react-responsive";
 import '/orienter.css'; // Importez les styles CSS
 import { Link } from "react-router-dom";
-
 
 function Sorienter() {
   const [error, setError] = useState(null);
@@ -26,6 +26,10 @@ function Sorienter() {
       : import.meta.env.VITE_API_URL_DEV;
 
   const handleInscription = () => {
+    // Affiche la notification
+    toast.success('Bouton actif !', {
+      position: toast.POSITION.TOP_RIGHT,}); 
+
     // Make API call to register for the workshop
     const registrationUrl = `${apiUrlEnv}/api/notifierConseillerFormulaire`;
 
@@ -52,7 +56,7 @@ function Sorienter() {
     <div className="bg-[#F6F6F6]">
       <div
         className="bg-image bg-cover bg-center h-12 flex justify-center items-center text-white font-bold sm:h-16 md:h-28 lg:h-40 xl:h-52"
-        style={{ backgroundImage: "url(/public/MicrosoftTeams-image12.png)" }}
+        style={{ backgroundImage: "url(MicrosoftTeams-image12.png)" }}
       >
         <h1 className="md:text-3xl">S&apos;ORIENTER</h1>
       </div>
@@ -74,7 +78,7 @@ function Sorienter() {
           <span className="border-b-2 border-[#D60B52] pb-[0.5px]">
            QUEL MET 
           </span>
-          IER EST FAIT POUR MOI
+          IER EST FAIT POUR MOI ?
         </h2>     
                <p >
                Un accompagnement est proposé pour t’aider dans ta recherche d’emploi ou de formation, personnalisé en fonction de tes attentes. Ces accompagnements seront aussi là pour t’aider sur le plan social, tels que la santé, le logement ou bien encore la mobilité.  
@@ -103,6 +107,6 @@ Un conseiller est assigné pour t’accompagner et t’aider dans toutes les dé
       </div>
     </div>
   );
-}
+};
 
 export default Sorienter;

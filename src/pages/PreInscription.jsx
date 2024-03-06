@@ -6,8 +6,8 @@ import { useNavigate } from "react-router-dom";
 
 function PreInscription() {
   const [successMessage, setSuccessMessage] = useState("");
-
   const isLaptopOrLarger = useMediaQuery({ minWidth: 1024 });
+
 
   const navigate = useNavigate();
 
@@ -160,32 +160,6 @@ function PreInscription() {
                       </span>
                     )}
 
-                    {/* <select
-                                        {...register("schooled", {
-                                            //required: true,
-                                        })}
-                                        className="rounded-md p-2 text-left placeholder-black placeholder-opacity-75 mb-4"
-                                    >
-                                        <option
-                                            value=""
-                                            disabled
-                                            selected
-                                            hidden
-                                        >
-                                            Scolarisé*
-                                        </option>
-                                        <option value="yes">
-                                            Scolarisé: Oui
-                                        </option>
-                                        <option value="no">
-                                            Scolarisé: Non
-                                        </option>
-                                    </select> */}
-                    {/* {errors.schooled && (
-                                        <span className="text-red-600 text-center mb-4">
-                                            Ce champ est obligatoire
-                                        </span>
-                                    )} */}
                   </div>
 
                   <div className="flex flex-col w-[45%]">
