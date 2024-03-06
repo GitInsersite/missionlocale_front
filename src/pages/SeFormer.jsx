@@ -18,22 +18,15 @@ function SeFormer() {
       </div>
       <div className="flex flex-col items-center">
         <div>
-          <div className="breadcrumb px-4 pt-4  md:px-14 lg:px-20 xl:px-52">
-            <a className="hover:text-[#D70B52]" href="/">
-              Accueil
-            </a>{" "}
+          <div className=" breadcrumb px-4 pt-4  md:px-14 lg:px-10 xl:px-50">
+            <a href="/">Accueil</a> {">"}
+            <a href="/">Services </a>
             {">"}
-            <a className="hover:text-[#D70B52]" href="/Services">
+            <a className="text-[#A4195C]" href="/se-former">
               {" "}
-              Services
-            </a>{" "}
-            {">"}
-            <a className="hover:text-[#D70B52]" href="/Etreaccompagne">
-              {" "}
-              Se former
+              Se Former
             </a>
           </div>
-
           <section>
             <div className="containe">
               <div className="carte" style={{ "--clr": "#ff0066" }}>
