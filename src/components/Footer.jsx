@@ -49,7 +49,7 @@ function Footer() {
           </p>
           
           <h2 className="font-bold md:mb-2">NOUS CONTACTER :</h2>
-          <h3 className="text-white text-sm md:mb-2">contact@missionlocale-mureaux.org</h3>
+          <h3 className="text-white text-sm md:mb-2">contact@mureaux-mlidf.org</h3>
           <h4 className="text-white text-sm md:mb-3">01.30.91.21.50</h4>
           <div>
             <h2 className="flex items-center font-bold md:mb-3">
