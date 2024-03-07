@@ -74,9 +74,9 @@ function Actualites() {
                 <h3 className="font-bold mb-1 overflow-x-auto leading-tight">
                   {newsItem.title}
                 </h3>
-                <p className="text-[#2897d5] mb-1 text-sm md:mb-4">
+                {/* <p className="text-[#2897d5] mb-1 text-sm md:mb-4">
                   {new Date(newsItem.created_at).toLocaleDateString()}
-                </p>{" "}
+                </p>{" "} */}
                 {/* Replace 'date' with the actual property name from your API response */}
                 {/* <p className="my-1 md:mb-4 leading-tight">
                   {" "}
