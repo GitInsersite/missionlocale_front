@@ -1,6 +1,11 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+/**
+ * Renders the Gouvernance page component.
+ *
+ * @returns {JSX.Element} The Gouvernance page component.
+ */
 function Gouvernance() {
   const [governanceData, setGovernanceData] = useState({
     conseil_admin: [],
@@ -8,9 +13,10 @@ function Gouvernance() {
   });
 
   // Dynamically get the API URL based on the environment
-  const apiUrlEnv = import.meta.env.MODE === 'production'
-  ? import.meta.env.VITE_API_URL_PROD
-  : import.meta.env.VITE_API_URL_DEV;
+  const apiUrlEnv =
+    import.meta.env.MODE === "production"
+      ? import.meta.env.VITE_API_URL_PROD
+      : import.meta.env.VITE_API_URL_DEV;
 
   useEffect(() => {
     const fetchGovernanceData = async () => {
@@ -113,14 +119,17 @@ function Gouvernance() {
         style={{ backgroundImage: "url(MicrosoftTeams-image11.png)" }}
       >
         <h1 className="md:text-3xl">GOUVERNANCE</h1>
-      </div> <br />
-
+      </div>{" "}
+      <br />
       <div className="breadcrumb px-4 pt-4 md:px-14 lg:px-20 xl:px-52">
-       <a href="/">Accueil</a> {'>'}
-        <a href="/LaMissionLocale">  La Mission Locale </a>{'>'}
-        <a className="text-[#A4195C]" href="/gouvernance"> La Gouvernance </a>
-        </div>
-
+        <a href="/">Accueil</a> {">"}
+        <a href="/LaMissionLocale"> La Mission Locale </a>
+        {">"}
+        <a className="text-[#A4195C]" href="/gouvernance">
+          {" "}
+          La Gouvernance{" "}
+        </a>
+      </div>
       <div className="xl:px-32">
         <div className="flex flex-col items-center pt-6 md:items-start md:mx-14 lg:mx-20">
           <h2 className="font-bold text-black text-lg mb-8 w-[85%] md:text-2xl">
@@ -154,13 +163,33 @@ function Gouvernance() {
               BUREAU
             </span>
           </h2>
+          {/* <ul>
+            <li>Madame BIENSO MATETA Salamata – Présidente ;</li>
+            <li>Madame OLIVIER Sabine – Vice Présidente ;</li>
+            <li>Monsieur MEMISOGLU Ergin – Vice Président ;</li>
+            <li>Madame KOENIG FILISIKA Honorine – Trésorière ;</li>
+            <li>Monsieur MONTEL Bruno – Secrétaire</li>
+          </ul> */}
+
           <p>Les Membres du BUREAU : </p>
-          <li>Madame BIENSO MATETA Salamata – Présidente </li>
-          <li>Madame OLIVIER Sabine – Vice Présidente </li> 
-          <li>Monsieur MEMISOGLU Ergin – Vice Président </li>
-          <li>Madame KOENIG FILISIKA Honorine – Trésorière </li>
-          <li>Monsieur MONTEL Bruno – Secrétaire</li>  
-    
+          <ul class="flex flex-col items-center md:flex-row md:justify-center">
+            <li class="bg-gray-200 py-2 px-4 m-2">
+              Madame BIENSO MATETA Salamata – Présidente
+            </li>
+            <li class="bg-gray-200 py-2 px-4 m-2">
+              Madame OLIVIER Sabine – Vice Présidente
+            </li>
+            <li class="bg-gray-200 py-2 px-4 m-2">
+              Monsieur MEMISOGLU Ergin – Vice Président
+            </li>
+            <li class="bg-gray-200 py-2 px-4 m-2">
+              Madame KOENIG FILISIKA Honorine – Trésorière
+            </li>
+            <li class="bg-gray-200 py-2 px-4 m-2">
+              Monsieur MONTEL Bruno – Secrétaire
+            </li>
+          </ul>
+
           <div className="md:w-full md:grid md:grid-cols-2 lg:grid-cols-3">
             {governanceData.bureau.map((member, index) => (
               <div
@@ -170,7 +199,9 @@ function Gouvernance() {
                 <div className="w-[45%] flex items-center md:w-28 md:h-28 md:rounded-full">
                   <img
                     src={member.image_url || "placeholder.jpg"}
-                    alt="" width={300} height={200}
+                    alt=""
+                    width={300}
+                    height={200}
                     className="border-2 my-1 mx-2 h-20 w-20 md:w-28 md:h-28 rounded-full md:mx-0 md:my-0"
                   />
                 </div>
@@ -187,7 +218,6 @@ function Gouvernance() {
           </div>
         </div>
       </div>
-
       <div className="flex flex-col items-center pt-6 md:items-start md:mx-14 lg:mx-20 xl:px-32">
         <div className="flex flex-col items-center md:items-start">
           <h2 className="font-bold text-black text-lg mb-8 mt-6 w-[85%] md:text-2xl md:mb-4">
@@ -202,19 +232,34 @@ function Gouvernance() {
           </p>
         </div>
         <div className="flex flex-col md:flex-row  md:w-full md:mt-4">
-          <button className="py-2 bg-[#A4195C] mb-4 px-6 rounded-xl text-white mt-6 md:mt-0 md:px-8 md:py-2 md:mr-4" onClick={handleDownload22}>
+          <button
+            className="py-2 bg-[#A4195C] mb-4 px-6 rounded-xl text-white mt-6 md:mt-0 md:px-8 md:py-2 md:mr-4"
+            onClick={handleDownload22}
+          >
             2022
           </button>
-          <button className="py-2 bg-[#D70B52] mb-4 px-6 rounded-xl text-white md:px-8 md:py-2 md:mr-4" onClick={handleDownload21}>
+          <button
+            className="py-2 bg-[#D70B52] mb-4 px-6 rounded-xl text-white md:px-8 md:py-2 md:mr-4"
+            onClick={handleDownload21}
+          >
             2021
           </button>
-          <button className="py-2 bg-[#2997D6] mb-6 px-6 rounded-xl text-white md:px-8 md:py-2 md:mb-4 md:mr-4" onClick={handleDownload20}>
+          <button
+            className="py-2 bg-[#2997D6] mb-6 px-6 rounded-xl text-white md:px-8 md:py-2 md:mb-4 md:mr-4"
+            onClick={handleDownload20}
+          >
             2020
           </button>
-          <button className="py-2 bg-[#95C221] mb-6 px-6 rounded-xl text-white md:px-8 md:py-2 md:mb-4 md:mr-4" onClick={handleDownload19}>
+          <button
+            className="py-2 bg-[#95C221] mb-6 px-6 rounded-xl text-white md:px-8 md:py-2 md:mb-4 md:mr-4"
+            onClick={handleDownload19}
+          >
             2019
           </button>
-          <button className="py-2 bg-[#F29200] mb-6 px-6 rounded-xl text-white md:px-8 md:py-2 md:mb-4" onClick={handleDownload18}>
+          <button
+            className="py-2 bg-[#F29200] mb-6 px-6 rounded-xl text-white md:px-8 md:py-2 md:mb-4"
+            onClick={handleDownload18}
+          >
             2018
           </button>
         </div>
