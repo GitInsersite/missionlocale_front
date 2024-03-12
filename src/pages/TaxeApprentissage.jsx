@@ -13,16 +13,16 @@ function TaxeApprentissage() {
       <br />
 
       <div className="breadcrumb px-4 pt-4  md:px-14 lg:px-20 xl:px-52">
-        <a className="hover:text-[#F29200]" href="/">
+        <a className="" href="/">
           Accueil
         </a>{" "}
         {">"}
-        <a className="hover:text-[#F29200]" href="/Entreprise">
+        <a className="" href="/">
           {" "}
           Entreprise{" "}
         </a>
         {">"}
-        <a className="hover:text-[#F29200]" href="/TaxeApprentissage">
+        <a className="text-[#F29200]" href="/taxe-pprentissage">
           {" "}
           Taxe d'apprentissage
         </a>

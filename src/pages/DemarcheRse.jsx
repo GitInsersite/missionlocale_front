@@ -13,9 +13,9 @@ function DemarcheRse() {
       <br />
       
       <div className="breadcrumb px-4 pt-4  md:px-14 lg:px-20 xl:px-52">
-       <a className="hover:text-[#F29200]" href="/">Accueil</a> {'>'}
-        <a className="hover:text-[#F29200]" href="/Entreprise">  Entreprise </a>{'>'}
-        <a className="hover:text-[#F29200]" href="/DemarcheRse"> S'engager dans une démarche RSE</a>
+       <a className="" href="/">Accueil</a> {'>'}
+        <a className="" href="/"> Entreprise </a>{'>'}
+        <a className="text-[#F29200]" href="/demarche-rse"> S'engager dans une démarche RSE</a>
         </div>
 
       <div className="flex flex-col pl-4 p-4 md:px-14 lg:px-20 xl:px-52">

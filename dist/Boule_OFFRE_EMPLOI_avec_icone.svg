@@ -1,40 +1,90 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Generator: Adobe Illustrator 27.8.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 330 315.7" style="enable-background:new 0 0 330 315.7;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#F7C5DA;}
-	.st1{fill:#D60B53;}
-	.st2{fill:none;stroke:#D60B53;stroke-width:5;stroke-miterlimit:10;}
-	.st3{fill:none;}
-	.st4{font-family:'Poppins-Medium';}
-	.st5{font-size:20px;}
-	.st6{fill:#FFFFFF;}
-</style>
-<circle class="st0" cx="140.2" cy="199.4" r="114"/>
-<circle class="st1" cx="140.2" cy="185.7" r="100.3"/>
-<line class="st2" x1="92.9" y1="21.6" x2="121.9" y2="125"/>
-<line class="st2" x1="91.0" y1="22.3" x2="320.5" y2="22.3"/>
-<rect x="111.6" y="2.3" class="st3" width="212.9" height="14.9"/>
-<text transform="matrix(1 0 0 1 90.6068 17.1723)" class="st1 st4 st5">NOS OFFRES D’EMPLOIS</text>
-<g transform="translate(25, 0)">
-	<g id="XMLID_00000120522678454933634580000002936931825721927581_">
-		<path id="XMLID_00000100344366704633656750000004505092164290517898_" class="st6" d="M175.4,148.6h-31.8v-19.4
-			c0-2.6-2.5-4.6-5.7-4.6c-0.4,0-0.7,0-0.9,0.1c-0.4,0-0.6-0.1-0.9-0.1H93.3c-0.1,0-0.2,0-0.4,0c-0.1,0-0.2,0-0.4,0
-			c-3.2,0-5.7,2-5.7,4.6v19.4H55.2c-5.2,0-9.4,4.2-9.4,9.4v42.7c0,5.1,3.9,9.1,8.9,9.4v34.1c0,5.2,3.8,9.4,8.5,9.4h104.2
-			c4.7,0,8.5-4.2,8.5-9.4v-34.1c5-0.4,8.9-4.4,8.9-9.4v-42.6C184.8,152.9,180.6,148.6,175.4,148.6z M91.7,129.6
-			c0.2-0.1,0.7-0.2,1.2-0.2c0.1,0,0.2,0,0.4,0h0.1h42.7c0.1,0,0.2,0,0.4,0c0.4,0.1,0.7,0.1,1.1,0c0.6-0.1,1.2,0,1.5,0.1v23.4
-			c-0.2,0.1-0.5,0.2-0.9,0.2c-0.5,0-0.8-0.1-0.9-0.2V135c0-1.3-1.1-2.4-2.4-2.4H95.9c-1.3,0-2.4,1.1-2.4,2.4V153
-			c-0.2,0.1-0.5,0.2-0.9,0.2c-0.5,0-0.8-0.1-0.9-0.2V129.6z M132.3,137.4v11.2h-34v-11.3h34V137.4z M171.2,244.5
-			c0,2.6-1.7,4.7-3.8,4.7H63.1c-2.1,0-3.8-2.1-3.8-4.7v-34.1h37.1v4.4c0,5.2,4.2,9.4,9.4,9.4h16.9c5.2,0,9.4-4.2,9.4-9.4v-4.4H171
-			v34.1H171.2z M101.2,214.6v-13.3c0-2.6,2.1-4.7,4.7-4.7h16.9c2.6,0,4.7,2.1,4.7,4.7v13.3c0,2.6-2.1,4.7-4.7,4.7H106
-			C103.4,219.3,101.2,217.2,101.2,214.6z M180.1,200.8c0,2.6-2.1,4.7-4.7,4.7h-43.1v-4.4c0-5.2-4.2-9.4-9.4-9.4H106
-			c-5.2,0-9.4,4.2-9.4,9.4v4.4H55.2c-2.6,0-4.7-2.1-4.7-4.7v-42.6c0-2.6,2.1-4.7,4.7-4.7H87c0.1,2.5,2.5,4.5,5.7,4.5
-			c3.1,0,5.5-1.9,5.7-4.5h34c0.1,2.5,2.5,4.5,5.7,4.5c3.1,0,5.5-1.9,5.7-4.5h31.8c2.6,0,4.7,2.1,4.7,4.7
-			C180.1,158.2,180.1,200.8,180.1,200.8z"/>
-		<path id="XMLID_00000088821992420426563790000000502397695128062371_" class="st6" d="M114.5,216.3c4.6,0,8.3-3.8,8.3-8.3
-			c0-4.6-3.8-8.3-8.3-8.3c-4.5,0-8.3,3.8-8.3,8.3C106.1,212.5,109.9,216.3,114.5,216.3z M114.5,202c3.3,0,5.9,2.7,5.9,5.9
-			c0,3.3-2.7,5.9-5.9,5.9c-3.3,0-5.9-2.7-5.9-5.9C108.4,204.7,111.2,202,114.5,202z"/>
-	</g>
-</g>
-</svg>
+
+<svg
+   version="1.1"
+   id="Calque_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 330 315.7"
+   style="enable-background:new 0 0 330 315.7;"
+   xml:space="preserve"
+   sodipodi:docname="Boule_OFFRE_EMPLOI_avec_icone.svg"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs3" /><sodipodi:namedview
+   id="namedview3"
+   pagecolor="#505050"
+   bordercolor="#eeeeee"
+   borderopacity="1"
+   inkscape:showpageshadow="0"
+   inkscape:pageopacity="0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#505050"
+   inkscape:zoom="3.2826897"
+   inkscape:cx="205.01481"
+   inkscape:cy="-14.469842"
+   inkscape:window-width="1920"
+   inkscape:window-height="1051"
+   inkscape:window-x="-9"
+   inkscape:window-y="562"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Calque_1"
+   showguides="true"><sodipodi:guide
+     position="320.5222,273.48068"
+     orientation="1,0"
+     id="guide1"
+     inkscape:locked="false" /><sodipodi:guide
+     position="320.5222,296.74439"
+     orientation="0,-1"
+     id="guide2"
+     inkscape:locked="false" /></sodipodi:namedview>&#10;<style
+   type="text/css"
+   id="style1">&#10;	.st0{fill:#F7C5DA;}&#10;	.st1{fill:#D60B53;}&#10;	.st2{fill:none;stroke:#D60B53;stroke-width:5;stroke-miterlimit:10;}&#10;	.st3{fill:none;}&#10;	.st4{font-family:'Poppins-Medium';}&#10;	.st5{font-size:20px;}&#10;	.st6{fill:#FFFFFF;}&#10;</style>&#10;<circle
+   class="st0"
+   cx="140.2"
+   cy="199.4"
+   r="114"
+   id="circle1" />&#10;<circle
+   class="st1"
+   cx="140.2"
+   cy="185.7"
+   r="100.3"
+   id="circle2" />&#10;<line
+   class="st2"
+   x1="92.9"
+   y1="21.6"
+   x2="121.9"
+   y2="125"
+   id="line2" />&#10;<line
+   class="st2"
+   x1="91.0"
+   y1="22.3"
+   x2="320.5"
+   y2="22.3"
+   id="line3" />&#10;<rect
+   x="111.6"
+   y="2.3"
+   class="st3"
+   width="212.9"
+   height="14.9"
+   id="rect3" />&#10;<text
+   class="st1 st4 st5"
+   id="text3"
+   style="font-size:18.6667px"
+   x="136.92963"
+   y="17.667784"><tspan
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18.6667px;font-family:Arial;-inkscape-font-specification:'Arial Bold'"
+     id="tspan3">OFFRES D’EMPLOIS</tspan></text>&#10;<g
+   transform="translate(25, 0)"
+   id="g3">&#10;	<g
+   id="XMLID_00000120522678454933634580000002936931825721927581_">&#10;		<path
+   id="XMLID_00000100344366704633656750000004505092164290517898_"
+   class="st6"
+   d="M175.4,148.6h-31.8v-19.4    c0-2.6-2.5-4.6-5.7-4.6c-0.4,0-0.7,0-0.9,0.1c-0.4,0-0.6-0.1-0.9-0.1H93.3c-0.1,0-0.2,0-0.4,0c-0.1,0-0.2,0-0.4,0    c-3.2,0-5.7,2-5.7,4.6v19.4H55.2c-5.2,0-9.4,4.2-9.4,9.4v42.7c0,5.1,3.9,9.1,8.9,9.4v34.1c0,5.2,3.8,9.4,8.5,9.4h104.2    c4.7,0,8.5-4.2,8.5-9.4v-34.1c5-0.4,8.9-4.4,8.9-9.4v-42.6C184.8,152.9,180.6,148.6,175.4,148.6z M91.7,129.6    c0.2-0.1,0.7-0.2,1.2-0.2c0.1,0,0.2,0,0.4,0h0.1h42.7c0.1,0,0.2,0,0.4,0c0.4,0.1,0.7,0.1,1.1,0c0.6-0.1,1.2,0,1.5,0.1v23.4    c-0.2,0.1-0.5,0.2-0.9,0.2c-0.5,0-0.8-0.1-0.9-0.2V135c0-1.3-1.1-2.4-2.4-2.4H95.9c-1.3,0-2.4,1.1-2.4,2.4V153    c-0.2,0.1-0.5,0.2-0.9,0.2c-0.5,0-0.8-0.1-0.9-0.2V129.6z M132.3,137.4v11.2h-34v-11.3h34V137.4z M171.2,244.5    c0,2.6-1.7,4.7-3.8,4.7H63.1c-2.1,0-3.8-2.1-3.8-4.7v-34.1h37.1v4.4c0,5.2,4.2,9.4,9.4,9.4h16.9c5.2,0,9.4-4.2,9.4-9.4v-4.4H171    v34.1H171.2z M101.2,214.6v-13.3c0-2.6,2.1-4.7,4.7-4.7h16.9c2.6,0,4.7,2.1,4.7,4.7v13.3c0,2.6-2.1,4.7-4.7,4.7H106    C103.4,219.3,101.2,217.2,101.2,214.6z M180.1,200.8c0,2.6-2.1,4.7-4.7,4.7h-43.1v-4.4c0-5.2-4.2-9.4-9.4-9.4H106    c-5.2,0-9.4,4.2-9.4,9.4v4.4H55.2c-2.6,0-4.7-2.1-4.7-4.7v-42.6c0-2.6,2.1-4.7,4.7-4.7H87c0.1,2.5,2.5,4.5,5.7,4.5    c3.1,0,5.5-1.9,5.7-4.5h34c0.1,2.5,2.5,4.5,5.7,4.5c3.1,0,5.5-1.9,5.7-4.5h31.8c2.6,0,4.7,2.1,4.7,4.7    C180.1,158.2,180.1,200.8,180.1,200.8z" />&#10;		<path
+   id="XMLID_00000088821992420426563790000000502397695128062371_"
+   class="st6"
+   d="M114.5,216.3c4.6,0,8.3-3.8,8.3-8.3    c0-4.6-3.8-8.3-8.3-8.3c-4.5,0-8.3,3.8-8.3,8.3C106.1,212.5,109.9,216.3,114.5,216.3z M114.5,202c3.3,0,5.9,2.7,5.9,5.9    c0,3.3-2.7,5.9-5.9,5.9c-3.3,0-5.9-2.7-5.9-5.9C108.4,204.7,111.2,202,114.5,202z" />&#10;	</g>&#10;</g>&#10;</svg>
