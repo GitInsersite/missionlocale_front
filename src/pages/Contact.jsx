@@ -53,12 +53,13 @@ function Contact() {
           </h2>
           <div className="flex justify-between w-[80%] mt-2 mb-2">
             <Link to="#" className="transition-all duration-500 hover:scale-110 hover:text-blue-500"><FaLinkedin className="w-8 h-8 md:w-10 md:h-10"/></Link>
-            <Link to="#" className="transition-all duration-500 hover:scale-110 hover:text-blue-500"><FaFacebook className="w-8 h-8 md:w-10 md:h-10"/></Link>
             <Link to="#" className="instagram"><TiSocialInstagramCircular className="w-8 h-8 md:w-10 md:h-10"/></Link>
+            <Link to="#" className="transition-all duration-500 hover:scale-110 hover:text-blue-500"><FaFacebook className="w-8 h-8 md:w-10 md:h-10"/></Link>
+            
           </div>
         </div>
         {isLaptopOrLarger ? (<div className="flex flex-col items-center mx-4 rounded-lg mb-4 w-[90%]">
-        <img src="/carte_mission_locale_mureaux.svg" alt="" />
+        <img src="/carte_mission_locale_mureaux2.svg" alt="carte du réseau de la mission locale des Mureaux" />
         </div>) : ("")}
       </div>
     </div>

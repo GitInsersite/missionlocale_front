@@ -33,9 +33,10 @@ function NosCommunes() {
           </h1>
           <div className="flex justify-center">
             <img
-              src="carte_mission_locale_mureaux.svg"
-              alt=""
-              className="h-[500px]"
+              src="carte_mission_locale_mureaux2.svg"
+              alt="carte du réseau de la mission locale des Mureaux"
+              title="carte du réseau de la mission locale des Mueaux"
+              className="w-3/4"
             />
           </div>
         </div>
@@ -59,24 +60,23 @@ function NosCommunes() {
                 <li>Aubergenville</li>
                 <li>Bouafle</li>
                 <li>Brueil-En-Vexin</li>
-                <li>Ecquevilly</li>
+                <li>Evecquemont</li>
               </ul>
               <ul>
-                <li>Evecquemont</li>
                 <li>Flins Sur Seine</li>
                 <li>Gaillon-Sur-Montcient</li>
                 <li>Hardricourt</li>
                 <li>Jambville</li>
-              </ul>
-              <ul>
                 <li>Juziers</li>
+              </ul>              <ul>
                 <li>Lainville</li>
                 <li>Les Mureaux</li>
                 <li>Meulan En Yvelines</li>
                 <li>Mézy-Sur-Seine</li>
+                <li>Montalet Le Bois</li>
               </ul>
               <ul>
-                <li>Montalet Le Bois</li>
+
                 <li>Nézel</li>
                 <li>Oinville-Sur-Montcient</li>
                 <li>Tessancourt Sur Aubette</li>

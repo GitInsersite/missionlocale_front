@@ -90,7 +90,7 @@ function ConnexionEntreprise() {
               </button>
             </form>
           </div>
-          <div className="flex justify-between px-4 rounded-lg mb-4 pt-2 w-[90%]">
+          <div className="flex justify-center px-4 rounded-lg mb-4 pt-2 w-[90%]">
             <Link
               onClick={() => window.scrollTo(0, 0)}
               to="/pre-inscription-entreprise"
@@ -98,13 +98,13 @@ function ConnexionEntreprise() {
             >
               Créer un compte
             </Link>
-            <Link
+            {/* <Link
               onClick={() => window.scrollTo(0, 0)}
               to="/mot-de-passe-oublie-entreprise"
               className="font-bold text-sm border-b-2 border-black w-[45%] sm:w-fit"
             >
               Mot de passe oublié
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
