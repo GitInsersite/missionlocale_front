@@ -170,7 +170,7 @@ function Statistiques() {
             <p className="text-center leading-tight text-xs flex justify-center">
               JEUNES
               <br />
-              FORMATION
+              EN FORMATION
             </p>
           </div>
           <div className="mt-10 flex-col justify-center items-center">
@@ -188,7 +188,7 @@ function Statistiques() {
               {currentNumber3.toLocaleString()}
             </p>
             <p className="text-center leading-tight text-xs flex justify-center">
-              ENTRETIEN
+              ENTRETIENS
               <br />
               ET ATELIERS
             </p>

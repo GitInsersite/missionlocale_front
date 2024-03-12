@@ -79,9 +79,9 @@ function Ateliers() {
                 <h3 className="font-bold my-1 overflow-x-auto">
                   {atelier.title}
                 </h3>
-                <p className="text-[#95c11f] text-sm p-4">
+                {/* <p className="text-[#95c11f] text-sm p-4">
                   {new Date(atelier.created_at).toLocaleDateString()}
-                </p>
+                </p> */}
                 {/* Replace 'date' with the actual property name from your API response
                 <p className="mb-1 md:mb-4 overflow-hidden break-words">
                   {atelier.description}

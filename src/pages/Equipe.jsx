@@ -87,15 +87,7 @@ function Equipe() {
         </div>
       </div>
       <div className="flex flex-col items-center md:items-start md:px-14 lg:px-20 xl:px-52">
-        <div className="pt-4">
-          <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
-            <span className="border-b-2 border-[#A4195C] pb-[0.5px]">POLE</span>{" "}
-            TECHNIQUE
-          </h2>
-          <div className="lg:grid lg:grid-cols-3 xl:grid-cols-5">
-            {renderMembers(equipeData.technique)}
-          </div>
-        </div>
+        <br />
       </div>
       <div className="py-4 flex justify-center items-center md:items-start md:justify-start md:px-14 lg:px-20 xl:px-52">
         {/* <img src={photo} alt="Equipe Image" className="w-[80%] " /> */}
