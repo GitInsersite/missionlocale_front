@@ -1,34 +1,77 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Generator: Adobe Illustrator 27.8.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 294.3 315.7" style="enable-background:new 0 0 294.3 315.7;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#FBE0B8;}
-	.st1{fill:#F39204;}
-	.st2{fill:none;stroke:#F39204;stroke-width:5;stroke-miterlimit:10;}
-	.st3{fill:none;}
-	.st4{font-family:'Poppins-Medium';}
-	.st5{font-size:20px;}
-	.st6{fill:#FFFFFF;}
-</style>
-<circle class="st0" cx="178.8" cy="200.4" r="114"/>
-<circle class="st1" cx="178.8" cy="186.6" r="100.3"/>
-<line class="st2" x1="190" y1="18.5" x2="177.5" y2="121.8"/>
-<line class="st2" x1="1.6" y1="20.7" x2="187.6" y2="20.7"/>
-<rect x="2.9" y="0.7" class="st3" width="176.4" height="14.9"/>
-<text transform="matrix(1 0 0 1 2.8691 15.4659)" class="st1 st4 st5">NOS FORMATIONS</text>
-<g>
-	<g id="XMLID_00000034807834349767432700000013867341329473551528_">
-		<path id="XMLID_00000042728815000349746980000012572871508176065454_" class="st6" d="M118.1,190.5c-3.1,0.6-5.3,3.4-5.3,6.7
-			c0,1.5,0.5,3,1.4,4.1l-2.9,16.9c-0.1,0.7,0.1,1.5,0.5,2c0.5,0.6,1.1,0.9,1.9,0.9h11.7c0.7,0,1.4-0.2,1.9-0.9
-			c0.5-0.5,0.7-1.2,0.6-2l-2.5-17.5c0.6-1,1-2.2,1-3.5c0-2.5-1.4-4.6-3.2-5.8v-9.1l15.4,6.7v38.1c0,4.7,3.8,8.6,8.6,8.6h70
-			c4.7,0,8.6-3.8,8.6-8.6v-40.6l36.5-15.9c1-0.4,1.5-1.4,1.5-2.4s-0.7-1.9-1.7-2.2l-83.1-28.4c-0.5-0.2-1.1-0.1-1.7,0
-			c-28.4,10.8-75.1,28-79.4,28.3c-1.1,0-2.2,0.9-2.4,2c-0.2,1.1,0.4,2.4,1.5,2.7l21.6,9.4v10.4H118.1z M116.6,216l2.6-15.1
-			c0.1-0.9-0.1-1.7-0.9-2.4c-0.4-0.4-0.6-0.9-0.6-1.4c0-1,0.9-1.9,1.9-1.9s1.9,0.9,1.9,1.9c0,0.6-0.2,1-0.5,1.2
-			c-0.5,0.5-0.7,1.2-0.6,2l2.1,15.8h-5.8V216z M220.4,226.9c0,2-1.6,3.6-3.6,3.6h-70c-2,0-3.6-1.6-3.6-3.6v-36l34.9,15.1
-			c0.4,0.1,0.6,0.2,1,0.2c0.4,0,0.6-0.1,1-0.2l40.2-17.5v38.3H220.4z M105,168.9c17.9-5.6,61-21.8,72.8-26.3l76.2,26.1l-74.8,32.5
-			l-49.5-21.5l41.8-5.6c1.9,1.1,4.6,1.9,7.7,1.9c5.7,0,10.1-2.2,10.1-5.3c0-3-4.3-5.3-10.1-5.3c-5,0-8.8,1.7-9.8,4.1l-48.4,6.5
-			L105,168.9z M171.5,170.7c0-1.1,3-2.9,7.6-2.9c4.6,0,7.6,1.7,7.6,2.9s-3,2.9-7.6,2.9C174.5,173.5,171.5,171.8,171.5,170.7z"/>
-	</g>
-</g>
-</svg>
+
+<svg
+   version="1.1"
+   id="Calque_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 294.3 315.7"
+   style="enable-background:new 0 0 294.3 315.7;"
+   xml:space="preserve"
+   sodipodi:docname="Boule_FORMATION_avec_icone.svg"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs3" /><sodipodi:namedview
+   id="namedview3"
+   pagecolor="#505050"
+   bordercolor="#eeeeee"
+   borderopacity="1"
+   inkscape:showpageshadow="0"
+   inkscape:pageopacity="0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#505050"
+   inkscape:zoom="2.6027864"
+   inkscape:cx="147.14999"
+   inkscape:cy="157.33139"
+   inkscape:window-width="1920"
+   inkscape:window-height="1051"
+   inkscape:window-x="-9"
+   inkscape:window-y="562"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Calque_1" />&#10;<style
+   type="text/css"
+   id="style1">&#10;	.st0{fill:#FBE0B8;}&#10;	.st1{fill:#F39204;}&#10;	.st2{fill:none;stroke:#F39204;stroke-width:5;stroke-miterlimit:10;}&#10;	.st3{fill:none;}&#10;	.st4{font-family:'Poppins-Medium';}&#10;	.st5{font-size:20px;}&#10;	.st6{fill:#FFFFFF;}&#10;</style>&#10;<circle
+   class="st0"
+   cx="178.8"
+   cy="200.4"
+   r="114"
+   id="circle1" />&#10;<circle
+   class="st1"
+   cx="178.8"
+   cy="186.6"
+   r="100.3"
+   id="circle2" />&#10;<line
+   class="st2"
+   x1="190"
+   y1="18.5"
+   x2="177.5"
+   y2="121.8"
+   id="line2" />&#10;<line
+   class="st2"
+   x1="1.6"
+   y1="20.7"
+   x2="187.6"
+   y2="20.7"
+   id="line3" />&#10;<rect
+   x="2.9"
+   y="0.7"
+   class="st3"
+   width="176.4"
+   height="14.9"
+   id="rect3" />&#10;<text
+   class="st1 st4 st5"
+   id="text3"
+   style="font-size:18.6667px"
+   x="0.94808179"
+   y="16.618511"><tspan
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18.6667px;font-family:Arial;-inkscape-font-specification:'Arial Bold'"
+     id="tspan3">FORMATIONS</tspan></text>&#10;<g
+   id="g3">&#10;	<g
+   id="XMLID_00000034807834349767432700000013867341329473551528_">&#10;		<path
+   id="XMLID_00000042728815000349746980000012572871508176065454_"
+   class="st6"
+   d="M118.1,190.5c-3.1,0.6-5.3,3.4-5.3,6.7    c0,1.5,0.5,3,1.4,4.1l-2.9,16.9c-0.1,0.7,0.1,1.5,0.5,2c0.5,0.6,1.1,0.9,1.9,0.9h11.7c0.7,0,1.4-0.2,1.9-0.9    c0.5-0.5,0.7-1.2,0.6-2l-2.5-17.5c0.6-1,1-2.2,1-3.5c0-2.5-1.4-4.6-3.2-5.8v-9.1l15.4,6.7v38.1c0,4.7,3.8,8.6,8.6,8.6h70    c4.7,0,8.6-3.8,8.6-8.6v-40.6l36.5-15.9c1-0.4,1.5-1.4,1.5-2.4s-0.7-1.9-1.7-2.2l-83.1-28.4c-0.5-0.2-1.1-0.1-1.7,0    c-28.4,10.8-75.1,28-79.4,28.3c-1.1,0-2.2,0.9-2.4,2c-0.2,1.1,0.4,2.4,1.5,2.7l21.6,9.4v10.4H118.1z M116.6,216l2.6-15.1    c0.1-0.9-0.1-1.7-0.9-2.4c-0.4-0.4-0.6-0.9-0.6-1.4c0-1,0.9-1.9,1.9-1.9s1.9,0.9,1.9,1.9c0,0.6-0.2,1-0.5,1.2    c-0.5,0.5-0.7,1.2-0.6,2l2.1,15.8h-5.8V216z M220.4,226.9c0,2-1.6,3.6-3.6,3.6h-70c-2,0-3.6-1.6-3.6-3.6v-36l34.9,15.1    c0.4,0.1,0.6,0.2,1,0.2c0.4,0,0.6-0.1,1-0.2l40.2-17.5v38.3H220.4z M105,168.9c17.9-5.6,61-21.8,72.8-26.3l76.2,26.1l-74.8,32.5    l-49.5-21.5l41.8-5.6c1.9,1.1,4.6,1.9,7.7,1.9c5.7,0,10.1-2.2,10.1-5.3c0-3-4.3-5.3-10.1-5.3c-5,0-8.8,1.7-9.8,4.1l-48.4,6.5    L105,168.9z M171.5,170.7c0-1.1,3-2.9,7.6-2.9c4.6,0,7.6,1.7,7.6,2.9s-3,2.9-7.6,2.9C174.5,173.5,171.5,171.8,171.5,170.7z" />&#10;	</g>&#10;</g>&#10;</svg>
