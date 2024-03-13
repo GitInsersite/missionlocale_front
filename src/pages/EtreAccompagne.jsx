@@ -43,13 +43,13 @@ function EtreAccompagne() {
       </div>
       </div>
       
-      <div className="breadcrumb px-4 pt-4  md:px-14 lg:px-20 xl:px-52">
+      <div className="breadcrumb px-4 pt-4  md:px-14 lg:px-20 xl:px-52 mt-14">
         <a className="hover:text-[#D70B52]" href="/">Accueil</a> {'>'}
         <a className="hover:text-[#D70B52]" href="/Services"> Services</a> {'>'}
         <a className="hover:text-[#D70B52]" href="/Etreaccompagne"> Etre accompagné</a>
       </div> 
       
-      <section>
+      <section className="mt-14">
       <div className="container_acc">
         <div className="carte" style={{ '--clr': '#ff0066' }}>
           <div className="imgBx">

@@ -66,12 +66,12 @@ function TrouverUnEmploi() {
         <h1 className="md:text-3xl">TROUVER UN EMPLOI</h1>
       </div>
 
-      <div className="breadcrumb px-4 pt-4  md:px-14 lg:px-20 xl:px-52">
+      <div className="breadcrumb px-4 pt-4  md:px-14 lg:px-20 xl:px-52 mt-14">
         <a className="hover:text-[#D70B52]" href="/">Accueil</a> {'>'}
         <a className="hover:text-[#D70B52]" href="/Services"> Services</a> {'>'}
         <a className="hover:text-[#D70B52]" href="/Etreaccompagne"> Trouver un emploi</a>
       </div> 
-      <section>
+      <section className="mt-14">
       <div className="bloc">
         <div className="carte" style={{ '--clr': '#ff0066' }}>
           <div className="imgBxe">
@@ -81,7 +81,7 @@ function TrouverUnEmploi() {
           <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">    
           LA MISSION LOCALE T'ACCOMPAGNE VERS
           
-          <span className="border-b-2 border-[#D60B52] pb-[0.5px]">{" "}
+          <span className="border-b-2 border-[#D60B52] pb-[0.5px] ">{" "}
            L'EMPLOI
            </span>
 
@@ -95,7 +95,7 @@ N’hésite donc pas à prendre rendez-vous avec ton conseiller si tu es à la r
               
             </p>
             <div className="rdv">
-            <Link to="/connexion-jeune"  >PRENDRE RDV AVEC UN CONSEILLER</Link>
+            <Link to={{ pathname: "/connexion-jeune", state: {showMessage: true } }}  >PRENDRE RDV AVEC UN CONSEILLER</Link>
 </div>
 
           </div>

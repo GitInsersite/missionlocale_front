@@ -13,7 +13,7 @@ function NosCommunes() {
         <h1 className="md:text-3xl">NOS COMMUNES</h1>
       </div>{" "}
       <br />
-      <div className=" breadcrumb px-4 pt-4  md:px-14 lg:px-10 xl:px-56">
+      <div className=" breadcrumb px-4 pt-4 md:px-14 lg:px-10 xl:px-56 ">
         <a href="/">Accueil</a> {">"}
         <a href="/"> La Mission Locale </a>
         {">"}
@@ -53,7 +53,7 @@ function NosCommunes() {
         </div>
         <div className="md:w-full md:px-14 md:pr-28 md:flex md:flex-col lg:pr-36 lg:px-20">
           {isLaptopOrLarger ? (
-            <div className="font-medium md:flex md:justify-between">
+            <div className=" font-light md:flex md:justify-between">
               <ul>
                 <li>Aulnay Sur Mauldre</li>
                 <li>Aubergenville</li>

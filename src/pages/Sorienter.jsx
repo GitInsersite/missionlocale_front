@@ -67,7 +67,7 @@ function Sorienter() {
         <a className="hover:text-[#D70B52]" href="/Etreaccompagne"> S'orienter</a>
       </div> 
       
-        <section>
+        <section className=' mb-11 mt-14'>
         <div className={`bloc_orient ${isClicked ? "transition-transform duration-500 transform translate-y-10" : ""}`}>
         <div className="carte" style={{ '--clr': '#ff0066' }}>
           <div className="imgBx">
