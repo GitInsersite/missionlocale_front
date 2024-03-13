@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: http://missionlocale-lesmureaux.fr/sitemap.xml
