@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function Expertise() {
   const [error, setError] = useState(null);
@@ -43,7 +44,7 @@ function Expertise() {
       </div>
       <br />
 
-      <div className="breadcrumb px-4 pt-4 md:px-14 lg:px-20 xl:px-52">
+      <div className="breadcrumb px-4 pt-4 md:px-14 lg:px-20 xl:px-52 mt-14 mb-10">
         <a href="/">Accueil</a> {">"}
         <a href="/"> Entreprise </a>
         {">"}
@@ -54,18 +55,18 @@ function Expertise() {
       </div>
 
       <div className="flex flex-col pl-4 p-4 md:px-14 lg:px-20 xl:px-52">
-        <p className="mb-6">
+        <p className="mb-10">
           L’entreprise est au cœur de notre projet. La Mission Locale s’engage à
           vos côtés, vous accompagne et vous conseille au quotidien grâce à
           l’expertise de nos chargés de relations entreprises!
         </p>
-        <p className="mb-6">
+        <p className="mb-10">
           En tant que membre service public de l’emploi, la Mission Locale vous
           offre un service sur mesure pour répondre à l’ensemble de vos besoins
           tels que le recrutement de jeunes talents mais aussi la mise en œuvre
           de votre politique RSE.
         </p>
-        <p className="mb-6">
+        <p className="mb-10 ">
           Vous avez besoin d’échanger sur le profil de poste adapté à votre
           organisation, d’avoir des informations sur les mesures d’aide à
           l’embauche (contrats aidés, alternance…), d’organiser une session de
@@ -76,12 +77,12 @@ function Expertise() {
         {/* Display error message */}
         {success && <div className="text-green-500">{success}</div>}{" "}
         {/* Display success message */}
-        <button
+        <Link to="/connexion-entreprise"
           onClick={handleInscription}
-          className="bg-[#F29200] text-white font-semibold py-1 px-3 text-center rounded-lg text-sm mb-6 md:w-64  hover:bg-orange-500 transition-all duration-300"
+          className="bg-[#F29200] text-white font-semibold py-1 px-3 text-center rounded-lg text-sm mb-28 mt-16 md:w-64  hover:bg-orange-500 transition-all duration-300 "
         >
           PRENDRE RDV
-        </button>
+        </Link>
       </div>
     </div>
   );
