@@ -94,14 +94,14 @@ function ConnexionEntreprise() {
             <Link
               onClick={() => window.scrollTo(0, 0)}
               to="/pre-inscription-entreprise"
-              className="font-bold text-sm border-b-2 border-black w-[45%] sm:w-fit"
+              className="font-bold text-sm border-b-2 border-black w-[45%] sm:w-fit mt-14 mb-5"
             >
               Créer un compte
             </Link>
             <Link
               onClick={() => window.scrollTo(0, 0)}
               to="/mot-de-passe-oublie-entreprise"
-              className="font-bold text-sm border-b-2 border-black w-[45%] sm:w-fit"
+              className="font-bold text-sm border-b-2 border-black w-[45%] sm:w-fit mt-14 mb-5"
             >
               Mot de passe oublié
             </Link>

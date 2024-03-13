@@ -6,8 +6,8 @@ import { useLocation } from "react-router-dom";
 
 function ConnexionJeune() {
   const { login, successMessage, errorMessage } = useAuth();
-
   const location = useLocation();
+  const showMessage = location.state?.showMessage;
   const isRedirectedFromSorienter = location.search.includes("redirectFrom=sorienter");
 
 
@@ -98,19 +98,22 @@ function ConnexionJeune() {
                 SE CONNECTER
               </button>
             </form>
+            <div>
+            {showMessage && <p>Connectez-vous pour prendre un rendez-vous avec un conseiller.</p>}
+            </div>
           </div>
           <div className="flex justify-between px-4 rounded-lg mb-4 pt-2 w-[90%]">
             <Link
               onClick={() => window.scrollTo(0, 0)}
               to="/pre-inscription"
-              className="font-bold text-sm border-b-2 border-black w-[45%] sm:w-fit"
+              className="font-bold text-sm border-b-2 border-black w-[45%] sm:w-fit mt-14 m-5"
             >
               Créer un compte
             </Link>
             <Link
               onClick={() => window.scrollTo(0, 0)}
               to="/mot-de-passe-oublie"
-              className="font-bold text-sm border-b-2 border-black w-[45%] sm:w-fit"
+              className="font-bold text-sm border-b-2 border-black w-[45%] sm:w-fit mt-14 mb-5"
             >
               Mot de passe oublié
             </Link>
