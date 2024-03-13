@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 function UnAtelier() {
   const [atelier, setAtelier] = useState(null);
@@ -81,12 +81,12 @@ function UnAtelier() {
           <p className="mb-4 px-2 py-3 overflow-hidden break-words">{atelier.description}</p>
           {error && <div className="text-red-500">{error}</div>} {/* Display error message */}
           {success && <div className="text-green-500">{success}</div>} {/* Display success message */}
-          <button
+          <Link to="/connexion-jeune"
             onClick={handleInscription}
             className="bg-[#95c11f] text-white py-1 px-2 text-center rounded-xl text-sm mb-6 w-[55%] md:w-56"
           >
             S&apos;inscrire à l&apos;atelier
-          </button>
+          </Link>
         </div>
         <div className="flex mb-6 md:justify-start md:items-center md:w-[90%] md:ml-4">
           <div className=" w-[40%] md:w-fit md:mr-4">
