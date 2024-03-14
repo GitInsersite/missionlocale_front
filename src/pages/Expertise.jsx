@@ -11,26 +11,26 @@ function Expertise() {
       ? import.meta.env.VITE_API_URL_PROD
       : import.meta.env.VITE_API_URL_DEV;
 
-  const handleInscription = () => {
-    // Make API call to register for the workshop
-    const registrationUrl = `${apiUrlEnv}/api/notifierConseillerFormulaire`;
+  // const handleInscription = () => {
+  //   // Make API call to register for the workshop
+  //   const registrationUrl = `${apiUrlEnv}/api/notifierConseillerFormulaire`;
 
-    axios
-      .post(registrationUrl)
-      .then((response) => {
-        console.log("Registration Response:", response);
-        // Handle success, e.g., show a success message or update the UI
-        setSuccess(response.data.success || "Registration successful.");
-      })
-      .catch((error) => {
-        console.error("Error registering for the workshop:", error);
-        // Handle error, e.g., show an error message to the user
-        // Set the error state to display the error message
-        setError(
-          error.response.data.error || "An error occurred while registering."
-        );
-      });
-  };
+  //   axios
+  //     .post(registrationUrl)
+  //     .then((response) => {
+  //       console.log("Registration Response:", response);
+  //       // Handle success, e.g., show a success message or update the UI
+  //       setSuccess(response.data.success || "Registration successful.");
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error registering for the workshop:", error);
+  //       // Handle error, e.g., show an error message to the user
+  //       // Set the error state to display the error message
+  //       setError(
+  //         error.response.data.error || "An error occurred while registering."
+  //       );
+  //     });
+  // };
 
   return (
     <div>
@@ -76,12 +76,12 @@ function Expertise() {
         {/* Display error message */}
         {success && <div className="text-green-500">{success}</div>}{" "}
         {/* Display success message */}
-        <button
+        {/* <button
           onClick={handleInscription}
           className="bg-[#F29200] text-white font-semibold py-1 px-3 text-center rounded-lg text-sm mb-6 md:w-64  hover:bg-orange-500 transition-all duration-300"
         >
           PRENDRE RDV
-        </button>
+        </button> */}
       </div>
     </div>
   );
