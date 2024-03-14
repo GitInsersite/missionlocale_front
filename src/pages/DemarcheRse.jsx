@@ -9,19 +9,32 @@ function DemarcheRse() {
       >
         <h1 className="md:text-3xl">S’engager dans une démarche RSE </h1>
       </div>
-      
+
       <br />
-      
+
       <div className="breadcrumb px-4 pt-4  md:px-14 lg:px-20 xl:px-52">
-       <a className="" href="/">Accueil</a> {'>'}
-        <a className="" href="/"> Entreprise </a>{'>'}
-        <a className="text-[#F29200]" href="/demarche-rse"> S'engager dans une démarche RSE</a>
-        </div>
+        <a className="" href="/">
+          Accueil
+        </a>{" "}
+        {">"}
+        <a className="" href="/">
+          {" "}
+          Entreprise{" "}
+        </a>
+        {">"}
+        <a className="text-[#F29200]" href="/demarche-rse">
+          {" "}
+          S'engager dans une démarche RSE
+        </a>
+      </div>
 
       <div className="flex flex-col pl-4 p-4 md:px-14 lg:px-20 xl:px-52">
         <h2 className="mb-6 font-bold text-black text-lg md:text-2xl">
-        <span className="border-b-2 border-[#F29200] pb-[0.5px]">La Mission</span>{" "}Locale conseille les entreprises dans la mise en place
-          d’une politique RSE, notamment au niveau de l’emploi des jeunes
+          <span className="border-b-2 border-[#F29200] pb-[0.5px]">
+            La Mission
+          </span>{" "}
+          Locale conseille les entreprises dans la mise en place d’une politique
+          RSE, notamment au niveau de l’emploi des jeunes
         </h2>
         <p className="mb-6">
           La Responsabilité Sociale et Environnementale est l’application d’une
@@ -33,7 +46,7 @@ function DemarcheRse() {
         <h3 className="leading-tight">
           La RSE se traduit par un comportement éthique et transparent qui :
         </h3>
-        <ul className="mb-6 mt-6 leading-tight">
+        <ul className="mb-6 mt-6 leading-tight space-y-4">
           <li>
             - Contribue au développement durable, y compris à la santé et au
             bien-être de la société.
