@@ -56,8 +56,12 @@ function Footer() {
           <div className="md:w-[20%] md:pr-4 text-white pb-4 mb-2 md:pb-0">
             <ul  className="text-start text-white text-sm">
               <li><h2 className="font-bold md:mb-2">NOUS CONTACTER</h2></li>
-              <li className="text-white text-sm md:mb-2">contact@mureaux-mlidf.org</li>
-              <li className="text-white text-sm md:mb-3">01.30.91.21.50</li>
+              <li className="text-white text-sm md:mb-2">
+                <a href="mailto:contact@mureaux-mlidf.org" className="text-white">contact@mureaux-mlidf.org</a>
+                </li>
+              <li className="text-white text-sm md:mb-3">
+                <a href="tel:01-30-91-21-50" className="text-white">01.30.91.21.50</a>
+              </li>
             </ul>
             
             <ul   className=" mt-2 text-start text-white text-sm">
