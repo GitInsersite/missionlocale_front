@@ -8,14 +8,14 @@ function Footer() {
     <>
       <div>
         <div className="bg-[#252323] px-8 pb-8 pt-8 md:flex xl:px-52 justify-between">
-          <div className="md:w-[20%] overflow-x-auto md:pr-4 text-white pb-4 mr-4 md:pb-0">
+          <div className="md:w-[30%] overflow-x-auto md:pr-4 text-white pb-4 mr-4 md:pb-0">
             <ul className=" pr-8 text-start text-white text-sm">
               <li className="text-white text-sm md:mb-2">
                 <Link to="" onClick={() => window.scrollTo(0, 0)}>
                   <img
                     src="/logo1.png"
                     alt="logo mission locale des Mureaux"
-                    className="bg-white rounded-lg mb-6 "
+                    className="bg-white rounded-lg mb-6 w-60 h-auto"
                   />
               </Link>
               </li>
@@ -46,7 +46,7 @@ function Footer() {
 
           <div className="md:w-[20%] md:pr-4 text-white pb-4 mb-2 md:pb-0">
             <ul  className="text-start text-white text-sm">
-              <li><h2 className="justify-start text-white font-bold mb-2  md:mb-4">HORAIRES D&apos;OUVERTURE:</h2></li>
+              <li><h2 className="justify-start text-white font-bold mb-2  md:mb-4">HORAIRES D&apos;OUVERTURE</h2></li>
               <li>Du Lundi au Vendredi</li>
               <li>De 08H45 à 12H15</li>
               <li>De 13H30 à 17H30</li>
@@ -55,7 +55,7 @@ function Footer() {
 
           <div className="md:w-[20%] md:pr-4 text-white pb-4 mb-2 md:pb-0">
             <ul  className="text-start text-white text-sm">
-              <li><h2 className="font-bold md:mb-2">NOUS CONTACTER :</h2></li>
+              <li><h2 className="font-bold md:mb-2">NOUS CONTACTER</h2></li>
               <li className="text-white text-sm md:mb-2">contact@mureaux-mlidf.org</li>
               <li className="text-white text-sm md:mb-3">01.30.91.21.50</li>
             </ul>
@@ -84,12 +84,12 @@ function Footer() {
           <div className="md:w-[20%] md:pr-4 text-white pb-4 mb-2 md:pb-0">
             <ul className="text-start text-white text-sm">
               <li>
-                <h2 className="font-bold md:mb-2">NOUS LOCALISER :</h2></li>
+                <h2 className="font-bold md:mb-2">NOUS LOCALISER</h2></li>
               <li>
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2618.0406529566458!2d1.9105878751635066!3d48.9907837913822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6928ec8766197%3A0x4a462aa9e0eb44c3!2s38%20Av.%20Paul%20Raoult%2C%2078130%20Les%20Mureaux!5e0!3m2!1sfr!2sfr!4v1699452035578!5m2!1sfr!2sfr"
                   style={{ width: "", height: "" }}
-                  className=" my-4  mr-8 rounded-lg"
+                  className=" my-4  mr-8 rounded-lg mb-6 sm:min-w-1/4 sm:max-w-1/2 md:w-full"
                 ></iframe>
               </li>
             </ul>
