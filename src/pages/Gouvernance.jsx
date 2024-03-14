@@ -174,18 +174,6 @@ function Gouvernance() {
           <p>Les Membres du BUREAU : </p>
           <ul class="flex flex-col items-center md:flex-row md:justify-center">
             <li class="bg-gray-200 py-2 px-4 m-2">
-              Madame BIENSO MATETA Salamata – Présidente
-            </li>
-            <li class="bg-gray-200 py-2 px-4 m-2">
-              Madame OLIVIER Sabine – Vice Présidente
-            </li>
-            <li class="bg-gray-200 py-2 px-4 m-2">
-              Monsieur MEMISOGLU Ergin – Vice Président
-            </li>
-            <li class="bg-gray-200 py-2 px-4 m-2">
-              Madame KOENIG FILISIKA Honorine – Trésorière
-            </li>
-            <li class="bg-gray-200 py-2 px-4 m-2">
               Monsieur MONTEL Bruno – Secrétaire
             </li>
           </ul>
@@ -245,19 +233,19 @@ function Gouvernance() {
             2021
           </button>
           <button
-            className="py-2 bg-[#2997D6] mb-6 px-6 rounded-xl text-white md:px-8 md:py-2 md:mb-4 md:mr-4"
+            className="py-2 bg-[#2997D6] mb-4 px-6 rounded-xl text-white md:px-8 md:py-2 md:mb-4 md:mr-4"
             onClick={handleDownload20}
           >
             2020
           </button>
           <button
-            className="py-2 bg-[#95C221] mb-6 px-6 rounded-xl text-white md:px-8 md:py-2 md:mb-4 md:mr-4"
+            className="py-2 bg-[#95C221] mb-4 px-6 rounded-xl text-white md:px-8 md:py-2 md:mb-4 md:mr-4"
             onClick={handleDownload19}
           >
             2019
           </button>
           <button
-            className="py-2 bg-[#F29200] mb-6 px-6 rounded-xl text-white md:px-8 md:py-2 md:mb-4"
+            className="py-2 bg-[#F29200] mb-4 px-6 rounded-xl text-white md:px-8 md:py-2 md:mb-4"
             onClick={handleDownload18}
           >
             2018
