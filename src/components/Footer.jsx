@@ -35,7 +35,7 @@ function Footer() {
           <div className="md:w-[20%] md:pr-4 text-white pb-4 mb-2 md:pb-0">
             <ul className="text-start text-white text-sm">
               <li><h2 className="justify-start text-white font-bold mb-2 md:mb-4">ACCÈS RAPIDE</h2></li>
-              <li><Link to=""className="cursor-pointer"onClick={() => window.scrollTo(0, 0)}>Mission Locale</Link></li>
+              <li><Link to="/"className="cursor-pointer"onClick={() => window.scrollTo(0, 0)}>Mission Locale</Link></li>
               <li><Link to="/se-former" onClick={() => window.scrollTo(0, 0)}>Services</Link></li>
               <li><Link to="/actualites" onClick={() => window.scrollTo(0, 0)}>Actualités</Link></li>
               <li><Link to="/ateliers" onClick={() => window.scrollTo(0, 0)}>Ateliers</Link></li>

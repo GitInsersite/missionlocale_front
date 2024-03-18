@@ -111,107 +111,111 @@ function Statistiques() {
         <span className="border-b-2 border-[#DB34C7] pb-[0.5px]">CETT</span>E
         ANNEE A LA MISSION LOCALE
       </h1>
+
+      
       {isTabletOrLarger ? (
-        <div className="mb-4 font-semibold md:grid md:grid-cols-3 md:gap-4 md:w-full md:mb-10 lg:flex lg:justify-between xl:px-10">
-          <div className="mt-10 flex-col justify-center items-center">
-            <div className="flex justify-center pb-4">
-              <img
-                src="JEUNES_ACCOMPAGNÉS.svg"
-                alt=""
-                className="w-12 h-12 flex justify-center"
-              />
-            </div>
-            <p
-              className="flex justify-center pb-4 text-3xl font-bold"
-              style={{ color: "rgba(0, 0, 0, 0.5)" }}
-            >
-              {currentNumber.toLocaleString()}
-            </p>
-            <p className="text-center leading-tight text-xs flex justify-center">
-              JEUNES
-              <br />
-              ACCOMPAGNES
-            </p>
+      <div className="flex flex-row my-8 w-full font-semibold justify-between">
+      <div className="flex flex-col w-1/5">
+        <div>
+          <div className="flex justify-center pb-4">
+            <img
+              src="JEUNES_ACCOMPAGNÉS.svg"
+              alt=""
+              className="w-12 h-12 flex justify-center"
+            />
           </div>
-          <div className="mt-10 flex-col justify-center items-center">
-            <div className="flex justify-center pb-4">
-              <img
-                src="JEUNES_EMPLOI.svg"
-                alt=""
-                className="w-12 h-12 flex justify-center"
-              />
-            </div>
-            <p
-              className="flex justify-center pb-4 text-3xl font-bold"
-              style={{ color: "rgba(0, 0, 0, 0.5)" }}
-            >
-              {currentNumber1.toLocaleString()}
-            </p>
-            <p className="text-center leading-tight text-xs flex justify-center">
-              JEUNES
-              <br />
-              EN EMPLOI
-            </p>
+        </div>
+        <div className="flex justify-center pb-4 text-3xl font-bold" style={{ color: "rgba(0, 0, 0, 0.5)" }}>{currentNumber.toLocaleString()}</div>
+        <div>
+          <div className="text-center leading-tight text-xs flex justify-center">
+            JEUNES
+            <br />
+            ACCOMPAGNES
           </div>
-          <div className="mt-10 flex-col justify-center items-center">
-            <div className="flex justify-center pb-4">
-              <img
-                src="JEUNES_FORMATION.svg"
-                alt=""
-                className="w-12 h-12 flex justify-center"
-              />
-            </div>
-            <p
-              className="flex justify-center pb-4 text-3xl font-bold"
-              style={{ color: "rgba(0, 0, 0, 0.5)" }}
-            >
-              {currentNumber2.toLocaleString()}
-            </p>
-            <p className="text-center leading-tight text-xs flex justify-center">
-              JEUNES
-              <br />
-              EN FORMATION
-            </p>
+        </div>
+      </div>
+      <div className="flex flex-col w-1/5">
+        <div>
+        <div className="flex justify-center pb-4">
+            <img
+              src="JEUNES_EMPLOI.svg"
+              alt=""
+              className="w-12 h-12 flex justify-center"
+            />
           </div>
-          <div className="mt-10 flex-col justify-center items-center">
-            <div className="flex justify-center pb-4">
-              <img
+        </div>
+        <div className="flex justify-center pb-4 text-3xl font-bold"
+            style={{ color: "rgba(0, 0, 0, 0.5)" }}>{currentNumber1.toLocaleString()}</div>
+        <div>
+        <p className="text-center leading-tight text-xs flex justify-center">
+            JEUNES
+            <br />
+            EN EMPLOI
+          </p>
+        </div>
+      </div>
+      <div className="flex flex-col w-1/5">
+        <div>
+        <div className="flex justify-center pb-4">
+            <img
+              src="JEUNES_FORMATION.svg"
+              alt=""
+              className="w-12 h-12 flex justify-center"
+            />
+          </div>
+        </div>
+        <div className="flex justify-center pb-4 text-3xl font-bold"
+            style={{ color: "rgba(0, 0, 0, 0.5)" }}>{currentNumber2.toLocaleString()}
+        </div>
+        <div>
+          <p className="text-center leading-tight text-xs flex justify-center">
+            JEUNES
+            <br />
+            EN FORMATION
+          </p>
+          </div>
+      </div>
+      <div className="flex flex-col w-1/5">
+        <div>
+          <div className="flex justify-center pb-4">
+            <img
                 src="ENTRETIEN_ATELIER.svg"
                 alt=""
                 className="w-12 h-12 flex justify-center"
               />
-            </div>
-            <p
-              className="flex justify-center pb-4 text-3xl font-bold"
-              style={{ color: "rgba(0, 0, 0, 0.5)" }}
-            >
-              {currentNumber3.toLocaleString()}
-            </p>
-            <p className="text-center leading-tight text-xs flex justify-center">
-              ENTRETIENS
-              <br />
-              ET ATELIERS
-            </p>
-          </div>
-          <div className="mt-10 flex-col justify-center items-center">
-            <div className="flex justify-center pb-4">
-              <img
-                src="PARTENAIRES.svg"
-                alt=""
-                className="w-12 h-12 flex justify-center"
-              />
-            </div>
-            <p
-              className="flex justify-center pb-4 text-3xl font-bold"
-              style={{ color: "rgba(0, 0, 0, 0.5)" }}
-            >
-              {currentNumber4.toLocaleString()}
-            </p>
-            <p className="text-center leading-tight text-xs flex justify-center">
-              PARTENAIRES
-            </p>
           </div>
         </div>
+        <div className="flex justify-center pb-4 text-3xl font-bold"
+            style={{ color: "rgba(0, 0, 0, 0.5)" }}>{currentNumber3.toLocaleString()}</div>
+        <div>
+        <p className="text-center leading-tight text-xs flex justify-center">
+            ENTRETIENS
+            <br />
+            ET ATELIERS
+          </p>
+        </div>
+      </div>
+      <div className="flex flex-col w-1/5">
+        <div>
+          <div className="flex justify-center pb-4">
+            <img
+              src="PARTENAIRES.svg"
+              alt=""
+              className="w-12 h-12 flex justify-center"
+            />
+          </div>
+          </div>
+        <div className="flex justify-center pb-4 text-3xl font-bold"
+            style={{ color: "rgba(0, 0, 0, 0.5)" }}>{currentNumber4.toLocaleString()}</div>
+        <div>
+        <p className="text-center leading-tight text-xs flex justify-center">
+            PARTENAIRES
+          </p>
+        </div>
+      </div>
+    </div>
+        
+
       ) : (
         <div className="mb-4 w-full font-semibold md:grid md:grid-cols-3 md:gap-4 md:mb-10 lg:flex lg:justify-between">
           <div className="flex justify-around">
@@ -235,6 +239,7 @@ function Statistiques() {
                 ACCOMPAGNES
               </p>
             </div>
+
             <div className="mt-10 flex-col justify-center items-center">
               <div className="flex justify-center pb-4">
                 <img
@@ -256,6 +261,7 @@ function Statistiques() {
               </p>
             </div>
           </div>
+
           <div className="flex justify-around">
             <div className="mt-10 flex-col justify-center items-center">
               <div className="flex justify-center pb-4">
@@ -277,6 +283,7 @@ function Statistiques() {
                 EN FORMATION
               </p>
             </div>
+
             <div className="mt-10 flex-col justify-center items-center">
               <div className="flex justify-center pb-4">
                 <img
@@ -298,6 +305,7 @@ function Statistiques() {
               </p>
             </div>
           </div>
+          
           <div className="mt-10 flex-col justify-center items-center">
             <div className="flex justify-center pb-4">
               <img
@@ -319,6 +327,8 @@ function Statistiques() {
         </div>
       )}
     </div>
+
+
   );
 }
 
