@@ -112,57 +112,17 @@
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://missionlocale-lesmureaux.fr/LaMissionLocale</loc>
-	<lastmod>2024-03-13T10:54:39+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://missionlocale-lesmureaux.fr/Services</loc>
-	<lastmod>2024-03-13T10:54:39+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
 	<loc>https://missionlocale-lesmureaux.fr/Etreaccompagne</loc>
 	<lastmod>2024-03-13T10:54:39+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://missionlocale-lesmureaux.fr/taxe-pprentissage</loc>
+	<loc>https://missionlocale-lesmureaux.fr/taxe-apprentissage</loc>
 	<lastmod>2024-03-13T10:54:39+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
 	<loc>https://missionlocale-lesmureaux.fr/pre-inscription-entreprise</loc>
-	<lastmod>2024-03-13T10:54:39+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://missionlocale-lesmureaux.fr/mot-de-passe-oublie</loc>
-	<lastmod>2024-03-13T10:54:39+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://missionlocale-lesmureaux.fr/mot-de-passe-oublie-entreprise</loc>
-	<lastmod>2024-03-13T10:54:39+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://missionlocale-lesmureaux.fr/espace-personnel-jeune</loc>
-	<lastmod>2024-03-13T10:54:39+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://missionlocale-lesmureaux.fr/espace-personnel-jeune2</loc>
-	<lastmod>2024-03-13T10:54:39+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://missionlocale-lesmureaux.fr/espace-entreprise</loc>
-	<lastmod>2024-03-13T10:54:39+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://missionlocale-lesmureaux.fr/espace-personnel-entreprise</loc>
 	<lastmod>2024-03-13T10:54:39+01:00</lastmod>
 	<priority>1.0</priority>
 </url>

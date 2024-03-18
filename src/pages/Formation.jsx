@@ -108,7 +108,7 @@ function Formation() {
         </div>
         <div className="border-2 border-[#D70B52] flex flex-col px-4 bg-white rounded-lg mb-4 pt-2 w-[90%]">
           <h2 className="font-semibold text-lg mb-2">
-            OBJETIF DE LA FORMATION
+            OBJECTIF DE LA FORMATION
           </h2>
           <p className="mb-4">{formation.objectives}</p>
         </div>
@@ -119,7 +119,7 @@ function Formation() {
         </div>
         <div className="border-2 border-[#D70B52] flex flex-col px-4 bg-white rounded-lg mb-4 pt-2 w-[90%]">
           <h2 className="font-semibold text-lg mb-2">
-            PROGRAM DE LA FORMATION
+            PROGRAMME DE LA FORMATION
           </h2>
           <p className="mb-4">{formation.program}</p>
         </div>
