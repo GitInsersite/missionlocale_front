@@ -8,7 +8,7 @@ function SlideMenu() {
   
   const slides = [
     {
-      original: "MicrosoftTeams-image4.png",
+      original: "MicrosoftTeams-image4.webp",
       description: (
         <>
           <h1>
@@ -24,7 +24,7 @@ function SlideMenu() {
       },
     },
     {
-      original: "MicrosoftTeams-image2.png",
+      original: "MicrosoftTeams-image2.webp",
       description: (
         <>
           <h1>
@@ -40,7 +40,7 @@ function SlideMenu() {
       },
     },
     {
-      original: "MicrosoftTeams-image3.png",
+      original: "MicrosoftTeams-image3.webp",
       description: (
         <>
           <h1>
@@ -61,7 +61,7 @@ function SlideMenu() {
     <>
       <img
         src="MicrosoftTeams-image.png"
-        alt=""
+        alt="ligne coloree"
         className="h-1 md:h-[5px] xl:h-2 2xl:h-3"
       />
       <div className="relative" style={
@@ -81,7 +81,7 @@ function SlideMenu() {
                 <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
                 <img
                   src={item.original}
-                  alt={item.description}
+                  alt="jeunes souriants"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center text-white">

@@ -21,14 +21,14 @@ function Options() {
               <Link to="/pre-inscription" onClick={() => window.scrollTo(0, 0)}>
                 <img
                   src="Boule_preinscrire_avec_icone.svg"
-                  alt=""
+                  alt="se preinscrire"
                   className="w-36 h-36 lg:w-44 lg:h-44 xl:w-60 xl:h-60 hover:scale-105 transition-transform"
                 />
               </Link>
               <Link to="/offre-emploi" onClick={() => window.scrollTo(0, 0)}>
                 <img
                   src="Boule_OFFRE_EMPLOI_avec_icone.svg"
-                  alt=""
+                  alt="offre d'emploi"
                   className="w-36 h-36 lg:w-44 lg:h-44 xl:w-60 xl:h-60 hover:scale-105 transition-transform"
                 />
               </Link>
@@ -42,14 +42,14 @@ function Options() {
               <Link to="/ateliers" onClick={() => window.scrollTo(0, 0)}>
                 <img
                   src="Boule_ateliers_avec_icone.svg"
-                  alt=""
+                  alt="ateliers"
                   className="w-36 h-36 lg:w-44 lg:h-44 xl:w-60 xl:h-60 hover:scale-105 transition-transform mt-9 lg:mt-11 xl:mt-16"
                 />
               </Link>
               <Link to="/formations" onClick={() => window.scrollTo(0, 0)}>
                 <img
                   src="Boule_FORMATION_avec_icone.svg"
-                  alt=""
+                  alt="formation"
                   className="w-36 h-36 lg:w-44 lg:h-44 xl:w-60 xl:h-60 relative top-[-36px] lg:top-[-45px]  xl:top-[-65px] hover:scale-105 transition-transform"
                 />
               </Link>
@@ -60,7 +60,7 @@ function Options() {
                 <div className="flex-col items-center justify-center mb-4 hover:scale-105 transition-transform">
                   <img
                     src="preinscrire_mobile.svg"
-                    alt=""
+                    alt="se preinscrire"
                     className="w-52 h-52"
                   />
                   <p className="text-center text-[#A4195B] font-bold text-xl">
@@ -70,9 +70,9 @@ function Options() {
               </Link>
               <Link to="/offre-emploi" onClick={() => window.scrollTo(0, 0)}>
                 <div className="flex-col items-center justify-center mb-4 hover:scale-105 transition-transform">
-                  <img src="emploi-mobile.svg" alt="" className="w-52 h-52" />
+                  <img src="emploi-mobile.svg" alt="offre d'emploi" className="w-52 h-52" />
                   <p className="text-center text-[#D60B53] font-bold text-xl">
-                    NOS OFFRES <br /> D&apos;EMPLOIS
+                    NOS OFFRES <br /> D&apos;EMPLOI
                   </p>
                 </div>
               </Link>
@@ -80,7 +80,7 @@ function Options() {
                 <div className="flex-col items-center justify-center mb-4 hover:scale-105 transition-transform">
                   <img
                     src="evenement-mobile.svg"
-                    alt=""
+                    alt="evenement"
                     className="w-52 h-52"
                   />
                   <p className="text-center text-[#2C96D4] font-bold text-xl">
@@ -90,7 +90,7 @@ function Options() {
               </Link>
               <Link to="/ateliers" onClick={() => window.scrollTo(0, 0)}>
                 <div className="flex-col items-center justify-center mb-4 hover:scale-105 transition-transform">
-                  <img src="atelier_mobile.svg" alt="" className="w-52 h-52" />
+                  <img src="atelier_mobile.svg" alt="ateliers" className="w-52 h-52" />
                   <p className="text-center text-[#95C121] font-bold text-xl">
                     NOS ATELIERS
                   </p>
@@ -100,7 +100,7 @@ function Options() {
                 <div className="flex-col items-center justify-center hover:scale-105 transition-transform">
                   <img
                     src="formation_mobile.svg"
-                    alt=""
+                    alt="formation"
                     className="w-52 h-52"
                   />
                   <p className="text-center text-[#F39204] font-bold text-xl">
