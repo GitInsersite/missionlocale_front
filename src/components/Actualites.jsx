@@ -15,10 +15,10 @@ function Actualites({ latestNews }) {
       }
     >
       <div className="mb-4 lg:mb-10">
-        <h1 className="font-bold mb-2 text-2xl lg:text-3xl">
+        <h2 className="font-bold mb-2 text-2xl lg:text-3xl">
           <span className="border-b-2 border-[#87D2F0] pb-[0.5px]">NOS</span>{" "}
           ACTUALITES
-        </h1>
+        </h2>
         <p className="leading-tight"></p>
       </div>
       <div className="flex flex-col items-center md:mb-2">

@@ -83,10 +83,10 @@ function Soutien() {
     >
       <div className="absolute inset-0 bg-gray-400 opacity-50"></div>
       <div className="relative h-full py-10">
-        <h1 className="font-bold text-white ml-4 mt-2 text-2xl lg:text-3xl md:ml-11 xl:ml-0 md:mt-10 relative z-10">
+        <h2 className="font-bold text-white ml-4 mt-2 text-2xl lg:text-3xl md:ml-11 xl:ml-0 md:mt-10 relative z-10">
           <span className="border-b-2 border-white pb-[0.5px]">AVEC </span>
           LE SOUTIEN DE:
-        </h1>
+        </h2>
         <div className="flex items-center justify-center h-52">
           <ImageGallery
             items={slides}

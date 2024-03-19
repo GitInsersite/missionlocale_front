@@ -11,11 +11,11 @@ function SlideMenu() {
       original: "MicrosoftTeams-image4.webp",
       description: (
         <>
-          <h1>
+          <h2>
             VOUS AVEZ ENTRE 16 ET 25 ANS ?<br />
             LA MISSION LOCALE DES MUREAUX <br />
             VOUS ACCOMPAGNE 
-          </h1>
+          </h2>
         </>
       ),
       link: {
@@ -27,11 +27,11 @@ function SlideMenu() {
       original: "MicrosoftTeams-image2.webp",
       description: (
         <>
-          <h1>
+          <h2>
             VOUS AVEZ ENTRE 16 ET 25 ANS ?<br />
             LA MISSION LOCALE DES MUREAUX <br />
             VOUS ACCOMPAGNE 
-          </h1>
+          </h2>
         </>
       ),
       link: {
@@ -43,11 +43,11 @@ function SlideMenu() {
       original: "MicrosoftTeams-image3.webp",
       description: (
         <>
-          <h1>
+          <h2>
             VOUS AVEZ ENTRE 16 ET 25 ANS ?<br />
             LA MISSION LOCALE DES MUREAUX <br />
             VOUS ACCOMPAGNE 
-          </h1>
+          </h2>
         </>
       ),
       link: {
