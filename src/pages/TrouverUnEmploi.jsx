@@ -4,7 +4,6 @@ import "/emploi.css";
 import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
 
-
 function TrouverUnEmploi() {
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
@@ -67,53 +66,54 @@ function TrouverUnEmploi() {
       </div>
 
       <div className="breadcrumb px-4 pt-4  md:px-14 lg:px-20 xl:px-52">
-        <a className="hover:text-[#D70B52]" href="/">
+        <a className="" href="/">
           Accueil
         </a>{" "}
         {">"}
-        <a className="hover:text-[#D70B52]" href="/Services">
+        <a className="" href="/services">
           {" "}
           Services
         </a>{" "}
         {">"}
-        <a className="hover:text-[#D70B52]" href="/Etreaccompagne">
+        <a className="text-[#A4195C]" href="/trouver-un-emploi">
           {" "}
           Trouver un emploi
         </a>
       </div>
       <section>
-      <div className="bloc">
-        <div className="carte" style={{ '--clr': '#ff0066' }}>
-          <div className="imgBxe">
-            <img src="/roux.jpg" alt="Accompagnement" />
-          </div>
-          <div className="contente">
-          <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">    
-          LA MISSION LOCALE T'ACCOMPAGNE VERS
-          
-          <span className="border-b-2 border-[#D60B52] pb-[0.5px]">{" "}
-           L'EMPLOI
-           </span>
-
-        </h2>     
-               <p >
-               Des équipes spécialisées en lien avec ton conseiller sont là pour t’aider à trouver une emploi ! Elles sont là pour négocier des offres d’emploi avec les entreprises, organiser des actions de recrutement ainsi que te préparer activement à la recherche d’emploi et à la rencontre avec les employeurs. 
-
- 
-
-N’hésite donc pas à prendre rendez-vous avec ton conseiller si tu es à la recherche d’un emploi et pour que l’on puisse te présenter nos conseils et nos différents dispositifs d’insertion professionnelle. 
-              
-            </p>
-            <div className="rdv">
-            <Link to="/connexion-jeune"  >PRENDRE RDV AVEC UN CONSEILLER</Link>
-</div>
-
+        <div className="bloc">
+          <div className="carte" style={{ "--clr": "#ff0066" }}>
+            <div className="imgBxe">
+              <img src="/roux.jpg" alt="Accompagnement" />
+            </div>
+            <div className="contente">
+              <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
+                LA MISSION LOCALE T'ACCOMPAGNE VERS
+                <span className="border-b-2 border-[#D60B52] pb-[0.5px]">
+                  {" "}
+                  L'EMPLOI
+                </span>
+              </h2>
+              <p>
+                Des équipes spécialisées en lien avec ton conseiller sont là
+                pour t’aider à trouver une emploi ! Elles sont là pour négocier
+                des offres d’emploi avec les entreprises, organiser des actions
+                de recrutement ainsi que te préparer activement à la recherche
+                d’emploi et à la rencontre avec les employeurs. N’hésite donc
+                pas à prendre rendez-vous avec ton conseiller si tu es à la
+                recherche d’un emploi et pour que l’on puisse te présenter nos
+                conseils et nos différents dispositifs d’insertion
+                professionnelle.
+              </p>
+              <div className="rdv">
+                <Link to="/connexion-jeune">
+                  PRENDRE RDV AVEC UN CONSEILLER
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-
-     
+      </section>
     </div>
   );
 }
