@@ -5,15 +5,17 @@ import { useMediaQuery } from "react-responsive";
 
 function SlideMenu() {
   const isTabletOrLarger = useMediaQuery({ minWidth: 768 });
-
+  
   const slides = [
     {
       original: "MicrosoftTeams-image4.png",
       description: (
         <>
-          VOUS AVEZ ENTRE 16 ET 25 ANS ?<br />
-          LA MISSION LOCALE DES MUREAUX <br />
-          VOUS ACCOMPAGNE 
+          <h1>
+            VOUS AVEZ ENTRE 16 ET 25 ANS ?<br />
+            LA MISSION LOCALE DES MUREAUX <br />
+            VOUS ACCOMPAGNE 
+          </h1>
         </>
       ),
       link: {
@@ -25,9 +27,11 @@ function SlideMenu() {
       original: "MicrosoftTeams-image2.png",
       description: (
         <>
-          VOUS AVEZ ENTRE 16 ET 25 ANS ?<br />
-          LA MISSION LOCALE DES MUREAUX <br />
-          VOUS ACCOMPAGNE 
+          <h1>
+            VOUS AVEZ ENTRE 16 ET 25 ANS ?<br />
+            LA MISSION LOCALE DES MUREAUX <br />
+            VOUS ACCOMPAGNE 
+          </h1>
         </>
       ),
       link: {
@@ -39,9 +43,11 @@ function SlideMenu() {
       original: "MicrosoftTeams-image3.png",
       description: (
         <>
-          VOUS AVEZ ENTRE 16 ET 25 ANS ?<br />
-          LA MISSION LOCALE DES MUREAUX <br />
-          VOUS ACCOMPAGNE 
+          <h1>
+            VOUS AVEZ ENTRE 16 ET 25 ANS ?<br />
+            LA MISSION LOCALE DES MUREAUX <br />
+            VOUS ACCOMPAGNE 
+          </h1>
         </>
       ),
       link: {
