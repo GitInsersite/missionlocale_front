@@ -123,7 +123,7 @@ function Gouvernance() {
       <br />
       <div className="breadcrumb px-4 pt-4 md:px-14 lg:px-20 xl:px-52">
         <a href="/">Accueil</a> {">"}
-        <a href="/LaMissionLocale"> La Mission Locale </a>
+        <a href="/"> La Mission Locale </a>
         {">"}
         <a className="text-[#A4195C]" href="/gouvernance">
           {" "}
@@ -142,6 +142,7 @@ function Gouvernance() {
             <div
               key={index}
               className="bg-white mx-10 h-28 rounded-xl flex w-3/4 md:mx-0 md:w-[90%]"
+              title={`${member.first_name} ${member.last_name}, ${member.job}`}
             >
               <div className="w-[40%] md:w-[20%] lg:w-[15%] xl:w-[10%]">
                 <img
@@ -173,7 +174,7 @@ function Gouvernance() {
 
           <p>Les Membres du BUREAU : </p>
           <ul class="flex flex-col items-center md:flex-row md:justify-center">
-            <li class="bg-gray-200 py-2 px-4 m-2">
+            <li class="bg-gray-200 py-2 px-4 m-2" title="Monsieur MONTEL Bruno – Secrétaire">
               Monsieur MONTEL Bruno – Secrétaire
             </li>
           </ul>
@@ -187,7 +188,7 @@ function Gouvernance() {
                 <div className="w-[45%] flex items-center md:w-28 md:h-28 md:rounded-full">
                   <img
                     src={member.image_url || "placeholder.jpg"}
-                    alt=""
+                    alt={`{member.first_name} {member.last_name}`}
                     width={300}
                     height={200}
                     className="border-2 my-1 mx-2 h-20 w-20 md:w-28 md:h-28 rounded-full md:mx-0 md:my-0"
