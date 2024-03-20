@@ -67,6 +67,7 @@ function Menu() {
       {isLaptopOrLarger ? (
         <div className="flex justify-around xl:mx-28">
           <div>
+            <h1>
             <Link to="/" onClick={() => window.scrollTo(0, 0)}>
               <img
                 src="/logo1.png"
@@ -74,6 +75,8 @@ function Menu() {
                 className="w-60 h-20"
               />
             </Link>
+            </h1>
+
           </div>
           <div className="flex">
             <ul className="flex items-center text-sm font-semibold">

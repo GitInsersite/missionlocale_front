@@ -34,7 +34,7 @@ function Footer() {
           
           <div className="md:w-[20%] md:pr-4 text-white pb-4 mb-2 md:pb-0">
             <ul className="text-start text-white text-sm">
-              <li><h2 className="justify-start text-white font-bold mb-2 md:mb-4">ACCÈS RAPIDE</h2></li>
+              <li><h4 className="justify-start text-white font-bold mb-2 md:mb-4">ACCÈS RAPIDE</h4></li>
               <li><Link to="/"className="cursor-pointer"onClick={() => window.scrollTo(0, 0)}>Mission Locale</Link></li>
               <li><Link to="/se-former" onClick={() => window.scrollTo(0, 0)}>Services</Link></li>
               <li><Link to="/actualites" onClick={() => window.scrollTo(0, 0)}>Actualités</Link></li>
@@ -46,7 +46,7 @@ function Footer() {
 
           <div className="md:w-[20%] md:pr-4 text-white pb-4 mb-2 md:pb-0">
             <ul  className="text-start text-white text-sm">
-              <li><h2 className="justify-start text-white font-bold mb-2  md:mb-4">HORAIRES D&apos;OUVERTURE</h2></li>
+              <li><h4 className="justify-start text-white font-bold mb-2  md:mb-4">HORAIRES D&apos;OUVERTURE</h4></li>
               <li>Du Lundi au Vendredi</li>
               <li>De 08H45 à 12H15</li>
               <li>De 13H30 à 17H30</li>
@@ -55,7 +55,7 @@ function Footer() {
 
           <div className="md:w-[20%] md:pr-4 text-white pb-4 mb-2 md:pb-0">
             <ul  className="text-start text-white text-sm">
-              <li><h2 className="font-bold md:mb-2">NOUS CONTACTER</h2></li>
+              <li><h4 className="font-bold md:mb-2">NOUS CONTACTER</h4></li>
               <li className="text-white text-sm md:mb-2">
                 <a href="mailto:contact@mureaux-mlidf.org" className="text-white">contact@mureaux-mlidf.org</a>
                 </li>
@@ -66,7 +66,7 @@ function Footer() {
             
             <ul   className=" mt-2 text-start text-white text-sm">
               <li>
-                  <h2  className="font-bold md:mb-2">NOUS SUIVRE :</h2>
+                  <h4  className="font-bold md:mb-2">NOUS SUIVRE :</h4>
                 </li>
               <li>
                 <div className="flex items-center space-x-4 my-2">
@@ -88,7 +88,7 @@ function Footer() {
           <div className="md:w-[20%] md:pr-4 text-white pb-4 mb-2 md:pb-0">
             <ul className="text-start text-white text-sm">
               <li>
-                <h2 className="font-bold md:mb-2">NOUS LOCALISER</h2></li>
+                <h4 className="font-bold md:mb-2">NOUS LOCALISER</h4></li>
               <li>
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2618.0406529566458!2d1.9105878751635066!3d48.9907837913822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6928ec8766197%3A0x4a462aa9e0eb44c3!2s38%20Av.%20Paul%20Raoult%2C%2078130%20Les%20Mureaux!5e0!3m2!1sfr!2sfr!4v1699452035578!5m2!1sfr!2sfr"
