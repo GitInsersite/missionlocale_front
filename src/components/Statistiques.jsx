@@ -103,7 +103,7 @@ setIsIntersecting(boundingBox.top < window.innerHeight); } }; window.addEventLis
     </h2>
 
 
-
+    { isTabletOrLarger ?(
     <div className="flex md:flex-row sm:flex-col sm:m-8 my-8 w-full font-semibold">
 
       <div className="flex flex-col md:w-1/5 sm:my-6 ">
@@ -186,6 +186,98 @@ setIsIntersecting(boundingBox.top < window.innerHeight); } }; window.addEventLis
         </div>
       </div>
     </div>
+    ) : (
+    <div className="flex md:flex-row sm:flex-col sm:m-8 my-8 w-full font-semibold">
+      <div className="flex flex-row justify-center">
+        <div className="flex flex-col sm:w-1/2 md:w-1/5 sm:my-6 ">
+          <div>
+            <div className="flex justify-center pb-4">
+              <img src="JEUNES_ACCOMPAGNÉS.svg" alt="jeunes accompagnés" className="w-12 h-12 flex justify-center" />
+            </div>
+          </div>
+          <div className="flex justify-center pb-4 text-3xl font-bold" style={{ color: "rgba(0, 0, 0, 0.5)" }}>
+            {currentNumber.toLocaleString()}
+          </div>
+          <div>
+            <div className="text-center leading-tight text-xs flex justify-center">
+              JEUNES
+              <br />
+              ACCOMPAGNES
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col sm:w-1/2 md:w-1/5  sm:my-6 ">
+          <div>
+            <div className="flex justify-center pb-4">
+              <img src="JEUNES_EMPLOI.svg" alt="jeunes  emploi" className="w-12 h-12 flex justify-center" />
+            </div>
+          </div>
+          <div className="flex justify-center pb-4 text-3xl font-bold" style={{ color: "rgba(0, 0, 0, 0.5)" }}>
+            {currentNumber1.toLocaleString()}
+          </div>
+          <div>
+            <p className="text-center leading-tight text-xs flex justify-center">
+              JEUNES
+              <br />
+              EN EMPLOI
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div  className="flex flex-row justify-center">
+        <div className="flex flex-col sm:w-1/2 md:w-1/5  sm:my-6">
+          <div>
+            <div className="flex justify-center pb-4">
+              <img src="JEUNES_FORMATION.svg" alt="jeunes formation" className="w-12 h-12 flex justify-center" />
+            </div>
+          </div>
+          <div className="flex justify-center pb-4 text-3xl font-bold" style={{ color: "rgba(0, 0, 0, 0.5)" }}>
+            {currentNumber2.toLocaleString()}
+          </div>
+          <div>
+            <p className="text-center leading-tight text-xs flex justify-center">
+              JEUNES
+              <br />
+              EN FORMATION
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-col sm:w-1/2 md:w-1/5  sm:my-6">
+          <div>
+            <div className="flex justify-center pb-4">
+              <img src="ENTRETIEN_ATELIER.svg" alt="entretien, atelier" className="w-12 h-12 flex justify-center" />
+            </div>
+          </div>
+          <div className="flex justify-center pb-4 text-3xl font-bold" style={{ color: "rgba(0, 0, 0, 0.5)" }}>
+            {currentNumber3.toLocaleString()}</div>
+          <div>
+            <p className="text-center leading-tight text-xs flex justify-center">
+              ENTRETIENS
+              <br />
+              ET ATELIERS
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-col md:w-1/5 sm:my-6 mx-8">
+        <div>
+          <div className="flex justify-center pb-4">
+            <img src="PARTENAIRES.svg" alt="partenaire" className="w-12 h-12 flex justify-center" />
+          </div>
+        </div>
+        <div className="flex justify-center pb-4 text-3xl font-bold" style={{ color: "rgba(0, 0, 0, 0.5)" }}>
+          {currentNumber4.toLocaleString()}</div>
+        <div>
+          <p className="text-center leading-tight text-xs flex justify-center">
+            PARTENAIRES
+          </p>
+        </div>
+      </div>
+    </div>
+    )}
+
 
 
 
