@@ -52,9 +52,9 @@ function Contact() {
             SUIVEZ-NOUS SUR LES RÉSEAUX
           </h2>
           <div className="flex justify-between w-[80%] mt-2 mb-2">
-            <Link to="#" className="transition-all duration-500 hover:scale-110 hover:text-blue-500"><FaLinkedin className="w-8 h-8 md:w-10 md:h-10"/></Link>
-            <Link to="#" className="instagram"><TiSocialInstagramCircular className="w-8 h-8 md:w-10 md:h-10"/></Link>
-            <Link to="#" className="transition-all duration-500 hover:scale-110 hover:text-blue-500"><FaFacebook className="w-8 h-8 md:w-10 md:h-10"/></Link>
+            <Link to="https://fr.linkedin.com/in/la-mission-locale-intercommunale-des-mureaux-b403b52b0" className="transition-all duration-500 hover:scale-110 hover:text-blue-500"><FaLinkedin className="w-8 h-8 md:w-10 md:h-10"/></Link>
+            <Link to="https://www.instagram.com/mlmureaux/?hl=fr" className="instagram"><TiSocialInstagramCircular className="w-8 h-8 md:w-10 md:h-10"/></Link>
+            <Link to="https://www.facebook.com/mureauxmlidf/?locale=fr_FR" className="transition-all duration-500 hover:scale-110 hover:text-blue-500"><FaFacebook className="w-8 h-8 md:w-10 md:h-10"/></Link>
             
           </div>
         </div>

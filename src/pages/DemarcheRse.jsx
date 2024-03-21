@@ -34,7 +34,7 @@ function DemarcheRse() {
             La Mission
           </span>{" "}
           Locale conseille les entreprises dans la mise en place d’une politique
-          RSE, notamment au niveau de l’emploi des jeunes
+          RSE
         </h2>
         <p className="mb-6">
           La Responsabilité Sociale et Environnementale est l’application d’une
