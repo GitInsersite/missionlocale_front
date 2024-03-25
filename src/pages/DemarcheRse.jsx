@@ -12,28 +12,28 @@ function DemarcheRse() {
       
       <br />
       
-      <div className="breadcrumb px-4 pt-4  md:px-14 lg:px-20 xl:px-52">
+      <div className="breadcrumb px-4 pt-4  md:px-14 lg:px-20 xl:px-52 mb-14">
        <a className="hover:text-[#F29200]" href="/">Accueil</a> {'>'}
         <a className="hover:text-[#F29200]" href="/Entreprise">  Entreprise </a>{'>'}
         <a className="hover:text-[#F29200]" href="/DemarcheRse"> S'engager dans une démarche RSE</a>
         </div>
 
       <div className="flex flex-col pl-4 p-4 md:px-14 lg:px-20 xl:px-52">
-        <h2 className="mb-6 font-bold text-black text-lg md:text-2xl">
-        <span className="border-b-2 border-[#F29200] pb-[0.5px]">La Mission</span>{" "}Locale conseille les entreprises dans la mise en place
+        <h2 className="mb-14 font-bold text-black text-lg md:text-2xl">
+        <span className="border-b-2 border-[#F29200] pb-[0.5px] ">La Mission</span>{" "}Locale conseille les entreprises dans la mise en place
           d’une politique RSE, notamment au niveau de l’emploi des jeunes
         </h2>
-        <p className="mb-6">
+        <p className="mb-9">
           La Responsabilité Sociale et Environnementale est l’application d’une
           démarche développement durable par les entreprises. Ce concept suppose
           qu’elles intègrent dans leurs activités des préoccupations sociales,
           environnementales, et économiques. Elle s’applique aux multinationales
           cotées, comme aux petites et moyennes entreprises.
         </p>
-        <h3 className="leading-tight">
+        <h3 className="leading-tight mb-10">
           La RSE se traduit par un comportement éthique et transparent qui :
         </h3>
-        <ul className="mb-6 mt-6 leading-tight">
+        <ul className="mb-32 mt-5 leading-tight">
           <li>
             - Contribue au développement durable, y compris à la santé et au
             bien-être de la société.

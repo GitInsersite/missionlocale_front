@@ -115,20 +115,15 @@ function Gouvernance() {
         <h1 className="md:text-3xl">GOUVERNANCE</h1>
       </div> <br />
 
-      <div className="breadcrumb px-4 pt-4 md:px-14 lg:px-20 xl:px-52">
+      <div className="breadcrumb px-4 pt-4 mb-6 md:px-14 lg:px-20 xl:px-52">
        <a href="/">Accueil</a> {'>'}
         <a href="/LaMissionLocale">  La Mission Locale </a>{'>'}
         <a className="text-[#A4195C]" href="/gouvernance"> La Gouvernance </a>
         </div>
 
       <div className="xl:px-32">
-        <div className="flex flex-col items-center pt-6 md:items-start md:mx-14 lg:mx-20">
-          <h2 className="font-bold text-black text-lg mb-8 w-[85%] md:text-2xl">
-            <span className="border-b-2 border-[#A4195C] pb-[0.5px]">
-              CONSEIL
-            </span>{" "}
-            D&apos;ADMINISTRATION
-          </h2>
+        <div className="flex flex-col items-center pt-6 md:items-start mb-4 md:mx-14 lg:mx-20">
+          
           {governanceData.conseil_admin.map((member, index) => (
             <div
               key={index}
@@ -148,7 +143,7 @@ function Gouvernance() {
             </div>
           ))}
         </div>
-        <div className="flex flex-col items-center md:items-start md:mx-14 lg:mx-20">
+        <div className="flex flex-col items-center mb-9 md:items-start md:mx-14 lg:mx-20">
           <h2 className="font-bold text-black text-lg mb-8 mt-6 w-[85%] md:text-2xl">
             <span className="border-b-2 border-[#A4195C] pb-[0.5px]">
               BUREAU
@@ -190,18 +185,18 @@ function Gouvernance() {
 
       <div className="flex flex-col items-center pt-6 md:items-start md:mx-14 lg:mx-20 xl:px-32">
         <div className="flex flex-col items-center md:items-start">
-          <h2 className="font-bold text-black text-lg mb-8 mt-6 w-[85%] md:text-2xl md:mb-4">
+          <h2 className="font-bold text-black text-lg mb-8 mt-6 w-[85%]  md:text-2xl md:mb-4">
             <span className="border-b-2 border-[#A4195C] pb-[0.5px]">
               RAPPORT
             </span>{" "}
             D&apos;ACTIVITE
           </h2>
-          <p className="text-sm font-semibold flex flex-col items-center pl-4 md:pl-0">
+          <p className="text-sm font-semibold flex flex-col items-center mb-6 mt-6 pl-4 md:pl-0">
             VOUS POUVEZ CONSULTER NOS RAPPORTS D&apos;ACTIVITE DE SES 5
             DERNIERES ANNEES
           </p>
         </div>
-        <div className="flex flex-col md:flex-row  md:w-full md:mt-4">
+        <div className="flex flex-col md:flex-row mb-7  md:w-full md:mt-4">
           <button className="py-2 bg-[#A4195C] mb-4 px-6 rounded-xl text-white mt-6 md:mt-0 md:px-8 md:py-2 md:mr-4" onClick={handleDownload22}>
             2022
           </button>

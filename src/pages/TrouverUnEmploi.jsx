@@ -81,7 +81,7 @@ function TrouverUnEmploi() {
           <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">    
           LA MISSION LOCALE T'ACCOMPAGNE VERS
           
-          <span className="border-b-2 border-[#D60B52] pb-[0.5px] ">{" "}
+          <span className="border-b-2 border-[#D60B52] pb-[0.5px] mt-7 mb-1 ">{" "}
            L'EMPLOI
            </span>
 

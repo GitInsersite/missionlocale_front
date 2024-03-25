@@ -46,7 +46,7 @@ function Equipe() {
         <h1 className="md:text-3xl">NOTRE EQUIPE</h1>
       </div>{" "}
       <br />
-      <div className="breadcrumb px-4 pt-4 md:px-14 lg:px-20 xl:px-52">
+      <div className="breadcrumb px-4 pt-4 md:px-14 lg:px-20 xl:px-52 mb-11 mt-6">
         <a href="/">Accueil</a> {">"}
         <a href="/"> La Mission Locale </a>
         {">"}
@@ -57,12 +57,12 @@ function Equipe() {
       </div>
       <div className="flex flex-col items-center md:items-start md:px-14 md:pt-4 lg:px-20 xl:px-52">
         <div className="pt-4">
-          <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
+          <h2 className="font-bold text-black text-lg mb-9 md:text-2xl">
             <span className="border-b-2 border-[#A4195C] pb-[0.5px]">POLE</span>{" "}
             DIRECTION
           </h2>
          
-          <ul>
+          <ul className=" mb-11">
             
             <li>1 Responsable Administrative et Financières ;</li>
             <li>1 Responsable de secteur ;</li>
@@ -74,11 +74,11 @@ function Equipe() {
           <br />
 
           <div>{renderMembers(equipeData.direction)}</div>
-          <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
+          <h2 className="font-bold text-black text-lg mb-9 md:text-2xl">
             <span className="border-b-2 border-[#A4195C] pb-[0.5px]">POLE</span>{" "}
             STRUCTURE
           </h2>
-          <ul>
+          <ul className=" mb-11">
           <li>4 Conseillères CEJ ;</li>
           <li>10 Conseillers classiques ;</li>
           </ul>
@@ -86,17 +86,7 @@ function Equipe() {
           <div>{renderMembers(equipeData.structure)}</div>
         </div>
       </div>
-      <div className="flex flex-col items-center md:items-start md:px-14 lg:px-20 xl:px-52">
-        <div className="pt-4">
-          <h2 className="font-bold text-black text-lg mb-4 md:text-2xl">
-            <span className="border-b-2 border-[#A4195C] pb-[0.5px]">POLE</span>{" "}
-            TECHNIQUE
-          </h2>
-          <div className="lg:grid lg:grid-cols-3 xl:grid-cols-5">
-            {renderMembers(equipeData.technique)}
-          </div>
-        </div>
-      </div>
+      
       <div className="py-4 flex justify-center items-center md:items-start md:justify-start md:px-14 lg:px-20 xl:px-52">
         {/* <img src={photo} alt="Equipe Image" className="w-[80%] " /> */}
       </div>
