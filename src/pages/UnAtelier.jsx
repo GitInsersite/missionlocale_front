@@ -88,7 +88,7 @@ function UnAtelier() {
             S&apos;inscrire à l&apos;atelier
           </button>
         </div>
-        <div className="flex mb-6 md:justify-start md:items-center md:w-[90%] md:ml-4">
+        {/* <div className="flex mb-6 md:justify-start md:items-center md:w-[90%] md:ml-4">
           <div className=" w-[40%] md:w-fit md:mr-4">
             <p className="font-semibold">LE PROCHAIN ATELIER</p>
           </div>
@@ -103,7 +103,7 @@ function UnAtelier() {
               {date.year}
             </p>
           </div>
-        </div>
+        </div> */}
         <div className="border-2 border-[#95c11f] flex flex-col px-4 bg-white rounded-lg mb-4 pt-2 w-[90%]">
           <h2 className="font-semibold text-lg mb-2">RESUME</h2>
           <p className="mb-4 px-2 py-3 overflow-hidden break-words">{atelier.resume}</p>

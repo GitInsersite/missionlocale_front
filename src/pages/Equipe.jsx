@@ -63,7 +63,7 @@ function Equipe() {
           </h2>
          
           <ul>
-            
+            <li>1 Directeur </li>
             <li>1 Responsable Administrative et Financières </li>
             <li>1 Responsable de secteur </li>
             <li>1 Chargée de l’emploi et des relations entreprises </li>

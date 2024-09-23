@@ -149,7 +149,7 @@ function NosCommunes() {
             <h2 className="font-semibold ml-4 mb-2">AUBERGENVILLE</h2>
             <div className="text-xs ml-4 font-medium pb-2">
               <p>
-                MAISON DE TOUS
+                LE SPOT Maisons des jeunes
                 <br />
                 LES MERCREDIS
               </p>
